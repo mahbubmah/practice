@@ -1,0 +1,14 @@
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\bin\Debug\DailyExpenseApp.exe.config
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\bin\Debug\DailyExpenseApp.exe
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\bin\Debug\DailyExpenseApp.pdb
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\bin\Debug\CSVLib.dll
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\bin\Debug\DailyExpe.dll
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\obj\Debug\DailyExpenseApp.csprojResolveAssemblyReference.cache
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\obj\Debug\DailyExpenseApp.DailyExpense.resources
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\obj\Debug\DailyExpenseApp.Properties.Resources.resources
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\obj\Debug\DailyExpenseApp.csproj.GenerateResource.Cache
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\obj\Debug\DailyExpenseApp.exe
+E:\46th Batch\DailyExpenseApp\DailyExpenseApp\obj\Debug\DailyExpenseApp.pdb
+C:\Users\MJS\Desktop\C#\DailyExpenseApp\DailyExpenseApp\bin\Debug\DailyExpenseApp.exe.config
+C:\Users\MJS\Desktop\C#\DailyExpenseApp\DailyExpenseApp\obj\Debug\DailyExpenseApp.exe
+C:\Users\MJS\Desktop\C#\DailyExpenseApp\DailyExpenseApp\obj\Debug\DailyExpenseApp.pdb

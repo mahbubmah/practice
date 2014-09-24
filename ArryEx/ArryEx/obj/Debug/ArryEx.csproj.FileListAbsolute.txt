@@ -1,0 +1,9 @@
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\bin\Debug\ArryEx.exe.config
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\bin\Debug\ArryEx.exe
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\bin\Debug\ArryEx.pdb
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\obj\Debug\ArryEx.csprojResolveAssemblyReference.cache
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\obj\Debug\ArryEx.Form1.resources
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\obj\Debug\ArryEx.Properties.Resources.resources
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\obj\Debug\ArryEx.csproj.GenerateResource.Cache
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\obj\Debug\ArryEx.exe
+C:\Users\MJS\Desktop\C#\ArryEx\ArryEx\obj\Debug\ArryEx.pdb

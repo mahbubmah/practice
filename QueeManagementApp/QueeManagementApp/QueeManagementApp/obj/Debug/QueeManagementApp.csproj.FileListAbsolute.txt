@@ -1,0 +1,9 @@
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\bin\Debug\QueeManagementApp.exe.config
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\bin\Debug\QueeManagementApp.exe
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\bin\Debug\QueeManagementApp.pdb
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\obj\Debug\QueeManagementApp.csprojResolveAssemblyReference.cache
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\obj\Debug\QueeManagementApp.QueueCustomarUi.resources
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\obj\Debug\QueeManagementApp.Properties.Resources.resources
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\obj\Debug\QueeManagementApp.csproj.GenerateResource.Cache
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\obj\Debug\QueeManagementApp.exe
+C:\Users\MJS\Desktop\C#\QueeManagementApp\QueeManagementApp\QueeManagementApp\obj\Debug\QueeManagementApp.pdb
