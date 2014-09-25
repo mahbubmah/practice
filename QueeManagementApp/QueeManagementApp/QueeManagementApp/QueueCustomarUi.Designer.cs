@@ -121,7 +121,7 @@
             this.groupBox2.Location = new System.Drawing.Point(385, 36);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(363, 150);
-            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dequeue Customar";
             // 
@@ -164,16 +164,17 @@
             this.dequeueSerialNoTextBox.Location = new System.Drawing.Point(96, 31);
             this.dequeueSerialNoTextBox.Name = "dequeueSerialNoTextBox";
             this.dequeueSerialNoTextBox.Size = new System.Drawing.Size(83, 20);
-            this.dequeueSerialNoTextBox.TabIndex = 0;
+            this.dequeueSerialNoTextBox.TabIndex = 1;
             // 
             // dequeueButton
             // 
             this.dequeueButton.Location = new System.Drawing.Point(214, 28);
             this.dequeueButton.Name = "dequeueButton";
             this.dequeueButton.Size = new System.Drawing.Size(125, 29);
-            this.dequeueButton.TabIndex = 2;
+            this.dequeueButton.TabIndex = 0;
             this.dequeueButton.Text = "Dequeue";
             this.dequeueButton.UseVisualStyleBackColor = true;
+            this.dequeueButton.Click += new System.EventHandler(this.dequeueButton_Click);
             // 
             // dequeueComplainTextBox
             // 
@@ -188,7 +189,7 @@
             this.groupBox3.Location = new System.Drawing.Point(12, 204);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(736, 306);
-            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Waiting Queue";
             // 

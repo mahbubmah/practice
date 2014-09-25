@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataType.cs" />
     <Compile Include="QueueManagementHelper.cs" />
     <Compile Include="QueueCustomarUi.cs">
       <SubType>Form</SubType>
