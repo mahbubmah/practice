@@ -6,19 +6,35 @@ using System.Threading.Tasks;
 
 namespace AccountOperationApp
 {
-    class Account
+    internal class Account
     {
 
-        public string number;
-        public string name;
-        public double balance = 0;
+        private string number;
+        private string name;
+        private double balance = 0;
+
+
+        public string Name
+        {
+            set { name = value; }
+            get { return name; }
+        }
+
+        public string Number
+        {
+            set { number = value; }
+            get { return number; }
+        }
+
+        public double Balance
+        {
+            get { return balance; }
+        }
 
         public void Create(string aAccountNo,string nName)
         {
             number = aAccountNo;
             name = nName;
-            
-
         }
 
         public double Deposite(double deposite)
@@ -33,12 +49,7 @@ namespace AccountOperationApp
             balance = balance - withdraw;
             return balance;
         }
-
-        public string Report()
-        {
-            string report="";
-            report = name + ", your account number: " + number + " and it's balance is " + Convert.ToString(balance) + "Taka";
-            return report;
-        }
+        
+        
     }
 }

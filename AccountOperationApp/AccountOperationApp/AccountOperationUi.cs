@@ -32,7 +32,7 @@ namespace AccountOperationApp
 
             else
             {
-                MessageBox.Show("Please enter your name and account number")
+                MessageBox.Show("Please enter your name and account number");
             }
             
             
@@ -48,7 +48,7 @@ namespace AccountOperationApp
             }
             else
             {
-                MessageBox.Show("Please create account first")
+                MessageBox.Show("Please create account first");
             }
         }
 
@@ -61,7 +61,7 @@ namespace AccountOperationApp
             }
             else
             {
-                MessageBox.Show("Please create account first")
+                MessageBox.Show("Please create account first");
             }
         }
 
@@ -69,11 +69,13 @@ namespace AccountOperationApp
         {
             if (aAccount != null)
             {
-                MessageBox.Show(aAccount.Report());
+                string report = "";
+                report = aAccount.Name + ", your account number: " + aAccount.Number + " and it's balance is " + Convert.ToString(aAccount.Balance) + "Taka";
+                MessageBox.Show(report);
             }
             else
             {
-                MessageBox.Show("Please create account first")
+                MessageBox.Show("Please create account first");
             }
         }
 

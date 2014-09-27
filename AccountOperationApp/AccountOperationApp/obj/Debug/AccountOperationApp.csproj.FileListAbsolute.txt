@@ -20,3 +20,12 @@ C:\Users\PC21\Desktop\AccountOperationApp\AccountOperationApp\AccountOperationAp
 C:\Users\PC21\Desktop\Exam 01\AccountOperationApp\AccountOperationApp\bin\Debug\AccountOperationApp.exe.config
 C:\Users\PC21\Desktop\Exam 01\AccountOperationApp\AccountOperationApp\obj\Debug\AccountOperationApp.exe
 C:\Users\PC21\Desktop\Exam 01\AccountOperationApp\AccountOperationApp\obj\Debug\AccountOperationApp.pdb
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\bin\Debug\AccountOperationApp.exe.config
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\obj\Debug\AccountOperationApp.exe
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\obj\Debug\AccountOperationApp.pdb
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\bin\Debug\AccountOperationApp.exe
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\bin\Debug\AccountOperationApp.pdb
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\obj\Debug\AccountOperationApp.csprojResolveAssemblyReference.cache
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\obj\Debug\AccountOperationApp.AccountOperationUi.resources
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\obj\Debug\AccountOperationApp.Properties.Resources.resources
+C:\Users\PC21\Desktop\Exam 01\pactice\AccountOperationApp\AccountOperationApp\obj\Debug\AccountOperationApp.csproj.GenerateResource.Cache
