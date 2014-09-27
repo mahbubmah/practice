@@ -1,0 +1,9 @@
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\bin\Debug\CalculatorOopApp.exe.config
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\bin\Debug\CalculatorOopApp.exe
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\bin\Debug\CalculatorOopApp.pdb
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\obj\Debug\CalculatorOopApp.csprojResolveAssemblyReference.cache
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\obj\Debug\CalculatorOopApp.CalculatorUi.resources
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\obj\Debug\CalculatorOopApp.Properties.Resources.resources
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\obj\Debug\CalculatorOopApp.csproj.GenerateResource.Cache
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\obj\Debug\CalculatorOopApp.exe
+C:\Users\PC21\Desktop\Exam 01\CalculatorOopApp\CalculatorOopApp\obj\Debug\CalculatorOopApp.pdb
