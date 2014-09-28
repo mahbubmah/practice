@@ -1,0 +1,11 @@
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\bin\Debug\EmployeeInformationPrimitiveType.exe
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\bin\Debug\EmployeeInformationPrimitiveType.pdb
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\obj\Debug\ResolveAssemblyReference.cache
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\obj\Debug\EmployeeInformationPrimitiveType.EmployeeInformationUI.resources
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\obj\Debug\EmployeeInformationPrimitiveType.Properties.Resources.resources
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\obj\Debug\ResGen.read.1.tlog
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\obj\Debug\ResGen.write.1.tlog
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\obj\Debug\EmployeeInformationPrimitiveType.exe
+D:\OOP Training (.Net) @ BASIS\Course Content\2. User Define Type\EmployeeExample\PrimitiveType\PrimitiveType\obj\Debug\EmployeeInformationPrimitiveType.pdb
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\EmployeeExample\EmployeeExamplePrimitiveType\PrimitiveType\obj\Debug\EmployeeInformationPrimitiveType.exe
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\EmployeeExample\EmployeeExamplePrimitiveType\PrimitiveType\obj\Debug\EmployeeInformationPrimitiveType.pdb

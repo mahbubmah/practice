@@ -1,0 +1,9 @@
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\bin\Debug\EmployeeApp.exe.config
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\bin\Debug\EmployeeApp.exe
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\bin\Debug\EmployeeApp.pdb
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.csprojResolveAssemblyReference.cache
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.EmployeeUI.resources
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.Properties.Resources.resources
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.csproj.GenerateResource.Cache
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.exe
+E:\OOP0149-Evening\23-Sep-2014\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.pdb

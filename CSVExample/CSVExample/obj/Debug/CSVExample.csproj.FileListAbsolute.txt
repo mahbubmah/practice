@@ -1,0 +1,9 @@
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\bin\Debug\CSVExample.exe.config
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\bin\Debug\CSVExample.exe
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\bin\Debug\CSVExample.pdb
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\bin\Debug\CSVLib.dll
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\obj\Debug\CSVExample.Form1.resources
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\obj\Debug\CSVExample.Properties.Resources.resources
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\obj\Debug\CSVExample.csproj.GenerateResource.Cache
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\obj\Debug\CSVExample.exe
+c:\users\pc21\documents\visual studio 2013\Projects\CSVExample\CSVExample\obj\Debug\CSVExample.pdb

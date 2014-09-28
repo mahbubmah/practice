@@ -1,0 +1,25 @@
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\bin\Debug\StudentInformationUsingUserDefinedType.exe
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\bin\Debug\StudentInformationUsingUserDefinedType.pdb
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\ResolveAssemblyReference.cache
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.Properties.Resources.resources
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.StudentInformationUI.resources
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\GenerateResource-ResGen.read.1.tlog
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\GenerateResource-ResGen.write.1.tlog
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.exe
+G:\BASIS\.Net Course Content\2. User Define Type\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.pdb
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.exe
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.pdb
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\bin\Debug\StudentInformationUsingUserDefinedType.exe
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\bin\Debug\StudentInformationUsingUserDefinedType.pdb
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.csprojResolveAssemblyReference.cache
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.Properties.Resources.resources
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.StudentInformationUI.resources
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.csproj.GenerateResource.Cache
+E:\OOP0149-Evening\23-Sep-2014\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.pdb
+E:\OOP0149-Evening\23-Sep-2014\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\bin\Debug\StudentInformationUsingUserDefinedType.exe
+E:\OOP0149-Evening\23-Sep-2014\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\bin\Debug\StudentInformationUsingUserDefinedType.pdb
+E:\OOP0149-Evening\23-Sep-2014\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.csprojResolveAssemblyReference.cache
+E:\OOP0149-Evening\23-Sep-2014\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.Properties.Resources.resources
+E:\OOP0149-Evening\23-Sep-2014\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.StudentInformationUI.resources
+E:\OOP0149-Evening\23-Sep-2014\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.csproj.GenerateResource.Cache
+E:\OOP0149-Evening\23-Sep-2014\UserDefinedTypeWithMethod\StudentInformationUsingUserDefinedType\obj\Debug\StudentInformationUsingUserDefinedType.exe

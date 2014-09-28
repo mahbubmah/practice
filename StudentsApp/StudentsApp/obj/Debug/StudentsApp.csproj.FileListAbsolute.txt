@@ -1,0 +1,9 @@
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\bin\Debug\StudentsApp.exe.config
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\bin\Debug\StudentsApp.exe
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\bin\Debug\StudentsApp.pdb
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\obj\Debug\StudentsApp.csprojResolveAssemblyReference.cache
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\obj\Debug\StudentsApp.StudentUI.resources
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\obj\Debug\StudentsApp.Properties.Resources.resources
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\obj\Debug\StudentsApp.csproj.GenerateResource.Cache
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\obj\Debug\StudentsApp.exe
+E:\OOP0149-Evening\23-Sep-2014\StudentsApp\StudentsApp\obj\Debug\StudentsApp.pdb

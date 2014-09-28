@@ -1,0 +1,9 @@
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\bin\Debug\StudentInfoApp.exe.config
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\bin\Debug\StudentInfoApp.exe
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\bin\Debug\StudentInfoApp.pdb
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\obj\Debug\StudentInfoApp.csprojResolveAssemblyReference.cache
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\obj\Debug\StudentInfoApp.StudentInformation.resources
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\obj\Debug\StudentInfoApp.Properties.Resources.resources
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\obj\Debug\StudentInfoApp.csproj.GenerateResource.Cache
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\obj\Debug\StudentInfoApp.exe
+c:\users\pc21\documents\visual studio 2013\Projects\StudentInfoApp\StudentInfoApp\obj\Debug\StudentInfoApp.pdb

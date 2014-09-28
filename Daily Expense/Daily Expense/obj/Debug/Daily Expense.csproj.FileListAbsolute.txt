@@ -1,0 +1,9 @@
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\bin\Debug\Daily Expense.exe.config
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\bin\Debug\Daily Expense.exe
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\bin\Debug\Daily Expense.pdb
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\bin\Debug\CSVLib.dll
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\obj\Debug\Daily_Expense.Form1.resources
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\obj\Debug\Daily_Expense.Properties.Resources.resources
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\obj\Debug\Daily Expense.csproj.GenerateResource.Cache
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\obj\Debug\Daily Expense.exe
+c:\users\pc21\documents\visual studio 2013\Projects\Daily Expense\Daily Expense\obj\Debug\Daily Expense.pdb

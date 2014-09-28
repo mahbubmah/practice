@@ -1,0 +1,2 @@
+E:\OOP0149-Evening\23-Sep-2014\ListStackQueue\ListStackQueue\bin\Debug\ListStackQueue.exe.config
+C:\Users\MJS\Desktop\Desktop\ListStackQueue\ListStackQueue\bin\Debug\ListStackQueue.exe.config

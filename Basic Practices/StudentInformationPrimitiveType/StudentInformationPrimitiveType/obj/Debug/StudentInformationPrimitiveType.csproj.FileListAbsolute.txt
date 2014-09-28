@@ -1,0 +1,8 @@
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\Basic Practices\StudentInformationPrimitiveType\StudentInformationPrimitiveType\bin\Debug\StudentInformationPrimitiveType.exe
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\Basic Practices\StudentInformationPrimitiveType\StudentInformationPrimitiveType\bin\Debug\StudentInformationPrimitiveType.pdb
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\Basic Practices\StudentInformationPrimitiveType\StudentInformationPrimitiveType\obj\Debug\StudentInformationPrimitiveType.csprojResolveAssemblyReference.cache
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\Basic Practices\StudentInformationPrimitiveType\StudentInformationPrimitiveType\obj\Debug\StudentInformationPrimitiveType.Properties.Resources.resources
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\Basic Practices\StudentInformationPrimitiveType\StudentInformationPrimitiveType\obj\Debug\StudentInformationPrimitiveType.StudentInformationUI.resources
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\Basic Practices\StudentInformationPrimitiveType\StudentInformationPrimitiveType\obj\Debug\StudentInformationPrimitiveType.csproj.GenerateResource.Cache
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\Basic Practices\StudentInformationPrimitiveType\StudentInformationPrimitiveType\obj\Debug\StudentInformationPrimitiveType.exe
+E:\Dropbox\Dropbox\BITM\FTFL\Course Content\Day07\Basic Practices\StudentInformationPrimitiveType\StudentInformationPrimitiveType\obj\Debug\StudentInformationPrimitiveType.pdb
