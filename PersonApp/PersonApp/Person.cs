@@ -8,9 +8,25 @@ namespace PersonApp
 {
     class Person
     {
-        public string firstName;
-        public string middleName;
-        public string lastName;
+        private string firstName;
+        private string middleName;
+        private string lastName;
+
+        public string FirstName
+        {
+            set
+            {
+                if (value.Length >= 3)
+                {
+                    firstName = value;
+                }
+            }
+            get
+            {
+                return firstName;
+            }
+        }
+
 
         public string GetFullName()
         {

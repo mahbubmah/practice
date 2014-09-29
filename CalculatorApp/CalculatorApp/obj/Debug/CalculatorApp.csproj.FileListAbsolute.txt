@@ -1,0 +1,9 @@
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.exe.config
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.exe
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\bin\Debug\CalculatorApp.pdb
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.csprojResolveAssemblyReference.cache
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.CalculatorUI.resources
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.Properties.Resources.resources
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.csproj.GenerateResource.Cache
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.exe
+E:\OOP0149-Evening\27-Sep-2014\CalculatorApp\CalculatorApp\obj\Debug\CalculatorApp.pdb

@@ -20,9 +20,19 @@ namespace PersonApp
         private void showButton_Click(object sender, EventArgs e)
         {
             Person aPerson = new Person();
-            aPerson.firstName = firstNameTextBox.Text;
-            aPerson.middleName = middleNameTextBox.Text;
-            aPerson.lastName = lastNameTextBox.Text;
+
+            //aPerson.firstName = firstNameTextBox.Text;
+
+            aPerson.FirstName = firstNameTextBox.Text;
+
+            //aPerson.SetMiddleName(middleNameTextBox.Text);
+            //aPerson.SetLastName(lastNameTextBox.Text);
+
+            string fName = aPerson.FirstName;
+            
+            
+            //aPerson.middleName = middleNameTextBox.Text;
+            //aPerson.lastName = lastNameTextBox.Text;
 
             fullNameTextBox.Text = aPerson.GetFullName();
             reverseNameTextBox.Text = aPerson.GetFullReverseName();

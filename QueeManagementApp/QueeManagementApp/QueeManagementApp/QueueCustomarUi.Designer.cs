@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -199,8 +199,9 @@
             this.serialNoColumnHeader,
             this.nameColumnHeader,
             this.complainColumnHeader});
+            this.waitingQueueListView.GridLines = true;
             this.waitingQueueListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.waitingQueueListView.Location = new System.Drawing.Point(22, 26);
             this.waitingQueueListView.Name = "waitingQueueListView";
             this.waitingQueueListView.Size = new System.Drawing.Size(689, 268);
