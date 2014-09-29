@@ -8,40 +8,26 @@ namespace PersonApp
 {
     class Person
     {
-        private string firstName;
-        private string middleName;
-        private string lastName;
+        public string FirstName { private get; set; }
+        public string MiddleName { private get; set; }
+        public string LastName { private get; set; }
 
-        public string FirstName
-        {
-            set
-            {
-                if (value.Length >= 3)
-                {
-                    firstName = value;
-                }
-            }
-            get
-            {
-                return firstName;
-            }
-        }
+        public Person(string firstName, string middleName, string lastName) : this(firstName, lastName) { MiddleName = middleName; }
+        
+        public Person(string firstName, string lastName) :this() { FirstName = firstName; LastName = lastName; }
 
+        public Person() {}
 
-        public string GetFullName()
-        {
-            return firstName + " " + middleName + " " + lastName;
-        }
-
+        public string GetFullName() { return FirstName + " " + MiddleName + " " + LastName; }
+       
         public string GetFullReverseName()
         {
             string fullName = GetFullName();
             char[] cArray = fullName.ToCharArray();
             string reverse = String.Empty;
-            for (int i = cArray.Length - 1; i > -1; i--)
-            {
-                reverse += cArray[i];
-            }
+
+            for (int i = cArray.Length - 1; i > -1; i--) { reverse += cArray[i]; }
+
             return reverse;            
         }
     }

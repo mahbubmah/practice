@@ -12,3 +12,17 @@ E:\OOP0149-Evening\27-Sep-2014\PersonApp\PersonApp\bin\Debug\PersonApp.pdb
 E:\OOP0149-Evening\27-Sep-2014\PersonApp\PersonApp\obj\Debug\PersonApp.csprojResolveAssemblyReference.cache
 E:\OOP0149-Evening\27-Sep-2014\PersonApp\PersonApp\obj\Debug\PersonApp.PersonUI.resources
 E:\OOP0149-Evening\27-Sep-2014\PersonApp\PersonApp\obj\Debug\PersonApp.csproj.GenerateResource.Cache
+E:\OOP0149-Evening\29-Sep-2014\PersonApp\PersonApp\obj\Debug\PersonApp.exe
+E:\OOP0149-Evening\29-Sep-2014\PersonApp\PersonApp\obj\Debug\PersonApp.pdb
+E:\OOP0149-Evening\29-Sep-2014\PersonApp\PersonApp\bin\Debug\PersonApp.exe
+E:\OOP0149-Evening\29-Sep-2014\PersonApp\PersonApp\bin\Debug\PersonApp.pdb
+E:\OOP0149-Evening\29-Sep-2014\PersonApp\PersonApp\obj\Debug\PersonApp.csprojResolveAssemblyReference.cache
+E:\OOP0149-Evening\29-Sep-2014\PersonApp\PersonApp\obj\Debug\PersonApp.PersonUI.resources
+E:\OOP0149-Evening\29-Sep-2014\PersonApp\PersonApp\obj\Debug\PersonApp.csproj.GenerateResource.Cache
+C:\Users\acer\Desktop\New folder (2)\PersonApp\PersonApp\obj\Debug\PersonApp.exe
+C:\Users\acer\Desktop\New folder (2)\PersonApp\PersonApp\obj\Debug\PersonApp.pdb
+C:\Users\acer\Desktop\New folder (2)\PersonApp\PersonApp\bin\Debug\PersonApp.exe
+C:\Users\acer\Desktop\New folder (2)\PersonApp\PersonApp\bin\Debug\PersonApp.pdb
+C:\Users\acer\Desktop\New folder (2)\PersonApp\PersonApp\obj\Debug\PersonApp.csprojResolveAssemblyReference.cache
+C:\Users\acer\Desktop\New folder (2)\PersonApp\PersonApp\obj\Debug\PersonApp.PersonNameUi.resources
+C:\Users\acer\Desktop\New folder (2)\PersonApp\PersonApp\obj\Debug\PersonApp.csproj.GenerateResource.Cache

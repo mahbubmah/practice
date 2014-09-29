@@ -46,17 +46,17 @@
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Person.cs" />
-    <Compile Include="PersonUI.cs">
+    <Compile Include="PersonNameUi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PersonUI.Designer.cs">
-      <DependentUpon>PersonUI.cs</DependentUpon>
+    <Compile Include="PersonNameUi.Designer.cs">
+      <DependentUpon>PersonNameUi.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PersonUI.resx">
-      <DependentUpon>PersonUI.cs</DependentUpon>
+    <EmbeddedResource Include="PersonNameUi.resx">
+      <DependentUpon>PersonNameUi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

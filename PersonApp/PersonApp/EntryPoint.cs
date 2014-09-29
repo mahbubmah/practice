@@ -11,7 +11,7 @@ namespace PersonApp
     {
         public static void Main()
         {
-            Application.Run(new PersonUI());
+            Application.Run(new PersonNameUi());
         }
     }
 }
