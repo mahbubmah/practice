@@ -1,0 +1,12 @@
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\bin\Debug\ShopAppDB.exe.config
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\bin\Debug\ShopAppDB.exe
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\bin\Debug\ShopAppDB.pdb
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\obj\Debug\ShopAppDB.csprojResolveAssemblyReference.cache
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\obj\Debug\ShopAppDB.ShopUI.resources
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\obj\Debug\ShopAppDB.Properties.Resources.resources
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\obj\Debug\ShopAppDB.csproj.GenerateResource.Cache
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\obj\Debug\ShopAppDB.exe
+c:\users\asheeeq\documents\visual studio 2013\Projects\ShopAppDB\ShopAppDB\obj\Debug\ShopAppDB.pdb
+C:\Users\PC21\Desktop\ShopAppDB\ShopAppDB\bin\Debug\ShopAppDB.exe.config
+C:\Users\PC21\Desktop\ShopAppDB\ShopAppDB\obj\Debug\ShopAppDB.exe
+C:\Users\PC21\Desktop\ShopAppDB\ShopAppDB\obj\Debug\ShopAppDB.pdb
