@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OH.Web", "OH.Web\OH.Web.csproj", "{22B5BECE-137B-4202-8CB1-5C8CE9309C70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OH.Web.Tests", "OH.Web.Tests\OH.Web.Tests.csproj", "{E693E51A-90C0-4FBF-A3FF-A495EDF9E3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OH.DAL", "OH.DAL\OH.DAL.csproj", "{A95A2769-F93C-42D7-9057-C80D08B53047}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OH.BLL", "OH.BLL\OH.BLL.csproj", "{97D4B80F-11E5-4E14-87A9-7574046DFB79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OH.Utilities", "OH.Utilities\OH.Utilities.csproj", "{E5953D5F-20D6-4007-9990-267584638AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OH.Report", "OH.Report\OH.Report.csproj", "{40F1CCA1-05BB-4AA7-B1E8-76F26DAB02A8}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 7
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = OH.BLL\\OH.BLL.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = OH.BLL\\
+		SccProjectUniqueName2 = OH.DAL\\OH.DAL.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = OH.DAL\\
+		SccProjectUniqueName3 = OH.Utilities\\OH.Utilities.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = OH.Utilities\\
+		SccProjectUniqueName4 = OH.Web.Tests\\OH.Web.Tests.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = OH.Web.Tests\\
+		SccProjectUniqueName5 = OH.Web\\OH.Web.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = OH.Web\\
+		SccProjectUniqueName6 = OH.Report\\OH.Report.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = OH.Report\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22B5BECE-137B-4202-8CB1-5C8CE9309C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B5BECE-137B-4202-8CB1-5C8CE9309C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B5BECE-137B-4202-8CB1-5C8CE9309C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B5BECE-137B-4202-8CB1-5C8CE9309C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E693E51A-90C0-4FBF-A3FF-A495EDF9E3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E693E51A-90C0-4FBF-A3FF-A495EDF9E3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E693E51A-90C0-4FBF-A3FF-A495EDF9E3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E693E51A-90C0-4FBF-A3FF-A495EDF9E3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95A2769-F93C-42D7-9057-C80D08B53047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95A2769-F93C-42D7-9057-C80D08B53047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95A2769-F93C-42D7-9057-C80D08B53047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95A2769-F93C-42D7-9057-C80D08B53047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D4B80F-11E5-4E14-87A9-7574046DFB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D4B80F-11E5-4E14-87A9-7574046DFB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D4B80F-11E5-4E14-87A9-7574046DFB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D4B80F-11E5-4E14-87A9-7574046DFB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5953D5F-20D6-4007-9990-267584638AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5953D5F-20D6-4007-9990-267584638AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5953D5F-20D6-4007-9990-267584638AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5953D5F-20D6-4007-9990-267584638AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40F1CCA1-05BB-4AA7-B1E8-76F26DAB02A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40F1CCA1-05BB-4AA7-B1E8-76F26DAB02A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40F1CCA1-05BB-4AA7-B1E8-76F26DAB02A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40F1CCA1-05BB-4AA7-B1E8-76F26DAB02A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\bin\Debug\OH.BLL.dll
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\bin\Debug\OH.BLL.pdb
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\bin\Debug\OH.DAL.dll
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\bin\Debug\OH.Utilities.dll
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\bin\Debug\OH.DAL.pdb
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\bin\Debug\OH.Utilities.pdb
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\obj\Debug\OH.BLL.csprojResolveAssemblyReference.cache
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\obj\Debug\OH.BLL.dll
+F:\- E - PROJECT\OiiO Haat_9\OH.BLL\obj\Debug\OH.BLL.pdb

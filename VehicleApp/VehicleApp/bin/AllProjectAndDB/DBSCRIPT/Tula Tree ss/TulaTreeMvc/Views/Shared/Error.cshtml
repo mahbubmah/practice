@@ -1,0 +1,18 @@
+﻿@model Tula.Utilities.ErrorHelper
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <hgroup style="text-align: center">
+        <h1>Error<br/> <i style="color: red">@Model.ErrorMessege</i></h1>
+        <h2>Stack trace<br/> <i style="color: red">@Model.StackTrace</i></h2>
+    </hgroup>
+</body>
+</html>

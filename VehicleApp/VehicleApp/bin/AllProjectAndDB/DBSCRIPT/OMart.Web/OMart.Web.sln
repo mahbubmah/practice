@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMart.Web", "OMart.Web\OMart.Web.csproj", "{2C5BB513-828E-4613-B053-AFB8756CF8B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{C3FB16B5-BB92-4F49-AC41-B49546674B9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{CF5F37F7-5BE0-42EB-91D7-076939A395A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{4D8AB962-FD3C-4418-9801-C722E498FB4F}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 5
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BLL\\BLL.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = BLL\\
+		SccProjectUniqueName2 = DAL\\DAL.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = DAL\\
+		SccProjectUniqueName3 = OMart.Web\\OMart.Web.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = OMart.Web\\
+		SccProjectUniqueName4 = Utilities\\Utilities.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = Utilities\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C5BB513-828E-4613-B053-AFB8756CF8B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5BB513-828E-4613-B053-AFB8756CF8B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5BB513-828E-4613-B053-AFB8756CF8B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5BB513-828E-4613-B053-AFB8756CF8B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3FB16B5-BB92-4F49-AC41-B49546674B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3FB16B5-BB92-4F49-AC41-B49546674B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3FB16B5-BB92-4F49-AC41-B49546674B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3FB16B5-BB92-4F49-AC41-B49546674B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5F37F7-5BE0-42EB-91D7-076939A395A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5F37F7-5BE0-42EB-91D7-076939A395A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5F37F7-5BE0-42EB-91D7-076939A395A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5F37F7-5BE0-42EB-91D7-076939A395A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D8AB962-FD3C-4418-9801-C722E498FB4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D8AB962-FD3C-4418-9801-C722E498FB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D8AB962-FD3C-4418-9801-C722E498FB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D8AB962-FD3C-4418-9801-C722E498FB4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

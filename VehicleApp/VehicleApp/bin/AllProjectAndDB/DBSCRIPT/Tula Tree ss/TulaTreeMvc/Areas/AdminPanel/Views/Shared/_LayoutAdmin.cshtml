@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tula Tree Admin</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+          rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet'
+          type='text/css' />
+    
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @RenderSection("style", required: false)
+</head>
+<body>
+    <header>
+        <div class="headerTop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="userPanel">
+                            <ul>
+                                <li>Welcome to our site </li>
+
+                                <li><a href="OiiOHelpSupportpage.aspx">Help </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+                        <div class="userPanel">
+                            <ul id="ulLoginOutDirect">
+                                <li><a id="hrfRegister" >Register</a></li>
+                                <li><a id="hrfLogin">Log in</a></li>
+
+                            </ul>
+                            @*<ul id="ulLoginOut" >
+                                <li>
+                                    <asp:Label ID="lblUsername" >User name</asp:Label>
+                                </li>
+                                <li>
+                                    <asp:LinkButton ID="lbLogStatus"  Text="LogStatus"></asp:LinkButton>
+                                </li>
+                            </ul>*@
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <nav id="topNav" class="navbar navbar-default navbar-static-top">
+            <ul style="background-color: black">
+                <li>
+                    <a href="#" title="Basic SetUp">Basic SetUp</a>
+                    <ul>
+                        <li><a href="#" title="User Group">User Groups</a></li>
+                        <li><a href="#" title="User Info">Users Information</a></li>
+                        <li><a href="#" title="Url List">Url Lists</a></li>
+                        <li class="last"><a href="#" title="Users Permission">Users Permission</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Basic Data Info">Basic Data Info</a>
+                    <ul>
+                        <li><a href="#" title="Country">Country </a></li>
+                        <li><a href="#" title="Division/State">Division/State</a></li>
+                        <li><a href="#" title="District">District </a></li>
+                        <li><a href="#" title="Police Station">Police Station </a></li>
+                        <li><a href="#" title="Post Office">Post Office</a></li>
+                        <li><a href="#" title="Color">Color </a></li>
+                        <li><a href="#" title="Brand">Brand </a></li>
+                        <li class="last"><a href="#" title="Model">Model</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Category Info">Category Info</a>
+                    <ul>
+                        <li class="last"><a href="#" title="Category">Category</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Mapping Info">Mapping Info</a>
+                    <ul>
+                        <li><a href="#" title="Mapping Table">Mapping Table</a></li>
+                        <li class="last"><a href="#" title="Mapping Category">Mapping Category</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Post Info">Post Info</a>
+                    <ul>
+                        <li><a href="#" title="Material Admin Lists">Material Admin Lists</a></li>
+                        <li class="last"><a href="#" title="Material Admin">Material Admin</a></li>
+                    </ul>
+                </li>
+                <li class="last">
+                    <a href="#" title="Ad Giver(s) Info">AdGiver(s) Info</a>
+                    <ul>
+                        <li><a href="#" title="Show Registered User">Show Registered Users</a></li>
+                        <li><a href="#" title="Visitor Count">Visitor Information</a></li>
+                        <li><a href="#" title="OiiO Other Content">OiiO Other Content</a></li>
+                        <li><a href="#" title="Ad Giver Tracing">AdGiver Tracing</a></li>
+                        <li class="last"><a href="#" title="Add Giver Tracing Update">AdGiver Tracing Update</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="CMS Content Info">CMS Content Info</a>
+                    <ul>
+                        <li><a href="#" title="OiiOHaatCMSContent">CMS Content</a></li>
+                        <li><a href="#" title="OiiOHaatContent">OiiO Haat Content</a></li>
+                        <li><a href="#" title="Home Page Banner">Home Page Banner</a></li>
+                        <li><a href="#" title="Haat Help Suppot">Haat Help Suppot</a></li>
+                        <li><a href="#" title="OiiO Alert">OiiO Alert</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+    </header>
+    
+    <div class="col-xs-10" style="margin-left: 10%">
+        @RenderBody()
+    </div>
+
+ 
+    <footer>
+        <div class="footerWerp navbar-fixed-bottom">
+            <div class="container">
+
+                <div class="row footerBottom">
+                    <div class="col-md-12 copyright">
+
+                        <p>All contents copyright © <span>OiiO Haat</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    <script type="text/javascript">
+
+       
+        (function ($) {
+
+            //cache nav
+            var nav = $("#topNav");
+
+            //add indicator and hovers to submenu parents
+            nav.find("li").each(function () {
+                if ($(this).find("ul").length > 0) {
+                    $("<span>").text("^").appendTo($(this).children(":first"));
+
+                    //show subnav on hover
+                    $(this).mouseenter(function () {
+                        $(this).find("ul").stop(true, true).slideDown('fast');
+                    });
+
+                    //hide submenus on exit
+                    $(this).mouseleave(function () {
+                        $(this).find("ul").stop(true, true).slideUp('fast');
+                    });
+                }
+            });
+        })(jQuery);
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

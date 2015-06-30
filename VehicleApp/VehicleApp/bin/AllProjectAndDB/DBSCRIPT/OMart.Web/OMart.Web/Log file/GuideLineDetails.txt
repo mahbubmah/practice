@@ -1,0 +1,52 @@
+06/05/2015 14:57:28   192.168.1.12   DataBinding: 'DAL.UrlWFList' does not contain a property with the name 'UrlDisplayName'.      at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.oiiomasterpage_master.__DataBind__control43(Object sender, EventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\OiiOMasterPage.Master:line 115
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at OMart.Web.OiiOMasterPage.rptModule_OnItemDataBound(Object sender, RepeaterItemEventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\OiiOMasterPage.Master.cs:line 74
+06/05/2015 14:57:29   192.168.1.12   DataBinding: 'DAL.UrlWFList' does not contain a property with the name 'UrlDisplayName'.      at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.oiiomasterpage_master.__DataBind__control43(Object sender, EventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\OiiOMasterPage.Master:line 115
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at OMart.Web.OiiOMasterPage.rptModule_OnItemDataBound(Object sender, RepeaterItemEventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\OiiOMasterPage.Master.cs:line 74
+06/05/2015 14:57:30   192.168.1.12   DataBinding: 'DAL.UrlWFList' does not contain a property with the name 'UrlDisplayName'.      at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.oiiomasterpage_master.__DataBind__control43(Object sender, EventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\OiiOMasterPage.Master:line 115
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   at System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.Repeater.DataBind()
+   at OMart.Web.OiiOMasterPage.rptModule_OnItemDataBound(Object sender, RepeaterItemEventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\OiiOMasterPage.Master.cs:line 74
+06/05/2015 15:49:46   192.168.1.12   Object reference not set to an instance of an object.      at OMart.Web.GuideLineDetails.LoadGuideLineReapeater() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\GuideLineDetails.aspx.cs:line 53
+06/05/2015 15:49:56   192.168.1.12   Object reference not set to an instance of an object.      at OMart.Web.GuideLineDetails.LoadGuideLineReapeater() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\GuideLineDetails.aspx.cs:line 53
+06/05/2015 15:53:36   192.168.1.12   Object reference not set to an instance of an object.      at OMart.Web.GuideLineDetails.LoadGuideLineReapeater() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\GuideLineDetails.aspx.cs:line 53
+06/05/2015 15:54:11   192.168.1.12   Object reference not set to an instance of an object.      at OMart.Web.GuideLineDetails.LoadGuideLineReapeater() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\GuideLineDetails.aspx.cs:line 53

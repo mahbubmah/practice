@@ -1,0 +1,240 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="OMart.Web.AdminPanel.AdminMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxConTK" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=edge" />--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" /> 
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <title>OiiO Mart</title>
+    <%--<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,700,600,500' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css' />--%>
+    <%--<link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,900,700' rel='stylesheet' type='text/css' />
+        @123456780#biswas
+    --%>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css' />
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/oiioStyle.css" rel="stylesheet" />
+    <link href="../Content/screen.css" rel="stylesheet" />
+    <link href="../Content/Admin_Menu.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="AdminHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frm" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <header>
+            <div class="headerMain">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+                            <div class="logo">
+                                <h1><a href="<%=Page.ResolveUrl("~/")%>">
+                                    <asp:Image ID="imgLogo" runat="server"  alt="img" Width="75" Height="75" /></a></h1>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                            <div class="headerRight">
+                                <p>Welcome to our site OiiO Mart</p>
+                                <%--<p><a href="#">Sign in</a></p>--%>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+                            <div class="userPanel">
+                                <ul id="ulLoginOutDirect" runat="server">
+                                    <%--<li><a href="<%=Page.ResolveUrl("~/Account/Register")%>">Register</a></li>--%>
+                                    <%--<li><a href="<%=Page.ResolveUrl("~/Account/LoginPage")%>">Log in</a></li>--%>
+                                    <p>Welcome to our site OiiO Mart</p>
+                                    <li><a id="hrfRegister" runat="server">Register</a></li>
+                                    <li><a id="hrfLogin" runat="server">Log in</a></li>
+
+                                </ul>
+                                <ul id="ulLoginOut" runat="server">
+                                    <li>
+                                        <asp:Label ID="lblUsername" runat="server"></asp:Label>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="lbLogStatus" runat="server" Text="" OnClick="lbLogStatus_OnClick"></asp:LinkButton>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="row" style="width: 110%; margin: 0 auto;">
+                    <div id='cssmenu'>
+                        <ul>
+                            <li class='active has-sub'><a href='#'><span>Setup</span></a>
+                                <ul>
+                                    <li><a href="CountryDisplay"><span>Country Information</span></a> </li>
+                                    <li><a href="DivisionOrStateWF"><span>Division Or State Information</span></a> </li>
+                                    <li><a href="DistrictWF"><span>District Information</span></a> </li>
+                                    <li><a href="PoliceStationWF"><span>Police Station Information</span></a> </li>
+                                    <li><a href="PostOfficeDisplay"><span>Post office information</span></a> </li>
+                                    <li><a href="LocationDisplay"><span>Location information</span></a> </li>
+                                    <li><a href="CompanyInfoDisplay"><span>Company Information</span></a> </li>
+                                    <li><a href='UserGroupWF'><span>User Group Information</span></a> </li>
+                                    <li><a href='UserInfoWF'><span>User Information</span></a> </li>
+                                    <li><a href='ProfessionView'><span>Profession</span></a> </li>
+                                    <li><a href='AllFeatureDisplay'><span>Feature Insert & Update</span></a> </li>
+                                    <li><a href='AdLogInfoView'><span>Add Logo Info</span></a> </li>
+                                    <li><a href='ChannelInfoView'><span>Channel Info </span></a></li>
+                                    <li><a href='UrlWFListOnePage'><span>Url List </span></a></li>
+                                    <li><a href='HelpAdviceWF'><span>Help Advice </span></a></li>
+                                </ul>
+                            </li>
+                            <li class='has-sub'><a href='#'><span>Mobile</span></a>
+                                <ul>
+                                    <li><a href="MPTypeDisplay"><span>Mobile Phone Type</span></a></li>
+                                    <li><a href="MobilePhoneInfoDisplay"><span>Mobile Phone Information</span></a> </li>
+                                </ul>
+                            </li>
+
+                            <li class='has-sub'><a href='#'><span>Loan</span></a>
+                                <ul>
+                                    <li><a href='LoanAmntYrScdle'><span>Loan Year Schedule</span></a> </li>
+                                    <li><a href="LoanInfoDisplay"><span>Loan Information</span></a> </li>
+                                </ul>
+                            </li>
+                            <li class='has-sub'><a href='#'><span>Mortgage</span></a>
+                                <ul>
+                                    <li><a href='MortgageTermWF'><span>Mortgage Term Year</span></a> </li>
+                                    <li><a href='MortgageDisplay'><span>Mortgage Information</span></a> </li>
+                                </ul>
+                            </li>
+                            <li class='has-sub'><a href='#'><span>Card</span></a>
+                                <ul>
+                                    <li><a href='CardInfoDisplay'><span>Card Information</span></a> </li>
+                                    <li><a href='CardFeatureDisplay'><span>Card Feature</span></a> </li>
+                                    <li><a href='CardInfoPurchase'><span>Card Purchase</span></a> </li>
+                                    <li><a href='CardBalanceTransferWF'><span>Balance Transfer</span></a> </li>
+                                    <li><a href='CardRegionWiseFeeDisplay'><span>Region Wise Fees</span></a> </li>
+                                </ul>
+                            </li>
+
+                           <%-- <li class='has-sub'><a href='#'><span>Shopping</span></a>
+                                <ul>
+                                    <li><a href='#'><span>Shopping Information</span></a> </li>
+                                </ul>
+                            </li>--%>
+
+                            <li class='has-sub'><a href='#'><span>Insurance</span></a>
+                                <ul>
+                                    <li class='has-sub'><a href='#'><span>Business Insurance</span></a>
+                                        <ul>
+                                            <li><a href='BICategoryDisplay'><span>Business Category</span></a> </li>
+                                            <li><a href='BIAmountRangeDisplay'><span>Amount Range</span></a> </li>
+                                            <li><a href='BIBusinessAgeDisplay'><span>Business Age</span></a> </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href='LifeInsuranceWF'><span>Insurance Information</span></a> </li>
+                                    <li><a href='LISchemaView'><span>Life Insurance Schema</span></a> </li>
+                                    <li><a href='CarInsuranceView'><span>Car Insurance </span></a></li>
+                                    <li><a href='CarInsuranceParameterView'><span>Car Insurance Parameter</span></a> </li>
+                                </ul>
+                            </li>
+                           <%-- <li class='has-sub'><a href='#'><span>Vehicle</span></a>
+                                <ul>
+                                    <li><a href='#'><span>Vehicle Information</span></a> </li>
+                                    <li><a href='#'><span>Vehicle Feature</span></a> </li>
+                                </ul>
+                            </li>--%>
+                            <li class='has-sub'><a href='#'><span>Broadband</span></a>
+                                <ul>
+                                    <li><a href='BDInternetView'><span>BD Internet</span></a> </li>
+                                    <li><a href='#'><span>Broadband Information</span></a> </li>
+                                    <li><a href='#'><span>Broadband Feature</span></a> </li>
+                                </ul>
+                            </li>
+                            <li class='last has-sub'><a href='#'><span>Energy</span></a>
+                                <ul>
+                                    <li><a href='GasCylienderDisplay'><span>Gas Cyliender Information</span></a> </li>
+                                    <li><a href='GasDealerInfoDisplay'><span>Gas Dealer Information</span></a> </li>
+                                </ul>
+                            </li>
+                            <li class='has-sub'><a href='#'><span>News</span></a>
+                                <ul>
+                                    <li><a href="AllNewsDisplay"><span>All News</span></a></li>
+                                </ul>
+                            </li>
+                            <li class='has-sub'><a href='#'><span>GuideLine</span></a>
+                                <ul>
+                                    <li><a href="GuideLineWithDetails"><span>GuideLine With Detail</span></a></li>
+                                    <li><a href="GuideLineDetailDisplay"><span>GuideLine Details With More</span></a></li>
+                                    <li><a href="GuideLineDetailMoredisplay"><span>GuideLine Detail More</span></a></li>
+                                </ul>
+                            </li>
+                            <li class='has-sub'><a href='#'><span>News & Community</span></a>
+                                <ul>
+                                    <li><a href="CommunityNewsDisplay.aspx"><span>News & Community Info</span></a> </li>
+                                </ul>
+                            </li>
+
+                            <li class='has-sub'><a href='#'><span>CMS Content</span></a>
+                                <ul>
+                                    <li><a href="CMSpage"><span>CMSpage</span></a></li>
+                                    <li><a href="OiiOMartContent"><span>OiiO Mart</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="adminContent">
+            <asp:ContentPlaceHolder ID="AdminContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+
+        <footer>
+            <div class="footerWerp">
+                <div class="container">
+
+                    <div class="row footerBottom">
+                        <div class="col-md-8 copyright">
+
+                            <p>All contents copyright © <span>OiiO Mart</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../Scripts/jquery-1.10.2.js"></script>
+        <script src="../Scripts/bootstrap.js"></script>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,310 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OiiOMasterPage.master.cs" Inherits="OB.Web.BookAdmin.OiiOMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <meta charset="utf-8" />
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=edge" />--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" /> 
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <title>OiiO Book</title>
+    <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,700,600,500' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,900,700' rel='stylesheet' type='text/css' />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/oiioStyle.css" rel="stylesheet" />
+    <link href="../Content/screen.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <header>
+            <div class="headerMain">
+                <div class="container">                 
+
+                    <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+                        <div class="userPanel">
+                            <ul id="ulLoginOutDirect" runat="server">
+                                <%--<li><a href="<%=Page.ResolveUrl("~/Account/Register")%>">Register</a></li>--%>
+                                <%--<li><a href="<%=Page.ResolveUrl("~/Account/LoginPage")%>">Log in</a></li>--%>
+                                <p style="color:green;">Welcome to our site OiiO Book</p>
+                                <li style="color:green;"><a id="hrfRegister" runat="server">Register |</a></li>
+                                <li style="color:green;"><a id="hrfLogin" runat="server">Log in</a></li>
+
+                            </ul>
+                            <ul id="ulLoginOut" runat="server">
+                                <li>
+                                    <asp:Label ID="lblUsername" runat="server"></asp:Label>
+                                </li>
+                                <li>
+                                    <asp:LinkButton style="color: white" ID="lbLogStatus" runat="server" Text="" OnClick="lbLogStatus_OnClick"></asp:LinkButton>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            <nav role="navigation" class="navbar navbar-inverse oiioMainMenu">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav col-sm-12 col-md-12 col-lg-12">
+
+                            <li class="dropdown oiioBrand">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="AdminDefault.aspx">Setup</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="CountryWF"><span>Country Information</span></a> </li>
+
+                                    <%-- <li><a href="LocationDisplay"><span>Location information</span></a> </li>--%>
+                                    <li><a href="DivisionOrStateWF.aspx"><span>Division/State Info</span></a> </li>
+                                    <li><a href="DistrictWF.aspx"><span>District Info</span></a> </li>
+                                    <li><a href="PoliceStationWF.aspx"><span>Police Stationinfo</span></a> </li>
+                                    <li><a href="PostOfficeWF.aspx"><span>Post office info</span></a> </li>
+                                    <li><a href='UserGrpWF'><span>User Group Info</span></a> </li>
+                                    <li><a href='UserInfoWF'><span>User Info</span></a> </li>
+                                    <li><a href="UserPermissionWF.aspx"><span>Permission</span></a> </li>
+                                    <li><a href="UrlWFListWF.aspx"><span>Url Lists</span></a> </li>
+                                </ul>
+                            </li>
+
+
+                            <li class="dropdown oiioBrand">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Book</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="BookDisplay">Book Lists</a></li>
+                                    <li><a href="BookCategoryWF">Book Categories</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown oiioBrand">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Authors </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="AuthorDisplay">Authors Information</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown oiioBrand">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="Travel.aspx">Publishers </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="PublisherDisplay">Publishers Information</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown oiioBrand">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="InsuranceNews.aspx">Book Order </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="OrderDisplay">Order Information</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown oiioBrand">
+                                <a class=" dropdown-toggle" data-toggle="dropdown" href="Shopping.aspx">Competitions</a>
+                                <%--<ul class="dropdown-menu">
+                                     <li><a href="#">Health & beauty</a></li>
+                                                <li><a href="#">Office supplies</a></li>
+                                                <li><a href="#">Cameras</a></li>
+                                                <li><a href="#">Televisions</a></li>
+                                                <li><a href="#">Computers</a></li>
+                                                <li><a href="#">Fashion</a></li>
+                                                <li><a href="#">Furniture</a></li>
+
+                                </ul>--%>
+                            </li>
+                            <li class="dropdown oiioBrand">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="MobilePhones.aspx">Oiio Blog </a>
+
+                            </li>
+                             <li class="dropdown oiioBrand">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Book News</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="BookNewsWF">Oiio Book News</a></li>
+                                
+
+                                </ul>
+                                 </li>
+                            <li class="dropdown oiioBrand">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">CMS Content</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="OiiOBookWF">Oiio Book Logo</a></li>
+                                
+                                    <li><a href="CmsContentWF">Oiio Book CMS Content</a></li>
+                                </ul>
+                                 </li>
+                        </ul>
+                        <%--<div class="navbar-form navbar-right search-form" role="search">
+                            <div class="headerRight">
+                                <div class="input-group searchPanel">
+                                    <input id="Textf1" type="text" class="form-control" placeholder="Search for..." />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>--%>
+                    </div>
+
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div class="logo">
+                            <h1><a class="img-responsive" href="#">
+                                <img src="../Images/Interfaces/logo.png" alt="logo" /></a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3  col-md-offset-3 col-lg-offset-3">
+                        <ul class="ul socialMedia">
+                            <li><a href="#">
+                                <img alt="icon1" src="../images/Interfaces/icon1.png" /></a></li>
+                            <li><a href="#">
+                                <img alt="icon1" src="../images/Interfaces/icon2.png" /></a></li>
+
+                            <li><a href="#">
+                                <img alt="icon1" src="../images/Interfaces/icon4.png" /></a></li>
+                            <li><a href="#">
+                                <img alt="icon1" src="../images/Interfaces/icon5.png" /></a></li>
+
+                            <li><a href="#">
+                                <img alt="icon1" src="../images/Interfaces/icon7.png" /></a></li>
+                            <li><a href="#">
+                                <img alt="icon1" src="../images/Interfaces/icon8.png" /></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            </div>
+            <br />
+            <br />
+        </header>
+
+
+        <section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+
+
+        <footer>
+            <div class="footerWerp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="footerBox">
+                                <h3>testimonials</h3>
+                                <div class="testBox">
+                                    <p>Lorem ipsum dolor sit amet Conse ctetur adipisicingElit sed do eiusmod tempor</p>
+                                </div>
+                                <p class="text-right">Jhon aless.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="footerBox">
+                                <h3>About us</h3>
+                                <ul class="nav">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About Us </a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="footerBox">
+                                <h3>services</h3>
+                                <ul class="nav">
+                                    <li><a href="#">Painting, </a></li>
+                                    <li><a href="#">Dry wall,</a></li>
+                                    <li><a href="#">Pressure washing, </a></li>
+                                    <li><a href="#">Carpentry,</a></li>
+                                    <li><a href="#">Plumbing and landscaping.</a></li>
+
+                                </ul>
+
+
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="footerBox">
+                                <h3>&nbsp;</h3>
+                                <ul class="nav">
+                                    <li><a href="#">Painting, </a></li>
+                                    <li><a href="#">Dry wall,</a></li>
+                                    <li><a href="#">Pressure washing, </a></li>
+                                    <li><a href="#">Carpentry,</a></li>
+                                    <li><a href="#">Plumbing and landscaping.</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="footerBox">
+                                <h3>contact us </h3>
+                                <p>Lorem ipsum dolor sit amet conse ctetur.....</p>
+                                <h5>(800)1234-5678</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row footerBottom">
+                        <div class="col-md-2">
+                            <img src="../images/Interfaces/logo1.png" alt="img" />
+                        </div>
+                        <div class="col-md-9 copyright">
+
+                            <p>All contents copyright © <span>OiiO Book</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </form>
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+
+    <script src="../Scripts/js.js"></script>
+
+
+</body>
+</html>

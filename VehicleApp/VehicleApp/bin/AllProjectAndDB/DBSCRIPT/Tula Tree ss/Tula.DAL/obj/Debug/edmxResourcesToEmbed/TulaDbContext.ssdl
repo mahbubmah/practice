@@ -1,0 +1,1209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TulaTreeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdGiver">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ClientTypeID" Type="int" Nullable="false" />
+    <Property Name="NationalID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyOrOrganizationName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ComOrOrgAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="ComOrOrgPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailID" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="PhoneNo1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNo2" Type="nvarchar" MaxLength="50" />
+    <Property Name="LocationID" Type="bigint" />
+    <Property Name="TotalPostNo" Type="int" />
+    <Property Name="IsVerified" Type="bit" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AdGiverTracing">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdGiverID" Type="bigint" Nullable="false" />
+    <Property Name="MaterialID" Type="bigint" />
+    <Property Name="IPAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MACAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrowserNameID" Type="int" />
+    <Property Name="BrowsingTimeDuration" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Origin" Type="int" />
+    <Property Name="EastblishYear" Type="int" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="SerialNo" Type="int" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CMSContent">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CMSTypeID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="CMSDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ISDCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="District">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="DivisionOrStateID" Type="bigint" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DivisionOrState">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HomePageBanner">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeavingCauses">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="300" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TulaTree.dbo.Loc' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Loc">
+    <Key>
+      <PropertyRef Name="PoliceStationName" />
+      <PropertyRef Name="DistrictName" />
+      <PropertyRef Name="DivisionOrStateName" />
+      <PropertyRef Name="CountryName" />
+    </Key>
+    <Property Name="CurrentLocationName" Type="nvarchar" MaxLength="250" />
+    <Property Name="PoliceStationName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DistrictName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DivisionOrStateName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="DistrictID" Type="bigint" Nullable="false" />
+    <Property Name="SubDistrictID" Type="bigint" />
+    <Property Name="PoliceStationID" Type="bigint" Nullable="false" />
+    <Property Name="PostOfficeID" Type="bigint" />
+    <Property Name="CurrentLocation" Type="nvarchar" MaxLength="250" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MappingCategory">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="MappingTableID" Type="int" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MappingTable">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="nchar" MaxLength="10" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="250" />
+    <Property Name="TitleName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="ntext" Nullable="false" />
+    <Property Name="LocationID" Type="bigint" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="BrandID" Type="bigint" />
+    <Property Name="ModelID" Type="bigint" />
+    <Property Name="ColorID" Type="bigint" />
+    <Property Name="AdGiverID" Type="bigint" />
+    <Property Name="AdTypeID" Type="int" />
+    <Property Name="AdDate" Type="datetime" Nullable="false" />
+    <Property Name="AdDisplayLastDate" Type="datetime" />
+    <Property Name="Price" Type="money" />
+    <Property Name="TotalVisitor" Type="int" />
+    <Property Name="IsUrgent" Type="bit" />
+    <Property Name="IsFeatured" Type="bit" />
+    <Property Name="IsSpotlight" Type="bit" />
+    <Property Name="IsExpired" Type="bit" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="WebSiteUrl" Type="nvarchar" MaxLength="300" />
+    <Property Name="YoutubeUrl" Type="nvarchar" MaxLength="300" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserPhoneNumber" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsNegotiablePrice" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TulaTree.dbo.MaterialLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MaterialLog">
+    <Key>
+      <PropertyRef Name="IID" />
+      <PropertyRef Name="TitleName" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="LocationID" />
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="AdDate" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="IsNegotiablePrice" />
+    </Key>
+    <Property Name="IID" Type="bigint" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="250" />
+    <Property Name="TitleName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="ntext" Nullable="false" />
+    <Property Name="LocationID" Type="bigint" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="BrandID" Type="bigint" />
+    <Property Name="ModelID" Type="bigint" />
+    <Property Name="ColorID" Type="bigint" />
+    <Property Name="AdGiverID" Type="bigint" />
+    <Property Name="AdTypeID" Type="int" />
+    <Property Name="AdDate" Type="datetime" Nullable="false" />
+    <Property Name="AdDisplayLastDate" Type="datetime" />
+    <Property Name="Price" Type="money" />
+    <Property Name="TotalVisitor" Type="int" />
+    <Property Name="IsUrgent" Type="bit" />
+    <Property Name="IsFeatured" Type="bit" />
+    <Property Name="IsSpotlight" Type="bit" />
+    <Property Name="IsExpired" Type="bit" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="WebSiteUrl" Type="nvarchar" MaxLength="300" />
+    <Property Name="YoutubeUrl" Type="nvarchar" MaxLength="300" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserPhoneNumber" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsNegotiablePrice" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrandID" Type="bigint" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MyFavourites">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialID" Type="bigint" Nullable="false" />
+    <Property Name="UserLoginID" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ReturnURL" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="OiiONewsLetter">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="IsSubscribe" Type="bit" Nullable="false" />
+    <Property Name="SubscribeDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OiiOOthers">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ShortDescription" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="DetailDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Picture">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialID" Type="bigint" />
+    <Property Name="UrlAddress" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="PictureLog">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" Nullable="false" />
+    <Property Name="MaterialID" Type="bigint" />
+    <Property Name="UrlAddress" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="PoliceStation">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="DivisionOrStateID" Type="bigint" Nullable="false" />
+    <Property Name="DistrictID" Type="bigint" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PostOffice">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Code" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="PoliceStationID" Type="bigint" Nullable="false" />
+    <Property Name="SubDistrictID" Type="bigint" />
+    <Property Name="DistrictID" Type="bigint" Nullable="false" />
+    <Property Name="DivisionOrStateID" Type="bigint" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tula">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="LoginLogo" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TulaTreeAlert">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TulaTreeHelpSupport">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HelpSupportTypeID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UrlWFList">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModuleName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ModuleSerialNo" Type="int" />
+    <Property Name="UrlWFName" Type="nvarchar" MaxLength="900" />
+    <Property Name="UrlWFSerialNo" Type="int" />
+    <Property Name="UrlWFDisplayName" Type="nvarchar" MaxLength="250" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="TypeID" Type="int" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserGroupID" Type="int" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="LoginPassword" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Salt" Type="nvarchar" MaxLength="250" />
+    <Property Name="AdGiverID" Type="bigint" />
+    <Property Name="IsActiveUser" Type="bit" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+    <Property Name="LeavingCausesID" Type="int" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsEmail" Type="bit" />
+    <Property Name="IsSMS" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserRatings">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialID" Type="bigint" />
+    <Property Name="Ratings" Type="int" />
+    <Property Name="AdGiverID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="UserWFPermission">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserGroupID" Type="int" />
+    <Property Name="UrlWFListID" Type="int" />
+    <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VisitorCounter">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TotalVisitor" Type="bigint" Nullable="false" />
+    <Property Name="VisitDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VisitorInfo">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IPAddress" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="IPType" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitorInfoDetails">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VisitorInfoID" Type="bigint" />
+    <Property Name="AccessDateTime" Type="datetime" Nullable="false" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Brand_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Brand" Type="Self.Brand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Brand">
+        <PropertyRef Name="Origin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_District_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="District" Type="Self.District" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="District">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_District_DivisionOrState1">
+    <End Role="DivisionOrState" Type="Self.DivisionOrState" Multiplicity="1" />
+    <End Role="District" Type="Self.District" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DivisionOrState">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="District">
+        <PropertyRef Name="DivisionOrStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DivisionOrState_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="DivisionOrState" Type="Self.DivisionOrState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="DivisionOrState">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Location_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Location_District">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Location_PoliceStation">
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PoliceStation">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="PoliceStationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Location_PostOffice">
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="0..1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostOffice">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="PostOfficeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MappingCategory_MappingTable">
+    <End Role="MappingTable" Type="Self.MappingTable" Multiplicity="0..1" />
+    <End Role="MappingCategory" Type="Self.MappingCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MappingTable">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="MappingCategory">
+        <PropertyRef Name="MappingTableID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Material_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Material" Type="Self.Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Material">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Model_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Picture_Material">
+    <End Role="Material" Type="Self.Material" Multiplicity="0..1" />
+    <End Role="Picture" Type="Self.Picture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Picture">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoliceStation_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PoliceStation">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoliceStation_District1">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PoliceStation">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoliceStation_DivisionOrState">
+    <End Role="DivisionOrState" Type="Self.DivisionOrState" Multiplicity="1" />
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DivisionOrState">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PoliceStation">
+        <PropertyRef Name="DivisionOrStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostOffice_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PostOffice">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostOffice_District">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PostOffice">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostOffice_DivisionOrState">
+    <End Role="DivisionOrState" Type="Self.DivisionOrState" Multiplicity="1" />
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DivisionOrState">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PostOffice">
+        <PropertyRef Name="DivisionOrStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostOffice_PoliceStation">
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="1" />
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PoliceStation">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PostOffice">
+        <PropertyRef Name="PoliceStationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfo_UserGroup">
+    <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="1" />
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="UserInfo">
+        <PropertyRef Name="UserGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserWFPermission_UrlWFList">
+    <End Role="UrlWFList" Type="Self.UrlWFList" Multiplicity="0..1" />
+    <End Role="UserWFPermission" Type="Self.UserWFPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UrlWFList">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="UserWFPermission">
+        <PropertyRef Name="UrlWFListID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserWFPermission_UserGroup">
+    <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="0..1" />
+    <End Role="UserWFPermission" Type="Self.UserWFPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="UserWFPermission">
+        <PropertyRef Name="UserGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VisitorInfoDetails_VisitorInfo">
+    <End Role="VisitorInfo" Type="Self.VisitorInfo" Multiplicity="0..1" />
+    <End Role="VisitorInfoDetails" Type="Self.VisitorInfoDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VisitorInfo">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="VisitorInfoDetails">
+        <PropertyRef Name="VisitorInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DeleteFromMaterialAndSaveToLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="DeleteFromMyFvrt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="DeleteFromUserGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="GetAdGiverArcMaterialsForSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryID" Type="bigint" Mode="In" />
+    <Parameter Name="adGiveUserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="matCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetAdGiverMaterialsForSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryID" Type="bigint" Mode="In" />
+    <Parameter Name="adGiveUserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="matCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetAllFromPostOffice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetArcMaterialsForSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryID" Type="bigint" Mode="In" />
+    <Parameter Name="adGiveID" Type="bigint" Mode="In" />
+    <Parameter Name="matCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetMapCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetMaterialsForSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryID" Type="bigint" Mode="In" />
+    <Parameter Name="adGiveID" Type="bigint" Mode="In" />
+    <Parameter Name="matCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetModelNameForSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="brandID" Type="bigint" Mode="In" />
+    <Parameter Name="modelName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetSearchResultForRegisteredUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="startDate" Type="datetime" Mode="In" />
+    <Parameter Name="enddate" Type="datetime" Mode="In" />
+    <Parameter Name="SetMaxDAte" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetServerDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetSortedMaterialAccordingToCategoreyIIDnClientTypeIdForClientListView" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientTypeID" Type="int" Mode="In" />
+    <Parameter Name="CatagoryIID" Type="bigint" Mode="In" />
+    <Parameter Name="RecentDate" Type="datetime" Mode="In" />
+    <Parameter Name="StartIndex" Type="int" Mode="In" />
+    <Parameter Name="MaximumRows" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertMaterialAndAllChildXML" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaterialXML" Type="ntext" Mode="In" />
+  </Function>
+  <Function Name="OH_OT_GetAllOtherContent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="OH_OT_GetNavMenu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="OH_SP_GetAllSpotLightAds" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SearchForPoliceStationbyCountryDivisionDistrict" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="policeStationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="districtID" Type="bigint" Mode="In" />
+    <Parameter Name="divOrStateID" Type="bigint" Mode="In" />
+    <Parameter Name="countryID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_CategoryTree_GetCategoryListByParentID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="parId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_CategoryTree_GetCategoryParentID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="parID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_CategoryTree_GetSearchedCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_CategoryTree_GetSearchedCategoryOrAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catName" Type="nvarchar" Mode="In" />
+    <Parameter Name="parId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetAdgiverFnameLnamePhn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userEmailId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GetAllLatestAds" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GetAllMaterialAccordingToCategoreyIID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CatagoryIID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_GetAllMaterialForCategoreyIIDnClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CatagoryIID" Type="bigint" Mode="In" />
+    <Parameter Name="ClientTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GetAllRecentMaterialAdsForCategoreyIID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CatagoryIID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_GetAllSortedRecentMaterialAdsForCategoreyIID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CatagoryIID" Type="bigint" Mode="In" />
+    <Parameter Name="StartIndex" Type="int" Mode="In" />
+    <Parameter Name="MaximumRows" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GetDistrictForSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="districtName" Type="nvarchar" Mode="In" />
+    <Parameter Name="countryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GetFourMortgageType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GetHelpSupportAccordingToHelpSupportID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HelpSupportTypeID" Type="int" Mode="In" />
+    <Parameter Name="StartIndex" Type="int" Mode="In" />
+    <Parameter Name="MaximumRows" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GetLocationByMaterialIID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_GetLocationForGoogleMap" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="locationID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_GetLocationForSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="locationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="policeStationId" Type="bigint" Mode="In" />
+    <Parameter Name="districtId" Type="bigint" Mode="In" />
+    <Parameter Name="countryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GetMaterialAccordingToMaterialIID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaterialIID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_GetPoliceStaionForSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="policeStationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="districtId" Type="bigint" Mode="In" />
+    <Parameter Name="countryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GetRandomAllRecentMaterialAccordingToCategoreyIID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GetRandomAllRecentMaterialAds" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GetSortedAllMaterialForCategoreyIIDnClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CatagoryIID" Type="bigint" Mode="In" />
+    <Parameter Name="ClientTypeID" Type="int" Mode="In" />
+    <Parameter Name="StartIndex" Type="int" Mode="In" />
+    <Parameter Name="MaximumRows" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GetSortedMaterialAccordingToCategoreyIID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CatagoryIID" Type="bigint" Mode="In" />
+    <Parameter Name="StartIndex" Type="int" Mode="In" />
+    <Parameter Name="MaximumRows" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GetWholeWebSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SearchKeyWord" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAccNamePhone" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userEmailId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="PhoneNo1" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateAccPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userEmailId" Type="nvarchar" Mode="In" />
+    <Parameter Name="LoginPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateUserDeactivation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userEmailId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Comments" Type="nvarchar" Mode="In" />
+    <Parameter Name="LeavingCausesID" Type="int" Mode="In" />
+    <Parameter Name="IsActiveUser" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpCountAllMaterialForCategorey" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CatagoryName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpDeleteUrlList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DeleteUrlList" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetAllMaterialForCategorey" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CatagoryName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpGetAllPoliceStation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpGetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UFN_HourMinuteSecond" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="StartDateTime" Type="datetime" Mode="In" />
+    <Parameter Name="EndDateTime" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="TulaTreeModelStoreContainer">
+    <EntitySet Name="AdGiver" EntityType="Self.AdGiver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdGiverTracing" EntityType="Self.AdGiverTracing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMSContent" EntityType="Self.CMSContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="District" EntityType="Self.District" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DivisionOrState" EntityType="Self.DivisionOrState" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HomePageBanner" EntityType="Self.HomePageBanner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeavingCauses" EntityType="Self.LeavingCauses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MappingCategory" EntityType="Self.MappingCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MappingTable" EntityType="Self.MappingTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material" EntityType="Self.Material" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyFavourites" EntityType="Self.MyFavourites" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OiiONewsLetter" EntityType="Self.OiiONewsLetter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OiiOOthers" EntityType="Self.OiiOOthers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Picture" EntityType="Self.Picture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PictureLog" EntityType="Self.PictureLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PoliceStation" EntityType="Self.PoliceStation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PostOffice" EntityType="Self.PostOffice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tula" EntityType="Self.Tula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TulaTreeAlert" EntityType="Self.TulaTreeAlert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TulaTreeHelpSupport" EntityType="Self.TulaTreeHelpSupport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UrlWFList" EntityType="Self.UrlWFList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRatings" EntityType="Self.UserRatings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserWFPermission" EntityType="Self.UserWFPermission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VisitorCounter" EntityType="Self.VisitorCounter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VisitorInfo" EntityType="Self.VisitorInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VisitorInfoDetails" EntityType="Self.VisitorInfoDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loc" EntityType="Self.Loc" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Loc].[CurrentLocationName] AS [CurrentLocationName], 
+    [Loc].[PoliceStationName] AS [PoliceStationName], 
+    [Loc].[DistrictName] AS [DistrictName], 
+    [Loc].[DivisionOrStateName] AS [DivisionOrStateName], 
+    [Loc].[CountryName] AS [CountryName]
+    FROM [dbo].[Loc] AS [Loc]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MaterialLog" EntityType="Self.MaterialLog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MaterialLog].[IID] AS [IID], 
+    [MaterialLog].[Code] AS [Code], 
+    [MaterialLog].[TitleName] AS [TitleName], 
+    [MaterialLog].[Description] AS [Description], 
+    [MaterialLog].[LocationID] AS [LocationID], 
+    [MaterialLog].[CategoryID] AS [CategoryID], 
+    [MaterialLog].[BrandID] AS [BrandID], 
+    [MaterialLog].[ModelID] AS [ModelID], 
+    [MaterialLog].[ColorID] AS [ColorID], 
+    [MaterialLog].[AdGiverID] AS [AdGiverID], 
+    [MaterialLog].[AdTypeID] AS [AdTypeID], 
+    [MaterialLog].[AdDate] AS [AdDate], 
+    [MaterialLog].[AdDisplayLastDate] AS [AdDisplayLastDate], 
+    [MaterialLog].[Price] AS [Price], 
+    [MaterialLog].[TotalVisitor] AS [TotalVisitor], 
+    [MaterialLog].[IsUrgent] AS [IsUrgent], 
+    [MaterialLog].[IsFeatured] AS [IsFeatured], 
+    [MaterialLog].[IsSpotlight] AS [IsSpotlight], 
+    [MaterialLog].[IsExpired] AS [IsExpired], 
+    [MaterialLog].[CreatedBy] AS [CreatedBy], 
+    [MaterialLog].[CreatedDate] AS [CreatedDate], 
+    [MaterialLog].[ModifiedBy] AS [ModifiedBy], 
+    [MaterialLog].[ModifiedDate] AS [ModifiedDate], 
+    [MaterialLog].[WebSiteUrl] AS [WebSiteUrl], 
+    [MaterialLog].[YoutubeUrl] AS [YoutubeUrl], 
+    [MaterialLog].[UserEmail] AS [UserEmail], 
+    [MaterialLog].[UserPhoneNumber] AS [UserPhoneNumber], 
+    [MaterialLog].[IsNegotiablePrice] AS [IsNegotiablePrice]
+    FROM [dbo].[MaterialLog] AS [MaterialLog]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Brand_Country" Association="Self.FK_Brand_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Brand" EntitySet="Brand" />
+    </AssociationSet>
+    <AssociationSet Name="FK_District_Country" Association="Self.FK_District_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="District" EntitySet="District" />
+    </AssociationSet>
+    <AssociationSet Name="FK_District_DivisionOrState1" Association="Self.FK_District_DivisionOrState1">
+      <End Role="DivisionOrState" EntitySet="DivisionOrState" />
+      <End Role="District" EntitySet="District" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DivisionOrState_Country" Association="Self.FK_DivisionOrState_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="DivisionOrState" EntitySet="DivisionOrState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Location_Country" Association="Self.FK_Location_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Location" EntitySet="Location" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Location_District" Association="Self.FK_Location_District">
+      <End Role="District" EntitySet="District" />
+      <End Role="Location" EntitySet="Location" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Location_PoliceStation" Association="Self.FK_Location_PoliceStation">
+      <End Role="PoliceStation" EntitySet="PoliceStation" />
+      <End Role="Location" EntitySet="Location" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Location_PostOffice" Association="Self.FK_Location_PostOffice">
+      <End Role="PostOffice" EntitySet="PostOffice" />
+      <End Role="Location" EntitySet="Location" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MappingCategory_MappingTable" Association="Self.FK_MappingCategory_MappingTable">
+      <End Role="MappingTable" EntitySet="MappingTable" />
+      <End Role="MappingCategory" EntitySet="MappingCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Material_Category" Association="Self.FK_Material_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Material" EntitySet="Material" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Model_Brand" Association="Self.FK_Model_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Model" EntitySet="Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Picture_Material" Association="Self.FK_Picture_Material">
+      <End Role="Material" EntitySet="Material" />
+      <End Role="Picture" EntitySet="Picture" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoliceStation_Country" Association="Self.FK_PoliceStation_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="PoliceStation" EntitySet="PoliceStation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoliceStation_District1" Association="Self.FK_PoliceStation_District1">
+      <End Role="District" EntitySet="District" />
+      <End Role="PoliceStation" EntitySet="PoliceStation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoliceStation_DivisionOrState" Association="Self.FK_PoliceStation_DivisionOrState">
+      <End Role="DivisionOrState" EntitySet="DivisionOrState" />
+      <End Role="PoliceStation" EntitySet="PoliceStation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostOffice_Country" Association="Self.FK_PostOffice_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="PostOffice" EntitySet="PostOffice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostOffice_District" Association="Self.FK_PostOffice_District">
+      <End Role="District" EntitySet="District" />
+      <End Role="PostOffice" EntitySet="PostOffice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostOffice_DivisionOrState" Association="Self.FK_PostOffice_DivisionOrState">
+      <End Role="DivisionOrState" EntitySet="DivisionOrState" />
+      <End Role="PostOffice" EntitySet="PostOffice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostOffice_PoliceStation" Association="Self.FK_PostOffice_PoliceStation">
+      <End Role="PoliceStation" EntitySet="PoliceStation" />
+      <End Role="PostOffice" EntitySet="PostOffice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInfo_UserGroup" Association="Self.FK_UserInfo_UserGroup">
+      <End Role="UserGroup" EntitySet="UserGroup" />
+      <End Role="UserInfo" EntitySet="UserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserWFPermission_UrlWFList" Association="Self.FK_UserWFPermission_UrlWFList">
+      <End Role="UrlWFList" EntitySet="UrlWFList" />
+      <End Role="UserWFPermission" EntitySet="UserWFPermission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserWFPermission_UserGroup" Association="Self.FK_UserWFPermission_UserGroup">
+      <End Role="UserGroup" EntitySet="UserGroup" />
+      <End Role="UserWFPermission" EntitySet="UserWFPermission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VisitorInfoDetails_VisitorInfo" Association="Self.FK_VisitorInfoDetails_VisitorInfo">
+      <End Role="VisitorInfo" EntitySet="VisitorInfo" />
+      <End Role="VisitorInfoDetails" EntitySet="VisitorInfoDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

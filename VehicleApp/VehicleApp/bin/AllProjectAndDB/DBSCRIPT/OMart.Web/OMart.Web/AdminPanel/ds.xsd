@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds" targetNamespace="http://tempuri.org/ds.xsd" xmlns:mstns="http://tempuri.org/ds.xsd" xmlns="http://tempuri.org/ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds" msprop:Generator_UserDSName="ds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MortgageTable" msprop:Generator_TableClassName="MortgageTableDataTable" msprop:Generator_TableVarName="tableMortgageTable" msprop:Generator_TablePropName="MortgageTable" msprop:Generator_RowDeletingName="MortgageTableRowDeleting" msprop:Generator_RowChangingName="MortgageTableRowChanging" msprop:Generator_RowEvHandlerName="MortgageTableRowChangeEventHandler" msprop:Generator_RowDeletedName="MortgageTableRowDeleted" msprop:Generator_UserTableName="MortgageTable" msprop:Generator_RowChangedName="MortgageTableRowChanged" msprop:Generator_RowEvArgName="MortgageTableRowChangeEvent" msprop:Generator_RowClassName="MortgageTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IID" msprop:Generator_ColumnVarNameInTable="columnIID" msprop:Generator_ColumnPropNameInRow="IID" msprop:Generator_ColumnPropNameInTable="IIDColumn" msprop:Generator_UserColumnName="IID" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" type="xs:string" minOccurs="0" />
+              <xs:element name="MortageType" msprop:Generator_ColumnVarNameInTable="columnMortageType" msprop:Generator_ColumnPropNameInRow="MortageType" msprop:Generator_ColumnPropNameInTable="MortageTypeColumn" msprop:Generator_UserColumnName="MortageType" type="xs:string" minOccurs="0" />
+              <xs:element name="InterestRateType" msprop:Generator_ColumnVarNameInTable="columnInterestRateType" msprop:Generator_ColumnPropNameInRow="InterestRateType" msprop:Generator_ColumnPropNameInTable="InterestRateTypeColumn" msprop:Generator_UserColumnName="InterestRateType" type="xs:string" minOccurs="0" />
+              <xs:element name="PaymentType" msprop:Generator_ColumnVarNameInTable="columnPaymentType" msprop:Generator_ColumnPropNameInRow="PaymentType" msprop:Generator_ColumnPropNameInTable="PaymentTypeColumn" msprop:Generator_UserColumnName="PaymentType" type="xs:string" minOccurs="0" />
+              <xs:element name="FeeOrCharge" msprop:Generator_ColumnVarNameInTable="columnFeeOrCharge" msprop:Generator_ColumnPropNameInRow="FeeOrCharge" msprop:Generator_ColumnPropNameInTable="FeeOrChargeColumn" msprop:Generator_UserColumnName="FeeOrCharge" type="xs:string" minOccurs="0" />
+              <xs:element name="APR" msprop:Generator_ColumnVarNameInTable="columnAPR" msprop:Generator_ColumnPropNameInRow="APR" msprop:Generator_ColumnPropNameInTable="APRColumn" msprop:Generator_UserColumnName="APR" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

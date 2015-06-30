@@ -1,0 +1,1971 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OiiOMart_Live" Class="OiiOMartDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.2;Initial Catalog=OiiOMart_Live;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="OiiOMart_LiveConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VisitorInfoDetails" Member="VisitorInfoDetails">
+    <Type Name="VisitorInfoDetail">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitorInfoID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AccessDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="VisitorInfo_VisitorInfoDetail" Member="VisitorInfo" ThisKey="VisitorInfoID" OtherKey="IID" Type="VisitorInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CardFeature" Member="CardFeatures">
+    <Type Name="CardFeature">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CardInfoID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CardInfo_CardFeature" Member="CardInfo" ThisKey="CardInfoID" OtherKey="IID" Type="CardInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CardInfo" Member="CardInfos">
+    <Type Name="CardInfo">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CardTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BalanceTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CardLogoUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="APR" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="APRDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MinimumLimitAmt" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MaximumLimitAmt" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AnnualFeePayment" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="RewardNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="RewardCompanyLogoUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="CashbackEarnedAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CashbackEarnedNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="WholeWorldUsageFeePer" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UsedRemarkedPoint" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PostAdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostLastDisplayDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsVerified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VerifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="TotalVisitor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsPostAdExtended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CardInfo_CardFeature" Member="CardFeatures" ThisKey="IID" OtherKey="CardInfoID" Type="CardFeature" />
+      <Association Name="CardInfo_CardPostDisplayHistory" Member="CardPostDisplayHistories" ThisKey="IID" OtherKey="CardInfoID" Type="CardPostDisplayHistory" />
+      <Association Name="CardInfo_CardRegionWiseFee" Member="CardRegionWiseFees" ThisKey="IID" OtherKey="CardInfoID" Type="CardRegionWiseFee" />
+      <Association Name="CardInfo_CardBalanceTransfer" Member="CardBalanceTransfers" ThisKey="IID" OtherKey="CardInfoID" Type="CardBalanceTransfer" />
+      <Association Name="CardInfo_CardPurchase" Member="CardPurchases" ThisKey="IID" OtherKey="CardInfoID" Type="CardPurchase" />
+      <Association Name="CompanyInfo_CardInfo" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CardPostDisplayHistory" Member="CardPostDisplayHistories">
+    <Type Name="CardPostDisplayHistory">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CardInfoID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PostAdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostLastDisplayDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CardInfo_CardPostDisplayHistory" Member="CardInfo" ThisKey="CardInfoID" OtherKey="IID" Type="CardInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CardRegionWiseFee" Member="CardRegionWiseFees">
+    <Type Name="CardRegionWiseFee">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CardInfoID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="RegionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="UsageFeePercent" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CardInfo_CardRegionWiseFee" Member="CardInfo" ThisKey="CardInfoID" OtherKey="IID" Type="CardInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyInfo" Member="CompanyInfos">
+    <Type Name="CompanyInfo">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="BussinessDescription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="OriginCountryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstablishedYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalCountryBussCover" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BussinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactPhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CompanyInfo_CardInfo" Member="CardInfos" ThisKey="IID" OtherKey="CompanyInfoID" Type="CardInfo" />
+      <Association Name="CompanyInfo_LoanAmtYearSchedule" Member="LoanAmtYearSchedules" ThisKey="IID" OtherKey="CompanyInfoID" Type="LoanAmtYearSchedule" />
+      <Association Name="CompanyInfo_LoanInfo" Member="LoanInfos" ThisKey="IID" OtherKey="CompanyInfoID" Type="LoanInfo" />
+      <Association Name="CompanyInfo_MobilePhoneInfo" Member="MobilePhoneInfos" ThisKey="IID" OtherKey="CompanyInfoID" Type="MobilePhoneInfo" />
+      <Association Name="CompanyInfo_MPType" Member="MPTypes" ThisKey="IID" OtherKey="CompanyInfoID" Type="MPType" />
+      <Association Name="CompanyInfo_LifeInsurance" Member="LifeInsurances" ThisKey="IID" OtherKey="CompanyInfoID" Type="LifeInsurance" />
+      <Association Name="CompanyInfo_Mortgage" Member="Mortgages" ThisKey="IID" OtherKey="CompanyInfoID" Type="Mortgage" />
+      <Association Name="CompanyInfo_GasCyliender" Member="GasCylienders" ThisKey="IID" OtherKey="CompanyInfoID" Type="GasCyliender" />
+      <Association Name="CompanyInfo_CarInsurance" Member="CarInsurances" ThisKey="IID" OtherKey="CompanyInfoID" Type="CarInsurance" />
+      <Association Name="CompanyInfo_BDInternet" Member="BDInternets" ThisKey="IID" OtherKey="ProviderID" Type="BDInternet" />
+      <Association Name="Country_CompanyInfo" Member="Country" ThisKey="OriginCountryID" OtherKey="IID" Type="Country" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Country" Member="Countries">
+    <Type Name="Country">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ISDCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Country_CompanyInfo" Member="CompanyInfos" ThisKey="IID" OtherKey="OriginCountryID" Type="CompanyInfo" />
+      <Association Name="Country_DivisionOrState" Member="DivisionOrStates" ThisKey="IID" OtherKey="CountryID" Type="DivisionOrState" />
+    </Type>
+  </Table>
+  <Table Name="dbo.District" Member="Districts">
+    <Type Name="District">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DivisionOrStateID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="District_PoliceStation" Member="PoliceStations" ThisKey="IID" OtherKey="DistrictID" Type="PoliceStation" />
+      <Association Name="DivisionOrState_District" Member="DivisionOrState" ThisKey="DivisionOrStateID" OtherKey="IID" Type="DivisionOrState" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DivisionOrState" Member="DivisionOrStates">
+    <Type Name="DivisionOrState">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DivisionOrState_District" Member="Districts" ThisKey="IID" OtherKey="DivisionOrStateID" Type="District" />
+      <Association Name="Country_DivisionOrState" Member="Country" ThisKey="CountryID" OtherKey="IID" Type="Country" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.error_log" Member="error_logs">
+    <Type Name="error_log">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LogDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ErrMsg" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanAmtYearSchedule" Member="LoanAmtYearSchedules">
+    <Type Name="LoanAmtYearSchedule">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AmountStart" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmountEnd" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Duration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="APRNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CompanyInfo_LoanAmtYearSchedule" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanFeature" Member="LoanFeatures">
+    <Type Name="LoanFeature">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanInfoID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="LoanInfo_LoanFeature" Member="LoanInfo" ThisKey="LoanInfoID" OtherKey="IID" Type="LoanInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanInfo" Member="LoanInfos">
+    <Type Name="LoanInfo">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanAmtYearScheduleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalInstallmentNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthlyReturnAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalReturnAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PostAdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostLastDisplayDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsVerified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VerifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="TotalVisitor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsPostAdExtended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="LoanInfo_LoanFeature" Member="LoanFeatures" ThisKey="IID" OtherKey="LoanInfoID" Type="LoanFeature" />
+      <Association Name="CompanyInfo_LoanInfo" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Location" Member="Locations">
+    <Type Name="Location">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DistrictID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SubDistrictID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PoliceStationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PostOfficeID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CurrentLocation" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MobilePhoneInfo" Member="MobilePhoneInfos">
+    <Type Name="MobilePhoneInfo">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NetworkProviderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MPTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SIMAvailableID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TotalTalkTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalkTimeUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalTextMessage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalUsableData" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="UsableDataUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConnectionTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ContractDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="WarrantyInfo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="PostAdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostLastDisplayDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsVerified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VerifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="MobilePhoneInfo_MPFeature" Member="MPFeatures" ThisKey="IID" OtherKey="MobilePhoneID" Type="MPFeature" />
+      <Association Name="CompanyInfo_MobilePhoneInfo" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MortgageTermYear" Member="MortgageTermYears">
+    <Type Name="MortgageTermYear">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NumberOfYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="MortgageTermYear_Mortgage" Member="Mortgages" ThisKey="IID" OtherKey="TermYearID" Type="Mortgage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MPFeature" Member="MPFeatures">
+    <Type Name="MPFeature">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MobilePhoneID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="MobilePhoneInfo_MPFeature" Member="MobilePhoneInfo" ThisKey="MobilePhoneID" OtherKey="IID" Type="MobilePhoneInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MPType" Member="MPTypes">
+    <Type Name="MPType">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CompanyInfo_MPType" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PoliceStation" Member="PoliceStations">
+    <Type Name="PoliceStation">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DivisionOrStateID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DistrictID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="District_PoliceStation" Member="District" ThisKey="DistrictID" OtherKey="IID" Type="District" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserGroup" Member="UserGroups">
+    <Type Name="UserGroup">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="UserGroup_UserWFPermission" Member="UserWFPermissions" ThisKey="IID" OtherKey="UserGroupID" Type="UserWFPermission" />
+      <Association Name="UserGroup_UserInfo" Member="UserInfos" ThisKey="IID" OtherKey="UserGroupID" Type="UserInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserWFPermission" Member="UserWFPermissions">
+    <Type Name="UserWFPermission">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UrlWFListID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="UserGroup_UserWFPermission" Member="UserGroup" ThisKey="UserGroupID" OtherKey="IID" Type="UserGroup" IsForeignKey="true" />
+      <Association Name="UrlWFList_UserWFPermission" Member="UrlWFList" ThisKey="UrlWFListID" OtherKey="IID" Type="UrlWFList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VisitorInfo" Member="VisitorInfos">
+    <Type Name="VisitorInfo">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="IPType" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="VisitorInfo_VisitorInfoDetail" Member="VisitorInfoDetails" ThisKey="IID" OtherKey="VisitorInfoID" Type="VisitorInfoDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PostOffice" Member="PostOffices">
+    <Type Name="PostOffice">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="PoliceStationID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SubDistrictID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DistrictID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DivisionOrStateID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserInfo" Member="UserInfos">
+    <Type Name="UserInfo">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="LoginName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LoginPassword" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Salt" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsActiveUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsEmail" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="UserGroup_UserInfo" Member="UserGroup" ThisKey="UserGroupID" OtherKey="IID" Type="UserGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MortgageTypeInfo" Member="MortgageTypeInfos">
+    <Type Name="MortgageTypeInfo">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CardBalanceTransfer" Member="CardBalanceTransfers">
+    <Type Name="CardBalanceTransfer">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CardInfoID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MonthNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TransferFeePercent" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CardInfo_CardBalanceTransfer" Member="CardInfo" ThisKey="CardInfoID" OtherKey="IID" Type="CardInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LifeInsurance" Member="LifeInsurances">
+    <Type Name="LifeInsurance">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LISchemaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PackageName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TotalCoverAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CriticalillnessCoverAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsGuranteedPremium" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClaimsPaidPercent" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CompanyInfo_LifeInsurance" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+      <Association Name="LISchema_LifeInsurance" Member="LISchema" ThisKey="LISchemaID" OtherKey="IID" Type="LISchema" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LIApplicableFeature" Member="LIApplicableFeatures">
+    <Type Name="LIApplicableFeature">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LISchemaID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="LISchema_LIApplicableFeature" Member="LISchema" ThisKey="LISchemaID" OtherKey="IID" Type="LISchema" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CardPurchase" Member="CardPurchases">
+    <Type Name="CardPurchase">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CardInfoID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MonthNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RateOnPurchase" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CardInfo_CardPurchase" Member="CardInfo" ThisKey="CardInfoID" OtherKey="IID" Type="CardInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mortgage" Member="Mortgages">
+    <Type Name="Mortgage">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OperationTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TermYearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FeeOrCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="LTV" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PropertyValueMinAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PropertyValueMaxAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsPostAdExtended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PostAdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostLastDisplayDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsVerified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VerifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="TotalVisitor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Mortgage_MortgageInterestRate" Member="MortgageInterestRates" ThisKey="IID" OtherKey="MortgageID" Type="MortgageInterestRate" />
+      <Association Name="CompanyInfo_Mortgage" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+      <Association Name="MortgageTermYear_Mortgage" Member="MortgageTermYear" ThisKey="TermYearID" OtherKey="IID" Type="MortgageTermYear" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanType" Member="LoanTypes">
+    <Type Name="LoanType">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VisitorCounter" Member="VisitorCounters">
+    <Type Name="VisitorCounter">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TotalVisitor" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="VisitDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Profession" Member="Professions">
+    <Type Name="Profession">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Profession_Applicant" Member="Applicant" ThisKey="IID" OtherKey="ProfessionID" Type="Applicant" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LISchema" Member="LISchemas">
+    <Type Name="LISchema">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NumberOfYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgeMin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgeMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MultiplyFactor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPremiumAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="UnitReturnAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PremiumPolicyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="LISchema_LifeInsurance" Member="LifeInsurances" ThisKey="IID" OtherKey="LISchemaID" Type="LifeInsurance" />
+      <Association Name="LISchema_LIApplicableFeature" Member="LIApplicableFeatures" ThisKey="IID" OtherKey="LISchemaID" Type="LIApplicableFeature" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GuideLine" Member="GuideLines">
+    <Type Name="GuideLine">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="GuideLine_GuideLineDetail" Member="GuideLineDetails" ThisKey="IID" OtherKey="GuideLineID" Type="GuideLineDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GuideLineDetail" Member="GuideLineDetails">
+    <Type Name="GuideLineDetail">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GuideLineID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="GuideLineDetail_GuideLineDetailMore" Member="GuideLineDetailMores" ThisKey="IID" OtherKey="GuideLineDetailID" Type="GuideLineDetailMore" />
+      <Association Name="GuideLine_GuideLineDetail" Member="GuideLine" ThisKey="GuideLineID" OtherKey="IID" Type="GuideLine" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllNewsDetail" Member="AllNewsDetails">
+    <Type Name="AllNewsDetail">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AllNewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AllNews_AllNewsDetail" Member="AllNews" ThisKey="AllNewsID" OtherKey="IID" Type="AllNews" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllNews" Member="AllNews">
+    <Type Name="AllNews">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="ReleaseDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AllNews_AllNewsDetail" Member="AllNewsDetail" ThisKey="IID" OtherKey="AllNewsID" Type="AllNewsDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GuideLineDetailMore" Member="GuideLineDetailMores">
+    <Type Name="GuideLineDetailMore">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GuideLineDetailID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="GuideLineDetail_GuideLineDetailMore" Member="GuideLineDetail" ThisKey="GuideLineDetailID" OtherKey="IID" Type="GuideLineDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BDChannelInfo" Member="BDChannelInfos">
+    <Type Name="BDChannelInfo">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SerialNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="ContactPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BDChannelInfo_BDInternetAndChannelMapping" Member="BDInternetAndChannelMappings" ThisKey="IID" OtherKey="BDChannelInfoID" Type="BDInternetAndChannelMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GasDealerInfo" Member="GasDealerInfos">
+    <Type Name="GasDealerInfo">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TradeName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DealerName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="DistrictID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="GasDealerInfo_GasCylinderAndDealerInfoMapping" Member="GasCylinderAndDealerInfoMappings" ThisKey="IID" OtherKey="GasDealerInfoID" Type="GasCylinderAndDealerInfoMapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GasCylinderAndDealerInfoMapping" Member="GasCylinderAndDealerInfoMappings">
+    <Type Name="GasCylinderAndDealerInfoMapping">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GasCylinderID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="GasDealerInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="GasDealerInfo_GasCylinderAndDealerInfoMapping" Member="GasDealerInfo" ThisKey="GasDealerInfoID" OtherKey="IID" Type="GasDealerInfo" IsForeignKey="true" />
+      <Association Name="GasCyliender_GasCylinderAndDealerInfoMapping" Member="GasCyliender" ThisKey="GasCylinderID" OtherKey="IID" Type="GasCyliender" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GasCyliender" Member="GasCylienders">
+    <Type Name="GasCyliender">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AreaInfo" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="WeightOfGas" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="WeightOfContainer" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="RetailPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PriceNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="GasCyliender_GasCylinderAndDealerInfoMapping" Member="GasCylinderAndDealerInfoMappings" ThisKey="IID" OtherKey="GasCylinderID" Type="GasCylinderAndDealerInfoMapping" />
+      <Association Name="CompanyInfo_GasCyliender" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MortgageInterestRate" Member="MortgageInterestRates">
+    <Type Name="MortgageInterestRate">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MortgageID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UptoYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InterestRateTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Mortgage_MortgageInterestRate" Member="Mortgage" ThisKey="MortgageID" OtherKey="IID" Type="Mortgage" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllFeature" Member="AllFeatures">
+    <Type Name="AllFeature">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AllFeature_AllFeatureDetail" Member="AllFeatureDetails" ThisKey="IID" OtherKey="AllFeatureID" Type="AllFeatureDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AllFeatureDetail" Member="AllFeatureDetails">
+    <Type Name="AllFeatureDetail">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AllFeatureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AllFeature_AllFeatureDetail" Member="AllFeature" ThisKey="AllFeatureID" OtherKey="IID" Type="AllFeature" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdLogInfo" Member="AdLogInfos">
+    <Type Name="AdLogInfo">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="BussinessDescription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="DisplayOnPageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactPhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PayAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CarInsuranceFeature" Member="CarInsuranceFeatures">
+    <Type Name="CarInsuranceFeature">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarInsuranceID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CarInsurance_CarInsuranceFeature" Member="CarInsurance" ThisKey="CarInsuranceID" OtherKey="IID" Type="CarInsurance" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CarInsuranceParameter" Member="CarInsuranceParameters">
+    <Type Name="CarInsuranceParameter">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CarConditionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MinRun" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MaxRun" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MinCarAge" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxCarAge" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MinCarValueAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MaxCarValueAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PremiumTotalPercent" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Duration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CarInsuranceParameter_CarInsurance" Member="CarInsurances" ThisKey="IID" OtherKey="CarInsuranceParameterID" Type="CarInsurance" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CarInsurance" Member="CarInsurances">
+    <Type Name="CarInsurance">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CarInsuranceParameterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CarValueAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FixedTotalAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FixedVoluntaryAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FixedCompulsoryAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AnnuallyGrossAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalMonth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InstallmentAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CarInsurance_CarInsuranceFeature" Member="CarInsuranceFeatures" ThisKey="IID" OtherKey="CarInsuranceID" Type="CarInsuranceFeature" />
+      <Association Name="CarInsuranceParameter_CarInsurance" Member="CarInsuranceParameter" ThisKey="CarInsuranceParameterID" OtherKey="IID" Type="CarInsuranceParameter" IsForeignKey="true" />
+      <Association Name="CompanyInfo_CarInsurance" Member="CompanyInfo" ThisKey="CompanyInfoID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BDInternetAndChannelMapping" Member="BDInternetAndChannelMappings">
+    <Type Name="BDInternetAndChannelMapping">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BDInternetID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BDChannelInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BDChannelInfo_BDInternetAndChannelMapping" Member="BDChannelInfo" ThisKey="BDChannelInfoID" OtherKey="IID" Type="BDChannelInfo" IsForeignKey="true" />
+      <Association Name="BDInternet_BDInternetAndChannelMapping" Member="BDInternet" ThisKey="BDInternetID" OtherKey="IID" Type="BDInternet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UrlWFList" Member="UrlWFLists">
+    <Type Name="UrlWFList">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModuleName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleNote" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleImage" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleSerialNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UrlWFName" Type="System.String" DbType="NVarChar(900) NOT NULL" CanBeNull="false" />
+      <Column Name="UrlWFSerialNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UrlWFDisplayName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UrlModuleName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="UrlWFList_UserWFPermission" Member="UserWFPermissions" ThisKey="IID" OtherKey="UrlWFListID" Type="UserWFPermission" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CMSContent" Member="CMSContents">
+    <Type Name="CMSContent">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CMSTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CMSDescription" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BIAmountRange" Member="BIAmountRange">
+    <Type Name="BIAmountRange">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AmountStart" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AmountEnd" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmountDetail" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BIAmountRange_BusinessInsuranceReceiverDetail" Member="BusinessInsuranceReceiverDetail" ThisKey="IID" OtherKey="BIAmountRangeID" Type="BusinessInsuranceReceiverDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BIBusinessAge" Member="BIBusinessAge">
+    <Type Name="BIBusinessAge">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AgeInterval" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BIEmployeeLiability" Member="BIEmployeeLiability">
+    <Type Name="BIEmployeeLiability">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmountDetail" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BIOfficeEquipment" Member="BIOfficeEquipment">
+    <Type Name="BIOfficeEquipment">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmountDetail" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BIPublicLiability" Member="BIPublicLiability">
+    <Type Name="BIPublicLiability">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmountDetail" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BusinessInsurance" Member="BusinessInsurance">
+    <Type Name="BusinessInsurance">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BusinessInsuranceReceiver" Member="BusinessInsuranceReceiver">
+    <Type Name="BusinessInsuranceReceiver">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ApplicantID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BICategoryDetailID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BIBusinessAgeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="YearWiseTurnoverAmt" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BusinessInsuranceReceiver_BusinessInsuranceReceiverDetail" Member="BusinessInsuranceReceiverDetail" ThisKey="IID" OtherKey="BusinessInsuranceReceiverID" Type="BusinessInsuranceReceiverDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BusinessInsuranceReceiverDetail" Member="BusinessInsuranceReceiverDetail">
+    <Type Name="BusinessInsuranceReceiverDetail">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessInsuranceReceiverID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BIAmountRangeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BIAmountRange_BusinessInsuranceReceiverDetail" Member="BIAmountRange" ThisKey="BIAmountRangeID" OtherKey="IID" Type="BIAmountRange" IsForeignKey="true" />
+      <Association Name="BusinessInsuranceReceiver_BusinessInsuranceReceiverDetail" Member="BusinessInsuranceReceiver" ThisKey="BusinessInsuranceReceiverID" OtherKey="IID" Type="BusinessInsuranceReceiver" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BICategoryDetail" Member="BICategoryDetail">
+    <Type Name="BICategoryDetail">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BICategoryID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BICategory_BICategoryDetail" Member="BICategory" ThisKey="BICategoryID" OtherKey="IID" Type="BICategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BICategory" Member="BICategory">
+    <Type Name="BICategory">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BICategory_BICategoryDetail" Member="BICategoryDetail" ThisKey="IID" OtherKey="BICategoryID" Type="BICategoryDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BDInternet" Member="BDInternets">
+    <Type Name="BDInternet">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProviderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PackageName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PackageImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="NetSpeed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NetSpeedUnitID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DownloadSpeed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DownloadSpeedUnitID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataAmount" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NetGenerationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContractDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractNote" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChargeTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChargeTypeNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ChargeAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalChannelNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BDInternet_BDInternetAndChannelMapping" Member="BDInternetAndChannelMappings" ThisKey="IID" OtherKey="BDInternetID" Type="BDInternetAndChannelMapping" />
+      <Association Name="CompanyInfo_BDInternet" Member="CompanyInfo" ThisKey="ProviderID" OtherKey="IID" Type="CompanyInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Applicant" Member="Applicant">
+    <Type Name="Applicant">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MotherName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="GenderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SmokingHistoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplicationFor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IPNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HomePhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProfessionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WantMoreInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HaveAdditionalJob" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Applicant_HomeInfo" Member="HomeInfo" ThisKey="IID" OtherKey="ApplicantID" Type="HomeInfo" />
+      <Association Name="Profession_Applicant" Member="Profession" ThisKey="ProfessionID" OtherKey="IID" Type="Profession" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommunityNews" Member="CommunityNews">
+    <Type Name="CommunityNew">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NewsType" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="VideoLink" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HeadLine" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsDescription" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsOnlyVideo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HomeInfo" Member="HomeInfo">
+    <Type Name="HomeInfo">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ApplicantID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FloorNumberOfBuilding" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FloorSize" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FloorSizeUnitID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoomNumberPerFloor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParkingSpaceSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParkingSpaceSizeUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalFloorSize" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AddressOfBuilding" Type="System.String" DbType="NVarChar(900) NOT NULL" CanBeNull="false" />
+      <Column Name="PowerSupplyTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WaterSupplyTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GasSupplyTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConstructionDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EstimatedPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Applicant_HomeInfo" Member="Applicant" ThisKey="ApplicantID" OtherKey="IID" Type="Applicant" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HelpAdvice" Member="HelpAdvices">
+    <Type Name="HelpAdvice">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OiiOMart" Member="OiiOMarts">
+    <Type Name="OiiOMart">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Logo" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewsLetterSubscribe" Member="NewsLetterSubscribes">
+    <Type Name="NewsLetterSubscribe">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserEmail" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SubscribeDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SpDeleteUrlList" Method="SpDeleteUrlList">
+    <Parameter Name="urlID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GetAllLocationForListView" Method="SP_GetAllLocationForListView">
+    <ElementType Name="SP_GetAllLocationForListViewResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentLocation" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="PostOffice" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PoliceStation" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spDeleteFromUserGroup" Method="spDeleteFromUserGroup">
+    <Parameter Name="id" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spUserAccountPassword" Method="spUserAccountPassword" IsComposable="true">
+    <Parameter Name="userEmailId" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LoginPassword" Parameter="loginPassword" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.SP_GetAllPostOfficeForListView" Method="SP_GetAllPostOfficeForListView">
+    <ElementType Name="SP_GetAllPostOfficeForListViewResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="DivisionOrState" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="PoliceStation" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PostOffice" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DeleteLoanFeatureByLoanIID" Method="DeleteLoanFeatureByLoanIID">
+    <Parameter Name="LoanIID" Parameter="loanIID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SpGetAllPoliceStation" Method="SpGetAllPoliceStation">
+    <ElementType Name="SpGetAllPoliceStationResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="DivisionOrState" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllMobileInfoForListView" Method="SP_GetAllMobileInfoForListView">
+    <ElementType Name="SP_GetAllMobileInfoForListViewResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="MPTypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModelName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TotalTextMessage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalUsableData" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="TotalTalkTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ContractDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="WarrantyInfo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="PostAdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostLastDisplayDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="ConnectionType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NetworkServiceProvider" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalkTimeUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsableDataUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SIMAvailable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertMobilePhoneInfoAndFeatureChildXML" Method="InsertMobilePhoneInfoAndFeatureChildXML">
+    <Parameter Name="MobilePhoneInfoXML" Parameter="mobilePhoneInfoXML" Type="System.String" DbType="NText" />
+    <ElementType Name="InsertMobilePhoneInfoAndFeatureChildXMLResult">
+      <Column Name="MobilePhoneInfo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertCardInfoAndAllFreatureChildXML" Method="InsertCardInfoAndAllFreatureChildXML">
+    <Parameter Name="CardInfoXML" Parameter="cardInfoXML" Type="System.String" DbType="NText" />
+    <ElementType Name="InsertCardInfoAndAllFreatureChildXMLResult">
+      <Column Name="CardInfoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAllMobilePhoneInformation" Method="spGetAllMobilePhoneInformation">
+    <ElementType Name="spGetAllMobilePhoneInformationResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModelName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllCardTypeForBankingNews" Method="SP_GetAllCardTypeForBankingNews">
+    <ElementType Name="SP_GetAllCardTypeForBankingNewsResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CardType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTopOneMobilePhoneInformation" Method="spGetTopOneMobilePhoneInformation">
+    <ElementType Name="spGetTopOneMobilePhoneInformationResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModelName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCardInfoPageWise" Method="GetCardInfoPageWise" IsComposable="true">
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageCount" Parameter="pageCount" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.SpGetAllCompanyInformation" Method="SpGetAllCompanyInformation">
+    <ElementType Name="SpGetAllCompanyInformationResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanAmtYearScheduleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeImageUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetFourMortgageType" Method="SP_GetFourMortgageType">
+    <ElementType Name="SP_GetFourMortgageTypeResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SpGetAllLoanTypeInformation" Method="SpGetAllLoanTypeInformation">
+    <ElementType Name="SpGetAllLoanTypeInformationResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeImageUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpadateInterestRateTypeByMortgageID" Method="UpadateInterestRateTypeByMortgageID">
+    <Parameter Name="MortgageIID" Parameter="mortgageIID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SpGetAllLoanDescriptionDetailPassingParameter" Method="SpGetAllLoanDescriptionDetailPassingParameter">
+    <Parameter Name="LoanTypeID" Parameter="loanTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="startRowNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maxRowNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SpGetAllLoanDescriptionDetailPassingParameterResult">
+      <Column Name="RowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LoanTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanAmtYearScheduleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalReturnAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MonthlyReturnAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeImageUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_SP_GetAllLoanTypeForBankingNews" Method="SP_SP_GetAllLoanTypeForBankingNews">
+    <ElementType Name="SP_SP_GetAllLoanTypeForBankingNewsResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeDescription" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="LoanTypeImage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_SP_GetAllMortgageTypeForBankingNews" Method="SP_SP_GetAllMortgageTypeForBankingNews">
+    <ElementType Name="SP_SP_GetAllMortgageTypeForBankingNewsResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MortgageTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MortgageTypeDescription" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="MortgageTypeImage" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetModelNameByCompanyName" Method="spGetModelNameByCompanyName">
+    <Parameter Name="CompanyInfoID" Parameter="companyInfoID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetModelNameByCompanyNameResult">
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SpGetAllMobileDetailByCompanynModel" Method="SpGetAllMobileDetailByCompanynModel">
+    <Parameter Name="CompanyInfoID" Parameter="companyInfoID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ModelName" Parameter="modelName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SpGetAllMobileDetailByCompanynModelResult">
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModelName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NetworkProviderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalTalkTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalkTimeUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalTextMessage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalUsableData" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="UsableDataUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAllMobileTypeAndModelByCompanyInfoID" Method="spGetAllMobileTypeAndModelByCompanyInfoID">
+    <Parameter Name="CompanyInfoID" Parameter="companyInfoID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetAllMobileTypeAndModelByCompanyInfoIDResult">
+      <Column Name="Models" Type="System.String" DbType="NVarChar(401)" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAllDataAccordingToNetworkServiceProvider" Method="spGetAllDataAccordingToNetworkServiceProvider">
+    <Parameter Name="operatorID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetAllDataAccordingToNetworkServiceProviderResult">
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModelName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NetworkProviderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalTalkTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalkTimeUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalTextMessage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalUsableData" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="UsableDataUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAllProductsForIndividualManufacturer" Method="spGetAllProductsForIndividualManufacturer">
+    <Parameter Name="CompanyInfoID" Parameter="companyInfoID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetAllProductsForIndividualManufacturerResult">
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(602)" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NetworkProviderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalTalkTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TalkTimeUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalTextMessage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalUsableData" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="UsableDataUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DeleteLiFeatureByLIIID" Method="DeleteLiFeatureByLIIID">
+    <Parameter Name="LISchemaID" Parameter="lISchemaID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GetAllLiSchemaNoOfYearForListView" Method="SP_GetAllLiSchemaNoOfYearForListView">
+    <ElementType Name="SP_GetAllLiSchemaNoOfYearForListViewResult">
+      <Column Name="DiplayMember" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetDataForLifeInsuranceQuotesSearchReasultDisplay" Method="SP_GetDataForLifeInsuranceQuotesSearchReasultDisplay">
+    <Parameter Name="CriticalIllnessCoverAmount" Parameter="criticalIllnessCoverAmount" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="coverAmount" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="noOfYear" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetDataForLifeInsuranceQuotesSearchReasultDisplayResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CriticalillnessCoverAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalCoverAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ClaimsPaidPercent" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PackageName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsGuranteedPremium" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PremiumPolicyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPremiumAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyTerm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DeleteGuideLineDetailByLoanIID" Method="DeleteGuideLineDetailByLoanIID">
+    <Parameter Name="LISchemaID" Parameter="lISchemaID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGuideLineDetailByGuideLineIID" Method="DeleteGuideLineDetailByGuideLineIID">
+    <Parameter Name="LoanIID" Parameter="loanIID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGuideLineDetailByGuideLineIID" Method="DeleteGuideLineDetailByGuideLineIID1">
+    <Parameter Name="LoanIID" Parameter="loanIID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GetAllUpToYear" Method="SP_GetAllUpToYear">
+    <ElementType Name="SP_GetAllUpToYearResult">
+      <Column Name="InitialPeriod" Type="System.String" DbType="VarChar(56)" CanBeNull="true" />
+      <Column Name="UptoYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertLISchemaFreatureChildXML" Method="InsertLISchemaFreatureChildXML">
+    <Parameter Name="LISchemaFreatureXML" Parameter="lISchemaFreatureXML" Type="System.String" DbType="NText" />
+    <ElementType Name="InsertLISchemaFreatureChildXMLResult">
+      <Column Name="LISchemaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertGuideLineDetailChildXML" Method="InsertGuideLineDetailChildXML">
+    <Parameter Name="GuideLineXML" Parameter="guideLineXML" Type="System.String" DbType="NText" />
+    <ElementType Name="InsertGuideLineDetailChildXMLResult">
+      <Column Name="GuideLineID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_SP_GetAllGuideType" Method="SP_SP_GetAllGuideType">
+    <ElementType Name="SP_SP_GetAllGuideTypeResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GuideTypeBusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GuideTypeTitle" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="GuideTypeDescription" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="GuideTypeImage" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAllMobilePhoneType" Method="spGetAllMobilePhoneType">
+    <ElementType Name="spGetAllMobilePhoneTypeResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertCarInsuranceFreatureChildXML" Method="InsertCarInsuranceFreatureChildXML">
+    <Parameter Name="CarInsuranceFreatureXML" Parameter="carInsuranceFreatureXML" Type="System.String" DbType="NText" />
+    <ElementType Name="InsertCarInsuranceFreatureChildXMLResult">
+      <Column Name="CarInsuranceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SpGetSortedAllNewsDetailsForNewsID" Method="SpGetSortedAllNewsDetailsForNewsID">
+    <Parameter Name="AllNewsIId" Parameter="allNewsIId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="startRowNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maxRowNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SpGetSortedAllNewsDetailsForNewsIDResult">
+      <Column Name="RowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AllNewsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetDealerForListViewByCompanyIid" Method="SP_GetDealerForListViewByCompanyIid">
+    <Parameter Name="companyIid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetDealerForListViewByCompanyIidResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TradeName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DealerName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllFeatureMoreDetails" Method="SP_GetAllFeatureMoreDetails">
+    <ElementType Name="SP_GetAllFeatureMoreDetailsResult">
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetGasCylienderListBySearch" Method="GetGasCylienderListBySearch">
+    <Parameter Name="companyID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="districtId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="policeStationId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="amountOfGas" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetGasCylienderListBySearchResult">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="WeightOfGas" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="WeightOfContainer" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="RetailPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="RowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllFeatureDetails" Method="SP_GetAllFeatureDetails">
+    <Parameter Name="BussinessBrID" Parameter="bussinessBrID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetAllFeatureDetailsResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllFeature" Method="SP_GetAllFeature">
+    <ElementType Name="SP_GetAllFeatureResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_GetAllNewsListByBusinessTypeID" Method="Sp_GetAllNewsListByBusinessTypeID">
+    <Parameter Name="BusinessTypeID" Parameter="businessTypeID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Sp_GetAllNewsListByBusinessTypeIDResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetTopFourFeature" Method="SP_GetTopFourFeature">
+    <ElementType Name="SP_GetTopFourFeatureResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BussinessTypeName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BussinessTypeBrName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCardNameAccordingToBank" Method="GetAllCardNameAccordingToBank">
+    <ElementType Name="GetAllCardNameAccordingToBankResult">
+      <Column Name="CARD" Type="System.String" DbType="NVarChar(404) NOT NULL" CanBeNull="false" />
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllMortgageForListView" Method="SP_GetAllMortgageForListView">
+    <ElementType Name="SP_GetAllMortgageForListViewResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="MortageType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MortgageTermYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FeeOrCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PostAdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostLastDisplayDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllMorgageWithInterestRate" Method="SP_GetAllMorgageWithInterestRate">
+    <Parameter Name="startRowNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maxRowNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mortgageTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="paymentTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="rateTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="periodID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetAllMorgageWithInterestRateResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ROWNUMBER" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FeeOrCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PaymentTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllMorgagesCount" Method="SP_GetAllMorgagesCount">
+    <Parameter Name="mortgageTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="paymentTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="rateTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="periodID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetAllMorgagesCountResult">
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ROWNUMBER" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FeeOrCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PaymentTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllRandomAllNewsRowsByBusenessTypeID" Method="SP_GetAllRandomAllNewsRowsByBusenessTypeID">
+    <Parameter Name="BusinessTypeID" Parameter="businessTypeID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetAllRandomAllNewsRowsByBusenessTypeIDResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(83) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllRandomGuideLineRowsByBusenessTypeID" Method="SP_GetAllRandomGuideLineRowsByBusenessTypeID">
+    <Parameter Name="BusinessTypeID" Parameter="businessTypeID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetAllRandomGuideLineRowsByBusenessTypeIDResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(38) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetRandomAllNewsRowsByBusenessTypeID" Method="SP_GetRandomAllNewsRowsByBusenessTypeID">
+    <Parameter Name="BusinessTypeID" Parameter="businessTypeID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetRandomAllNewsRowsByBusenessTypeIDResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(38) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllFeatureByBussinessTypeID" Method="SP_GetAllFeatureByBussinessTypeID">
+    <Parameter Name="BussinessTypeID" Parameter="bussinessTypeID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetAllFeatureByBussinessTypeIDResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAllShoppingNews" Method="spGetAllShoppingNews">
+    <ElementType Name="spGetAllShoppingNewsResult">
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllFeatureDetailsByFeatureID" Method="SP_GetAllFeatureDetailsByFeatureID">
+    <Parameter Name="FeatureID" Parameter="featureID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_GetAllFeatureDetailsByFeatureIDResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AllFeatureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllMortgageProvider" Method="SP_GetAllMortgageProvider">
+    <ElementType Name="SP_GetAllMortgageProviderResult">
+      <Column Name="companyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ProviderUrl" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetMobileInfoListForSearch" Method="GetMobileInfoListForSearch">
+    <Parameter Name="manufactureID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mpTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="modelName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="talktime" Type="System.Int32" DbType="Int" />
+    <Parameter Name="talktimeUnitId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="data" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="dataUnitId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="montlyAmount" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="networkProviderId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetMobileInfoListForSearchResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="TotalTalkTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalTextMessage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalUsableData" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="TalkTimeUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsableDataUnitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAllInsuranceCarNews" Method="spGetAllInsuranceCarNews">
+    <ElementType Name="spGetAllInsuranceCarNewsResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(35)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(999)" CanBeNull="true" />
+      <Column Name="BusinessTypeBreakdownID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertBiReceiverAndBiReceiverChildXML" Method="InsertBiReceiverAndBiReceiverChildXML">
+    <Parameter Name="BiReceiverXML" Parameter="biReceiverXML" Type="System.String" DbType="NText" />
+    <ElementType Name="InsertBiReceiverAndBiReceiverChildXMLResult">
+      <Column Name="BusinessInsuranceReceiverID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetAllNewsCommunityType" Method="SP_GetAllNewsCommunityType">
+    <ElementType Name="SP_GetAllNewsCommunityTypeResult">
+      <Column Name="NewsTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NewsType" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_GetAllBroadBandInternetByTypeID" Method="Sp_GetAllBroadBandInternetByTypeID">
+    <Parameter Name="TypeID" Parameter="typeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="startRowNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maxRowNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Sp_GetAllBroadBandInternetByTypeIDResult">
+      <Column Name="RowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="REDIRECTURL" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="PROVIDER" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="OFFER" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="PACKAGE" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="USAGE" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="SPEED" Type="System.String" DbType="VarChar(52)" CanBeNull="true" />
+      <Column Name="CONTRACT" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="PAYMENT" Type="System.String" DbType="VarChar(53)" CanBeNull="true" />
+      <Column Name="PAYMENTSCHEDULE" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetCarInsuranceQuotes" Method="spGetCarInsuranceQuotes">
+    <Parameter Name="CartypeID" Parameter="cartypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CarConditionID" Parameter="carConditionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Run" Parameter="run" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CarAge" Parameter="carAge" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CarValueAmount" Parameter="carValueAmount" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="PremiumTotalPercent" Parameter="premiumTotalPercent" Type="System.Double" DbType="Float" />
+    <Parameter Name="Duration" Parameter="duration" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetCarInsuranceQuotesResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CarValueAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FixedTotalAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FixedVoluntaryAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FixedCompulsoryAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AnnuallyGrossAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalMonth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InstallmentAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetTop2HelpAdvice" Method="SP_GetTop2HelpAdvice">
+    <ElementType Name="SP_GetTop2HelpAdviceResult">
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertBDInternetAndChannelMappingChildXML" Method="InsertBDInternetAndChannelMappingChildXML">
+    <Parameter Name="BDInternetAndChannelMappingXML" Parameter="bDInternetAndChannelMappingXML" Type="System.String" DbType="NText" />
+    <Parameter Name="BDInternetIID" Parameter="bDInternetIID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GetLastIIDofBDInternet" Method="SP_GetLastIIDofBDInternet">
+    <ElementType Name="SP_GetLastIIDofBDInternetResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GetRecentlySaved" Method="SP_GetRecentlySaved">
+    <ElementType Name="SP_GetRecentlySavedResult">
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OperationTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TermYearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FeeOrCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="LTV" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PropertyValueMinAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PropertyValueMaxAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MonthlyInstallmentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsPostAdExtended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PostAdDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostLastDisplayDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsVerified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VerifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="TotalVisitor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="IID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="BussinessDescription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="OriginCountryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstablishedYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalCountryBussCover" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BussinessTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ContactPhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy1" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatedDate1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy1" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ModifiedDate1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRemoved1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Name1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ImageUrl1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DeleteMPFeatureByMobilePhoneInfoID" Method="DeleteMPFeatureByMobilePhoneInfoID">
+    <Parameter Name="MobilePhoneInfoIID" Parameter="mobilePhoneInfoIID" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SpSearchAllLoanDescriptionDetailPassingParameter" Method="SpSearchAllLoanDescriptionDetailPassingParameter">
+    <Parameter Name="LoanTypeID" Parameter="loanTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Amount" Parameter="amount" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Duration" Parameter="duration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="startRowNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maxRowNumber" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SpSearchAllLoanDescriptionDetailPassingParameterResult">
+      <Column Name="RowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LoanTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanAmtYearScheduleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalReturnAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MonthlyReturnAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeImageUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SpGetAllLoanDescriptionDetail" Method="SpGetAllLoanDescriptionDetail">
+    <Parameter Name="LoanTypeID" Parameter="loanTypeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Amount" Parameter="amount" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Duration" Parameter="duration" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SpGetAllLoanDescriptionDetailResult">
+      <Column Name="RowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LogoUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LoanTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanAmtYearScheduleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APR" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalReturnAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MonthlyReturnAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanTypeImageUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertGuidelinedetailAndAllFreatureChildXML" Method="InsertGuidelinedetailAndAllFreatureChildXML">
+    <Parameter Name="GuidelinedetailXML" Parameter="guidelinedetailXML" Type="System.String" DbType="NText" />
+    <ElementType Name="InsertGuidelinedetailAndAllFreatureChildXMLResult">
+      <Column Name="GuideLineDetailID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAllGasDealForListView" Method="spGetAllGasDealForListView">
+    <ElementType Name="spGetAllGasDealForListViewResult">
+      <Column Name="IsRemoved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TradeName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="DealerName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(999) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DistrictName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetTopTenMobilePhoneInformation" Method="spGetTopTenMobilePhoneInformation">
+    <ElementType Name="spGetTopTenMobilePhoneInformationResult">
+      <Column Name="TotalPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="IID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PictureUrl" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModelName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

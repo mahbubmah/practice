@@ -1,0 +1,9 @@
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\bin\Debug\OB.BLL.dll
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\bin\Debug\OB.BLL.pdb
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\bin\Debug\OB.DAL.dll
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\bin\Debug\OB.Utilities.dll
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\bin\Debug\OB.DAL.pdb
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\bin\Debug\OB.Utilities.pdb
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\obj\Debug\OB.BLL.csprojResolveAssemblyReference.cache
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\obj\Debug\OB.BLL.dll
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.BLL\obj\Debug\OB.BLL.pdb

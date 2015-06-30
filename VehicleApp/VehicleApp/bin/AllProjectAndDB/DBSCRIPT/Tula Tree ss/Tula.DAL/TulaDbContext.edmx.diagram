@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c6500815926e4e3ebcd572a04d9fc40c" Name="Diagram1">
+        <EntityTypeShape EntityType="TulaTreeModel.AdGiver" Width="1.5" PointX="5.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.AdGiverTracing" Width="1.5" PointX="7.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Brand" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Category" Width="1.5" PointX="14.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.CMSContent" Width="1.5" PointX="9.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Color" Width="1.5" PointX="11.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Country" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.District" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.DivisionOrState" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.HomePageBanner" Width="1.5" PointX="17.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.LeavingCaus" Width="1.5" PointX="17.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Location" Width="1.5" PointX="7.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.MappingCategory" Width="1.5" PointX="17" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.MappingTable" Width="1.5" PointX="14.75" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Material" Width="1.5" PointX="17" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Model" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.MyFavourite" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.OiiONewsLetter" Width="1.5" PointX="5.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.OiiOOther" Width="1.5" PointX="19.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Picture" Width="1.5" PointX="19.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.PictureLog" Width="1.5" PointX="2.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.PoliceStation" Width="1.5" PointX="10.5" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.PostOffice" Width="1.5" PointX="12.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.sysdiagram" Width="1.5" PointX="7.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Tula" Width="1.5" PointX="0.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.TulaTreeAlert" Width="1.5" PointX="2.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.TulaTreeHelpSupport" Width="1.5" PointX="19.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.UrlWFList" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.UserGroup" Width="1.5" PointX="9.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.UserInfo" Width="1.5" PointX="12" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.UserRating" Width="1.5" PointX="9.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.UserWFPermission" Width="1.5" PointX="15" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.VisitorCounter" Width="1.5" PointX="11.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.VisitorInfo" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.VisitorInfoDetail" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.Loc" Width="1.5" PointX="14.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TulaTreeModel.MaterialLog" Width="1.5" PointX="19.75" PointY="16" IsExpanded="true" />
+        <AssociationConnector Association="TulaTreeModel.FK_Brand_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_Model_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_Material_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_District_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_DivisionOrState_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_Location_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_PoliceStation_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_PostOffice_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_District_DivisionOrState1" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_Location_District" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_PoliceStation_District1" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_PostOffice_District" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_PoliceStation_DivisionOrState" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_PostOffice_DivisionOrState" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_Location_PoliceStation" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_Location_PostOffice" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_MappingCategory_MappingTable" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_Picture_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_PostOffice_PoliceStation" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_UserWFPermission_UrlWFList" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_UserInfo_UserGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_UserWFPermission_UserGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="TulaTreeModel.FK_VisitorInfoDetails_VisitorInfo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

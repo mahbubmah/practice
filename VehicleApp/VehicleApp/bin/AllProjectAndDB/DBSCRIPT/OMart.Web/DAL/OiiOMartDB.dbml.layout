@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 36.875, 53.5" name="OiiOMartDB">
+  <DataContextMoniker Name="/OiiOMartDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e5250472-e180-4da4-800a-261cc2a2947a" absoluteBounds="3.25, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/VisitorInfoDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1000eda9-ffa0-4475-a920-8808368973d2" absoluteBounds="3.265, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ec943cd4-1b60-451f-a0bc-464f01dd439d" absoluteBounds="9, 36.375, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CardFeature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55338926-f70b-4458-a8e0-c9184f3243a7" absoluteBounds="9.015, 36.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c462dc1-265e-4903-aff1-9ff712e6fbcc" absoluteBounds="6.25, 41, 2, 6.7707340494791595">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CardInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85a1900f-98ff-444c-805b-c30daf099289" absoluteBounds="6.265, 41.46, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f9e8d38-057c-436f-9722-601dcdc2cad1" absoluteBounds="9, 46.125, 2, 2.7324039713541595">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CardPostDisplayHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb350dfd-870e-42e8-8690-f733ae883885" absoluteBounds="9.015, 46.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f570656-215a-4a11-9e88-48fb6557dcdc" absoluteBounds="9, 49.625, 2, 2.7324039713541595">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CardRegionWiseFee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d404d40b-469d-4460-83a8-269e58686454" absoluteBounds="9.015, 50.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aadd2882-e62d-4627-b923-7a099a0c1964" absoluteBounds="3.5, 25.875, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CompanyInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b209d92-f7c7-40ec-bcb0-5fccd28aa797" absoluteBounds="3.515, 26.335, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="05793f9b-a392-407b-a613-09114ad894ed" absoluteBounds="0.75, 24.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/Country" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e844ada5-8005-48ef-b19e-67ac6602c624" absoluteBounds="0.765, 25.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b92d0247-3c7e-4150-a6a2-1252dfd5449e" absoluteBounds="6.25, 6.625, 2, 2.7324039713541657">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/District" />
+      <nestedChildShapes>
+        <elementListCompartment Id="184396f0-ff0f-4619-b971-aa58503db690" absoluteBounds="6.265, 7.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a80d4186-d4d5-446d-a49e-0658ab0f675f" absoluteBounds="3.5, 6.625, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/DivisionOrState" />
+      <nestedChildShapes>
+        <elementListCompartment Id="973341cd-9a9c-45fb-917a-c02666b7d05f" absoluteBounds="3.515, 7.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="957e268c-38f0-49fa-acd6-b9ee4546b91c" absoluteBounds="3.625, 2.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/error_log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b3fa669-d498-440c-8535-a2805a7e595b" absoluteBounds="3.64, 3.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16cbc1ae-f145-4d14-96d3-93c1079f0544" absoluteBounds="6.25, 13.25, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/LoanAmtYearSchedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0928f7d7-106e-42f0-83dc-50372fa6829d" absoluteBounds="6.265, 13.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e8a0d32-257f-402d-8f2a-0cea04833c0a" absoluteBounds="13.125, 18.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/LoanFeature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="171a5faa-1836-40e5-800e-b1198fc47079" absoluteBounds="13.14, 19.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="601cd078-f51c-46c0-8478-7727739da19b" absoluteBounds="6.25, 17.125, 2, 5.0400211588541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/LoanInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69464549-d032-43a6-b504-162bb2ecdd6e" absoluteBounds="6.265, 17.585, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a75b4a63-8574-4199-8dcb-d7209e35fc34" absoluteBounds="0.75, 10.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40149eb3-fbb0-4a92-846d-04b9dcabcee9" absoluteBounds="0.765, 11.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23c33500-7530-4be5-849d-ceab8898eea3" absoluteBounds="6.25, 22.875, 2, 6.0015283203125023">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/MobilePhoneInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed227a54-4793-439a-a27e-b307c87e5033" absoluteBounds="6.265, 23.335, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80ceed66-cd18-4946-8365-1e3dd811e28e" absoluteBounds="6.5, 29.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/MortgageTermYear" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d163165f-e866-4671-a426-c8dd88401984" absoluteBounds="6.515, 30.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff55cfdb-64b7-4be7-bb23-26ea6a3a7ebb" absoluteBounds="9, 24.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/MPFeature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98f363f4-d6df-4b7f-a656-476cce7bfdb1" absoluteBounds="9.015, 25.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5cb1b79-c53b-415f-b336-8ad447658b50" absoluteBounds="6.25, 10.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/MPType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4251b1d-98c0-4445-adfb-24cb45874b4a" absoluteBounds="6.265, 10.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f15d1dbe-7e3c-407d-959a-7ec2b42bc911" absoluteBounds="9, 6.5, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/PoliceStation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="992af400-00cc-4c0c-b19b-46025000aa9c" absoluteBounds="9.015, 6.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a4aecf0-a003-47ee-a60d-2cde122b0f75" absoluteBounds="8.75, 13, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/UserGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="578c33a8-7cd9-46f4-b9fb-82e3a0a3da03" absoluteBounds="8.765, 13.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="550d08e8-991f-441b-8c30-8d310de379f2" absoluteBounds="11.5, 11, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/UserWFPermission" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8ec3c2e-f41e-461a-90a7-7eeefc20a3c2" absoluteBounds="11.515, 11.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dcd404b1-ca13-4ade-83d6-7aeb8f89ab1a" absoluteBounds="0.5, 1.125, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/VisitorInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="591bb957-4c75-48c5-98d8-459bd4da9db5" absoluteBounds="0.515, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 41); (8.625 : 40.625); (8.625 : 37.5489005533854); (9 : 37.5489005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CardInfo/CardInfo_CardFeature" />
+      <nodes>
+        <classShapeMoniker Id="5c462dc1-265e-4903-aff1-9ff712e6fbcc" />
+        <classShapeMoniker Id="ec943cd4-1b60-451f-a0bc-464f01dd439d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 46.9478670247396); (9 : 46.9478670247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CardInfo/CardInfo_CardPostDisplayHistory" />
+      <nodes>
+        <classShapeMoniker Id="5c462dc1-265e-4903-aff1-9ff712e6fbcc" />
+        <classShapeMoniker Id="0f9e8d38-057c-436f-9722-601dcdc2cad1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.71875 : 47.7707340494792); (7.71875 : 50.6450512695313); (9 : 50.6450512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CardInfo/CardInfo_CardRegionWiseFee" />
+      <nodes>
+        <classShapeMoniker Id="5c462dc1-265e-4903-aff1-9ff712e6fbcc" />
+        <classShapeMoniker Id="7f570656-215a-4a11-9e88-48fb6557dcdc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.34375 : 29.7612125651042); (5.34375 : 42.1739005533854); (6.25 : 42.1739005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_CardInfo" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="5c462dc1-265e-4903-aff1-9ff712e6fbcc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 26.5825512695313); (3.5 : 26.5825512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/Country/Country_CompanyInfo" />
+      <nodes>
+        <classShapeMoniker Id="05793f9b-a392-407b-a613-09114ad894ed" />
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.89505126953125); (6.25 : 7.89505126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/DivisionOrState/DivisionOrState_District" />
+      <nodes>
+        <classShapeMoniker Id="a80d4186-d4d5-446d-a49e-0658ab0f675f" />
+        <classShapeMoniker Id="b92d0247-3c7e-4150-a6a2-1252dfd5449e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 24.75); (1.75 : 24.6699039713542); (2.8125 : 24.6699039713542); (2.8125 : 7.89505126953125); (3.5 : 7.89505126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/Country/Country_DivisionOrState" />
+      <nodes>
+        <classShapeMoniker Id="05793f9b-a392-407b-a613-09114ad894ed" />
+        <classShapeMoniker Id="a80d4186-d4d5-446d-a49e-0658ab0f675f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 25.9242297692308); (5.75357443490112 : 25.6706553343297 : JumpStart); (5.87142556509888 : 25.5528042041319 : JumpEnd); (6.125 : 25.2992297692308); (6.125 : 14.8085034179688); (6.25 : 14.8085034179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_LoanAmtYearSchedule" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="16cbc1ae-f145-4d14-96d3-93c1079f0544" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 20.6434554036458); (12.6197891666667 : 20.6434554036458 : JumpStart); (12.9270833333333 : 20.6434554036458 : JumpEnd); (13.125 : 20.6434554036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/LoanInfo/LoanInfo_LoanFeature" />
+      <nodes>
+        <classShapeMoniker Id="601cd078-f51c-46c0-8478-7727739da19b" />
+        <classShapeMoniker Id="7e8a0d32-257f-402d-8f2a-0cea04833c0a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 25.9057682307692); (5.75357443490112 : 25.6521937958681 : JumpStart); (5.87142556509888 : 25.5343426656703 : JumpEnd); (6.03125 : 25.3745182307692); (6.03125 : 19.6450105794271); (6.04166666666667 : 19.6450105794271 : JumpStart); (6.20833333333333 : 19.6450105794271 : JumpEnd); (6.25 : 19.6450105794271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_LoanInfo" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="601cd078-f51c-46c0-8478-7727739da19b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 26.6018474350586); (5.72916666666667 : 26.6018474350586 : JumpStart); (5.89583333333333 : 26.6018474350586 : JumpEnd); (6.25 : 26.6018474350586)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_MobilePhoneInfo" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="23c33500-7530-4be5-849d-ceab8898eea3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 25.9239005533854); (9 : 25.9239005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/MobilePhoneInfo/MobilePhoneInfo_MPFeature" />
+      <nodes>
+        <classShapeMoniker Id="23c33500-7530-4be5-849d-ceab8898eea3" />
+        <classShapeMoniker Id="ff55cfdb-64b7-4be7-bb23-26ea6a3a7ebb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.3437495 : 25.875); (5.3437495 : 12.1915511067708); (5.47916666666667 : 12.1915511067708 : JumpStart); (5.64583333333333 : 12.1915511067708 : JumpEnd); (6.25 : 12.1915511067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_MPType" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="c5cb1b79-c53b-415f-b336-8ad447658b50" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 8.5713525390625); (9 : 8.5713525390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/District/District_PoliceStation" />
+      <nodes>
+        <classShapeMoniker Id="b92d0247-3c7e-4150-a6a2-1252dfd5449e" />
+        <classShapeMoniker Id="f15d1dbe-7e3c-407d-959a-7ec2b42bc911" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 15.0809147135417); (12.03125 : 15.0809147135417); (12.03125 : 13.1554996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/UserGroup/UserGroup_UserWFPermission" />
+      <nodes>
+        <classShapeMoniker Id="1a4aecf0-a003-47ee-a60d-2cde122b0f75" />
+        <classShapeMoniker Id="550d08e8-991f-441b-8c30-8d310de379f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.46875); (3.25 : 1.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/VisitorInfo/VisitorInfo_VisitorInfoDetail" />
+      <nodes>
+        <classShapeMoniker Id="dcd404b1-ca13-4ade-83d6-7aeb8f89ab1a" />
+        <classShapeMoniker Id="e5250472-e180-4da4-800a-261cc2a2947a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b6cf33f7-4b15-49b3-8137-79b64db718dd" absoluteBounds="0.75, 6.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/PostOffice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="715736d2-87c5-410c-bbae-b96feb976ed3" absoluteBounds="0.76500000000000057, 6.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e1ae8ec-6a09-413d-8616-971b54277a3a" absoluteBounds="9.375, 16.625, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/UserInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="430bc95a-5f69-4787-8962-f59de91b4218" absoluteBounds="9.39, 17.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.0625 : 15.3478011067708); (10.0625 : 16.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/UserGroup/UserGroup_UserInfo" />
+      <nodes>
+        <classShapeMoniker Id="1a4aecf0-a003-47ee-a60d-2cde122b0f75" />
+        <classShapeMoniker Id="0e1ae8ec-6a09-413d-8616-971b54277a3a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0a034f28-8c4c-4297-87b6-d4ce97494817" absoluteBounds="4.375, 4.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/MortgageTypeInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e6e9950-0ae4-4f9b-af83-0efb4047f087" absoluteBounds="4.39, 5.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5039e25e-8abd-4e5c-bf67-56081f2c3dc5" absoluteBounds="9.125, 39.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CardBalanceTransfer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a615cfe-4bc4-432f-8387-aeb78558baf7" absoluteBounds="9.14, 40.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 41.6787019856771); (9.125 : 41.6787019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CardInfo/CardInfo_CardBalanceTransfer" />
+      <nodes>
+        <classShapeMoniker Id="5c462dc1-265e-4903-aff1-9ff712e6fbcc" />
+        <classShapeMoniker Id="5039e25e-8abd-4e5c-bf67-56081f2c3dc5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ae05fdc4-2549-4cca-b1c8-54c4c7c556dd" absoluteBounds="6.375, 1.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/LifeInsurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58014d24-655b-486d-bd0c-7dd2a2028c0e" absoluteBounds="6.39, 1.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.39062275 : 25.875); (4.39062275 : 22.7371240234375); (5.5625 : 22.7371240234375); (5.5625 : 6.51609537760417); (7.375 : 6.51609537760417); (7.375 : 4.80930826822917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_LifeInsurance" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="ae05fdc4-2549-4cca-b1c8-54c4c7c556dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="34be2a01-4c53-4603-a928-955ff3b5f2a6" absoluteBounds="3.375, 9.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/LIApplicableFeature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48db2fba-9d95-4d1b-8db3-99d5a95d7e9c" absoluteBounds="3.3899999999999997, 9.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01f2aae0-4156-4d83-8262-c0e1b1173d76" absoluteBounds="9.25, 42.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CardPurchase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33c5e7a2-0372-4393-9f4c-1eed5068054d" absoluteBounds="9.265, 43.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 44.1162019856771); (9.25 : 44.1162019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CardInfo/CardInfo_CardPurchase" />
+      <nodes>
+        <classShapeMoniker Id="5c462dc1-265e-4903-aff1-9ff712e6fbcc" />
+        <classShapeMoniker Id="01f2aae0-4156-4d83-8262-c0e1b1173d76" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="92a19244-7510-4cf8-87c2-58b99968bbda" absoluteBounds="12.625, 8.75, 2, 6.0015283203125">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/Mortgage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30a55f60-2ed0-4fab-89d5-24f203ab65cb" absoluteBounds="12.64, 9.21, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 29.0948937402344); (12.84375 : 29.0948937402344); (12.84375 : 14.7515283203125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_Mortgage" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="92a19244-7510-4cf8-87c2-58b99968bbda" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 30.9239005533854); (12.7031225 : 30.9239005533854); (12.7031225 : 14.7515283203125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/MortgageTermYear/MortgageTermYear_Mortgage" />
+      <nodes>
+        <classShapeMoniker Id="80ceed66-cd18-4946-8365-1e3dd811e28e" />
+        <classShapeMoniker Id="92a19244-7510-4cf8-87c2-58b99968bbda" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="62244097-dadd-47c1-a035-b3bfebd0a1e5" absoluteBounds="8.75, 3.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/LoanType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b001ead8-7e0e-4bbd-9d30-aade8314239a" absoluteBounds="8.765, 3.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63644ae8-00cd-4aa7-997b-2e11e5ba03cb" absoluteBounds="8.75, 0.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/VisitorCounter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc41b9d8-a02b-4ec2-921d-9522db459879" absoluteBounds="8.765, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ae0a32f-b7fe-4b6a-a9d7-d8f3b0bf4395" absoluteBounds="3.125, 12.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/Profession" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb986832-9614-4f43-b53f-6f01e6f3f0c9" absoluteBounds="3.1399999999999997, 13.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ab06e20-40a2-46f7-b5d6-66c7d52d5bd0" absoluteBounds="0.625, 2.875, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/LISchema" />
+      <nestedChildShapes>
+        <elementListCompartment Id="610c7192-d388-42ba-941f-e7360d19125f" absoluteBounds="0.63999999999999968, 3.335, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.625 : 4.62580485026042); (0.3 : 4.62580485026042); (0.3 : 0.3); (8.575 : 0.3); (8.575 : 3.15465413411458); (8.375 : 3.15465413411458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/LISchema/LISchema_LifeInsurance" />
+      <nodes>
+        <classShapeMoniker Id="4ab06e20-40a2-46f7-b5d6-66c7d52d5bd0" />
+        <classShapeMoniker Id="ae05fdc4-2549-4cca-b1c8-54c4c7c556dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.65625 : 6.37660970052083); (0.65625 : 10.2796541341146); (2.72916666666667 : 10.2796541341146 : JumpStart); (2.89583333333333 : 10.2796541341146 : JumpEnd); (3.375 : 10.2796541341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/LISchema/LISchema_LIApplicableFeature" />
+      <nodes>
+        <classShapeMoniker Id="4ab06e20-40a2-46f7-b5d6-66c7d52d5bd0" />
+        <classShapeMoniker Id="34be2a01-4c53-4603-a928-955ff3b5f2a6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9eed01ae-5bf9-4ef5-ac94-23e36f4b02ab" absoluteBounds="0.5, 14, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/GuideLine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2313fb9f-aa6d-4109-b387-0256635e058d" absoluteBounds="0.51499999999999968, 14.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d68c5bed-ebea-4789-921e-efd25c8b6cdf" absoluteBounds="0.5, 17.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/GuideLineDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50dec08c-da5e-45a7-a4ba-5b29f0659aa9" absoluteBounds="0.51499999999999968, 17.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.15625 : 16.7324039713542); (1.15625 : 17.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/GuideLine/GuideLine_GuideLineDetail" />
+      <nodes>
+        <classShapeMoniker Id="9eed01ae-5bf9-4ef5-ac94-23e36f4b02ab" />
+        <classShapeMoniker Id="d68c5bed-ebea-4789-921e-efd25c8b6cdf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9c3d9644-1a31-400f-a79c-ae8352beff8a" absoluteBounds="0.5, 31.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/AllNewsDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56ec2632-0153-4e23-a92d-5000bec3eac2" absoluteBounds="0.51499999999999968, 31.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c4105ac-3634-4f53-bad3-bc68b65bc22a" absoluteBounds="0.5, 27.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/AllNews" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b944ff3f-8529-4887-a9bf-e58cfad3d40e" absoluteBounds="0.51499999999999968, 28.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.21875 : 30.8670068359375); (1.21875 : 31.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/AllNews/AllNews_AllNewsDetail" />
+      <nodes>
+        <classShapeMoniker Id="1c4105ac-3634-4f53-bad3-bc68b65bc22a" />
+        <classShapeMoniker Id="9c3d9644-1a31-400f-a79c-ae8352beff8a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="661a0890-55c9-4287-8afd-fc6afff7f79a" absoluteBounds="0.5, 21.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/GuideLineDetailMore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27a97f73-4062-4c7a-8be0-be6629a897b2" absoluteBounds="0.515, 22.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.03125 : 19.9824039713542); (1.03125 : 21.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/GuideLineDetail/GuideLineDetail_GuideLineDetailMore" />
+      <nodes>
+        <classShapeMoniker Id="d68c5bed-ebea-4789-921e-efd25c8b6cdf" />
+        <classShapeMoniker Id="661a0890-55c9-4287-8afd-fc6afff7f79a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d60236da-bf13-4d4d-a182-6a2abc5b49d7" absoluteBounds="0.5, 34.25, 2, 3.1170068359375">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BDChannelInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdd2d78d-069e-48eb-af5c-0e3b5a2d7f4a" absoluteBounds="0.51499999999999968, 34.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c222036-12b7-4e04-941e-9afb6a404b25" absoluteBounds="26.625, 5.375, 2, 3.1170068359375">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/GasDealerInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8f81bfb-32d9-4c52-b4a9-bcad209c1829" absoluteBounds="26.64, 5.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10e40a62-9041-42d6-8748-8f60d24d30b3" absoluteBounds="27.5, 1.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/GasCylinderAndDealerInfoMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f06aa706-5fe4-448a-86d4-c2f8db674c89" absoluteBounds="27.515, 1.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(28.0625 : 5.375); (28.0625 : 3.59780110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/GasDealerInfo/GasDealerInfo_GasCylinderAndDealerInfoMapping" />
+      <nodes>
+        <classShapeMoniker Id="0c222036-12b7-4e04-941e-9afb6a404b25" />
+        <classShapeMoniker Id="10e40a62-9041-42d6-8748-8f60d24d30b3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bc3008f9-f8a9-4985-8fe7-5ceb5e4cd9c4" absoluteBounds="21.375, 4.875, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/GasCyliender" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81167de8-b994-465d-9a6d-8322b32d4065" absoluteBounds="21.39, 5.335, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.375 : 4.875); (22.375 : 2.42390055338542); (27.5 : 2.42390055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/GasCyliender/GasCyliender_GasCylinderAndDealerInfoMapping" />
+      <nodes>
+        <classShapeMoniker Id="bc3008f9-f8a9-4985-8fe7-5ceb5e4cd9c4" />
+        <classShapeMoniker Id="10e40a62-9041-42d6-8748-8f60d24d30b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 29.3132641601563); (12.6197891666667 : 29.3132641601563 : JumpStart); (12.7864558333333 : 29.3132641601563 : JumpEnd); (22.375 : 29.3132641601563); (22.375 : 8.37660970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_GasCyliender" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="bc3008f9-f8a9-4985-8fe7-5ceb5e4cd9c4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2a0bb80c-5c3c-4632-bed4-f332669a26c0" absoluteBounds="16.125, 10.25, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/MortgageInterestRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22046be3-ef9a-4733-ba6b-853d60204a67" absoluteBounds="16.14, 10.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.625 : 11.7123527018229); (16.125 : 11.7123527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/Mortgage/Mortgage_MortgageInterestRate" />
+      <nodes>
+        <classShapeMoniker Id="92a19244-7510-4cf8-87c2-58b99968bbda" />
+        <classShapeMoniker Id="2a0bb80c-5c3c-4632-bed4-f332669a26c0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fa70137b-38c7-4f18-8b71-7adb49e7781f" absoluteBounds="31.625, 1.25, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/AllFeature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0744e66-be33-4f1c-ab4b-8bcb4a477020" absoluteBounds="31.64, 1.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12b4f324-17fb-4bf4-b032-cfc995f6ab6f" absoluteBounds="34.625, 1.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/AllFeatureDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3101e2cf-5fdb-4c7c-8a10-d8a7643d210c" absoluteBounds="34.64, 1.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(33.625 : 2.74120198567708); (34.625 : 2.74120198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/AllFeature/AllFeature_AllFeatureDetail" />
+      <nodes>
+        <classShapeMoniker Id="fa70137b-38c7-4f18-8b71-7adb49e7781f" />
+        <classShapeMoniker Id="12b4f324-17fb-4bf4-b032-cfc995f6ab6f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="eb78cbe5-0fd4-42ee-91e6-74a8d34e83d7" absoluteBounds="2.75, 30.5, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/AdLogInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e64da69-9f01-427a-8a83-e38e0ec5843e" absoluteBounds="2.7649999999999997, 30.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="794fe691-f9c7-465e-86fb-70223364c2bd" absoluteBounds="2.75, 39.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CarInsuranceFeature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9a76e62-be16-491b-bbea-9852d606bcbb" absoluteBounds="2.7650000000000006, 40.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e8958d1-7063-4bca-b921-d64f616868b4" absoluteBounds="0.5, 37.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CarInsuranceParameter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da98cd5d-c5c0-4366-803f-85a70bfa7a7e" absoluteBounds="0.51499999999999968, 38.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b7e749c9-4134-4a2a-8eee-2039920e1be6" absoluteBounds="2.75, 35.375, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CarInsurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="acab9a69-258d-498a-a576-5ae02b52afa8" absoluteBounds="2.7649999999999997, 35.835, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 39.0689111328125); (3.75 : 39.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CarInsurance/CarInsurance_CarInsuranceFeature" />
+      <nodes>
+        <classShapeMoniker Id="b7e749c9-4134-4a2a-8eee-2039920e1be6" />
+        <classShapeMoniker Id="794fe691-f9c7-465e-86fb-70223364c2bd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 38.4094555664063); (2.75 : 38.4094555664063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CarInsuranceParameter/CarInsuranceParameter_CarInsurance" />
+      <nodes>
+        <classShapeMoniker Id="7e8958d1-7063-4bca-b921-d64f616868b4" />
+        <classShapeMoniker Id="b7e749c9-4134-4a2a-8eee-2039920e1be6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.015623 : 29.7612125651042); (5.015623 : 37.2219555664063); (4.75 : 37.2219555664063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_CarInsurance" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="b7e749c9-4134-4a2a-8eee-2039920e1be6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="af59a9fc-a879-446a-bf8b-77633a187cc0" absoluteBounds="6.875, 14.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BDInternetAndChannelMapping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb3eb761-d69d-4a3c-af7c-5b07f1ccc567" absoluteBounds="6.89, 14.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 35.8085034179688); (2.6875 : 35.8085034179688); (2.6875 : 35.3125); (4.93228966666667 : 35.3125 : JumpStart); (5.09895633333333 : 35.3125 : JumpEnd); (5.26041666666667 : 35.3125 : JumpStart); (5.42708333333333 : 35.3125 : JumpEnd); (5.8125 : 35.3125); (5.8125 : 16.6915511067708); (7.875 : 16.6915511067708); (7.875 : 16.5978011067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/BDChannelInfo/BDChannelInfo_BDInternetAndChannelMapping" />
+      <nodes>
+        <classShapeMoniker Id="d60236da-bf13-4d4d-a182-6a2abc5b49d7" />
+        <classShapeMoniker Id="af59a9fc-a879-446a-bf8b-77633a187cc0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b6e783e6-d998-49ce-b103-9d17f1d60a61" absoluteBounds="13.75, 4.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/UrlWFList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5549050-2078-49ea-b6ec-aa177ee044e5" absoluteBounds="13.765, 4.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.75 : 6.60736378125); (12.375 : 6.60736378125); (12.375 : 10.625); (12.0624995 : 10.625); (12.0624995 : 11)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/UrlWFList/UrlWFList_UserWFPermission" />
+      <nodes>
+        <classShapeMoniker Id="b6e783e6-d998-49ce-b103-9d17f1d60a61" />
+        <classShapeMoniker Id="550d08e8-991f-441b-8c30-8d310de379f2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d33f5744-dc94-44f6-9931-71e5e042e940" absoluteBounds="13, 1.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CMSContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2cf36bce-c22b-4ee6-a187-198ad5957af9" absoluteBounds="13.015, 1.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68adada4-d9b2-41e1-98a4-07663b8d9732" absoluteBounds="0.5, 42.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BIAmountRange" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4186ac2f-5f43-4f1a-8d79-404eb2bab37a" absoluteBounds="0.51499999999999968, 42.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="328d5309-1ad0-4851-8cfe-4523a6b7967b" absoluteBounds="2.875, 42.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BIBusinessAge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14d3f4bc-5d10-43f3-a6e4-db1468e1ce11" absoluteBounds="2.8899999999999997, 42.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b57e590b-01e4-4132-94a8-28a8650d0b09" absoluteBounds="0.5, 47.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BIEmployeeLiability" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1a18736-088d-46f9-8591-f27776c6c491" absoluteBounds="0.51499999999999968, 48.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8362d7fc-01bc-4273-b9e5-9c64fbd23085" absoluteBounds="2.75, 47.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BIOfficeEquipment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f8ec5fc-170a-4078-8fe9-c792fd93cf22" absoluteBounds="2.7649999999999997, 48.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="454df493-55f1-4f7b-b646-19f09cb5a35a" absoluteBounds="5.125, 48, 2, 2.5401025390625">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BIPublicLiability" />
+      <nestedChildShapes>
+        <elementListCompartment Id="285b9d5d-5934-402f-a94b-3d8b98c54e50" absoluteBounds="5.14, 48.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ced26d65-831a-44c9-84f1-3723c2bccae8" absoluteBounds="5.125, 50.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BusinessInsurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50070b5c-a9b0-40ea-9c9f-4a75561fb535" absoluteBounds="5.14, 51.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90b8474a-3092-47f1-91ee-81a8dd8f39df" absoluteBounds="2.875, 50.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BusinessInsuranceReceiver" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6605506-39ba-4765-8e69-d82bebd2d7c8" absoluteBounds="2.8899999999999997, 50.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d6b71c6-f314-402b-9494-6062feff2678" absoluteBounds="0.5, 50.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BusinessInsuranceReceiverDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02b0bdd4-3ae8-4393-abce-9e98a00f3cac" absoluteBounds="0.51499999999999968, 51.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.499999999999998 : 45.0497054036458); (0.125 : 45.4247054036458); (0.125 : 50.25); (0.5 : 50.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/BIAmountRange/BIAmountRange_BusinessInsuranceReceiverDetail" />
+      <nodes>
+        <classShapeMoniker Id="68adada4-d9b2-41e1-98a4-07663b8d9732" />
+        <classShapeMoniker Id="1d6b71c6-f314-402b-9494-6062feff2678" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 51.7989005533854); (2.5 : 51.7989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/BusinessInsuranceReceiver/BusinessInsuranceReceiver_BusinessInsuranceReceiverDetail" />
+      <nodes>
+        <classShapeMoniker Id="90b8474a-3092-47f1-91ee-81a8dd8f39df" />
+        <classShapeMoniker Id="1d6b71c6-f314-402b-9494-6062feff2678" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d590119f-4924-4950-8e27-3ddef27381bb" absoluteBounds="3.125, 45, 2, 2.5401025390625">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BICategoryDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="301a7260-6a0f-4e3f-8736-d2c1e50acb30" absoluteBounds="3.1399999999999997, 45.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4f2a887-2809-4f97-a588-99df93aa63bc" absoluteBounds="0.5, 45.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BICategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7840912f-cbd4-4bed-92ed-312c5f91220e" absoluteBounds="0.51499999999999968, 45.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 46.3950512695313); (3.125 : 46.3950512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/BICategory/BICategory_BICategoryDetail" />
+      <nodes>
+        <classShapeMoniker Id="a4f2a887-2809-4f97-a588-99df93aa63bc" />
+        <classShapeMoniker Id="d590119f-4924-4950-8e27-3ddef27381bb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a6f6d03f-7c9d-43ca-b7ca-ef676cae1393" absoluteBounds="5.875, 33.875, 2, 5.4246240234375">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/BDInternet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c0c6b7e-fbd8-42ac-ac96-a1343af54eef" absoluteBounds="5.89, 34.335, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.875 : 35.7119502766927); (8.7187495 : 35.7119502766927); (8.7187495 : 16.5978011067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/BDInternet/BDInternet_BDInternetAndChannelMapping" />
+      <nodes>
+        <classShapeMoniker Id="a6f6d03f-7c9d-43ca-b7ca-ef676cae1393" />
+        <classShapeMoniker Id="af59a9fc-a879-446a-bf8b-77633a187cc0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.1796865 : 29.7612125651042); (5.1796865 : 34.8806062825521); (5.875 : 34.8806062825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/CompanyInfo/CompanyInfo_BDInternet" />
+      <nodes>
+        <classShapeMoniker Id="aadd2882-e62d-4627-b923-7a099a0c1964" />
+        <classShapeMoniker Id="a6f6d03f-7c9d-43ca-b7ca-ef676cae1393" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="64b4330a-30fd-492c-9006-cf460ba2066a" absoluteBounds="3, 17.25, 2, 5.4246240234375">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/Applicant" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3b188d9-9921-4451-b529-48d05a77c99a" absoluteBounds="3.015, 17.71, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.0625 : 15.1651025390625); (4.0625 : 17.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/Profession/Profession_Applicant" />
+      <nodes>
+        <classShapeMoniker Id="0ae0a32f-b7fe-4b6a-a9d7-d8f3b0bf4395" />
+        <classShapeMoniker Id="64b4330a-30fd-492c-9006-cf460ba2066a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="05e48246-13cb-4c2c-9efc-16e8a2aaef01" absoluteBounds="2.625, 1.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/CommunityNew" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1a9a653-4f30-4e3c-9ed2-b1cdb530475e" absoluteBounds="2.6399999999999997, 2.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ee5e6c2-cf9a-4238-a4f0-b21721083df7" absoluteBounds="10.875, 0.75, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/HomeInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42605d19-3fca-49ce-bed8-f6bebfc1c7e6" absoluteBounds="10.89, 1.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 19.9623120117188); (5.26041616666667 : 19.9623120117188 : JumpStart); (5.42708283333333 : 19.9623120117188 : JumpEnd); (5.625 : 19.9623120117188); (5.625 : 16.875); (5.72916666666667 : 16.875 : JumpStart); (5.89583333333333 : 16.875 : JumpEnd); (6.04166666666667 : 16.875 : JumpStart); (6.20833333333333 : 16.875 : JumpEnd); (8.63541616666667 : 16.875 : JumpStart); (8.80208283333333 : 16.875 : JumpEnd); (9.125 : 16.875); (9.125 : 16.375); (9.97916666666667 : 16.375 : JumpStart); (10.1458333333333 : 16.375 : JumpEnd); (11.25 : 16.375); (11.25 : 5.78041829427083); (11.875 : 5.78041829427083); (11.875 : 5.40541829427083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OiiOMartDBDataContext/Applicant/Applicant_HomeInfo" />
+      <nodes>
+        <classShapeMoniker Id="64b4330a-30fd-492c-9006-cf460ba2066a" />
+        <classShapeMoniker Id="7ee5e6c2-cf9a-4238-a4f0-b21721083df7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="12b547a1-4551-4885-a4f0-87ce6366a4b3" absoluteBounds="5.5, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/HelpAdvice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b2ea70e-8004-40d6-9493-e02ca4248b44" absoluteBounds="5.515, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a58a71f-e1c7-4df1-b93b-e4930cbc67f4" absoluteBounds="16.875, 1.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/OiiOMart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f259d4b8-146e-4942-9ee4-8ab49e412155" absoluteBounds="16.89, 2.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a20c3c1-ede7-4905-b1bc-fcca561e495e" absoluteBounds="4.5, 0.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OiiOMartDBDataContext/NewsLetterSubscribe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b47882b5-ad70-4ccb-935b-2d47f5656b08" absoluteBounds="4.515, 1.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

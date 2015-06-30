@@ -1,0 +1,12 @@
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\Tula.BLL.dll.config
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\Tula.BLL.dll
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\Tula.BLL.pdb
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\EntityFramework.dll
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\EntityFramework.SqlServer.dll
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\Tula.DAL.dll
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\Tula.DAL.pdb
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\EntityFramework.xml
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\bin\Debug\EntityFramework.SqlServer.xml
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\obj\Debug\Tula.BLL.csprojResolveAssemblyReference.cache
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\obj\Debug\Tula.BLL.dll
+F:\- E - PROJECT\Tula Tree Working folder\Tula Tree ss\Tula.BLL\obj\Debug\Tula.BLL.pdb

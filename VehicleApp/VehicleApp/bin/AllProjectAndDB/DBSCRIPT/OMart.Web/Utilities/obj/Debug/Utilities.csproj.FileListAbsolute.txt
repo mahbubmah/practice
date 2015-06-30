@@ -1,0 +1,7 @@
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\Utilities\bin\Debug\Utilities.dll
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\Utilities\bin\Debug\Utilities.pdb
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\Utilities\bin\Debug\DAL.dll
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\Utilities\bin\Debug\DAL.pdb
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\Utilities\obj\Debug\Utilities.dll
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\Utilities\obj\Debug\Utilities.pdb

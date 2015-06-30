@@ -1,0 +1,263 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OiiOMasterPage.master.cs" Inherits="OMart.Web.OiiOMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>OiiO Mart</title>
+    <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,700,600,500' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css' />
+    <link href="Content/rangeslider.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,900,700' rel='stylesheet' type='text/css' />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/oiioStyle.css" rel="stylesheet" />
+    <link href="Content/screen.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmWeb" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        <header>
+            <div class="headerMain">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+                            <div class="logo">
+                                <h1><a href="<%=Page.ResolveUrl("~/")%>">
+                                       <asp:Image ID="imgLogo" runat="server"  alt="img" Width="150" Height="110" /></a></h1>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+                            <div class="userPanel">
+                                <ul id="ulLoginOutDirect" runat="server">
+                                    <li><a id="hrfRegister" runat="server">Register</a></li>
+                                    <li><a id="hrfLogin" runat="server">Log in</a></li>
+                                </ul>
+                                <ul id="ulLoginOut" runat="server">
+
+                                    <asp:Label ID="lblUsername" runat="server"></asp:Label>
+
+
+                                    <asp:LinkButton ID="lbLogStatus" runat="server" Text="" OnClick="lbLogStatus_OnClick"></asp:LinkButton>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </header>
+        <div class="container-fluid bannerWrp">
+            <nav role="navigation" class="navbar navbar-inverse oiioMainMenu">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="<%=Page.ResolveUrl("~/") %>">Home</a>
+                            </li>
+
+                            <asp:Repeater runat="server" ID="rptModule" OnItemDataBound="rptModule_OnItemDataBound">
+                                <ItemTemplate>
+                                    <li class="dropdown oiioBrand">
+                                        <a class="dropdown-toggle disabled" id="hrefModuleName" data-toggle="dropdown" href="<%# Eval("UrlModuleName") %>">
+                                            <asp:Label ID="lblModuleName" runat="server"> <%# Eval("ModuleName") %></asp:Label></a>
+                                        <asp:HiddenField ID="hfModuleName" runat="server" Value='<%# Eval("ModuleName") %>' />
+                                        <ul class="dropdown-menu">
+                                            <asp:Repeater ID="rptUrl" runat="server">
+                                                <ItemTemplate>
+                                                    <li><a href='<%# Eval("UrlWFName") %>'><%# Eval("UrlWFDisplayName") %></a></li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+
+                                        </ul>
+
+                                    </li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+        </div>
+
+
+
+
+        <section>
+            <asp:ContentPlaceHolder ID="DefaultPageSlide" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+
+
+        <section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="socialicon">
+                        <div class="col-md-6 col-md-offset-4">
+                            <ul class="ul">
+                                <li><a href="http://www.facebook.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon1.png" /></a></li>
+                                <li><a href="http://www.twitter.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon2.png" /></a></li>
+                                <li><a href="http://www.flickr.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon3.png" /></a></li>
+                                <li><a href="http://www.linkedin.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon4.png" /></a></li>
+                                <li><a href="http://www.pinterest.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon5.png" /></a></li>
+                                <li><a href="#">
+                                    <img alt="icon1" src="images/Interfaces/icon6.png" /></a></li>
+                                <li><a href="http://www.youtube.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon7.png" /></a></li>
+                                <li><a href="http://www.plus.google.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon8.png" /></a></li>
+
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <footer>
+            <div class="footerWerp">
+                <div class="container">
+
+                    <div class="row">
+
+                        <asp:Repeater runat="server" ID="repFooterWithWFUrlsDisplay" OnItemDataBound="repFooterWithWFUrlsDisplay_OnItemDataBound">
+                            <ItemTemplate>
+                                <div class="col-sm-2 col-md-2 col-lg-2">
+                                    <div class="footerBox">
+                                        <h3><%# Eval("ModuleName") %></h3>
+                                        <asp:HiddenField ID="hfModuleName" runat="server" Value='<%# Eval("ModuleName") %>' />
+                                        <ul class="nav">
+                                            <asp:Repeater ID="repFooterUrlLinkList" runat="server">
+                                                <ItemTemplate>
+                                                    <li><a href='<%# Eval("UrlWFName") %>'><%# Eval("UrlWFDisplayName") %></a></li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="footerBox">
+                                <h3>About us</h3>
+                                <ul class="nav">
+                                    <asp:Repeater ID="rptCMSMenu" runat="server">
+                                        <ItemTemplate>
+                                            <li>
+                                                <a runat="server" href='<%#"CMSDetailPage?tp="+Utilities.StringCipher.Encrypt(Eval("Value").ToString()) %>'>
+                                                    <asp:Label ID="lblTypeID" runat="server" Text='<%#Eval("Name")%>'></asp:Label>
+                                                </a>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <strong style="color: #FFFFFF; font-size: 18px; line-height: 30px;">Total Visitor:&nbsp;<asp:Label ID="lblTotalNumberOfVisitor" runat="server"></asp:Label></strong>
+                        </div>
+                    </div>
+                    <div class="row footerBottom">
+                        <div class="col-md-8 copyright">
+
+                            <p>All contents copyright © <span>OiiO Mart</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                        </div>
+                        <div class="col-md-3 pull-right">
+                            <img src="images/Interfaces/paypal2.png" alt="img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="Scripts/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.dropdown-toggle').mouseover(function () {
+                    $('.dropdown-menu ul li').show();
+
+                })
+
+                $('.dropdown-toggle').mouseout(function () {
+                    t = setTimeout(function () {
+                        $('.dropdown-menu ul li').hide();
+                    }, 100);
+
+                    $('.dropdown-menu').on('mouseenter', function () {
+                        $('.dropdown-menu ul li').show();
+                        clearTimeout(t);
+                    }).on('mouseleave', function () {
+                        $('.dropdown-menu ul li').hide();
+                    })
+                })
+
+            });
+        </script>
+
+        <script src="Scripts/bootstrap.js"></script>
+
+        <script src="Scripts/rangeslider.min.js"></script>
+        <script src="Scripts/rangeslider.js"></script>
+
+        <script>
+            // Initialize a new plugin instance for all
+            // e.g. $('input[type="range"]') elements.
+            $('input[type="range"]').rangeslider();
+
+            // Destroy all plugin instances created from the
+            // e.g. $('input[type="range"]') elements.
+            $('input[type="range"]').rangeslider('destroy');
+        </script>
+
+    </form>
+</body>
+</html>

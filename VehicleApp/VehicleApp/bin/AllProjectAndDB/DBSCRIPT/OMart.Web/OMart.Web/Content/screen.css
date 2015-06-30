@@ -1,0 +1,174 @@
+﻿
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px) {
+    .hero {
+        width: 980px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hero h1 {
+        font-size: 4em;
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+    /*=============Brodband page==============*/
+    .bBrandproductBox2Wrp .img-thumbnail{
+        border:none;
+    }
+    .bBrandproductBox2Wrp h5 span {
+        background: none !important;
+    }
+    .bBrandproductCnt{
+        border:none;
+    }
+    .oiioInsuranceFormWrp .txtBox_ofw {
+        width:320px;
+    }
+
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+ 
+     .oiioInsuranceFormWrp .txtBox_ofw {
+        width:320px;
+    }
+
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+ /*=============Brodband page==============*/
+    .bBrandproductBox2Wrp .img-thumbnail{
+        border:none;
+    }
+    .bBrandproductBox2Wrp h5 span {
+        background: none !important;
+    }
+    .bBrandproductCnt{
+        border:none;
+    }
+     .oiioInsuranceFormWrp .txtBox_ofw {
+        width:320px;
+    }
+
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    .oiioMainMenu .navbar-nav > li > a{
+        font-size:14px;
+        padding:0 5px;
+    }
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+     .oiioMainMenu .navbar-nav > li > a{
+        font-size:14px;
+        padding:0 15px;
+    }
+       .productBox h3{
+      font-size:16px;
+  }
+       .hlpBox h4{
+            font-size:14px;
+       }
+       .servMenuItem h4{
+            font-size:14px;
+       }
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .oiioMainMenu .navbar-nav > li > a{
+        font-size:14px;
+        padding:0 5px;
+    }
+  .productBox h3{
+      font-size:16px;
+  }
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+ /*=============Brodband page==============*/
+    
+}
+ 
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+}
+ 
+/* iPhone 5 (portrait &amp; landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+ /*=============Brodband page==============*/
+    .bBrandproductBox2Wrp .img-thumbnail{
+        border:none;
+    }
+    .bBrandproductBox2Wrp h5 span {
+        background: none !important;
+
+    }
+    .bBrandproductCnt{
+        border:none;
+    }
+}
+ 
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+ /*=============Brodband page==============*/
+    .bBrandproductBox2Wrp .img-thumbnail{
+        border:none;
+    }
+    .bBrandproductBox2Wrp h5 span {
+        background: none !important;
+    }
+    .bBrandproductCnt{
+        border:none;
+    }
+}
+ 
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+ /*=============Brodband page==============*/
+    .bBrandproductBox2Wrp .img-thumbnail{
+        border:none;
+    }
+    .bBrandproductBox2Wrp h5 span {
+        background: none !important;
+    }
+    .bBrandproductCnt{
+        border:none;
+    }
+}

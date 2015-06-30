@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TulaTreeMvc", "TulaTreeMvc\TulaTreeMvc.csproj", "{751DC8DA-07B5-4886-BB92-BECFC445E262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TulaTreeMvc.Tests", "TulaTreeMvc.Tests\TulaTreeMvc.Tests.csproj", "{2BB57B62-5AE7-4BFE-B534-E14B82D9CABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tula.DAL", "Tula.DAL\Tula.DAL.csproj", "{379FD1CB-2FC8-4AC2-A231-39FEE31A31A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tula.BLL", "Tula.BLL\Tula.BLL.csproj", "{9C0B5439-09EF-4391-BA50-7F116598553A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tula.Utilities", "Tula.Utilities\Tula.Utilities.csproj", "{14227F5C-19D3-456F-AB92-C9D65989E6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tula.Service", "Tula.Service\Tula.Service.csproj", "{338D785E-54E4-4DA5-A20E-D986DC91093D}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 7
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Tula.BLL\\Tula.BLL.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = Tula.BLL\\
+		SccProjectUniqueName2 = Tula.DAL\\Tula.DAL.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = Tula.DAL\\
+		SccProjectUniqueName3 = Tula.Service\\Tula.Service.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = Tula.Service\\
+		SccProjectUniqueName4 = Tula.Utilities\\Tula.Utilities.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = Tula.Utilities\\
+		SccProjectUniqueName5 = TulaTreeMvc.Tests\\TulaTreeMvc.Tests.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = TulaTreeMvc.Tests\\
+		SccProjectUniqueName6 = TulaTreeMvc\\TulaTreeMvc.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = TulaTreeMvc\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{751DC8DA-07B5-4886-BB92-BECFC445E262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751DC8DA-07B5-4886-BB92-BECFC445E262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751DC8DA-07B5-4886-BB92-BECFC445E262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751DC8DA-07B5-4886-BB92-BECFC445E262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BB57B62-5AE7-4BFE-B534-E14B82D9CABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BB57B62-5AE7-4BFE-B534-E14B82D9CABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BB57B62-5AE7-4BFE-B534-E14B82D9CABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BB57B62-5AE7-4BFE-B534-E14B82D9CABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{379FD1CB-2FC8-4AC2-A231-39FEE31A31A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{379FD1CB-2FC8-4AC2-A231-39FEE31A31A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{379FD1CB-2FC8-4AC2-A231-39FEE31A31A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{379FD1CB-2FC8-4AC2-A231-39FEE31A31A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0B5439-09EF-4391-BA50-7F116598553A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0B5439-09EF-4391-BA50-7F116598553A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0B5439-09EF-4391-BA50-7F116598553A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0B5439-09EF-4391-BA50-7F116598553A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14227F5C-19D3-456F-AB92-C9D65989E6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14227F5C-19D3-456F-AB92-C9D65989E6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14227F5C-19D3-456F-AB92-C9D65989E6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14227F5C-19D3-456F-AB92-C9D65989E6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{338D785E-54E4-4DA5-A20E-D986DC91093D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{338D785E-54E4-4DA5-A20E-D986DC91093D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{338D785E-54E4-4DA5-A20E-D986DC91093D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{338D785E-54E4-4DA5-A20E-D986DC91093D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="Home">
+    <!--url="~/Default.aspx" title="Home"  description="Home page"-->
+    <siteMapNode url="~/BookFiction.aspx?Type=Fiction"  title="Fiction"  description="BookFiction page" />
+    <siteMapNode url="~/BookNonFiction.aspx?Type=Non_Fiction" title="Non-Fiction"  description="" />
+    <siteMapNode url="~/BookAuthLists.aspx?Type=authListPage" title="OiiO Authors"  description="" />
+    <siteMapNode url="~/BookCompetitions.aspx?Type=bookCompetitions" title="Competitions" description=""></siteMapNode>
+    <siteMapNode url="~/BookNewsDisplay.aspx?Type=booksNews" title="News" description=""></siteMapNode>
+  </siteMapNode>
+</siteMap>
+
+

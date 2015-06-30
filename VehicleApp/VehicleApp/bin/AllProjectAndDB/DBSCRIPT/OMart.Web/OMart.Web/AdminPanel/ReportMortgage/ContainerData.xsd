@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ContainerData" targetNamespace="http://tempuri.org/ContainerData.xsd" xmlns:mstns="http://tempuri.org/ContainerData.xsd" xmlns="http://tempuri.org/ContainerData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ContainerData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ContainerData" msprop:Generator_UserDSName="ContainerData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MortgageTable" msprop:Generator_TableClassName="MortgageTableDataTable" msprop:Generator_TableVarName="tableMortgageTable" msprop:Generator_RowChangedName="MortgageTableRowChanged" msprop:Generator_TablePropName="MortgageTable" msprop:Generator_RowDeletingName="MortgageTableRowDeleting" msprop:Generator_RowChangingName="MortgageTableRowChanging" msprop:Generator_RowEvHandlerName="MortgageTableRowChangeEventHandler" msprop:Generator_RowDeletedName="MortgageTableRowDeleted" msprop:Generator_RowClassName="MortgageTableRow" msprop:Generator_UserTableName="MortgageTable" msprop:Generator_RowEvArgName="MortgageTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" type="xs:string" minOccurs="0" />
+              <xs:element name="OperationType" msprop:Generator_ColumnVarNameInTable="columnOperationType" msprop:Generator_ColumnPropNameInRow="OperationType" msprop:Generator_ColumnPropNameInTable="OperationTypeColumn" msprop:Generator_UserColumnName="OperationType" type="xs:string" minOccurs="0" />
+              <xs:element name="MortgageType" msprop:Generator_ColumnVarNameInTable="columnMortgageType" msprop:Generator_ColumnPropNameInRow="MortgageType" msprop:Generator_ColumnPropNameInTable="MortgageTypeColumn" msprop:Generator_UserColumnName="MortgageType" type="xs:string" minOccurs="0" />
+              <xs:element name="PaymentType" msprop:Generator_ColumnVarNameInTable="columnPaymentType" msprop:Generator_ColumnPropNameInRow="PaymentType" msprop:Generator_ColumnPropNameInTable="PaymentTypeColumn" msprop:Generator_UserColumnName="PaymentType" type="xs:string" minOccurs="0" />
+              <xs:element name="APR" msprop:Generator_ColumnVarNameInTable="columnAPR" msprop:Generator_ColumnPropNameInRow="APR" msprop:Generator_ColumnPropNameInTable="APRColumn" msprop:Generator_UserColumnName="APR" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="LTV" msprop:Generator_ColumnVarNameInTable="columnLTV" msprop:Generator_ColumnPropNameInRow="LTV" msprop:Generator_ColumnPropNameInTable="LTVColumn" msprop:Generator_UserColumnName="LTV" type="xs:string" minOccurs="0" />
+              <xs:element name="PropertyValueMinAmt" msprop:Generator_ColumnVarNameInTable="columnPropertyValueMinAmt" msprop:Generator_ColumnPropNameInRow="PropertyValueMinAmt" msprop:Generator_ColumnPropNameInTable="PropertyValueMinAmtColumn" msprop:Generator_UserColumnName="PropertyValueMinAmt" type="xs:string" minOccurs="0" />
+              <xs:element name="PropertyValueMaxAmt" msprop:Generator_ColumnVarNameInTable="columnPropertyValueMaxAmt" msprop:Generator_ColumnPropNameInRow="PropertyValueMaxAmt" msprop:Generator_ColumnPropNameInTable="PropertyValueMaxAmtColumn" msprop:Generator_UserColumnName="PropertyValueMaxAmt" type="xs:string" minOccurs="0" />
+              <xs:element name="MonthlyInstallmentAmt" msprop:Generator_ColumnVarNameInTable="columnMonthlyInstallmentAmt" msprop:Generator_ColumnPropNameInRow="MonthlyInstallmentAmt" msprop:Generator_ColumnPropNameInTable="MonthlyInstallmentAmtColumn" msprop:Generator_UserColumnName="MonthlyInstallmentAmt" type="xs:string" minOccurs="0" />
+              <xs:element name="IsPostAdExtended" msprop:Generator_ColumnVarNameInTable="columnIsPostAdExtended" msprop:Generator_ColumnPropNameInRow="IsPostAdExtended" msprop:Generator_ColumnPropNameInTable="IsPostAdExtendedColumn" msprop:Generator_UserColumnName="IsPostAdExtended" type="xs:string" minOccurs="0" />
+              <xs:element name="PostAdDate" msprop:Generator_ColumnVarNameInTable="columnPostAdDate" msprop:Generator_ColumnPropNameInRow="PostAdDate" msprop:Generator_ColumnPropNameInTable="PostAdDateColumn" msprop:Generator_UserColumnName="PostAdDate" type="xs:string" minOccurs="0" />
+              <xs:element name="PostLastDisplayDate" msprop:Generator_ColumnVarNameInTable="columnPostLastDisplayDate" msprop:Generator_ColumnPropNameInRow="PostLastDisplayDate" msprop:Generator_ColumnPropNameInTable="PostLastDisplayDateColumn" msprop:Generator_UserColumnName="PostLastDisplayDate" type="xs:string" minOccurs="0" />
+              <xs:element name="PaymentAmt" msprop:Generator_ColumnVarNameInTable="columnPaymentAmt" msprop:Generator_ColumnPropNameInRow="PaymentAmt" msprop:Generator_ColumnPropNameInTable="PaymentAmtColumn" msprop:Generator_UserColumnName="PaymentAmt" type="xs:string" minOccurs="0" />
+              <xs:element name="IsVerified" msprop:Generator_ColumnVarNameInTable="columnIsVerified" msprop:Generator_ColumnPropNameInRow="IsVerified" msprop:Generator_ColumnPropNameInTable="IsVerifiedColumn" msprop:Generator_UserColumnName="IsVerified" type="xs:string" minOccurs="0" />
+              <xs:element name="RedirectUrl" msprop:Generator_ColumnVarNameInTable="columnRedirectUrl" msprop:Generator_ColumnPropNameInRow="RedirectUrl" msprop:Generator_ColumnPropNameInTable="RedirectUrlColumn" msprop:Generator_UserColumnName="RedirectUrl" type="xs:string" minOccurs="0" />
+              <xs:element name="ImageUrl" msprop:Generator_ColumnVarNameInTable="columnImageUrl" msprop:Generator_ColumnPropNameInRow="ImageUrl" msprop:Generator_ColumnPropNameInTable="ImageUrlColumn" msprop:Generator_UserColumnName="ImageUrl" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

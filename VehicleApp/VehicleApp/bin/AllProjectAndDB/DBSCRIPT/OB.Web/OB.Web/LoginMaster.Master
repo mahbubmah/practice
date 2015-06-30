@@ -1,0 +1,281 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoginMaster.master.cs" Inherits="OB.Web.LoginMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OiiO Book</title>
+       <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,700,600,500' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,900,700' rel='stylesheet' type='text/css' />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/oiioStyle.css" rel="stylesheet" />
+    <link href="../Content/screen.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="AdminHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form id="frm" runat="server">
+        <asp:ScriptManager ID="smr" runat="server">
+        </asp:ScriptManager>
+         <header>
+            <div class="headerMain">
+                <nav role="navigation" class="navbar navbar-inverse oiioMainMenu">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="row">
+                         <div class="col-sm-5 col-md-5 col-lg-5">
+                                    <div class="userPanel">
+                                        <ul>
+                                            <li style="color:green;">Welcome To</li>
+
+                                            <li style="color:green;"><a href="Default.aspx">OiiO Book </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+                                    <div class="userPanel">
+                                        <ul id="ulLoginOutDirect" runat="server">
+
+                                            <li style="color:green;"><a id="hrfRegister" runat="server">Register |</a></li>
+                                            <li style="color:green;"><a id="hrfLogin" runat="server">Log in</a></li>
+
+                                        </ul>
+                                        <ul id="ulLoginOut" runat="server">
+                                            <li>
+                                               <a> <asp:Label ID="lblUsername" runat="server"></asp:Label></a>
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton ID="lbLogStatus" runat="server" Text="" OnClick="lbLogStatus_OnClick"></asp:LinkButton>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                             </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                       
+                             <%--  <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                        	<div class="navbar-form navbar-right search-form" role="search">
+                          <div class="headerRight">
+                                <div class="input-group searchPanel">
+                                    <input id="Textf1" type="text" class="form-control" placeholder="Search for..." />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>--%>
+                            
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav>
+                <div class="container">
+                    
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                           <div class="logo">
+                               <h1><a class="img-responsive" href="Default">
+                                  <asp:Image ID="logoImg" runat="server" Width="210" Height="45" alt="Logo" />
+
+                                   </a>
+                               </h1>
+                           </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3  col-md-offset-3 col-lg-offset-3">
+                            <ul class="ul socialMedia">
+                                <li><a href="#">
+                                    <img alt="icon1" src="Images/Interfaces/icon1.png" /></a></li>
+                                <li><a href="#">
+                                    <img alt="icon1" src="Images/Interfaces/icon2.png" /></a></li>
+                                
+                                <li><a href="#">
+                                    <img alt="icon1" src="Images/Interfaces/icon4.png" /></a></li>
+                                <li><a href="#">
+                                    <img alt="icon1" src="Images/Interfaces/icon5.png" /></a></li>
+                               
+                                <li><a href="#">
+                                    <img alt="icon1" src="Images/Interfaces/icon7.png" /></a></li>
+                                <li><a href="#">
+                                    <img alt="icon1" src="Images/Interfaces/icon8.png" /></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </header>
+   
+     <%--   <section>
+            <div class="pageWrp">
+                <div class="container">
+                    <div class="row">
+
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+                </div>
+            </div>
+        </section>--%>
+         <section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+         <footer>
+            <div class="footerWerp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="footerBox">
+                                <h3>testimonials</h3>
+                               <div class="testBox">
+                                   <p>Lorem ipsum dolor sit amet Conse ctetur adipisicingElit sed do eiusmod tempor</p>
+                               </div>
+                                <p class="text-right">Jhon aless.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="footerBox">
+                                <h3>About us</h3>
+                                <ul class="nav">
+                                    <li><a href="#">Home</a></li>
+                                     <asp:Repeater ID="rptCMSMenu" runat="server">
+                                        <ItemTemplate>
+                                            <li>
+                                                <a runat="server" href='<%#"CMSDetailPage?tp="+OB.Utilities.StringCipher.Encrypt(Eval("Value").ToString()) %>'>
+                                                    <asp:Label ID="lblTypeID" runat="server" Text='<%#Eval("Name")%>'></asp:Label>
+                                                </a>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                   <%-- <li><a href="#">About Us </a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">Contact</a></li>--%>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="footerBox">
+                                <h3>services</h3>
+                                <ul class="nav">
+                                      <asp:Repeater ID="rptService" runat="server">
+                                        <ItemTemplate>
+                                            <li>
+                                                <a runat="server" href='<%#"CMSDetailPage?tp="+OB.Utilities.StringCipher.Encrypt(Eval("Value").ToString()) %>'>
+                                                    <asp:Label ID="lblTypeID" runat="server" Text='<%#Eval("Name")%>'></asp:Label>
+                                                </a>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    <%--<li><a href="#">Painting, </a></li>
+                                    <li><a href="#">Dry wall,</a></li>
+                                    <li><a href="#">Pressure washing, </a></li>
+                                    <li><a href="#">Carpentry,</a></li>
+                                    <li><a href="#">Plumbing and landscaping.</a></li>--%>
+                                   
+                                </ul>
+                                
+
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                        <div class="footerBox">
+                                <h3>OiiOBook</h3>
+                                <ul class="nav">
+                                     <li>
+                                          <a href="<%=this.ResolveUrl("~/BookFiction.aspx?Type="+ (OB.Utilities.EnumCollection.ParentCategory.Fiction.ToString())) %>">Fiction</a>
+                                     </li>
+                                    <li>
+                                      <a href="<%=this.ResolveUrl("~/BookNonFiction.aspx?Type="+OB.Utilities.EnumCollection.ParentCategory.Non_Fiction.ToString()) %>">Non-Fiction </a>
+
+                                    </li>
+                                    <li>
+                                           <a href="<%=this.ResolveUrl("~/BookAuthLists.aspx?Type=authListPage") %>">OiiO Authors </a>
+
+                                    </li>
+                                    <li>
+                                       <a href="<%=this.ResolveUrl("~/BookCompetitions.aspx?Type=bookCompetitions") %>">Competitions</a>
+
+                                    </li>
+                                    <li>
+                                          <a href="<%=this.ResolveUrl("~/BookNewsDisplay.aspx?Type=booksNews") %>">News</a>
+
+                                    </li>
+                                </ul>
+                               
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="footerBox">
+                                <h3>contact us </h3>
+                               <p>
+                                    <%--  <strong>Address :</strong>--%>
+                                    <asp:Label ID="lblftrAddress" ForeColor="White" runat="server" Text=""></asp:Label>
+                                </p>
+                                <p>
+                                    <strong>Phone:</strong>
+                                    <asp:Label ID="lblftrPhn" ForeColor="White" runat="server" Text=""></asp:Label>
+                                </p>
+                                <p>
+                                    <strong>E-mail:</strong> <a href="#">
+                                        <asp:Label ForeColor="White" ID="lblftrEmail" runat="server" Text=""></asp:Label></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row footerBottom">
+                        <div class="col-md-2">
+                            <img src="Images/Interfaces/logo1.png" alt="img" />
+                        </div>
+                        <div class="col-md-9 copyright">
+
+                            <p>All contents copyright © <span>OiiO Book</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="App_Themes/Default/js/bootstrap.min.js"></script>
+</body>
+</html>

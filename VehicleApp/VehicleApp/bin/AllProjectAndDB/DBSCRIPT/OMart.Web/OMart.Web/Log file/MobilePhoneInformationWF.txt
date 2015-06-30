@@ -1,0 +1,7 @@
+12/05/2015 10:46:08   192.168.1.12   Thread was being aborted.      at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at OMart.Web.MobilePhoneInformationWF.lnkbtnAnotherDeals_Click(Object sender, EventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\MobilePhoneInformationWF.aspx.cs:line 265

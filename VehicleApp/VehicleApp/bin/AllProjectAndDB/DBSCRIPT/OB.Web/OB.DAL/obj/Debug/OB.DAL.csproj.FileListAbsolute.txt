@@ -1,0 +1,5 @@
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.DAL\bin\Debug\OB.DAL.dll.config
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.DAL\bin\Debug\OB.DAL.dll
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.DAL\bin\Debug\OB.DAL.pdb
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.DAL\obj\Debug\OB.DAL.dll
+F:\- E - PROJECT\OiiO Books\OB.Web\OB.DAL\obj\Debug\OB.DAL.pdb

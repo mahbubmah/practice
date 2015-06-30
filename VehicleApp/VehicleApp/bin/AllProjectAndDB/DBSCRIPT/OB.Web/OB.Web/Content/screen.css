@@ -1,0 +1,123 @@
+﻿
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px) {
+   
+}
+
+@media screen and (max-width: 640px) {
+    
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+   .oiioMainMenu ul > li{
+       background:none;
+   }
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+ .oiioMainMenu ul > li{
+       background:none;
+   }
+    
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+ 
+
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+   .mainpageBody{
+       background:#fff;
+       margin-top:0;
+       -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:20px 0;
+   }
+   .linkitem a{
+       font-size:35px;
+   }
+   .contentPart h3{
+       font-size:19px;
+   }
+   .socialMedia li{
+       margin:0 1px;
+   }
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    .tabingPart ul li{
+      margin:0 5px;
+  }
+  .tabingPart ul li a{
+      font-size:14px;
+min-width: 105px;
+  }
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .oiioMainMenu ul > li > a{
+      padding:0 4px;
+      font-size:12px;
+  }
+  .tabingPart ul li{
+      margin:0 0;
+  }
+  .tabingPart ul li a{
+      font-size:14px;
+min-width: 105px;
+  }
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+    
+}
+ 
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+}
+ 
+/* iPhone 5 (portrait &amp; landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+ 
+}
+ 
+/* iPhone 5 (landscape)----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+}
+ 
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+ 
+}

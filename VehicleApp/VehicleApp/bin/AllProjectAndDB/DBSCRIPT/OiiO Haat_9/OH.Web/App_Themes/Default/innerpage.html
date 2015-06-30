@@ -1,0 +1,1563 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OiiO HAT Inner</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/font-awesome.css" rel="stylesheet">
+<!--    <link href="css/gradient.css" rel="stylesheet">
+-->    <link href="css/oiioStyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+        <div class="headerMain navbar-fixed-top">
+            <div class="headerTop">
+                <div class="container">
+                	<div class="row">
+                    	<div class="col-sm-8 col-md-8 col-lg-8">
+                        	<div class="userPanel">
+                            	<ul>
+                                    <li> Welcome to our site </li>
+                                    <li><a href="#">Help </a></li>
+                                    <li><a href="#"> OiiO Haat </a></li>
+                                    <li><a href="#"> All Ads  </a></li>
+                                    <li><a href="#"> Help & Support </a></li>
+                                    <li class="dropdown">
+              <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Language <span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Bangla</a></li>
+                
+              </ul>
+            </li>
+                                </ul>
+                            </div>
+                        </div>                        
+                       
+                        <div class="col-sm-1 col-md-1 col-lg-1 pull-right">
+                        <input type="button"  class="btn btn-primary btnLogin" value="User Login" name="btnLogin">
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        	<div class="container">
+            	<div class="row headerMainInner">
+                	<div class="col-sm-3 col-md-3 col-lg-3">
+                    	<div class="logo">
+                        	<h1><a href="index.html"><img src="images/interface/logo.png" alt="Oiio Logo"></a></h1>
+                        </div>
+                    </div>
+                   
+                     <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">                     
+                        <div class="input-group oiioSearchPart">
+                            
+                            <input type="hidden" name="search_param" value="all" id="search_param">         
+                            <input type="text" class="form-control inputSearchBox" name="x" placeholder="I am looking for.........">
+                            <div class="input-group-btn search-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle " data-toggle="dropdown">
+                                    <span id="search_concept">All categories</span> <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#contains">Contains</a></li>
+                                  <li><a href="#its_equal">It's equal</a></li>
+                                  <li><a href="#greather_than">Greather than ></a></li>
+                                  <li><a href="#less_than">Less than < </a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#all">Anything</a></li>
+                                </ul>
+                            </div>
+                            <div class="input-group-btn">
+                                        <p class="btn btn-default inItem"> in</p>
+                                    </div>
+                            		<input type="text" class="form-control" placeholder="Postcode or location" name="q">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search glypOiio"></i></button>
+                                    </div>
+                            
+                             
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="input-group stylish-input-group pull-right">
+                            <input type="button" class="form-control" name="postAdd"  value="Post an add" >
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-plus"></span> 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mainBodyWrp">
+
+    <section>
+    	<div class="container">
+        	<div class="row">
+            	<div class="well searchPanel3">
+                	<div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="inputSearch">
+                              <input type="text" class="form-control inputText" placeholder="Search...">                          
+                        </div>
+                        <div class="selectWant">
+                        	
+                            <div class="input-group checkBoxGroup">
+                              <span class="input-group-addon">
+                                <input type="checkbox" value="Sell">
+                              </span>
+                              <label class="label label-default">For sale</label>
+                            </div>
+                            <div class="input-group checkBoxGroup">
+                              <span class="input-group-addon">
+                                <input type="checkbox" value="Sell">
+                              </span>
+                              <label class="label label-default">Want to buy</label>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="selctCatg">
+                               <select name="selectCatg" class="form-control selectCatg1">
+                                  <option value="">All categories</option>
+                                  <option>Ketchup</option>
+                                  <option>Relish</option>
+                              </select>                        
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="selctCatg">
+                               <select name="selectCatg" class="form-control electCatg1">
+                                  <option value="">Bangladesh</option>
+                                  <option>Ketchup</option>
+                                  <option>Relish</option>
+                              </select>                        
+                        </div>
+                        <div class="selctCatg">
+                               <select name="selectCatg" class="form-control selectCatg1">
+                                  <option value=""> << All locations in world >> </option>
+                                  <option>Ketchup</option>
+                                  <option>Relish</option>
+                              </select>                        
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <button type="button" name="sbtSearch" class="btn btn-default searchBtn">Search</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                
+            </div>
+            <div class="row">
+            	<div class="col-sm-9 col-md-9 col-lg-9 cntLeftAra">
+            
+            <div class="panel with-nav-tabs panel-default oiioPanel">
+                <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1default" data-toggle="tab">All ads <span class="badge badge-info">110003912</span></a></li>
+                            <li><a href="#tab2default" data-toggle="tab">Private ads <span class="badge badge-info">113912</span></a></li>
+                            <li><a href="#tab3default" data-toggle="tab">Business ads <span class="badge badge-info">113912</span></a></li>
+                            <li class="dropdown pull-right">
+                                <a href="#" data-toggle="dropdown">Most Recent <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#tab4default" data-toggle="tab">Default 4</a></li>
+                                    <li><a href="#tab5default" data-toggle="tab">Default 5</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1default">
+                        
+                        <div class="row panelBodyTop">
+                        	<div class="col-md-4 col-sm-4 col-lg-4"><h4>All Ads <span> in Bangladesh</span></h4></div>
+                            <div class="col-md-4 col-sm-4 col-lg-4 pull-right filterBox">
+                            	<div class="btn-group" role="group" aria-label="">
+                                  <button type="button" class="btn btn-default hideBtn">Hide thumbnails</button>
+                                  <button type="button" class="btn btn-default">Sort by:</button>
+                                
+                                  <div class="btn-group ddlist" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                      Popular
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                      <li><a href="#">CAR</a></li>
+                                      <li><a href="#">MOBILE</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                        	<div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="paginationPart">
+                            <ul class="pagination pull-right">
+  <li><a href="#">&laquo;</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+                            </div>
+					</div>
+                        
+                        
+                        </div>
+                        <div class="tab-pane fade" id="tab2default">
+                          <div class="row panelBodyTop">
+                        	<div class="col-md-4 col-sm-4 col-lg-4"><h4>All Ads <span> in Bangladesh</span></h4></div>
+                            <div class="col-md-4 col-sm-4 col-lg-4 pull-right filterBox">
+                            	<div class="btn-group" role="group" aria-label="">
+                                  <button type="button" class="btn btn-default hideBtn">Hide thumbnails</button>
+                                  <button type="button" class="btn btn-default">Sort by:</button>
+                                
+                                  <div class="btn-group ddlist" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                      Popular
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                      <li><a href="#">CAR</a></li>
+                                      <li><a href="#">MOBILE</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                        	<div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+					</div>
+                        
+                        </div>
+                        <div class="tab-pane fade" id="tab3default">
+                          <div class="row panelBodyTop">
+                        	<div class="col-md-4 col-sm-4 col-lg-4"><h4>All Ads <span> in Bangladesh</span></h4></div>
+                            <div class="col-md-4 col-sm-4 col-lg-4 pull-right filterBox">
+                            	<div class="btn-group" role="group" aria-label="">
+                                  <button type="button" class="btn btn-default hideBtn">Hide thumbnails</button>
+                                  <button type="button" class="btn btn-default">Sort by:</button>
+                                
+                                  <div class="btn-group ddlist" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                      Popular
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                      <li><a href="#">CAR</a></li>
+                                      <li><a href="#">MOBILE</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                        	<div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+					</div>
+                        
+                        </div>
+                        <div class="tab-pane fade" id="tab4default">
+                          <div class="row panelBodyTop">
+                        	<div class="col-md-4 col-sm-4 col-lg-4"><h4>All Ads <span> in Bangladesh</span></h4></div>
+                            <div class="col-md-4 col-sm-4 col-lg-4 pull-right filterBox">
+                            	<div class="btn-group" role="group" aria-label="">
+                                  <button type="button" class="btn btn-default hideBtn">Hide thumbnails</button>
+                                  <button type="button" class="btn btn-default">Sort by:</button>
+                                
+                                  <div class="btn-group ddlist" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                      Popular
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                      <li><a href="#">CAR</a></li>
+                                      <li><a href="#">MOBILE</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                        	<div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/51.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/52.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+                            <div class="productRowWrp">
+                            <div class="productRow">
+                                <div class="col-xs-3">
+                                <div class="thumbnail">
+                                            <img src="images/products/53.jpg" class="img-responsive" alt="img"/>
+                                        </div>
+                                </div>
+                                <div class="col-xs-7 productDetails">
+                                    <h5 class="product-name">Toyota Corolla x -04</h5>
+                                    <p class="prodInfo">Lorem Ipsum is simply dummy text of the</p>
+                                    <p class="produlocation">Dhaka Bangladesh, Company ad</p>
+                                    <h6 class="pricePart"><strong>3,000,000  <span>Taka</span></strong></h6>
+                                </div>
+                                <div class="col-xs-2">
+                                <div class="producetRightpart">
+                                    <div class="productPostDate">                            
+                                        <p>Jan<br><span>02/02/15</span></p>
+                                    </div>
+                                    <div class="productTopAdd">                            
+                                        <p>Top ad</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        	</div>
+                            </div>
+					</div>
+                        
+                       </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+                
+                </div>
+              	<div class="col-sm-3 col-md-3 col-lg-3 sideBarInnerPage">
+                    	<div class="sidebarTop">
+                        	<h3>Post Your Free  Ad</h3>
+                            <div class="sidebar-nav">
+                            	<h4>All categories</h4>
+                                <div class="well">
+                                    <ul id="accodion1" class="nav nav-list">                      					
+                                      <li><a href="#">Electronics <span class="badge badge-info">113912</span></a>
+                                      	<ul class="nav tree">
+                                          <li><a href="#">Dhaka <span class="badge badge-info">113912</span></a></li>
+                                          <li><a href="#">Chittagong<span class="badge badge-info">42352</span></a></li>
+                                          <li><a href="#">Khulna  <span class="badge badge-info">4</span></a></li>
+                                          <li><a href="#">Sylhet <span class="badge badge-info">10</span></a></li>
+                                          <li><a href="#">Rajshahi <span class="badge badge-info">113912</span></a></li>
+                                          <li><a href="#">Barisal <span class="badge badge-info">42352</span></a></li>
+                                          <li><a href="#">Rangpur  <span class="badge badge-info">4</span></a></li>
+                                          
+                                        </ul>
+                                      </li>
+                                      <li><a href="#">Home Appliances <span class="badge badge-info">42352</span></a>
+                                      <ul class="nav tree">
+                                          <li><a href="#">Dhaka <span class="badge badge-info">113912</span></a></li>
+                                          <li><a href="#">Chittagong<span class="badge badge-info">42352</span></a></li>
+                                          <li><a href="#">Khulna  <span class="badge badge-info">4</span></a></li>
+                                          <li><a href="#">Sylhet <span class="badge badge-info">10</span></a></li>
+                                          <li><a href="#">Rajshahi <span class="badge badge-info">113912</span></a></li>
+                                          <li><a href="#">Barisal <span class="badge badge-info">42352</span></a></li>
+                                          <li><a href="#">Rangpur  <span class="badge badge-info">4</span></a></li>
+                                          
+                                        </ul>
+                                      </li>
+                                      <li><a href="#">Property <span class="badge badge-info">4</span></a>
+                                      <ul class="nav tree">
+                                          <li><a href="#">Dhaka <span class="badge badge-info">113912</span></a></li>
+                                          <li><a href="#">Chittagong<span class="badge badge-info">42352</span></a></li>
+                                          <li><a href="#">Khulna  <span class="badge badge-info">4</span></a></li>
+                                          <li><a href="#">Sylhet <span class="badge badge-info">10</span></a></li>
+                                          <li><a href="#">Rajshahi <span class="badge badge-info">113912</span></a></li>
+                                          <li><a href="#">Barisal <span class="badge badge-info">42352</span></a></li>
+                                          <li><a href="#">Rangpur  <span class="badge badge-info">4</span></a></li>
+                                          
+                                        </ul>
+                                      </li>
+                                      <li><a href="#">Personal Items <span class="badge badge-info">10</span></a></li>
+                                      <li><a href="#">Cars & Vehicles <span class="badge badge-info">113912</span></a></li>
+                                      <li><a href="#">Pets & Animals <span class="badge badge-info">42352</span></a></li>
+                                      <li><a href="#">Jobs & Services <span class="badge badge-info">4</span></a></li>
+                                      <li><a href="#">Leisure, Sport & Hobby <span class="badge badge-info">10</span></a></li>
+                                      <li><a href="#">Cars & Vehicles <span class="badge badge-info">113912</span></a></li>
+                                      <li><a href="#">Pets & Animals <span class="badge badge-info">42352</span></a></li>
+                                      <li><a href="#">Other<span class="badge badge-info">4</span></a></li>
+                                      <li><a href="#">Food & Agriculture <span class="badge badge-info">10</span></a></li>                                                                   
+                                    </ul>
+                                </div>
+                                <h4> ‹ All of World </h4>
+                                <div class="well">
+                                <ul id="accodion2" class="nav">
+                                    <li><a href="#">Bangladesh</a>
+                                        <ul class="nav">
+                                            <li><a href="index.php?id=2a#ex1">Subitem 2a</a></li>
+                                            <li><a href="index.php?id=2b#ex1">Subitem 2b</a></li>
+                                            <li><a href="index.php?id=2c#ex1">Subitem 2c</a></li>
+                                            <li><a href="index.php?id=2d#ex1">Subitem 2d</a></li>
+                                            <li><a href="index.php?id=2e#ex1">Subitem 2e</a></li>
+                                        </ul>
+                                        </li>
+
+                                    <li><a href="#">India</a>      
+                                        <ul class="nav">
+                                            <li><a href="index.php?id=5a#ex1">Subitem 5a</a></li>
+                                            <li><a href="index.php?id=5b#ex1">Subitem 5b</a></li>
+                                            <li><a href="index.php?id=5c#ex1">Subitem 5c</a></li>
+                                        </ul>
+                                        </li>
+
+                                   
+                                </ul>
+                                  
+                                    
+                                </div>
+                                
+                                
+                                
+	                        </div>        
+                            
+                                              
+                        </div>
+                        <div class="sidebarBottom">
+                        	<img src="images/interface/facebook.jpg" alt="img"/>
+                        </div>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+        
+        </div>
+            
+            
+            
+             
+    </section>
+    
+   
+    <footer>
+    	<div class="footerWerp">
+        	<div class="container">           
+                <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    	<div class="footerBoxLast">
+                        	<h3>Newsletter</h3>
+
+							<div id="custom-search-input">
+                                <div class="input-group col-md-12 searchPanel2">
+                                    <input type="text" class="  search-query form-control" placeholder="Email Id" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button">
+                                            <span class=" glyphicon glyphicon-chevron-right"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <h3>FOLLOW US </h3>
+                            
+                            <ul class="fa-ul">
+                                <li><a href="#"><i class="fa-li fa fa-facebook fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-google-plus fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-instagram fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-linkedin fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-pinterest fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-tumblr fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-twitter fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-youtube fa-lg"></i></a></li>
+                                      <div class="clearfix"></div>                         
+                            </ul>
+                        <p>© 2015 Magento Demo Store. All Rights Reserved.</p>
+                        <p><img src="images/interface/paypal.png" alt="paypal"/></p>
+                            
+                           
+                        </div>
+                    </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                    	<div class="footerBox">
+                        <h3>About us</h3>
+                        	<ul class="nav">
+                            	<li> <a href="#">Home</a></li>
+                                <li> <a href="#">About Us</a></li>
+                                <li> <a href="#">Solutions</a></li>
+                                <li> <a href="#">Service Request</a></li>
+                                <li> <a href="#">FAQ</a></li>  
+                                <li> <a href="#">Contact Us</a></li>                                  
+                            </ul>
+                        </div>
+                    </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    	<div class="footerBox">
+                        <h3>services</h3>
+                        	<ul class="nav">
+                                <li> <a href="#">Fault Diagnostics </a></li>
+                                <li> <a href="#">Virus Protection </a></li>
+                                <li> <a href="#">Virus/Spyware/Malware Removal</a></li>
+                                <li> <a href="#">Performance Tune-up </a></li>
+                                <li> <a href="#">Software Installation </a></li>
+                                <li> <a href="#">Software Installation </a></li>
+                                <li> <a href="#">Software Installation </a></li>
+                                <li> <a href="#">Printer Installation & Troubleshooting </a></li>                                
+                            </ul>                            
+                        </div>                        
+
+                    </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    	<div class="footerBox contactUsBox">
+                        <h3>contact us</h3>
+                        	<p><strong>Address</strong>: <span>Lorem ipsum</span></p>
+                            <p><strong>Phone:</strong>: <span>(123) 456 7890</span></p>
+                            <p><strong>E-mail:</strong> <a href="#">info@oiiointernational.com</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row footerBottom">
+                	<div class="col-md-8 copyright">
+                    	
+                        <p>All contents copyright © <span>OiiO Haat</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                    </div>
+                    <div class="col-md-3 pull-right">
+                    <img src="images/interface/paypal2.png" alt="img"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.hoveraccordion.js"></script>
+    <script src="js/js.js"></script>    
+        <script type="text/javascript">
+        $(document).ready(function () {
+            // Setup HoverAccordion for Example 1
+            $('#accodion1').hoverAccordion();
+			$('#accodion2').hoverAccordion();
+        });
+    </script>
+  </body>
+</html>

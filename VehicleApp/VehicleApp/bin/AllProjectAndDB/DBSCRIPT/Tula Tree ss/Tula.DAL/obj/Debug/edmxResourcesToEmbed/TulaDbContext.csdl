@@ -1,0 +1,1693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TulaTreeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdGiver">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClientTypeID" Type="Int32" Nullable="false" />
+    <Property Name="NationalID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyOrOrganizationName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ComOrOrgAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ComOrOrgPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNo1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNo2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LocationID" Type="Int64" />
+    <Property Name="TotalPostNo" Type="Int32" />
+    <Property Name="IsVerified" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="AdGiverTracing">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdGiverID" Type="Int64" Nullable="false" />
+    <Property Name="MaterialID" Type="Int64" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MACAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BrowserNameID" Type="Int32" />
+    <Property Name="BrowsingTimeDuration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Origin" Type="Int32" />
+    <Property Name="EastblishYear" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_Brand_Country" FromRole="Brand" ToRole="Country" />
+    <NavigationProperty Name="Models" Relationship="Self.FK_Model_Brand" FromRole="Brand" ToRole="Model" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNo" Type="Int32" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Materials" Relationship="Self.FK_Material_Category" FromRole="Category" ToRole="Material" />
+  </EntityType>
+  <EntityType Name="CMSContent">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CMSTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CMSDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ISDCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Brands" Relationship="Self.FK_Brand_Country" FromRole="Country" ToRole="Brand" />
+    <NavigationProperty Name="Districts" Relationship="Self.FK_District_Country" FromRole="Country" ToRole="District" />
+    <NavigationProperty Name="DivisionOrStates" Relationship="Self.FK_DivisionOrState_Country" FromRole="Country" ToRole="DivisionOrState" />
+    <NavigationProperty Name="Locations" Relationship="Self.FK_Location_Country" FromRole="Country" ToRole="Location" />
+    <NavigationProperty Name="PoliceStations" Relationship="Self.FK_PoliceStation_Country" FromRole="Country" ToRole="PoliceStation" />
+    <NavigationProperty Name="PostOffices" Relationship="Self.FK_PostOffice_Country" FromRole="Country" ToRole="PostOffice" />
+  </EntityType>
+  <EntityType Name="District">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="DivisionOrStateID" Type="Int64" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_District_Country" FromRole="District" ToRole="Country" />
+    <NavigationProperty Name="DivisionOrState" Relationship="Self.FK_District_DivisionOrState1" FromRole="District" ToRole="DivisionOrState" />
+    <NavigationProperty Name="Locations" Relationship="Self.FK_Location_District" FromRole="District" ToRole="Location" />
+    <NavigationProperty Name="PoliceStations" Relationship="Self.FK_PoliceStation_District1" FromRole="District" ToRole="PoliceStation" />
+    <NavigationProperty Name="PostOffices" Relationship="Self.FK_PostOffice_District" FromRole="District" ToRole="PostOffice" />
+  </EntityType>
+  <EntityType Name="DivisionOrState">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_DivisionOrState_Country" FromRole="DivisionOrState" ToRole="Country" />
+    <NavigationProperty Name="Districts" Relationship="Self.FK_District_DivisionOrState1" FromRole="DivisionOrState" ToRole="District" />
+    <NavigationProperty Name="PoliceStations" Relationship="Self.FK_PoliceStation_DivisionOrState" FromRole="DivisionOrState" ToRole="PoliceStation" />
+    <NavigationProperty Name="PostOffices" Relationship="Self.FK_PostOffice_DivisionOrState" FromRole="DivisionOrState" ToRole="PostOffice" />
+  </EntityType>
+  <EntityType Name="HomePageBanner">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeavingCaus">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="DistrictID" Type="Int64" Nullable="false" />
+    <Property Name="SubDistrictID" Type="Int64" />
+    <Property Name="PoliceStationID" Type="Int64" Nullable="false" />
+    <Property Name="PostOfficeID" Type="Int64" />
+    <Property Name="CurrentLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_Location_Country" FromRole="Location" ToRole="Country" />
+    <NavigationProperty Name="District" Relationship="Self.FK_Location_District" FromRole="Location" ToRole="District" />
+    <NavigationProperty Name="PoliceStation" Relationship="Self.FK_Location_PoliceStation" FromRole="Location" ToRole="PoliceStation" />
+    <NavigationProperty Name="PostOffice" Relationship="Self.FK_Location_PostOffice" FromRole="Location" ToRole="PostOffice" />
+  </EntityType>
+  <EntityType Name="MappingCategory">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="MappingTableID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MappingTable" Relationship="Self.FK_MappingCategory_MappingTable" FromRole="MappingCategory" ToRole="MappingTable" />
+  </EntityType>
+  <EntityType Name="MappingTable">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MappingCategories" Relationship="Self.FK_MappingCategory_MappingTable" FromRole="MappingTable" ToRole="MappingCategory" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TitleName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LocationID" Type="Int64" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="BrandID" Type="Int64" />
+    <Property Name="ModelID" Type="Int64" />
+    <Property Name="ColorID" Type="Int64" />
+    <Property Name="AdGiverID" Type="Int64" />
+    <Property Name="AdTypeID" Type="Int32" />
+    <Property Name="AdDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdDisplayLastDate" Type="DateTime" Precision="3" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalVisitor" Type="Int32" />
+    <Property Name="IsUrgent" Type="Boolean" />
+    <Property Name="IsFeatured" Type="Boolean" />
+    <Property Name="IsSpotlight" Type="Boolean" />
+    <Property Name="IsExpired" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="WebSiteUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="YoutubeUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="UserEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserPhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsNegotiablePrice" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Material_Category" FromRole="Material" ToRole="Category" />
+    <NavigationProperty Name="Pictures" Relationship="Self.FK_Picture_Material" FromRole="Material" ToRole="Picture" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandID" Type="Int64" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK_Model_Brand" FromRole="Model" ToRole="Brand" />
+  </EntityType>
+  <EntityType Name="MyFavourite">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialID" Type="Int64" Nullable="false" />
+    <Property Name="UserLoginID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ReturnURL" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OiiONewsLetter">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsSubscribe" Type="Boolean" Nullable="false" />
+    <Property Name="SubscribeDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OiiOOther">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DetailDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImageUrl" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Picture">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialID" Type="Int64" />
+    <Property Name="UrlAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Material" Relationship="Self.FK_Picture_Material" FromRole="Picture" ToRole="Material" />
+  </EntityType>
+  <EntityType Name="PictureLog">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" />
+    <Property Name="MaterialID" Type="Int64" />
+    <Property Name="UrlAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PoliceStation">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="DivisionOrStateID" Type="Int64" Nullable="false" />
+    <Property Name="DistrictID" Type="Int64" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_PoliceStation_Country" FromRole="PoliceStation" ToRole="Country" />
+    <NavigationProperty Name="District" Relationship="Self.FK_PoliceStation_District1" FromRole="PoliceStation" ToRole="District" />
+    <NavigationProperty Name="DivisionOrState" Relationship="Self.FK_PoliceStation_DivisionOrState" FromRole="PoliceStation" ToRole="DivisionOrState" />
+    <NavigationProperty Name="Locations" Relationship="Self.FK_Location_PoliceStation" FromRole="PoliceStation" ToRole="Location" />
+    <NavigationProperty Name="PostOffices" Relationship="Self.FK_PostOffice_PoliceStation" FromRole="PoliceStation" ToRole="PostOffice" />
+  </EntityType>
+  <EntityType Name="PostOffice">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PoliceStationID" Type="Int64" Nullable="false" />
+    <Property Name="SubDistrictID" Type="Int64" />
+    <Property Name="DistrictID" Type="Int64" Nullable="false" />
+    <Property Name="DivisionOrStateID" Type="Int64" Nullable="false" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_PostOffice_Country" FromRole="PostOffice" ToRole="Country" />
+    <NavigationProperty Name="District" Relationship="Self.FK_PostOffice_District" FromRole="PostOffice" ToRole="District" />
+    <NavigationProperty Name="DivisionOrState" Relationship="Self.FK_PostOffice_DivisionOrState" FromRole="PostOffice" ToRole="DivisionOrState" />
+    <NavigationProperty Name="Locations" Relationship="Self.FK_Location_PostOffice" FromRole="PostOffice" ToRole="Location" />
+    <NavigationProperty Name="PoliceStation" Relationship="Self.FK_PostOffice_PoliceStation" FromRole="PostOffice" ToRole="PoliceStation" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tula">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Logo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoginLogo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TulaTreeAlert">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TulaTreeHelpSupport">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HelpSupportTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UrlWFList">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ModuleSerialNo" Type="Int32" />
+    <Property Name="UrlWFName" Type="String" MaxLength="900" FixedLength="false" Unicode="true" />
+    <Property Name="UrlWFSerialNo" Type="Int32" />
+    <Property Name="UrlWFDisplayName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserWFPermissions" Relationship="Self.FK_UserWFPermission_UrlWFList" FromRole="UrlWFList" ToRole="UserWFPermission" />
+  </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TypeID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserInfoes" Relationship="Self.FK_UserInfo_UserGroup" FromRole="UserGroup" ToRole="UserInfo" />
+    <NavigationProperty Name="UserWFPermissions" Relationship="Self.FK_UserWFPermission_UserGroup" FromRole="UserGroup" ToRole="UserWFPermission" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserGroupID" Type="Int32" Nullable="false" />
+    <Property Name="LoginName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoginPassword" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Salt" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AdGiverID" Type="Int64" />
+    <Property Name="IsActiveUser" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <Property Name="LeavingCausesID" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsEmail" Type="Boolean" />
+    <Property Name="IsSMS" Type="Boolean" />
+    <NavigationProperty Name="UserGroup" Relationship="Self.FK_UserInfo_UserGroup" FromRole="UserInfo" ToRole="UserGroup" />
+  </EntityType>
+  <EntityType Name="UserRating">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialID" Type="Int64" />
+    <Property Name="Ratings" Type="Int32" />
+    <Property Name="AdGiverID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="UserWFPermission">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserGroupID" Type="Int32" />
+    <Property Name="UrlWFListID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UrlWFList" Relationship="Self.FK_UserWFPermission_UrlWFList" FromRole="UserWFPermission" ToRole="UrlWFList" />
+    <NavigationProperty Name="UserGroup" Relationship="Self.FK_UserWFPermission_UserGroup" FromRole="UserWFPermission" ToRole="UserGroup" />
+  </EntityType>
+  <EntityType Name="VisitorCounter">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TotalVisitor" Type="Int64" Nullable="false" />
+    <Property Name="VisitDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="VisitorInfo">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IPAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IPType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="VisitorInfoDetails" Relationship="Self.FK_VisitorInfoDetails_VisitorInfo" FromRole="VisitorInfo" ToRole="VisitorInfoDetails" />
+  </EntityType>
+  <EntityType Name="VisitorInfoDetail">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VisitorInfoID" Type="Int64" />
+    <Property Name="AccessDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsRemoved" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="VisitorInfo" Relationship="Self.FK_VisitorInfoDetails_VisitorInfo" FromRole="VisitorInfoDetails" ToRole="VisitorInfo" />
+  </EntityType>
+  <EntityType Name="Loc">
+    <Key>
+      <PropertyRef Name="PoliceStationName" />
+      <PropertyRef Name="DistrictName" />
+      <PropertyRef Name="DivisionOrStateName" />
+      <PropertyRef Name="CountryName" />
+    </Key>
+    <Property Name="CurrentLocationName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PoliceStationName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DistrictName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DivisionOrStateName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaterialLog">
+    <Key>
+      <PropertyRef Name="IID" />
+      <PropertyRef Name="TitleName" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="LocationID" />
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="AdDate" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="IsNegotiablePrice" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TitleName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LocationID" Type="Int64" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="BrandID" Type="Int64" />
+    <Property Name="ModelID" Type="Int64" />
+    <Property Name="ColorID" Type="Int64" />
+    <Property Name="AdGiverID" Type="Int64" />
+    <Property Name="AdTypeID" Type="Int32" />
+    <Property Name="AdDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdDisplayLastDate" Type="DateTime" Precision="3" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalVisitor" Type="Int32" />
+    <Property Name="IsUrgent" Type="Boolean" />
+    <Property Name="IsFeatured" Type="Boolean" />
+    <Property Name="IsSpotlight" Type="Boolean" />
+    <Property Name="IsExpired" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="WebSiteUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="YoutubeUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="UserEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserPhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsNegotiablePrice" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Brand_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Brand" Type="Self.Brand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Brand">
+        <PropertyRef Name="Origin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Model_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Material_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Material" Type="Self.Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Material">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_District_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="District" Type="Self.District" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="District">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DivisionOrState_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="DivisionOrState" Type="Self.DivisionOrState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="DivisionOrState">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Location_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoliceStation_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PoliceStation">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostOffice_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PostOffice">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_District_DivisionOrState1">
+    <End Role="DivisionOrState" Type="Self.DivisionOrState" Multiplicity="1" />
+    <End Role="District" Type="Self.District" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DivisionOrState">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="District">
+        <PropertyRef Name="DivisionOrStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Location_District">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoliceStation_District1">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PoliceStation">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostOffice_District">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PostOffice">
+        <PropertyRef Name="DistrictID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoliceStation_DivisionOrState">
+    <End Role="DivisionOrState" Type="Self.DivisionOrState" Multiplicity="1" />
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DivisionOrState">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PoliceStation">
+        <PropertyRef Name="DivisionOrStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostOffice_DivisionOrState">
+    <End Role="DivisionOrState" Type="Self.DivisionOrState" Multiplicity="1" />
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DivisionOrState">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PostOffice">
+        <PropertyRef Name="DivisionOrStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Location_PoliceStation">
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PoliceStation">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="PoliceStationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Location_PostOffice">
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="0..1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostOffice">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="PostOfficeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MappingCategory_MappingTable">
+    <End Role="MappingTable" Type="Self.MappingTable" Multiplicity="0..1" />
+    <End Role="MappingCategory" Type="Self.MappingCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MappingTable">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="MappingCategory">
+        <PropertyRef Name="MappingTableID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Picture_Material">
+    <End Role="Material" Type="Self.Material" Multiplicity="0..1" />
+    <End Role="Picture" Type="Self.Picture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="Picture">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostOffice_PoliceStation">
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="1" />
+    <End Role="PostOffice" Type="Self.PostOffice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PoliceStation">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="PostOffice">
+        <PropertyRef Name="PoliceStationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserWFPermission_UrlWFList">
+    <End Role="UrlWFList" Type="Self.UrlWFList" Multiplicity="0..1" />
+    <End Role="UserWFPermission" Type="Self.UserWFPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UrlWFList">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="UserWFPermission">
+        <PropertyRef Name="UrlWFListID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfo_UserGroup">
+    <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="1" />
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="UserInfo">
+        <PropertyRef Name="UserGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserWFPermission_UserGroup">
+    <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="0..1" />
+    <End Role="UserWFPermission" Type="Self.UserWFPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="UserWFPermission">
+        <PropertyRef Name="UserGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VisitorInfoDetails_VisitorInfo">
+    <End Role="VisitorInfo" Type="Self.VisitorInfo" Multiplicity="0..1" />
+    <End Role="VisitorInfoDetails" Type="Self.VisitorInfoDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VisitorInfo">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="VisitorInfoDetails">
+        <PropertyRef Name="VisitorInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBConnectionString" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdGivers" EntityType="Self.AdGiver" />
+    <EntitySet Name="AdGiverTracings" EntityType="Self.AdGiverTracing" />
+    <EntitySet Name="Brands" EntityType="Self.Brand" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="CMSContents" EntityType="Self.CMSContent" />
+    <EntitySet Name="Colors" EntityType="Self.Color" />
+    <EntitySet Name="Countries" EntityType="Self.Country" />
+    <EntitySet Name="Districts" EntityType="Self.District" />
+    <EntitySet Name="DivisionOrStates" EntityType="Self.DivisionOrState" />
+    <EntitySet Name="HomePageBanners" EntityType="Self.HomePageBanner" />
+    <EntitySet Name="LeavingCauses" EntityType="Self.LeavingCaus" />
+    <EntitySet Name="Locations" EntityType="Self.Location" />
+    <EntitySet Name="MappingCategories" EntityType="Self.MappingCategory" />
+    <EntitySet Name="MappingTables" EntityType="Self.MappingTable" />
+    <EntitySet Name="Materials" EntityType="Self.Material" />
+    <EntitySet Name="Models" EntityType="Self.Model" />
+    <EntitySet Name="MyFavourites" EntityType="Self.MyFavourite" />
+    <EntitySet Name="OiiONewsLetters" EntityType="Self.OiiONewsLetter" />
+    <EntitySet Name="OiiOOthers" EntityType="Self.OiiOOther" />
+    <EntitySet Name="Pictures" EntityType="Self.Picture" />
+    <EntitySet Name="PictureLogs" EntityType="Self.PictureLog" />
+    <EntitySet Name="PoliceStations" EntityType="Self.PoliceStation" />
+    <EntitySet Name="PostOffices" EntityType="Self.PostOffice" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Tulas" EntityType="Self.Tula" />
+    <EntitySet Name="TulaTreeAlerts" EntityType="Self.TulaTreeAlert" />
+    <EntitySet Name="TulaTreeHelpSupports" EntityType="Self.TulaTreeHelpSupport" />
+    <EntitySet Name="UrlWFLists" EntityType="Self.UrlWFList" />
+    <EntitySet Name="UserGroups" EntityType="Self.UserGroup" />
+    <EntitySet Name="UserInfoes" EntityType="Self.UserInfo" />
+    <EntitySet Name="UserRatings" EntityType="Self.UserRating" />
+    <EntitySet Name="UserWFPermissions" EntityType="Self.UserWFPermission" />
+    <EntitySet Name="VisitorCounters" EntityType="Self.VisitorCounter" />
+    <EntitySet Name="VisitorInfoes" EntityType="Self.VisitorInfo" />
+    <EntitySet Name="VisitorInfoDetails" EntityType="Self.VisitorInfoDetail" />
+    <EntitySet Name="Locs" EntityType="Self.Loc" />
+    <EntitySet Name="MaterialLogs" EntityType="Self.MaterialLog" />
+    <AssociationSet Name="FK_Brand_Country" Association="Self.FK_Brand_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Brand" EntitySet="Brands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Model_Brand" Association="Self.FK_Model_Brand">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Model" EntitySet="Models" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Material_Category" Association="Self.FK_Material_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Material" EntitySet="Materials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_District_Country" Association="Self.FK_District_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="District" EntitySet="Districts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DivisionOrState_Country" Association="Self.FK_DivisionOrState_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="DivisionOrState" EntitySet="DivisionOrStates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Location_Country" Association="Self.FK_Location_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoliceStation_Country" Association="Self.FK_PoliceStation_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="PoliceStation" EntitySet="PoliceStations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostOffice_Country" Association="Self.FK_PostOffice_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="PostOffice" EntitySet="PostOffices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_District_DivisionOrState1" Association="Self.FK_District_DivisionOrState1">
+      <End Role="DivisionOrState" EntitySet="DivisionOrStates" />
+      <End Role="District" EntitySet="Districts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Location_District" Association="Self.FK_Location_District">
+      <End Role="District" EntitySet="Districts" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoliceStation_District1" Association="Self.FK_PoliceStation_District1">
+      <End Role="District" EntitySet="Districts" />
+      <End Role="PoliceStation" EntitySet="PoliceStations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostOffice_District" Association="Self.FK_PostOffice_District">
+      <End Role="District" EntitySet="Districts" />
+      <End Role="PostOffice" EntitySet="PostOffices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoliceStation_DivisionOrState" Association="Self.FK_PoliceStation_DivisionOrState">
+      <End Role="DivisionOrState" EntitySet="DivisionOrStates" />
+      <End Role="PoliceStation" EntitySet="PoliceStations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostOffice_DivisionOrState" Association="Self.FK_PostOffice_DivisionOrState">
+      <End Role="DivisionOrState" EntitySet="DivisionOrStates" />
+      <End Role="PostOffice" EntitySet="PostOffices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Location_PoliceStation" Association="Self.FK_Location_PoliceStation">
+      <End Role="PoliceStation" EntitySet="PoliceStations" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Location_PostOffice" Association="Self.FK_Location_PostOffice">
+      <End Role="PostOffice" EntitySet="PostOffices" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MappingCategory_MappingTable" Association="Self.FK_MappingCategory_MappingTable">
+      <End Role="MappingTable" EntitySet="MappingTables" />
+      <End Role="MappingCategory" EntitySet="MappingCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Picture_Material" Association="Self.FK_Picture_Material">
+      <End Role="Material" EntitySet="Materials" />
+      <End Role="Picture" EntitySet="Pictures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostOffice_PoliceStation" Association="Self.FK_PostOffice_PoliceStation">
+      <End Role="PoliceStation" EntitySet="PoliceStations" />
+      <End Role="PostOffice" EntitySet="PostOffices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserWFPermission_UrlWFList" Association="Self.FK_UserWFPermission_UrlWFList">
+      <End Role="UrlWFList" EntitySet="UrlWFLists" />
+      <End Role="UserWFPermission" EntitySet="UserWFPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInfo_UserGroup" Association="Self.FK_UserInfo_UserGroup">
+      <End Role="UserGroup" EntitySet="UserGroups" />
+      <End Role="UserInfo" EntitySet="UserInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserWFPermission_UserGroup" Association="Self.FK_UserWFPermission_UserGroup">
+      <End Role="UserGroup" EntitySet="UserGroups" />
+      <End Role="UserWFPermission" EntitySet="UserWFPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VisitorInfoDetails_VisitorInfo" Association="Self.FK_VisitorInfoDetails_VisitorInfo">
+      <End Role="VisitorInfo" EntitySet="VisitorInfoes" />
+      <End Role="VisitorInfoDetails" EntitySet="VisitorInfoDetails" />
+    </AssociationSet>
+    <FunctionImport Name="DeleteFromMaterialAndSaveToLog">
+      <Parameter Name="id" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteFromMyFvrt">
+      <Parameter Name="id" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteFromUserGroup">
+      <Parameter Name="id" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetAdGiverArcMaterialsForSearch" ReturnType="Collection(TulaTreeModel.GetAdGiverArcMaterialsForSearch_Result)">
+      <Parameter Name="categoryID" Mode="In" Type="Int64" />
+      <Parameter Name="adGiveUserID" Mode="In" Type="String" />
+      <Parameter Name="matCode" Mode="In" Type="String" />
+      <Parameter Name="fromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetAdGiverMaterialsForSearch" ReturnType="Collection(TulaTreeModel.GetAdGiverMaterialsForSearch_Result)">
+      <Parameter Name="categoryID" Mode="In" Type="Int64" />
+      <Parameter Name="adGiveUserID" Mode="In" Type="String" />
+      <Parameter Name="matCode" Mode="In" Type="String" />
+      <Parameter Name="fromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllFromPostOffice" ReturnType="Collection(TulaTreeModel.GetAllFromPostOffice_Result)" />
+    <FunctionImport Name="GetArcMaterialsForSearch" ReturnType="Collection(TulaTreeModel.GetArcMaterialsForSearch_Result)">
+      <Parameter Name="categoryID" Mode="In" Type="Int64" />
+      <Parameter Name="adGiveID" Mode="In" Type="Int64" />
+      <Parameter Name="matCode" Mode="In" Type="String" />
+      <Parameter Name="fromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetMapCategory" ReturnType="Collection(TulaTreeModel.GetMapCategory_Result)">
+      <Parameter Name="categoryID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetMaterialsForSearch" ReturnType="Collection(TulaTreeModel.GetMaterialsForSearch_Result)">
+      <Parameter Name="categoryID" Mode="In" Type="Int64" />
+      <Parameter Name="adGiveID" Mode="In" Type="Int64" />
+      <Parameter Name="matCode" Mode="In" Type="String" />
+      <Parameter Name="fromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetModelNameForSearch" ReturnType="Collection(TulaTreeModel.GetModelNameForSearch_Result)">
+      <Parameter Name="brandID" Mode="In" Type="Int64" />
+      <Parameter Name="modelName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSearchResultForRegisteredUser" ReturnType="Collection(TulaTreeModel.GetSearchResultForRegisteredUser_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="startDate" Mode="In" Type="DateTime" />
+      <Parameter Name="enddate" Mode="In" Type="DateTime" />
+      <Parameter Name="SetMaxDAte" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetServerDateTime" ReturnType="Collection(DateTime)" />
+    <FunctionImport Name="GetSortedMaterialAccordingToCategoreyIIDnClientTypeIdForClientListView" ReturnType="Collection(TulaTreeModel.GetSortedMaterialAccordingToCategoreyIIDnClientTypeIdForClientListView_Result)">
+      <Parameter Name="ClientTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="CatagoryIID" Mode="In" Type="Int64" />
+      <Parameter Name="RecentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="StartIndex" Mode="In" Type="Int32" />
+      <Parameter Name="MaximumRows" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertMaterialAndAllChildXML" ReturnType="Collection(Int32)">
+      <Parameter Name="MaterialXML" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="OH_OT_GetAllOtherContent" ReturnType="Collection(TulaTreeModel.OH_OT_GetAllOtherContent_Result)" />
+    <FunctionImport Name="OH_OT_GetNavMenu" ReturnType="Collection(TulaTreeModel.OH_OT_GetNavMenu_Result)" />
+    <FunctionImport Name="OH_SP_GetAllSpotLightAds" ReturnType="Collection(TulaTreeModel.OH_SP_GetAllSpotLightAds_Result)" />
+    <FunctionImport Name="SearchForPoliceStationbyCountryDivisionDistrict" ReturnType="Collection(TulaTreeModel.SearchForPoliceStationbyCountryDivisionDistrict_Result)">
+      <Parameter Name="policeStationName" Mode="In" Type="String" />
+      <Parameter Name="districtID" Mode="In" Type="Int64" />
+      <Parameter Name="divOrStateID" Mode="In" Type="Int64" />
+      <Parameter Name="countryID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CategoryTree_GetCategoryListByParentID" ReturnType="Collection(TulaTreeModel.SP_CategoryTree_GetCategoryListByParentID_Result)">
+      <Parameter Name="parId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CategoryTree_GetCategoryParentID" ReturnType="Collection(TulaTreeModel.SP_CategoryTree_GetCategoryParentID_Result)">
+      <Parameter Name="parID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CategoryTree_GetSearchedCategory" ReturnType="Collection(TulaTreeModel.SP_CategoryTree_GetSearchedCategory_Result)">
+      <Parameter Name="catName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CategoryTree_GetSearchedCategoryOrAll" ReturnType="Collection(TulaTreeModel.SP_CategoryTree_GetSearchedCategoryOrAll_Result)">
+      <Parameter Name="catName" Mode="In" Type="String" />
+      <Parameter Name="parId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAdgiverFnameLnamePhn" ReturnType="Collection(TulaTreeModel.sp_GetAdgiverFnameLnamePhn_Result)">
+      <Parameter Name="userEmailId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetAllLatestAds" ReturnType="Collection(TulaTreeModel.SP_GetAllLatestAds_Result)" />
+    <FunctionImport Name="SP_GetAllMaterialAccordingToCategoreyIID" ReturnType="Collection(TulaTreeModel.SP_GetAllMaterialAccordingToCategoreyIID_Result)">
+      <Parameter Name="CatagoryIID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetAllMaterialForCategoreyIIDnClientType" ReturnType="Collection(TulaTreeModel.SP_GetAllMaterialForCategoreyIIDnClientType_Result)">
+      <Parameter Name="CatagoryIID" Mode="In" Type="Int64" />
+      <Parameter Name="ClientTypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetAllRecentMaterialAdsForCategoreyIID" ReturnType="Collection(TulaTreeModel.SP_GetAllRecentMaterialAdsForCategoreyIID_Result)">
+      <Parameter Name="CatagoryIID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetAllSortedRecentMaterialAdsForCategoreyIID" ReturnType="Collection(TulaTreeModel.SP_GetAllSortedRecentMaterialAdsForCategoreyIID_Result)">
+      <Parameter Name="CatagoryIID" Mode="In" Type="Int64" />
+      <Parameter Name="StartIndex" Mode="In" Type="Int32" />
+      <Parameter Name="MaximumRows" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetDistrictForSearch" ReturnType="Collection(TulaTreeModel.SP_GetDistrictForSearch_Result)">
+      <Parameter Name="districtName" Mode="In" Type="String" />
+      <Parameter Name="countryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetFourMortgageType" />
+    <FunctionImport Name="SP_GetHelpSupportAccordingToHelpSupportID" ReturnType="Collection(TulaTreeModel.SP_GetHelpSupportAccordingToHelpSupportID_Result)">
+      <Parameter Name="HelpSupportTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="StartIndex" Mode="In" Type="Int32" />
+      <Parameter Name="MaximumRows" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetLocationByMaterialIID" ReturnType="Collection(TulaTreeModel.SP_GetLocationByMaterialIID_Result)">
+      <Parameter Name="id" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetLocationForGoogleMap" ReturnType="Collection(TulaTreeModel.SP_GetLocationForGoogleMap_Result)">
+      <Parameter Name="locationID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetLocationForSearch" ReturnType="Collection(TulaTreeModel.SP_GetLocationForSearch_Result)">
+      <Parameter Name="locationName" Mode="In" Type="String" />
+      <Parameter Name="policeStationId" Mode="In" Type="Int64" />
+      <Parameter Name="districtId" Mode="In" Type="Int64" />
+      <Parameter Name="countryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetMaterialAccordingToMaterialIID" ReturnType="Collection(TulaTreeModel.SP_GetMaterialAccordingToMaterialIID_Result)">
+      <Parameter Name="MaterialIID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetPoliceStaionForSearch" ReturnType="Collection(TulaTreeModel.SP_GetPoliceStaionForSearch_Result)">
+      <Parameter Name="policeStationName" Mode="In" Type="String" />
+      <Parameter Name="districtId" Mode="In" Type="Int64" />
+      <Parameter Name="countryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetRandomAllRecentMaterialAccordingToCategoreyIID" ReturnType="Collection(TulaTreeModel.SP_GetRandomAllRecentMaterialAccordingToCategoreyIID_Result)" />
+    <FunctionImport Name="SP_GetRandomAllRecentMaterialAds" ReturnType="Collection(TulaTreeModel.SP_GetRandomAllRecentMaterialAds_Result)" />
+    <FunctionImport Name="SP_GetSortedAllMaterialForCategoreyIIDnClientType" ReturnType="Collection(TulaTreeModel.SP_GetSortedAllMaterialForCategoreyIIDnClientType_Result)">
+      <Parameter Name="CatagoryIID" Mode="In" Type="Int64" />
+      <Parameter Name="ClientTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="StartIndex" Mode="In" Type="Int32" />
+      <Parameter Name="MaximumRows" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetSortedMaterialAccordingToCategoreyIID" ReturnType="Collection(TulaTreeModel.SP_GetSortedMaterialAccordingToCategoreyIID_Result)">
+      <Parameter Name="CatagoryIID" Mode="In" Type="Int64" />
+      <Parameter Name="StartIndex" Mode="In" Type="Int32" />
+      <Parameter Name="MaximumRows" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetWholeWebSearch" ReturnType="Collection(TulaTreeModel.SP_GetWholeWebSearch_Result)">
+      <Parameter Name="SearchKeyWord" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TulaTreeModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TulaTreeModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateAccNamePhone">
+      <Parameter Name="userEmailId" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="PhoneNo1" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateAccPassword">
+      <Parameter Name="userEmailId" Mode="In" Type="String" />
+      <Parameter Name="LoginPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateUserDeactivation">
+      <Parameter Name="userEmailId" Mode="In" Type="String" />
+      <Parameter Name="Comments" Mode="In" Type="String" />
+      <Parameter Name="LeavingCausesID" Mode="In" Type="Int32" />
+      <Parameter Name="IsActiveUser" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SpCountAllMaterialForCategorey" ReturnType="Collection(Int32)">
+      <Parameter Name="CatagoryName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpDeleteUrlList">
+      <Parameter Name="DeleteUrlList" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllMaterialForCategorey" ReturnType="Collection(TulaTreeModel.SpGetAllMaterialForCategorey_Result)">
+      <Parameter Name="CatagoryName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllPoliceStation" ReturnType="Collection(TulaTreeModel.SpGetAllPoliceStation_Result)" />
+    <FunctionImport Name="SpGetData" ReturnType="Collection(TulaTreeModel.SpGetData_Result)" />
+  </EntityContainer>
+  <ComplexType Name="GetAdGiverArcMaterialsForSearch_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="AdGiverName" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="AdDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAdGiverMaterialsForSearch_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="AdGiverName" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="AdDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAllFromPostOffice_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="DivisionOrState" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="District" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="PoliceStationName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="GetArcMaterialsForSearch_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="AdGiverName" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="AdDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetMapCategory_Result">
+    <Property Type="Int32" Name="CatID" Nullable="false" />
+    <Property Type="String" Name="MapName" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="GetMaterialsForSearch_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="AdGiverName" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="AdDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetModelNameForSearch_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="GetSearchResultForRegisteredUser_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="NationalID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmailID" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsVerified" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetSortedMaterialAccordingToCategoreyIIDnClientTypeIdForClientListView_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="CategoryIID" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategoryIID" Nullable="true" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="IsNegotiablePrice" Nullable="false" MaxLength="13" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="OH_OT_GetAllOtherContent_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="ShortDescription" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="DetailDescription" Nullable="false" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="OH_OT_GetNavMenu_Result">
+    <Property Type="Int32" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="OH_SP_GetAllSpotLightAds_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="Int64" Name="AdGiverID" Nullable="true" />
+    <Property Type="DateTime" Name="AdDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="String" Name="CurrentLocation" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrandName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ColorCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UrlAddress" Nullable="true" MaxLength="1000" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SearchForPoliceStationbyCountryDivisionDistrict_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SP_CategoryTree_GetCategoryListByParentID_Result">
+    <Property Type="Int32" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="SerialNo" Nullable="true" />
+    <Property Type="Int32" Name="ParentID" Nullable="true" />
+    <Property Type="Int64" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ModifiedBy" Nullable="true" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsRemoved" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_CategoryTree_GetCategoryParentID_Result">
+    <Property Type="Int32" Name="ParentID" Nullable="true" />
+    <Property Type="Int32" Name="IID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_CategoryTree_GetSearchedCategory_Result">
+    <Property Type="Int32" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="SerialNo" Nullable="true" />
+    <Property Type="Int32" Name="ParentID" Nullable="true" />
+    <Property Type="Int64" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ModifiedBy" Nullable="true" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsRemoved" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_CategoryTree_GetSearchedCategoryOrAll_Result">
+    <Property Type="Int32" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="SerialNo" Nullable="true" />
+    <Property Type="Int32" Name="ParentID" Nullable="true" />
+    <Property Type="Int64" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ModifiedBy" Nullable="true" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsRemoved" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_GetAdgiverFnameLnamePhn_Result">
+    <Property Type="String" Name="firstname" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="lastname" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="PhoneNo1" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_GetAllLatestAds_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="Int64" Name="AdGiverID" Nullable="true" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CategoryID" Nullable="false" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ColorCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GetAllMaterialAccordingToCategoreyIID_Result">
+    <Property Type="Int32" Name="CategoryIID" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategoryIID" Nullable="true" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="SP_GetAllMaterialForCategoreyIIDnClientType_Result">
+    <Property Type="Int32" Name="CategoryIID" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategoryIID" Nullable="true" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="IsNegotiablePrice" Nullable="false" MaxLength="13" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="SP_GetAllRecentMaterialAdsForCategoreyIID_Result">
+    <Property Type="Int32" Name="CategoryIID" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategoryIID" Nullable="true" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" />
+    <Property Type="String" Name="IsNegotiablePrice" Nullable="false" MaxLength="13" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="SP_GetAllSortedRecentMaterialAdsForCategoreyIID_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="CategoryIID" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategoryIID" Nullable="true" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+    <Property Type="String" Name="IsNegotiablePrice" Nullable="false" MaxLength="13" />
+  </ComplexType>
+  <ComplexType Name="SP_GetDistrictForSearch_Result">
+    <Property Type="Int64" Name="DistrictID" Nullable="false" />
+    <Property Type="Int32" Name="CountryID" Nullable="false" />
+    <Property Type="Int64" Name="DivisionOrStateID" Nullable="false" />
+    <Property Type="String" Name="DivisionOrStateName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="DistrictName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SP_GetHelpSupportAccordingToHelpSupportID_Result">
+    <Property Type="Int32" Name="IID" Nullable="false" />
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Image" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="SP_GetLocationByMaterialIID_Result">
+    <Property Type="String" Name="CurrentLocation" Nullable="true" MaxLength="250" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_GetLocationForGoogleMap_Result">
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="PoliceStationName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="DistrictName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="DivisionOrStateName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SP_GetLocationForSearch_Result">
+    <Property Type="Int64" Name="PoliceStationID" Nullable="false" />
+    <Property Type="Int64" Name="DistrictID" Nullable="false" />
+    <Property Type="Int32" Name="CountryID" Nullable="false" />
+    <Property Type="Int64" Name="LocationID" Nullable="true" />
+    <Property Type="Int64" Name="DivisionOrStateID" Nullable="false" />
+    <Property Type="String" Name="DivisionOrStateName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="PoliceStationName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="DistrictName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CurrentLocationName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SP_GetMaterialAccordingToMaterialIID_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="Int32" Name="CategoryID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="SP_GetPoliceStaionForSearch_Result">
+    <Property Type="Int64" Name="PoliceStationID" Nullable="false" />
+    <Property Type="Int64" Name="DistrictID" Nullable="false" />
+    <Property Type="Int32" Name="CountryID" Nullable="false" />
+    <Property Type="Int64" Name="DivisionOrStateID" Nullable="false" />
+    <Property Type="String" Name="DivisionOrStateName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="PoliceStationName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="DistrictName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SP_GetRandomAllRecentMaterialAccordingToCategoreyIID_Result">
+    <Property Type="Int32" Name="CategoryIID" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategoryIID" Nullable="true" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="SP_GetRandomAllRecentMaterialAds_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="Int32" Name="CategoryID" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="SP_GetSortedAllMaterialForCategoreyIIDnClientType_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="CategoryIID" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategoryIID" Nullable="true" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+    <Property Type="String" Name="IsNegotiablePrice" Nullable="false" MaxLength="13" />
+  </ComplexType>
+  <ComplexType Name="SP_GetSortedMaterialAccordingToCategoreyIID_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="CategoryIID" Nullable="true" />
+    <Property Type="Int32" Name="ParentCategoryIID" Nullable="true" />
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AdDate" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="IsNegotiablePrice" Nullable="false" MaxLength="13" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="SP_GetWholeWebSearch_Result">
+    <Property Type="Int64" Name="IID" Nullable="true" />
+    <Property Type="String" Name="TitleName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Matdis" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="catdis" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="catID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllMaterialForCategorey_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="CurrentLocation" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="BrandName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ModelName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="TitleName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ColorName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="AdDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="AdDisplayLastDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="TotalVisitor" Nullable="true" />
+    <Property Type="Boolean" Name="IsUrgent" Nullable="true" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Boolean" Name="IsSpotlight" Nullable="true" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="true" />
+    <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllPoliceStation_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="250" />
+    <Property Type="Boolean" Name="IsRemoved" Nullable="false" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="DivisionOrState" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="District" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SpGetData_Result">
+    <Property Type="Int64" Name="IID" Nullable="false" />
+    <Property Type="Int32" Name="CountryID" Nullable="false" />
+    <Property Type="Int64" Name="DivisionOrStateID" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ModifiedBy" Nullable="true" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsRemoved" Nullable="false" />
+  </ComplexType>
+</Schema>

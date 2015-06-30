@@ -1,0 +1,33 @@
+10/05/2015 12:27:32   192.168.1.12   Thread was being aborted.      at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at OMart.Web.InsuranceQuotes.Page_Load(Object sender, EventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\InsuranceQuotes.aspx.cs:line 48
+10/05/2015 12:29:22   192.168.1.12   Thread was being aborted.      at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at OMart.Web.InsuranceQuotes.Page_Load(Object sender, EventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\InsuranceQuotes.aspx.cs:line 48
+10/05/2015 12:35:17   192.168.1.12   'dropDownPolicyTerm' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value      at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at OMart.Web.InsuranceQuotes.LoadResult() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\InsuranceQuotes.aspx.cs:line 100
+10/05/2015 12:36:35   192.168.1.12   Thread was being aborted.      at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at OMart.Web.InsuranceQuotes.Page_Load(Object sender, EventArgs e) in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\InsuranceQuotes.aspx.cs:line 48
+10/05/2015 12:37:04   192.168.1.12   'dropDownPolicyTerm' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value      at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at OMart.Web.InsuranceQuotes.LoadResult() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\InsuranceQuotes.aspx.cs:line 100
+10/05/2015 12:37:06   192.168.1.12   'dropDownPolicyTerm' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value      at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at OMart.Web.InsuranceQuotes.LoadResult() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\InsuranceQuotes.aspx.cs:line 100
+10/05/2015 12:37:09   192.168.1.12   'dropDownPolicyTerm' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value      at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at OMart.Web.InsuranceQuotes.LoadResult() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\InsuranceQuotes.aspx.cs:line 100

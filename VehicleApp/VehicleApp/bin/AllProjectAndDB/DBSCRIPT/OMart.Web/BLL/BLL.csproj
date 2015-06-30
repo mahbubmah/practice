@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3FB16B5-BB92-4F49-AC41-B49546674B9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic\AdLogInfoRT.cs" />
+    <Compile Include="Basic\AllFeatureRT.cs" />
+    <Compile Include="Basic\AllNewsRT.cs" />
+    <Compile Include="Basic\BalanceTransferRT.cs" />
+    <Compile Include="Basic\BankingInformationRT.cs" />
+    <Compile Include="Basic\BDInternetRT.cs" />
+    <Compile Include="Basic\BIAgeRT.cs" />
+    <Compile Include="Basic\BIAmountRangeRT.cs" />
+    <Compile Include="Basic\BICategoryRT.cs" />
+    <Compile Include="Basic\BICoverRT.cs" />
+    <Compile Include="Basic\BIDefaultRT.cs" />
+    <Compile Include="Basic\BIReceiverRT.cs" />
+    <Compile Include="Basic\BusinessInsuranceRT.cs" />
+    <Compile Include="Basic\CardFeatureRT.cs" />
+    <Compile Include="Basic\CardInfoRT.cs" />
+    <Compile Include="Basic\CardPurchaseRT.cs" />
+    <Compile Include="Basic\CardRegionWiseFeeRT.cs" />
+    <Compile Include="Basic\CarInsuranceFeatureRT.cs" />
+    <Compile Include="Basic\CarInsuranceParameterRT.cs" />
+    <Compile Include="Basic\CarInsuranceRT.cs" />
+    <Compile Include="Basic\ChannelInfoRT.cs" />
+    <Compile Include="Basic\cmsRT.cs" />
+    <Compile Include="Basic\CompanyInformation.cs" />
+    <Compile Include="Basic\CompanyInfoRT.cs" />
+    <Compile Include="Basic\CountryRT.cs" />
+    <Compile Include="Basic\DefaultRT.cs" />
+    <Compile Include="Basic\DistrictRT.cs" />
+    <Compile Include="Basic\DivisionOrStateRT.cs" />
+    <Compile Include="Basic\GasDealerInfoRT.cs" />
+    <Compile Include="Basic\GasRT.cs" />
+    <Compile Include="Basic\GlobalRT.cs" />
+    <Compile Include="Basic\GuideLineRT.cs" />
+    <Compile Include="Basic\GuideLineWithDetailsRT.cs" />
+    <Compile Include="Basic\HelpAdviceRT.cs" />
+    <Compile Include="Basic\HomeInsuranceRT.cs" />
+    <Compile Include="Basic\InsuranceCoverRT.cs" />
+    <Compile Include="Basic\InsuranceQuotesRT.cs" />
+    <Compile Include="Basic\LIApplicableFeatureRT.cs" />
+    <Compile Include="Basic\LifeInsuranceRT.cs" />
+    <Compile Include="Basic\LISchemaRT.cs" />
+    <Compile Include="Basic\LoanAmntYrScdleRT.cs" />
+    <Compile Include="Basic\LoanInformationRT.cs" />
+    <Compile Include="Basic\LoanInfoRT.cs" />
+    <Compile Include="Basic\LocationRT.cs" />
+    <Compile Include="Basic\MobilePhoneFeature.cs" />
+    <Compile Include="Basic\MobilePhoneInfoRT.cs" />
+    <Compile Include="Basic\MobilePhoneRT.cs" />
+    <Compile Include="Basic\MortgageRT.cs" />
+    <Compile Include="Basic\MortgageTermYearRT.cs" />
+    <Compile Include="Basic\MortgageType.cs" />
+    <Compile Include="Basic\MPTypeRT.cs" />
+    <Compile Include="Basic\NewsExtract.cs" />
+    <Compile Include="Basic\NewsLetterRT.cs" />
+    <Compile Include="Basic\OiiOMartRT.cs" />
+    <Compile Include="Basic\PoliceStationRT.cs" />
+    <Compile Include="Basic\PostOfficeRT.cs" />
+    <Compile Include="Basic\ProfessionRT.cs" />
+    <Compile Include="Basic\SubDistrictRT.cs" />
+    <Compile Include="Basic\UrlWFListRT.cs" />
+    <Compile Include="Basic\UserGroupRT.cs" />
+    <Compile Include="Basic\UserInformationRT.cs" />
+    <Compile Include="Basic\UserPermissionRT.cs" />
+    <Compile Include="Basic\UserRegistrationRT.cs" />
+    <Compile Include="Basic\VisitorCounterRT.cs" />
+    <Compile Include="Basic\VisitorInfoDetailRT.cs" />
+    <Compile Include="Basic\VisitorRT.cs" />
+    <Compile Include="Basic\CommunityNewsRT.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{4d8ab962-fd3c-4418-9801-c722e498fb4f}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{cf5f37f7-5be0-42eb-91d7-076939a395a9}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,5 @@
+F:\- E - PROJECT\OiiO Haat_9\OH.Utilities\bin\Debug\OH.Utilities.dll
+F:\- E - PROJECT\OiiO Haat_9\OH.Utilities\bin\Debug\OH.Utilities.pdb
+F:\- E - PROJECT\OiiO Haat_9\OH.Utilities\obj\Debug\OH.Utilities.dll
+F:\- E - PROJECT\OiiO Haat_9\OH.Utilities\obj\Debug\OH.Utilities.pdb
+F:\- E - PROJECT\OiiO Haat_9\OH.Utilities\obj\Debug\OH.Utilities.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\DAL\bin\Debug\DAL.dll.config
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\DAL\bin\Debug\DAL.dll
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\DAL\bin\Debug\DAL.pdb
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\DAL\obj\Debug\DAL.dll
+F:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\DAL\obj\Debug\DAL.pdb

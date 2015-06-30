@@ -1,0 +1,514 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OiiOBookDetailsInnerMasterPage.master.cs" Inherits="OB.Web.OiiOBookDetailsInnerMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>OiiO Book</title>
+    <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,700,600,500' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,900,700' rel='stylesheet' type='text/css' />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/oiioStyle.css" rel="stylesheet" />
+    <link href="Content/screen.css" rel="stylesheet" />
+    <%-- <script type="text/javascript" src="Content/enlargeImage.js"></script>--%>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="body2">
+    <form id="form1" runat="server">
+        <header>
+            <div class="headerMain">
+                <nav role="navigation" class="navbar navbar-inverse oiioMainMenu oiioMainMenuInnrpage">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 pull-right">
+                            <div class="userPanel">
+                                <ul id="ulLoginOutDirect" runat="server">
+
+                                    <li><a id="hrfRegister" runat="server">Register |</a></li>
+                                    <li><a id="hrfLogin" runat="server">Log in</a></li>
+
+                                </ul>
+                                <ul id="ulLoginOut" runat="server">
+                                    <li>
+                                       <a> <asp:Label ID="lblUsername" runat="server"></asp:Label></a>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="lbLogStatus" runat="server" Text="" OnClick="lbLogStatus_OnClick"></asp:LinkButton>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav col-sm-8 col-md-8 col-lg-8">
+                                <li>
+                                    <a class="active" href="Default.aspx">Home</a>
+                                </li>
+
+                                <li class="dropdown oiioBrand">
+                                    <a href="<%=this.ResolveUrl("~/BookFiction.aspx?Type=bookFinction") %>">Fiction</a>
+                                    <%--<ul class="dropdown-menu">
+                                     <li><a href="#">Compare gas and electricity</a></li>
+                                    <li><a href="#">Compare electricitys</a></li>
+                                    <li><a href="#">Compare gas</a></li>
+                                    <li><a href="#">Solar power</a></li>
+                                    <li><a href="#">Business energy</a></li>
+                                    <li><a href="#">Energy price changes</a></li>
+                                    <li><a href="#">Prepayment meters</a></li>
+                                </ul>--%>
+                                </li>
+                                <li class="dropdown oiioBrand">
+                                    <a href="<%=this.ResolveUrl("~/BookNonFiction.aspx?Type=bookNonFinction") %>">Non-Fiction </a>
+                                    <%--<ul class="dropdown-menu">
+                                     <li><a href="CurrentAccount.aspx">Current accounts</a></li>
+                                    <li><a href="CreditCards.aspx">Cradit cards</a></li>
+                                    <li><a href="Money.aspx">Loans</a></li>
+                                    <li><a href="Mortgages.aspx">Mortgages</a></li>
+                                    <li><a href="BankingNews.aspx">Banking news</a></li>
+                                </ul>--%>
+                                </li>
+                                <li class="dropdown oiioBrand">
+                                    <a href="<%=this.ResolveUrl("~/BookAuthLists.aspx?Type=authListPage") %>">OiiO Authors </a>
+                                    <%--<ul class="dropdown-menu">
+                                     
+                                    <li><a href="#">Holidays</a></li>
+                                     <li><a href="#">Flights</a></li>
+                                     <li><a href="#">Hotels</a></li>
+                                     <li><a href="#">Travel Insurance</a></li>
+                                     <li><a href="#">Travel Extras</a></li>
+                                    
+                                </ul>--%>
+                                </li>
+
+                                <li class="dropdown oiioBrand">
+                                    <a href="<%=this.ResolveUrl("~/BookCompetitions.aspx?Type=bookCompetitions") %>">Competitions</a>
+                                    <%--<a class=" dropdown-toggle" data-toggle="dropdown" href="Shopping.aspx">Competitions</a>--%>
+                                    <%--<ul class="dropdown-menu">
+                                     <li><a href="#">Health & beauty</a></li>
+                                                <li><a href="#">Office supplies</a></li>
+                                                <li><a href="#">Cameras</a></li>
+                                                <li><a href="#">Televisions</a></li>
+                                                <li><a href="#">Computers</a></li>
+                                                <li><a href="#">Fashion</a></li>
+                                                <li><a href="#">Furniture</a></li>
+
+                                </ul>--%>
+                                </li>
+                                <li class="dropdown oiioBrand">
+                                    <a href="<%=this.ResolveUrl("~/BookNewsDisplay.aspx?Type=booksNews") %>">News</a>
+
+                                    <%--<a class="dropdown-toggle" data-toggle="dropdown" href="MobilePhones.aspx">Oiio Blog </a>--%>
+
+                                </li>
+
+                            </ul>
+                            <%-- <div class="navbar-form navbar-right search-form" role="search">
+                                <div class="headerRight">
+                                    <div class="input-group searchPanel">
+                                        <input id="Textf1" type="text" class="form-control" placeholder="Search for..." />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>--%>
+                        </div>
+
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav>
+                <div class="headerBotm">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <div class="logo">
+                                    <h1><a class="img-responsive" href="Default">
+                                        <asp:Image ID="logoImg" runat="server" Width="210" Height="45" alt="Logo" />
+
+                                    </a>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-3  col-md-offset-3 col-lg-offset-3">
+                                <ul class="ul socialMedia">
+                                    <li><a href="#">
+                                        <img alt="icon1" src="Images/Interfaces/icon1.png" /></a></li>
+                                    <li><a href="#">
+                                        <img alt="icon1" src="Images/Interfaces/icon2.png" /></a></li>
+
+                                    <li><a href="#">
+                                        <img alt="icon1" src="Images/Interfaces/icon4.png" /></a></li>
+                                    <li><a href="#">
+                                        <img alt="icon1" src="Images/Interfaces/icon5.png" /></a></li>
+
+                                    <li><a href="#">
+                                        <img alt="icon1" src="Images/Interfaces/icon7.png" /></a></li>
+                                    <li><a href="#">
+                                        <img alt="icon1" src="Images/Interfaces/icon8.png" /></a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </header>
+        <div class="InnermainpageBody">
+            <div class="publCompWrp">
+                <div class="container">
+                    <div class="row">
+                        <div class="publComp col-md-12">
+                            <asp:Repeater ID="rpPublisherLogo" runat="server" OnItemDataBound="rpPublisherLogo_OnItemDataBound">
+                                <ItemTemplate>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+
+                                        <a runat="server" href='<%#"PublisherDetailPage?ID="+Eval("IID") %>'>
+                                            <asp:Image runat="server" ID="img_PublisherLogo" class="img-responsive" ImageUrl='<%# Eval("ImageUrl") %>' alt="Image" />
+
+                                        </a>
+                                        <%--<p>
+                                            <asp:Literal ID="ltrPublisherName" runat="server" Text=' <%# Eval("PublisherName") %>'></asp:Literal>
+                                        </p>--%>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <div class=" clearfix"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pageMenu">
+                            <ul>
+                                <li><a href="Default.aspx">Home<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                <li><a href="BookFiction.aspx">FIction<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                <li><a href="BookNonFiction.aspx">NonFIction<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                            </ul>
+                            <div class="  clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="sidebar sidebarLeft">
+
+                            <asp:Panel ID="pnlFiction" Visible="false" runat="server">
+                                <h3>Fiction</h3>
+                                <div class="sidbarMenu">
+                                    <ul>
+                                        <asp:Repeater ID="rpFictionCat" runat="server" OnItemDataBound="rpFictionCat_OnItemDataBound">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <a href="#">
+                                                        <asp:Literal ID="ltrCategoryName" runat="server" Text=' <%# Eval("CategoryName") %>'></asp:Literal>
+
+                                                    </a></li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                </div>
+                            </asp:Panel>
+                            <asp:Panel ID="pnlNonFiction" Visible="false" runat="server">
+                                <h3>Non Fiction</h3>
+                                <div class="sidbarMenu">
+                                    <ul>
+                                        <asp:Repeater ID="rpNonFictionCat" runat="server" OnItemDataBound="rpNonFictionCat_OnItemDataBound">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <a href="#">
+                                                        <asp:Literal ID="ltrCategoryName" runat="server" Text=' <%# Eval("CategoryName") %>'></asp:Literal>
+
+                                                    </a></li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+                                    </ul>
+                                </div>
+                            </asp:Panel>
+
+                            <asp:Panel ID="pnlauthListleftSidebar" runat="server" Visible="false">
+                                <h3>Authors</h3>
+                                <div class="sidbarMenu">
+                                    <ul>
+                                        <li><a href="#">Our authors</a></li>
+                                        <li><a href="#">Events</a></li>
+
+                                    </ul>
+                                </div>
+                            </asp:Panel>
+                            <div class="sidbarMenu2">
+                                <ul>
+                                    <li><a href="#">
+                                        <img src="Images/Interfaces/icon10.png" alt="fbook" />Find us on Facebook <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                    <li><a href="#">
+                                        <img src="Images/Interfaces/icon11.png" alt="fbook" />Follow us on Twitter<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                    <li><a href="#">
+                                        <img src="Images/Interfaces/icon12.png" alt="fbook" />Subscribe to our Blog<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolderInnerPage" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="sidebar sidebarRight">
+                            <asp:Panel ID="pnlSidebarRightTop" runat="server" Visible="false">
+                                <div class="videoPart">
+                                    <h3>Videos
+                                    </h3>
+                                    <p>
+                                        Book trailers, author interviews 
+and more
+                                    </p>
+                                   <iframe width="260" height="160" id="iFrmVedioLink"   runat="server">  </iframe>
+
+                                </div>
+
+                                <ul class="sidebarMenu3">
+                                    <li><a href="#">Losing It by Cora Carmack - You Never 
+Forget Your First Time</a></li>
+                                    <li><a href="#">The Missing Rose by Serda Ozkan</a></li>
+                                    <li><a href="#">You Are Next by Katia Lief - Trailer</a></li>
+                                    <li><a href="#">Immodesty Blaize talks about her new 
+novel Ambition</a></li>
+                                    <li>
+                                        <h5 class="help-block"><a class="btn btn-success pull-right" href="#">More Videos</a></h5>
+                                    </li>
+
+                                </ul>
+
+
+
+
+                            </asp:Panel>
+                            <div class="well socialShareIcon commonBg1">
+                                <h4>Share this page:</h4>
+                                <a href="#">
+                                    <img src="Images/Interfaces/icon20.png" alt="img" /></a>
+                                <a href="#">
+                                    <img src="Images/Interfaces/icon21.png" alt="img" /></a>
+                                <a href="#">
+                                    <img src="Images/Interfaces/icon22.png" alt="img" /></a>
+                                <a href="#">
+                                    <img src="Images/Interfaces/icon23.png" alt="img" /></a>
+                                <a href="#">
+                                    <img src="Images/Interfaces/icon24.png" alt="img" /></a>
+
+                            </div>
+                             <asp:ContentPlaceHolder ID="ContentPlaceHolderRight" runat="server">
+                        </asp:ContentPlaceHolder>
+                          
+
+
+                            <%--<asp:Panel ID="pnlAuthListSidebar" runat="server" Visible="false">--%>
+                            <div class="pnlAuthListSidebar">
+                                <%--<h3>Newsletter</h3>
+                                    <input type="text" class="form-control" placeholder="Enter your E-mail" />
+                                    <p><a href="#">Unsubscribe</a><a class="btn btn-success pull-right" href="#">subscribe</a></p>
+                                    <h3>Recent Posts</h3>
+                                    <h4>What Shall I Read?</h4>--%>
+                                <div class="newsLatter">
+                                    <h3>Newsletter</h3>
+                                    <%--   <input type="text" class="form-control" placeholder="Enter your E-mail">--%>
+                                    <asp:TextBox ID="txtEmailAdd" runat="server" class="form-control" placeholder="Enter your E-mail"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rbfEmail" runat="server" ControlToValidate="txtEmailAdd"
+                                        ForeColor="Red" ToolTip="Please enter your email" ErrorMessage="Please enter your email" Display="Dynamic" ValidationGroup="vG">*
+                                    </asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="rxvEmail" runat="server" Display="Dynamic"
+                                        ErrorMessage="Please Enter Valid E-mail" ControlToValidate="txtEmailAdd"
+                                        ValidationExpression="[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}" ForeColor="Red" ValidationGroup="vG">
+                                    </asp:RegularExpressionValidator>
+                                    <asp:HiddenField ID="hdIsDelete" runat="server" />
+                                    <asp:HiddenField ID="hdIsEdit" runat="server" />
+                                    <asp:HiddenField ID="hdEmailID" runat="server" />
+                                    <p>
+                                        <%-- <a href="#" class="pull-left">Unsubscribe</a>--%>
+                                        <%--   <input type="submit" class="btn btn-default oiioBtn pull-right" value="subscribe">--%>
+
+                                        <asp:Button ID="btn_subscribe" runat="server" Text="subscribe" ValidationGroup="vG" class="btn btn-default  pull-right" ForeColor="Red" OnClick="btn_subscribe_Click" />
+                                    </p>
+                                    <asp:Label ID="lblEmailSubscribe" runat="server" Text=""></asp:Label>
+                                    <asp:ValidationSummary
+                                        ShowMessageBox="true"
+                                        ShowSummary="false"
+                                        HeaderText="You must enter a value in the following fields:"
+                                        EnableClientScript="true"
+                                        runat="server" ValidationGroup="vG" />
+
+                                </div>
+                            </div>
+                             <div class=" clearfix"></div>
+
+                            <%-- </asp:Panel>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+            </section>
+
+
+            <footer>
+                <div class="footerWerp">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="footerBox">
+                                    <h3>testimonials</h3>
+                                    <div class="testBox">
+                                        <p>Lorem ipsum dolor sit amet Conse ctetur adipisicingElit sed do eiusmod tempor</p>
+                                    </div>
+                                    <p class="text-right">Jhon aless.</p>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <div class="footerBox">
+                                    <h3>About us</h3>
+                                    <ul class="nav">
+                                        <li><a href="#">Home</a></li>
+                                        <asp:Repeater ID="rptCMSMenu" runat="server">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <a runat="server" href='<%#"CMSDetailPage?tp="+OB.Utilities.StringCipher.Encrypt(Eval("Value").ToString()) %>'>
+                                                        <asp:Label ID="lblTypeID" runat="server" Text='<%#Eval("Name")%>'></asp:Label>
+                                                    </a>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                        <%-- <li><a href="#">About Us </a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Testimonials</a></li>
+                                        <li><a href="#">Contact</a></li>--%>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <div class="footerBox">
+                                    <h3>services</h3>
+                                    <ul class="nav">
+                                        <asp:Repeater ID="rptService" runat="server">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <a runat="server" href='<%#"CMSDetailPage?tp="+OB.Utilities.StringCipher.Encrypt(Eval("Value").ToString()) %>'>
+                                                        <asp:Label ID="lblTypeID" runat="server" Text='<%#Eval("Name")%>'></asp:Label>
+                                                    </a>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                        <%-- <li><a href="#">Painting, </a></li>
+                                        <li><a href="#">Dry wall,</a></li>
+                                        <li><a href="#">Pressure washing, </a></li>
+                                        <li><a href="#">Carpentry,</a></li>
+                                        <li><a href="#">Plumbing and landscaping.</a></li>--%>
+                                    </ul>
+
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                 <div class="footerBox">
+                                <h3>OiiOBook</h3>
+                                <ul class="nav">
+                                     <li>
+                                          <a href="<%=this.ResolveUrl("~/BookFiction.aspx?Type="+ (OB.Utilities.EnumCollection.ParentCategory.Fiction.ToString())) %>">Fiction</a>
+                                     </li>
+                                    <li>
+                                      <a href="<%=this.ResolveUrl("~/BookNonFiction.aspx?Type="+OB.Utilities.EnumCollection.ParentCategory.Non_Fiction.ToString()) %>">Non-Fiction </a>
+
+                                    </li>
+                                    <li>
+                                           <a href="<%=this.ResolveUrl("~/BookAuthLists.aspx?Type=authListPage") %>">OiiO Authors </a>
+
+                                    </li>
+                                    <li>
+                                       <a href="<%=this.ResolveUrl("~/BookCompetitions.aspx?Type=bookCompetitions") %>">Competitions</a>
+
+                                    </li>
+                                    <li>
+                                          <a href="<%=this.ResolveUrl("~/BookNewsDisplay.aspx?Type=booksNews") %>">News</a>
+
+                                    </li>
+                                </ul>
+                               
+                            </div>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="footerBox">
+                                    <h3>contact us </h3>
+                                    <p>
+                                        <%--  <strong>Address :</strong>--%>
+                                        <asp:Label ID="lblftrAddress" ForeColor="White" runat="server" Text=""></asp:Label>
+                                    </p>
+                                    <p>
+                                        <strong>Phone:</strong>
+                                        <asp:Label ID="lblftrPhn" ForeColor="White" runat="server" Text=""></asp:Label>
+                                    </p>
+                                    <p>
+                                        <strong>E-mail:</strong> <a href="#">
+                                            <asp:Label ForeColor="White" ID="lblftrEmail" runat="server" Text=""></asp:Label></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row footerBottom">
+                            <div class="col-md-2">
+                                <img src="Images/Interfaces/logo1.png" alt="img" />
+                            </div>
+                            <div class="col-md-9 copyright">
+
+                                <p>All contents copyright © <span>OiiO Book</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </form>
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+
+    <script src="../Scripts/js.js"></script>
+
+
+</body>
+</html>
+

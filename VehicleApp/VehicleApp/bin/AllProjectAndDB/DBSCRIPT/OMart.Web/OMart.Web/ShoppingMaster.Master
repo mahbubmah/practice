@@ -1,0 +1,291 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ShoppingMaster.master.cs" Inherits="OMart.Web.ShoppingMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OiiO Mart</title>
+    <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,700,600,500' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,900,700' rel='stylesheet' type='text/css' />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/oiioStyle.css" rel="stylesheet" />
+    <link href="Content/screen.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmWeb" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            </Scripts>
+        </asp:ScriptManager>
+        <header>
+            <div class="headerMain">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+                            <div class="logo">
+                                <h1><a href="<%=Page.ResolveUrl("~/")%>">
+                                    <asp:Image ID="imgLogo" runat="server"  alt="img" Width="150" Height="110" /></a></h1>
+                            </div>
+                        </div>
+                        <%--  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 pull-right">
+                            <div class="headerRight">
+                                <p>Welcome to our site OiiO Mart</p>
+                                <p><a href="LoginPage">Sign in</a></p>
+                                <div class="input-group searchPanel">
+                                    <input id="Text1" type="text" class="form-control" placeholder="Search for..." />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>--%>
+
+                        <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+                            <div class="userPanel">
+                                <ul id="ulLoginOutDirect" runat="server">
+
+                                    <p>Welcome to our site OiiO Mart</p>
+                                    <li><a id="hrfRegister" runat="server">Register</a></li>
+                                    <li><a id="hrfLogin" runat="server">Log in</a></li>
+
+                                </ul>
+                                <ul id="ulLoginOut" runat="server">
+                                    <li>
+                                        <asp:Label ID="lblUsername" runat="server"></asp:Label>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="lbLogStatus" runat="server" Text="" OnClick="lbLogStatus_Click"></asp:LinkButton>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </header>
+        <section>
+            <div class="container-fluid bannerWrp mortagesPage">
+                <nav role="navigation" class="navbar navbar-inverse oiioMainMenu">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <%-- <a class="active" href="Index.aspx">Home</a>--%>
+                                    <a href="Default.aspx">Home</a>
+                                </li>
+                                <asp:Repeater runat="server" ID="rptModule" OnItemDataBound="rptModule_OnItemDataBound">
+                                    <ItemTemplate>
+                                        <li class="dropdown oiioBrand">
+                                            <a class="dropdown-toggle" id="hrefModuleName" data-toggle="dropdown" href="<%# Eval("UrlModuleName") %>">
+                                                <asp:Label ID="lblModuleName" runat="server"> <%# Eval("ModuleName") %></asp:Label></a>
+                                            <asp:HiddenField ID="hfModuleName" runat="server" Value='<%# Eval("ModuleName") %>' />
+                                            <ul class="dropdown-menu">
+                                                <asp:Repeater ID="rptUrl" runat="server">
+                                                    <ItemTemplate>
+                                                        <li><a href='<%# Eval("UrlWFName") %>'><%# Eval("UrlWFDisplayName") %></a></li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+
+                                            </ul>
+
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="carousel fade-carousel slide oiioFadeBanner oiioInsBanner " data-ride="carousel" data-interval="4000" id="bs-carousel">
+                    <!-- Overlay -->
+
+
+                    <!-- Indicators -->
+                     <%-- <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>--%>
+                    <!-- Wrapper for slides -->
+                     <div class="carousel-inner">
+                         <div class="item slides active">
+                             <div class="insBannerCntWrp">
+                                 <div class="insBannerCnt">
+                                     <div class="row">
+                                         <div class="col-sm-4">
+                                             <ul class="insBannerLink">
+                                                <asp:Repeater ID="rptOne" runat="server"
+                                                    EnableViewState="False">
+                                                    <HeaderTemplate>
+                                                    </HeaderTemplate>
+                                                    <ItemTemplate>
+                                                        <li>
+                                                           <%-- <asp:LinkButton ID="lnkBtnName1" runat="server" CausesValidation="false" Text='<%# Eval("Name")%>'
+                                                                CommandArgument='<%# Eval("Value") %>' CommandName="EditUserInfo" OnClick="lnkBtnName1_Click"></asp:LinkButton><span class="glyphicon glyphicon-chevron-right oioCherRight2"></span></a></li>--%>
+
+                                                    </ItemTemplate>
+                                                    <%--<AlternatingItemTemplate>
+                                                     <asp:LinkButton ID="lnkBtnName1" runat="server" CausesValidation="false" Text='<%# Eval("Name")%>'
+                                CommandArgument='<%# Eval("Value") %>' CommandName="EditUserInfo"></asp:LinkButton><span class="glyphicon glyphicon-chevron-right oioCherRight2"></span></a></li>
+                                                </AlternatingItemTemplate>--%>
+                                                    <FooterTemplate>
+                                                    </FooterTemplate>
+                                                </asp:Repeater>
+                                            </ul>
+
+                                             </div>
+                                          <div class="col-sm-6 text-left">
+                                            <div class="bannerMortagesCnt">
+                                                <h3>
+                                                    <asp:Label ID="lblmortgageTypeName" runat="server"></asp:Label></h3>
+                                                <p>
+                                                    <asp:Literal ID="ltrDescription" runat="server"></asp:Literal>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                         </div>
+                                     <div class="hero2">
+                                       <%-- <asp:LinkButton ID="lnkBtnName2" runat="server" CausesValidation="false" Text='' CommandArgument='<%# Eval("IID") %>' OnClick="lnkBtnName2_Click">
+                                            <asp:Image runat="server" CssClass="img-responsive" Width="200px" Height="200px" ID="img_AdDetailsFirst" alt="Image" />
+                                        </asp:LinkButton>--%>
+                                    </div>
+                                     </div>
+                                 </div>
+                             </div>
+
+                        
+                         </div>
+                    </div>
+            </div>
+        </section>
+        <section>
+            <div>
+            <asp:ContentPlaceHolder ID="shoppingPlaceholder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="socialicon">
+                        <div class="col-md-6 col-md-offset-4">
+                            <ul class="ul">
+                                <li><a href="http://www.facebook.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon1.png" /></a></li>
+                                <li><a href="http://www.twitter.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon2.png" /></a></li>
+                                <li><a href="http://www.flickr.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon3.png" /></a></li>
+                                <li><a href="http://www.linkedin.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon4.png" /></a></li>
+                                <li><a href="http://www.pinterest.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon5.png" /></a></li>
+                                <li><a href="#">
+                                    <img alt="icon1" src="images/Interfaces/icon6.png" /></a></li>
+                                <li><a href="http://www.youtube.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon7.png" /></a></li>
+                                <li><a href="http://www.plus.google.com" target="_blank">
+                                    <img alt="icon1" src="images/Interfaces/icon8.png" /></a></li>
+
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+                <footer>
+            <div class="footerWerp">
+                <div class="container">
+                    <div class="row">
+                       
+
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div class="footerBox">
+                                <h3>About us</h3>
+                                <ul class="nav">
+                                    <li><a href="#">About OiiO Mart</a></li>
+                                    <li><a href="#">Work with Us</a></li>
+                                    <li><a href="#">Our partners</a></li>
+                                    <li><a href="#">Privacy & Policy</a></li>
+                                    <li><a href="#">Terms of Use</a></li>
+                                    <li><a href="#">Contact with Us</a></li>
+                                    <li><a href="#">OiiO Mart Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <strong style="color: #FFFFFF; font-size: 18px; line-height: 30px;">Total Visitor:&nbsp;<asp:Label ID="lblTotalNumberOfVisitor" runat="server"></asp:Label></strong>
+                        </div>
+                    </div>
+                    <div class="row footerBottom">
+                        <div class="col-md-8 copyright">
+
+                            <p>All contents copyright © <span>OiiO Mart</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                        </div>
+                        <div class="col-md-3 pull-right">
+                            <img src="images/Interfaces/paypal2.png" alt="img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="Scripts/jquery-1.10.2.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.dropdown-toggle').mouseover(function () {
+                    $('.dropdown-toggle ul li').show();
+
+                })
+
+                $('.dropdown-toggle').mouseout(function () {
+                    t = setTimeout(function () {
+                        $('.dropdown-toggle ul li').hide();
+                    }, 100);
+
+                    $('.dropdown-menu').on('mouseenter', function () {
+                        $('.dropdown-menu ul li').show();
+                        clearTimeout(t);
+                    }).on('mouseleave', function () {
+                        $('.dropdown-menu ul li').hide();
+                    })
+                })
+            });
+        </script>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+14/05/2015 14:16:08   192.168.1.29   Object reference not set to an instance of an object.      at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 14:38:02   192.168.1.29   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 14:38:32   192.168.1.29   Object reference not set to an instance of an object.      at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 14:38:50   192.168.1.29   Object reference not set to an instance of an object.      at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 14:41:09   192.168.1.29   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 14:41:35   192.168.1.29   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 14:44:06   192.168.1.29   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 14:46:46   192.168.1.29   Data source is an invalid type.  It must be either an IListSource, IEnumerable, or IDataSource.      at System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(Object dataSource)
+   at System.Web.UI.WebControls.BaseDataBoundControl.set_DataSource(Object value)
+   at OMart.Web.AllCommunityNewsDetails.LoadListViewSingleAllNews() in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 76
+14/05/2015 14:47:17   192.168.1.29   Data source is an invalid type.  It must be either an IListSource, IEnumerable, or IDataSource.      at System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(Object dataSource)
+   at System.Web.UI.WebControls.BaseDataBoundControl.set_DataSource(Object value)
+   at OMart.Web.AllCommunityNewsDetails.LoadListViewSingleAllNews() in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 76
+14/05/2015 14:54:45   192.168.1.29   Object reference not set to an instance of an object.      at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 15:01:13   127.0.0.1   Object reference not set to an instance of an object.      at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+14/05/2015 15:31:28   192.168.1.29   Object reference not set to an instance of an object.      at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 39
+26/05/2015 12:09:39   192.168.1.29   Object reference not set to an instance of an object.      at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllCommunityNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllCommunityNewsDetails.aspx.cs:line 40

@@ -1,0 +1,18 @@
+13/05/2015 15:24:07   192.168.1.29   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllNewsDetails.GetQueryStringOfAllNewsID() in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 52
+   at OMart.Web.AllNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 36
+13/05/2015 15:24:08   192.168.1.29   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.AllNewsDetails.GetQueryStringOfAllNewsID() in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 52
+   at OMart.Web.AllNewsDetails.objDataSourceNewsDetails_Selecting(Object sender, ObjectDataSourceSelectingEventArgs e) in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 98
+14/05/2015 12:16:09   192.168.1.29   Object reference not set to an instance of an object.      at OMart.Web.AllNewsDetails.GetQueryStringOfAllNewsID() in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 52
+   at OMart.Web.AllNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 36
+14/05/2015 12:16:11   192.168.1.29   Object reference not set to an instance of an object.      at OMart.Web.AllNewsDetails.GetQueryStringOfAllNewsID() in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 52
+   at OMart.Web.AllNewsDetails.objDataSourceNewsDetails_Selecting(Object sender, ObjectDataSourceSelectingEventArgs e) in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 98
+14/05/2015 12:54:19   192.168.1.29   Object reference not set to an instance of an object.      at OMart.Web.AllNewsDetails.GetQueryStringOfAllNewsID() in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 52
+   at OMart.Web.AllNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 36
+14/05/2015 12:54:20   192.168.1.29   Object reference not set to an instance of an object.      at OMart.Web.AllNewsDetails.GetQueryStringOfAllNewsID() in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 52
+   at OMart.Web.AllNewsDetails.objDataSourceNewsDetails_Selecting(Object sender, ObjectDataSourceSelectingEventArgs e) in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 98
+14/05/2015 12:59:36   192.168.1.29   Object reference not set to an instance of an object.      at OMart.Web.AllNewsDetails.GetQueryStringOfAllNewsID() in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 52
+   at OMart.Web.AllNewsDetails.Page_Load(Object sender, EventArgs e) in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 36
+14/05/2015 12:59:37   192.168.1.29   Object reference not set to an instance of an object.      at OMart.Web.AllNewsDetails.GetQueryStringOfAllNewsID() in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 52
+   at OMart.Web.AllNewsDetails.objDataSourceNewsDetails_Selecting(Object sender, ObjectDataSourceSelectingEventArgs e) in e:\Source Safe\Mart\OMart.Web\AllNewsDetails.aspx.cs:line 98

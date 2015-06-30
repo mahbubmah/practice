@@ -1,0 +1,4 @@
+28/05/2015 14:10:05   127.0.0.1   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.LoanDesciptionDetails.GetQueryStringDataForSearch() in e:\Source Safe\Mart\OMart.Web\LoanDesciptionDetails.aspx.cs:line 95
+28/05/2015 14:10:54   127.0.0.1   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at Utilities.StringCipher.Decrypt(String cipherText) in e:\Source Safe\Mart\Utilities\StringCipher.cs:line 84
+   at OMart.Web.LoanDesciptionDetails.GetQueryStringDataForSearch() in e:\Source Safe\Mart\OMart.Web\LoanDesciptionDetails.aspx.cs:line 95

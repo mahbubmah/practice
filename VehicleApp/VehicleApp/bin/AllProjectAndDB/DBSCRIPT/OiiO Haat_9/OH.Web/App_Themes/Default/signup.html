@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OiiO HAT</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!--    <link href="css/gradient.css" rel="stylesheet">
+    -->
+    <link href="css/oiioStyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <header>
+        <div class="headerMain">
+            <div class="headerTop">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="userPanel">
+                                <ul>
+                                    <li> Welcome to our site </li>
+                                    <li><a href="innerpage.html">Help </a></li>
+                                    <li><a href="#"> OiiO Haat </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-1 col-md-1 col-lg-1 pull-right">
+                            <input type="button" class="btn btn-primary btnLogin" value="User Login" name="btnLogin">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="container">
+                <div class="row headerMainInner">
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="logo">
+                            <h1><a href="index.html"><img src="images/interface/logo.png" alt="Oiio Logo"></a></h1>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                        <div class="input-group oiioSearchPart">
+
+                            <input type="hidden" name="search_param" value="all" id="search_param">
+                            <input type="text" class="form-control inputSearchBox" name="x" placeholder="I am looking for.........">
+                            <div class="input-group-btn search-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle " data-toggle="dropdown">
+                                    <span id="search_concept">All categories</span> <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#contains">Contains</a></li>
+                                    <li><a href="#its_equal">It's equal</a></li>
+                                    <li><a href="#greather_than">Greather than ></a></li>
+                                    <li><a href="#less_than">Less than < </a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#all">Anything</a></li>
+                                </ul>
+                            </div>
+                            <div class="input-group-btn">
+                                <p class="btn btn-default inItem"> in</p>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Postcode or location" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search glypOiio"></i></button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <div class="input-group stylish-input-group pull-right">
+                            <input type="button" class="form-control" name="postAdd" value="Post an add">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container signpPage">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Create an Account</h3>
+                </div>
+            </div>
+          
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="well signpPageLeft">
+                        <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                            <div class="formHeadBorder"> 
+                               
+                                    <div class="form-group">
+                                        <label class="oiioLbl">Your Details</label>
+
+                                        <label class="oiioLbl pull-right">Required*</label>
+                                    </div>
+                                                   
+                                </div>                               
+                           
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <label class="">First Name*</label>
+                                        <input type="text" class="form-control oiioFcnt" name="" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <label class="">Last Name*</label>
+                                        <input type="text" class="form-control oiioFcnt" name="" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailAdd" class="control-label">Email Address*</label>
+                                <input type="text" class="form-control" id="emailAdd" name="emailAdd" value="" required="" title="Please enter you Email Address" placeholder="example@gmail.com">
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="conEmailAdd" class="control-label">Confirm Email Address*</label>
+                                <input type="text" class="form-control" id="conEmailAdd" name="conEmailAdd" value="" required="" title="Please enter you Confirm Email Address" placeholder="example@gmail.com">
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">Password*</label>
+                                <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="conPassword" class="control-label">Confirm password*</label>
+                                <input type="text" class="form-control" id="conPassword" name="conPassword" value="" required="" title="Please enter your Confirm password">
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobileNumber" class="control-label">Mobile Number*</label>
+                                <input type="tel" class="form-control" id="mobileNumber" name="conPassword" value="" required="" title="Please enter your mobile Number">
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="telePhoneNumber" class="control-label">Home TelePhone Number*</label>
+                                <input type="tel" class="form-control" id="telePhoneNumber" name="conPassword" value="" required="" title="Please enter your Home TelePhone Number">
+                                <span class="help-block"></span>
+                            </div>
+                            <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+                            <div class="checkbox multiCkbox">
+                                <p class="help-block">(if this is a private computer)</p>
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-default">
+                                        <input type="checkbox" autocomplete="off">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </label>Email
+                                    </div>
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-default">
+                                        <input type="checkbox" autocomplete="off">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </label>SMS
+                                </div>
+                                </div>
+                            <button type="submit" class="btn btn-danger">Cancl</button>
+                            <a href="/forgot/" class="btn btn-primary  pull-right">Create An Account</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="well signpPageRight">
+                        <p class="lead">Get the most form your  <span class="text-danger">OiiO HAAT </span>account</p>
+                        <ul class="list-unstyled" style="line-height: 2">
+                            <li><span class="fa fa-folder-open text-danger1"></span> With a OiiO Haat account, you can manage all your ads in one place.</li>
+                            <li><span class="fa fa-pencil-square-o text-danger1"></span> Posting ads is faster and easier with pre-filled contact information.</li>
+                            <li><span class="fa fa-signal text-danger1"></span>Ad stats show you how many people have viewed and replied to your ads.</li>
+
+                        </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footerWerp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="footerBoxLast">
+                            <h3>Newsletter</h3>
+
+                            <div id="custom-search-input">
+                                <div class="input-group col-md-12 searchPanel2">
+                                    <input type="text" class="  search-query form-control" placeholder="Email Id" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button">
+                                            <span class=" glyphicon glyphicon-chevron-right"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <h3>FOLLOW US </h3>
+
+                            <ul class="fa-ul">
+                                <li><a href="#"><i class="fa-li fa fa-facebook fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-google-plus fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-instagram fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-linkedin fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-pinterest fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-tumblr fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-twitter fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa-li fa fa-youtube fa-lg"></i></a></li>
+                                <div class="clearfix"></div>
+                            </ul>
+                            <p>© 2015 Magento Demo Store. All Rights Reserved.</p>
+                            <p><img src="images/interface/paypal.png" alt="paypal" /></p>
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                        <div class="footerBox">
+                            <h3>About us</h3>
+                            <ul class="nav">
+                                <li> <a href="#">Home</a></li>
+                                <li> <a href="#">About Us</a></li>
+                                <li> <a href="#">Solutions</a></li>
+                                <li> <a href="#">Service Request</a></li>
+                                <li> <a href="#">FAQ</a></li>
+                                <li> <a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="footerBox">
+                            <h3>services</h3>
+                            <ul class="nav">
+                                <li> <a href="#">Fault Diagnostics </a></li>
+                                <li> <a href="#">Virus Protection </a></li>
+                                <li> <a href="#">Virus/Spyware/Malware Removal</a></li>
+                                <li> <a href="#">Performance Tune-up </a></li>
+                                <li> <a href="#">Software Installation </a></li>
+                                <li> <a href="#">Software Installation </a></li>
+                                <li> <a href="#">Software Installation </a></li>
+                                <li> <a href="#">Printer Installation & Troubleshooting </a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="footerBox contactUsBox">
+                            <h3>contact us</h3>
+                            <p><strong>Address</strong>: <span>Lorem ipsum</span></p>
+                            <p><strong>Phone:</strong>: <span>(123) 456 7890</span></p>
+                            <p><strong>E-mail:</strong> <a href="#">info@oiiointernational.com</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row footerBottom">
+                    <div class="col-md-8 copyright">
+
+                        <p>All contents copyright © <span>OiiO Haat</span> 2015. All rights reserved Website Design,Development and SEO by <span>-Oiio International.com</span></p>
+                    </div>
+                    <div class="col-md-3 pull-right">
+                        <img src="images/interface/paypal2.png" alt="img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/oiiojs.js"></script>
+</body>
+</html>

@@ -1,0 +1,3572 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Advent+Pro:400,700,600,500,200,100,300);
+@import url(http://fonts.googleapis.com/css?family=Cagliostro);
+
+@charset "utf-8";
+/*======================================
+	Project Name:OIIO Mat
+	Creator     :Md Ahasan Ullah Nahid
+	Date        :2015-03-10
+=======================================*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    background: #fff;
+}
+
+a:hover, a:focus {
+    outline: none;
+    outline-offset: 0;
+}
+
+.clr {
+    clear: both;
+}
+/*===========@Global Styles ============*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+img, fieldset {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+/* all */
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+/* firefox 19+ */
+:-ms-input-placeholder {
+    color: #fff;
+}
+/* ie */
+input:-moz-placeholder {
+    color: #fff;
+}
+
+/*===========================Header============================*/
+.headerMain {
+    background: #ff0000;
+    padding: 5px 0;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.headerRight p {
+    text-align: right;
+    color: #fff;
+}
+
+    .headerRight p a {
+        text-align: right;
+        color: #fff;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: 'Contrail One', cursive;
+    }
+
+.searchPanel {
+    border: 1px solid #fff;
+    padding: 0px 0px 0px 12px;
+    margin-top: 15px;
+}
+
+    .searchPanel .form-control {
+        background: none;
+        border: none;
+        height: 35px;
+        box-shadow: none;
+        color: #fff;
+        font-size: 18px;
+        padding: 6px 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+        .searchPanel .form-control::-moz-placeholder {
+            color: #fff;
+        }
+
+    .searchPanel .btn {
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        cursor: pointer;
+        border-color: none;
+    }
+
+/*===========================bannerWrp============================*/
+.bannerWrp {
+}
+
+.oiioMainMenu {
+    position: relative;
+    z-index: 999;
+    background: url(../Images/Interfaces/menu_bg.png) repeat;
+    border: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    margin: 0;
+    min-height: 50px;
+    width: 100%;
+    /*overflow:hidden;*/
+}
+
+    .oiioMainMenu .navbar-collapse {
+        padding: 0;
+    }
+
+    .oiioMainMenu ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .oiioMainMenu .navbar-nav > li > a {
+        padding: 0 22px;
+        line-height: 50px;
+        color: #525252;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .oiioMainMenu ul li a:hover, .oiioMainMenu ul li a.active {
+        background: #ff0000;
+        color: #fff;
+    }
+
+    .oiioMainMenu .navbar-nav > li > a:hover, .oiioMainMenu .navbar-nav > li > a:focus {
+        background: #ff0000;
+        color: #fff;
+    }
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background: #ff0000;
+    color: #fff;
+}
+
+.oiioFadeBanner {
+    margin: 0px 0 0px; /*-51 0 0 26*/
+}
+
+
+/*
+Fade content bs-carousel with hero headers
+Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
+Image credits: unsplash.com
+*/
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    max-height: 447px; /*447*/
+}
+
+    .fade-carousel .carousel-inner .item {
+        max-height: 280px; /*447*/
+    }
+
+    .fade-carousel .carousel-indicators > li {
+        margin: 0 2px;
+        background-color: #f39c12;
+        border-color: #f39c12;
+        opacity: .7;
+    }
+
+        .fade-carousel .carousel-indicators > li.active {
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+        }
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+    -webkit-transform: translate3d(-50%,-50%,0);
+    -moz-transform: translate3d(-50%,-50%,0);
+    -ms-transform: translate3d(-50%,-50%,0);
+    -o-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+
+    .hero h1 {
+        font-size: 6em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        color: #FF0000;
+    }
+
+    .hero h3 {
+        color: #00A2FF;
+    }
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+    -moz-transition: 2s all ease-in-out .1s;
+    -ms-transition: 2s all ease-in-out .1s;
+    -o-transition: 2s all ease-in-out .1s;
+    transition: 2s all ease-in-out .1s;
+}
+
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+    -moz-transition: 2s all ease-in-out .1s;
+    -ms-transition: 2s all ease-in-out .1s;
+    -o-transition: 2s all ease-in-out .1s;
+    transition: 2s all ease-in-out .1s;
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    /*background-color: #080d15;*/
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {
+    padding: 10px 40px;
+}
+
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1,
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.fade-carousel .slides .slide-1 {
+    /*background-image: url(../images/banner/1.jpg);*/
+    background-color:#a8dfff;
+}
+
+.fade-carousel .slides .slide-2 {
+    /*background-image: url(../images/banner/2.jpg);*/
+     background-color:#a8dfff;
+}
+
+.fade-carousel .slides .slide-3 {
+    background-image: url(../images/banner/1.jpg);
+}
+
+/*=====================productBox==========================*/
+.servBoxWrp {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    background: url(../Images/Interfaces/servBoxDivider-bg.png) repeat-x left bottom;
+}
+
+.productBox {
+    background: #ffffff url(../Images/Interfaces/productBox_bg.png) no-repeat center bottom;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 12px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+    /*.productBoxInner{
+	border:1px solid #d9d9d9;
+	}*/
+    .productBox:hover {
+        -moz-transform: scale(1.04);
+        -webkit-transform: scale(1.04);
+        -o-transform: scale(1.04);
+        transform: scale(1.04);
+        -ms-transform: scale(1.04);
+        background: #ffffff;
+        padding: 0;
+        color: #fff !important;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 0px 0px 3px #061616;
+        -webkit-box-shadow: 0px 0px 3px #061616;
+        box-shadow: 0px 0px 3px #061616;
+    }
+
+    .productBox img {
+        width: 100% !important;
+    }
+
+    .productBox a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .productBox h3 {
+        font-size: 24px;
+        color: #ff0000;
+        /*line-height: 45px;*/
+        line-height:normal;
+        text-transform: uppercase;
+        margin: 0 0 0px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .productBox p {
+        color: #1b537c;
+        font-size: 14px;
+        padding-bottom: 10px;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+
+.sponserLogo {
+    border: 0;
+}
+
+.productBox2Wrp {
+    padding-bottom: 13px;
+    border-top: 4px solid #ff4040;
+    background: #fff url(../Images/Interfaces/productBox_bg.png) no-repeat center bottom;
+}
+
+.productBox2 {
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #d9d9d9;
+}
+
+    .productBox2 a:hover {
+        text-decoration: none;
+    }
+
+.productBoxInner2 {
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+    .productBoxInner2:hover {
+        -moz-transform: scale(1.10);
+        -webkit-transform: scale(1.10);
+        -o-transform: scale(1.10);
+        transform: scale(1.10);
+        -ms-transform: scale(1.10);
+        background: #ffffff;
+        padding: 0;
+        color: #fff !important;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 0px 0px 3px #061616;
+        -webkit-box-shadow: 0px 0px 3px #061616;
+        box-shadow: 0px 0px 3px #061616;
+    }
+
+.productBox2 h3 {
+    font-size: 24px;
+    color: #ff0000;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin: 0 0 0px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.productBox p {
+    color: #1b537c;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.commBoxTitel h3 {
+    font-size: 24px;
+    color: #3e3e3e;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin: 10px 0 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+    .commBoxTitel h3 span {
+        color: #ff0000;
+    }
+
+.hlpBox h4 {
+    font-size: 20px;
+    color: #3e3e3e;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin: 0px 0 10px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hlpBox p {
+    color: #1b537c;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+/*==============servMenuItem==========================*/
+.servMenuItem ul {
+    width: 100%;
+    margin: 0 0 10px;
+    min-height: 210px;
+}
+
+.servMenuItem h4 {
+    font-size: 20px;
+    color: #ff0101;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin: 0px 0 10px;
+    font-weight: 700;
+    padding-left: 22px;
+    background: #d7d7d7;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.servMenuItem ul li {
+    list-style: none;
+}
+
+    .servMenuItem ul li a {
+        color: #353535;
+        font-size: 14px;
+        padding: 0;
+        line-height: 35px;
+    }
+
+        .servMenuItem ul li a span {
+            margin-right: 10px;
+            font-size: 14px;
+            color: #ff0000;
+        }
+
+.textMore {
+    color: #ff0000;
+    font-size: 18px;
+    font-family: Tahoma;
+    display: block;
+    padding-left: 10%;
+    margin-bottom: 10px;
+}
+
+.oiioMatBox1 {
+    background: #dedede;
+    min-height: 233px;
+    padding: 20px;
+}
+
+.oiioMat_bottom {
+    padding-top: 30px;
+}
+
+    .oiioMat_bottom p {
+        color: #696969;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: Tahoma;
+    }
+
+.oiioMatBox1 .btn {
+    color: #fff;
+    font-size: 14px;
+    background: #929292 !important;
+    font-family: Tahoma;
+}
+
+.oiioMatBox1 h3 {
+    font-size: 19px !important;
+}
+/*==============socialicon=============*/
+.socialicon {
+    overflow: hidden;
+    padding: 25px 0;
+    background: url(../images/Interfaces/social_bg.png) no-repeat center top;
+}
+
+    .socialicon ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+        .socialicon ul li {
+            float: left;
+            list-style: outside none none;
+            margin: 5px 7px;
+        }
+
+.moreFromOiiO {
+    margin-bottom: 50px;
+}
+
+    .moreFromOiiO h3 {
+        font-size: 36px;
+        line-height: 60px;
+        text-align: center;
+        background: url(../images/Interfaces/Titel_bg01.png) no-repeat center;
+    }
+
+    .moreFromOiiO a {
+        font-size: 20px;
+        display: block;
+        line-height: 24px;
+        min-height: 67px;
+        line-height: 67px;
+        vertical-align: middle;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        font-weight: 800;
+        border-radius: 5px;
+        color: #ff0101;
+        text-transform: uppercase;
+        margin: 0px 0 10px;
+        background: #d7d7d7;
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+        .moreFromOiiO a.lastFromOiiO {
+            line-height: 24px;
+            min-height: 67px;
+            padding: 8px 0;
+            text-align: center;
+        }
+
+        .moreFromOiiO a:hover {
+            text-decoration: none;
+            background: #1b537c;
+            color: #fff;
+        }
+/*===========================Footer============================*/
+.footerWerp {
+    padding: 20px 0 0 5px;
+    background: #d40101;
+}
+
+.footerBox h3 {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.footerBox ul {
+    margin: 0;
+}
+
+    .footerBox ul li a {
+        color: #fff;
+        font-size: 11px;
+        font-family: Tahoma;
+        font-weight: bold;
+        padding: 5px 5px;
+    }
+
+        .footerBox ul li a:hover {
+            text-decoration: underline;
+            background: none;
+            color: #fff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+.copyright p {
+    font-size: 11px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footerBottom {
+    margin-top: 10px;
+}
+
+.copyright {
+    overflow: hidden;
+    text-align:center;
+}
+
+.copyright span {
+        color: #FFFFFF;
+    }
+.copyright p a{
+    color:#FFFFFF;
+}
+
+/********************************/
+/*          insurance page       */
+/********************************/
+
+.insBannerCntWrp {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    /*top:20px;*/
+    left: 0;
+    z-index: 599;
+}
+
+.insBannerCnt {
+    width: 90%;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+    .insBannerCnt p {
+        margin: 0;
+    }
+
+    .insBannerCnt h4 {
+        font-weight: 600;
+        margin: 0;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+a.bantxtTitel {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 46px;
+    font-size: 24px;
+    color: #000;
+}
+
+    a.bantxtTitel:hover {
+        text-decoration: none;
+    }
+
+.oioCherRight {
+    font-size: 21px;
+    font-weight: bold;
+    color: #00a1ff;
+}
+
+.oioCherRight2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #585858;
+    margin-left: 10px;
+}
+.oioCherRight3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 10px;
+}
+
+ul.insBannerLink {
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+    ul.insBannerLink li {
+        list-style: none;
+        border-bottom: 1px solid #98cae7;
+    }
+
+        ul.insBannerLink li a {
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+            line-height: 25px; /*39*/
+            font-size: 16px;
+            color: #000;
+        }
+
+.linkBtn1 {
+    background: #00a1ff;
+    color: #fff;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.hero2 {
+    position: absolute;
+    top: 0%; /*14*/
+    right: 0%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+    -webkit-transform: translate3d(-20%,0%,0);
+    -moz-transform: translate3d(-20%,0%,0);
+    -ms-transform: translate3d(-20%,0%,0);
+    -o-transform: translate3d(-20%,0%,0);
+    transform: translate3d(-20%,0%,0);
+}
+
+.fade-carousel .carousel-inner .item .hero2 {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+    -moz-transition: 2s all ease-in-out .1s;
+    -ms-transition: 2s all ease-in-out .1s;
+    -o-transition: 2s all ease-in-out .1s;
+    transition: 2s all ease-in-out .1s;
+}
+
+.fade-carousel .carousel-inner .item.active .hero2 {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+    -moz-transition: 2s all ease-in-out .1s;
+    -ms-transition: 2s all ease-in-out .1s;
+    -o-transition: 2s all ease-in-out .1s;
+    transition: 2s all ease-in-out .1s;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+
+
+.oiioInsBanner .slides .slideinsur1,
+.oiioInsBanner .slides .slideinsur2,
+.oiioInsBanner .slides .slideinsur3 {
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.oiioInsBanner .slides .slideinsur1 {
+    /*background-image: url(../images/Interfaces/insurance_banner_bg.png);*/
+    /*background-image: url(../images/banner/3.jpg);*/
+}
+
+.oiioInsBanner .slides .slideinsur2 {
+    background: #DBEAF9;
+}
+
+.oiioInsBanner .slides .slideinsur3 {
+    background: #D9C8C7;
+}
+
+/********************************/
+/*       insServ     */
+/********************************/
+/*.insServ {
+    margin-top: -85px;
+}*/
+
+.insServInner {
+    background: none;
+    padding-bottom: 10px;
+}
+
+    .insServInner h4 {
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        line-height: 39px;
+        font-size: 20px;
+        font-weight: 800;
+        color: #00a1ff;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .insServInner p {
+        color: #7c7c7c;
+        font-size: 14px;
+        padding-bottom: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+.commBoxTitel2 h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #00a1ff;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+}
+
+.insGuide .productBox2Wrp {
+    border-top: 0;
+    background: #fff url(../Images/Interfaces/productBox_bg_oiioGuide.png) no-repeat center bottom;
+}
+
+.insGuide .productBox2 {
+    padding: 0 0;
+    min-height: 315px;
+}
+
+.insServ h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #747474;
+    margin: 15px 0 10px;
+    text-transform: capitalize;
+}
+
+a.btnReadMore {
+    background: #a8dfff;
+    color: #747474;
+    font-family: Tahoma;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    border-radius: 0;
+    left: 33%;
+}
+
+a.btnReadMore2 {
+    background: #a8dfff;
+    color: #747474;
+    font-family: Tahoma;
+    position: absolute;
+    bottom: 13px;
+    border: none;
+    border-radius: 0;
+    left: 15px;
+    width: 90%;
+    display: block;
+}
+
+.btn:focus {
+    outline: none;
+    outline-offset: 0;
+}
+
+.productCnt {
+    padding: 10px;
+    min-height: 160px;
+}
+
+.productCntHead {
+    padding: 0px 20px;
+    line-height: 28px;
+    background: #dcf2ff;
+    color: #747474;
+    font-size: 14px;
+    font-family: Tahoma;
+}
+
+.postDate {
+    line-height: 28px;
+    color: #747474;
+    font-size: 14px;
+    font-family: Tahoma;
+}
+
+.productCnt h6 {
+    overflow: hidden;
+}
+
+.productCnt h5 {
+    margin: 15px 0;
+}
+
+p.productCntDesc {
+    color: #747474;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    font-family: Tahoma;
+}
+/********************************/
+/*         brodBand page      */
+/********************************/
+/*.BroadBandBanner{
+    margin-bottom:1px;
+}*/
+
+.BroadBandBanner .carousel-inner .item {
+    height: 320px;
+}
+
+.BroadBandBanner .slides .slideinsur1,
+.BroadBandBanner .slides .slideinsur2,
+.BroadBandBanner .slides .slideinsur3 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.BroadBandBanner .slides .slideinsur1 {
+    background-image: url(../images/Interfaces/insurance_banner_bg.png);
+    /*background-image: url(../images/banner/3.jpg);*/
+}
+
+.BroadBandBanner .slides .slideinsur2 {
+    background: #d9d9d9;
+}
+
+.BroadBandBanner .slides .slideinsur3 {
+    background: #FEB54A;
+}
+
+.BroadBandBanner .hero2 {
+    /*right: -9%;*/
+}
+
+    .BroadBandBanner .hero2 img {
+        width: 75%;
+    }
+
+.brodBandLink ul {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+    .brodBandLink ul li {
+        list-style: none;
+        margin: 3px 0;
+        background: #f8f8f8;
+        border: 1px solid #dcdcdc;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+
+        .brodBandLink ul li a {
+            padding: 0 22px;
+            line-height: 24px;
+            color: #555555;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+            .brodBandLink ul li a:hover {
+                text-decoration: none;
+                color: #FF0000;
+            }
+
+brodBandLink a:last-child {
+    float: right;
+}
+
+.brodBandLinkControl {
+    display: inline-block;
+    padding: 0 55px;
+    line-height: 25px;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 800;
+    background: #f8f8f8;
+    border: 1px solid #dcdcdc;
+    /*margin-top:10px;*/
+    margin-top: 0px 2px;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+    .brodBandLinkControl:hover {
+        background: #ff0000;
+        color: #fff;
+        border: 1px solid #dcdcdc;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+.broadBandPage .insBannerCnt {
+    width: 100%;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+    .broadBandPage .insBannerCnt p {
+        margin: 0 0 10px;
+        color: #4b4a4a;
+        font-size: 12px;
+    }
+
+    .broadBandPage .insBannerCnt h4 {
+        font-weight: 400;
+        margin: 5px 0 10px;
+        line-height: 30px;
+        color: #008fe2;
+        font-size: 24px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+.broadBandPage h3 {
+    font-weight: 600;
+    margin: 5px 0 12px;
+    color: #4b4a4a;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.compareBtn {
+    background: #00a1ff;
+    color: #fff;
+    line-height: 37px;
+    height: 37px;
+    padding: 0 35px;
+    font-style: italic;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.providerIem {
+    padding: 16px 0;
+    background: #f3f3f3;
+}
+
+    .providerIem h3 {
+        font-weight: 600;
+        margin: 0;
+        color: #4b4a4a;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .providerIem p {
+        margin: 0;
+        color: #4b4a4a;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .providerIem img {
+        border: 1px solid #eaeaea;
+    }
+
+.brodBandServ {
+    margin-top: 18px;
+}
+
+
+.bBrandproductBox2Wrp {
+    padding-bottom: 37px;
+    background: #fff url(../Images/Interfaces/broadbandProduct_bg.png) no-repeat center bottom;
+}
+
+    .bBrandproductBox2Wrp .img-thumbnail {
+        padding: 16px;
+        border-radius: 0;
+        border: 1px solid #d9d9d9;
+        border-top: 4px solid #ff4040;
+        border-bottom: 0;
+    }
+
+        .bBrandproductBox2Wrp .img-thumbnail img {
+            border: 1px solid #a8dfff;
+        }
+
+    .bBrandproductBox2Wrp h5 {
+        color: #4b4a4a;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 600;
+        text-align: center;
+        margin: -13px 0;
+        font-style: italic;
+    }
+
+.bbandProdHead_bg1 {
+    padding: 14px 12px;
+    background: url(../Images/Interfaces/bBand_bg1.png) no-repeat left center;
+}
+
+.bbandProdHead_bg2 {
+    padding: 14px 12px;
+    background: url(../Images/Interfaces/bBand_bg2.png) no-repeat right center;
+}
+
+.bBrandproductCnt {
+    padding: 35px 20px 15px;
+    border: 1px solid #d9d9d9;
+    border-top: 0;
+    margin-top: -13px;
+    text-align: center;
+}
+
+.btnReadMore3 {
+    background: none;
+    color: #ff0000;
+    font-size: 14px;
+    padding: 6px 24px;
+    border: 1px solid #cbcccc;
+}
+
+.viewAll {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    border: 0;
+    background: none;
+    color: #00A2FF;
+    font-style: normal;
+}
+
+.viewAll_Bottom {
+    /*margin:-30px;*/
+}
+
+.viewAll_Top {
+}
+
+
+/********************************/
+/*         Mobile Phones   */
+/********************************/
+.dealMfgFinerWrp {
+    margin-top: 20px;
+}
+
+.dealFinderMfg {
+    background: #f4f4f4;
+    border: 1px solid #cbcccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 318px;
+}
+
+.dealFinderLeft {
+    padding: 20px 15px;
+}
+
+.dealFinderMfg h3 {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+    color: #3a3838;
+}
+
+.dealFinderMfg p {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    color: #3a3838;
+}
+
+.dealFinderMfg .form-control {
+    margin-bottom: 10px;
+}
+
+.compareBtn2 {
+    background: #ff0000;
+    color: #fff;
+    line-height: 37px;
+    height: 37px;
+    font-size: 16px;
+    padding: 0 35px;
+    font-style: italic;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+    .compareBtn2 span {
+        color: #fff;
+    }
+
+.phoneFinder {
+    background: #a8dfff;
+    margin: 20px 0;
+    padding: 5px 0 5px 0;
+}
+
+.phoneFinderInner h3 {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 40px;
+    color: #4b4a4a;
+}
+
+.phoneFinderInner p {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    color: #4b4a4a;
+}
+
+.marginTop30px {
+    margin-top: 25px;
+}
+
+.latestPhone h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #4b4a4a;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.latestProductBox fieldset {
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+}
+
+    .latestProductBox fieldset legend {
+        margin: 0;
+        margin-left: 25%;
+        border: none;
+        width: auto;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+.latestProductBox .imgBox {
+    border: 1px solid #cccccc;
+}
+
+.latestProductBox h5 {
+    margin: 0;
+    color: #4b4a4a;
+    font-size: 18px;
+    line-height: 45px;
+    font-family: Tahoma;
+}
+
+.latestProductBox h4 {
+    margin: 0 0 15px;
+    color: #4b4a4a;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    font-family: Tahoma;
+}
+
+.latestProductBox p {
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    color: #4b4a4a;
+}
+
+.readstory {
+    color: #ff0000;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+}
+
+
+/********************************/
+/*        loan page           */
+/********************************/
+.loanPageInner {
+    margin-top: 15px;
+}
+
+.loanBannerpart .slides .slideloan1,
+.loanBannerpart .slides .slideloan2,
+.loanBannerpart .slides .slideloan3 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.loanBannerpart .slides .slideloan1 {
+    background-image: url(../images/banner/7.jpg) !important;
+}
+
+.loanBannerpart .slides .slideloan2 {
+    background-image: url(../images/banner/5.jpg);
+}
+
+.loanBannerpart .slides .slideloan3 {
+    background-image: url(../images/banner/6.jpg);
+}
+
+
+
+
+.compareLoan {
+    min-height: 110px;
+    max-width: 570px;
+    padding: 5px 15px;
+    background-repeat: repeat;
+    z-index: 599;
+    background-image: url(../images/Interfaces/loandBanner_bg1.png);
+}
+
+    .compareLoan h2 {
+        color: #ff0000;
+        font-size: 48px;
+        margin: 0;
+        line-height: 50px;
+        font-weight: 700;
+        font-family: 'Advent Pro', sans-serif;
+    }
+
+    .compareLoan p {
+        color: #fff;
+        font-size: 18px;
+        font-family: 'Advent Pro', sans-serif;
+    }
+
+.loanBannerpartInner h4 {
+    color: #00a2ff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.commBoxTitelLoan h2 {
+    color: #666666;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+
+.loandBannerMenu li {
+    float: left;
+    list-style: none;
+    margin: 30px 10px 0;
+}
+
+.loandBannerMenu a {
+    display: block;
+    line-height: 55px;
+    padding: 0 10px;
+    border: 1px solid #bcbcbc;
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: 700;
+    background-image: url(../images/Interfaces/loandBanner_bg2.png);
+    background-repeat: repeat;
+    font-family: 'Advent Pro', sans-serif;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.loandBannerMenu li a:hover {
+    text-decoration: none;
+    background: #1b537c;
+    color: #fff;
+}
+
+.loanBox {
+    border: 1px solid #c0c0c0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+    .loanBox h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 30px;
+        color: #00a2ff;
+        font-family: 'Advent Pro', sans-serif;
+        font-weight: 600;
+    }
+
+    .loanBox img {
+        float: right;
+        margin: 0 0 0 10px;
+    }
+
+    .loanBox p {
+        margin: 0;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        line-height: 18px;
+        color: #767676;
+    }
+
+.loanBoxFoot {
+    margin: 0 -15px -15px;
+    padding: 0 15px;
+    margin-top: 10px;
+    background: #e4e4e4;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: 1px solid #c0c0c0;
+}
+
+    .loanBoxFoot a {
+        line-height: 50px;
+        color: #ff0000;
+        font-size: 18px;
+    }
+
+.loanServBox {
+    border: 1px solid #c0c0c0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 15px 0;
+    max-height: 245px;
+}
+
+.loanServWrp ul {
+    background: #00A2FF;
+    border-color: #ff0000;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+    .loanServWrp ul li a {
+        font-size: 24px;
+        line-height: 30px;
+        color: #fff;
+        font-family: 'Advent Pro', sans-serif;
+        font-weight: 600;
+        border: none;
+    }
+
+.loanServWrp .nav-tabs > li > a:hover {
+    background: #ff0000;
+    border: none;
+    color: #fff;
+}
+
+.loanServWrp .nav-tabs > li.active > a, .loanServWrp .nav-tabs > li.active > a:hover, .loanServWrp .nav-tabs > li.active > a:focus {
+    background: #ff0000;
+    border: none;
+    color: #fff;
+}
+
+.loanservBoxCnt {
+    padding: 5px 15px;
+}
+
+.loanServBox h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    line-height: 30px;
+    color: #00a2ff;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
+}
+
+    .loanServBox h3 a {
+        color: #00a2ff;
+        padding: 50px 0;
+        display: block;
+        font-size: 36px;
+    }
+
+        .loanServBox h3 a:hover {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+.oioCherRight3 {
+    font-size: 10px;
+}
+
+/*====================20150324==================*/
+.bBrandproductCnt h6 {
+    color: #4b4a4a;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}
+
+.providerIem2 {
+    background: #99e2ff;
+}
+
+    .providerIem2 a {
+        display: inline-block;
+        line-height: 58px;
+        color: #4b4a4a;
+        padding: 0 30px;
+        font-size: 16px;
+        font-weight: 600;
+        font-style: italic;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+.mortagesPage h2 {
+    margin-bottom: 20px;
+}
+
+.bannerMortagesCnt h3 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #5b5b5b;
+}
+
+.bannerMortagesCnt p {
+    color: #5b5b5b;
+    font-size: 16px;
+}
+
+.mortagesPage .fade-carousel {
+    height: 320px;
+}
+
+    .mortagesPage .fade-carousel .carousel-inner .item {
+        height: 320px;
+    }
+
+
+/********************************/
+/*      Banking News    */
+/********************************/
+.providerIem3 {
+    padding: 12px 0;
+    background: #f9f9fb;
+}
+
+    .providerIem3 h4 {
+        display: inline-block;
+        color: #4b4a4a;
+        font-size: 18px;
+        font-weight: 600;
+        font-style: italic;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .providerIem3 p {
+        color: #636363;
+        font-size: 14px;
+    }
+
+.btnFindMore {
+    margin-top: 41px;
+    background: #00a2ff;
+    color: #fff;
+    display: block;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.compLoans ul li:first-child {
+    background: #00a1ff;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    font-family: Tahoma;
+    text-align: center;
+    font-weight: 700;
+}
+
+.compLoans ul li a {
+    display: block;
+    text-align: left;
+    line-height: 50px;
+    font-family: Tahoma;
+    font-style: normal;
+    color: #4b4a4a;
+    font-weight: 400;
+}
+
+    .compLoans ul li a span {
+        color: #00a2ff;
+    }
+
+        .compLoans ul li:first-child a:hover, .compLoans ul li a span:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .compLoans ul li a:hover, .compLoans ul li a span:hover {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+.compLoans {
+    padding-top: 0;
+}
+
+/********************************/
+/*        Travel Page   */
+/********************************/
+
+
+.travelBanner ul li a {
+    line-height: 35px;
+}
+
+.travelBanner .hero2 {
+    z-index: 0;
+}
+
+.travelBanner h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.travelBanner p {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.travelBanner .carousel-inner .item {
+    height: 320px;
+}
+
+.travelBanner .slides .slideTrv1,
+.travelBanner .slides .slideTrv2,
+.travelBanner .slides .slideTrv3 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.travelBanner .slides .slideTrv1 {
+    /*background-image: url(../images/Interfaces/insurance_banner_bg.png);*/
+    /*background-image: url(../images/banner/3.jpg);*/
+    background: #FEB54A;
+}
+
+.travelBanner .slides .slideTrv2 {
+    background: #FEB54A;
+}
+
+.BroadBandBanner .slides .slideTrv3 {
+    background: #FEB54A;
+}
+
+.travelBanner .hero2 {
+    top: 0;
+    right: -150px;
+}
+
+.travelFormWrp {
+    background: #FEB54A;
+    padding: 20px 0;
+}
+
+.travelForm {
+    z-index: 600;
+    overflow: hidden;
+}
+
+.travelTabpanel {
+    z-index: 599;
+    overflow: hidden;
+    background-repeat: repeat;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 10px 0;
+    background-image: url(../images/Interfaces/loandBanner_bg1.png);
+}
+
+    .travelTabpanel ul {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+        .travelTabpanel ul li {
+            list-style: none;
+            margin: 2px 0;
+            background: #f8f8f8;
+            border: none;
+            padding: 0;
+            float: none;
+        }
+
+            .travelTabpanel ul li a {
+                padding: 0 22px;
+                line-height: 24px;
+                color: #555555;
+                font-size: 14px;
+                display: block;
+                border: none;
+                font-weight: 700;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+.brodBandLink ul li a:hover {
+    text-decoration: none;
+    color: #FF0000;
+}
+
+.travelTabpanel .nav-tabs > li.active > a, .travelTabpanel .nav-tabs > li.active > a:hover, .travelTabpanel .nav-tabs > li.active > a:focus {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    margin: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.travelTabpanel h5 {
+    font-size: 14px;
+    color: #363535;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0 20px 0;
+}
+
+.travelTabpanel label {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.travelTabpanel .form-control {
+    height: 24px;
+    padding: 2px 12px;
+}
+
+.travelTabpanel p {
+    color: #676767;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    line-height: 15px;
+    display: block;
+    margin: 0;
+}
+
+    .travelTabpanel p a {
+        color: #676767;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 11px;
+        display: block;
+    }
+
+.departingOn .mmmYear {
+    width: 134px;
+    float: left;
+}
+
+.departingOn .dayon {
+    width: 60px;
+    float: left;
+    padding: 2px 5px;
+    margin: 0 1px;
+}
+
+.departingOn .glyphicon-calendar {
+    font-size: 16px;
+    float: right;
+}
+
+.departingOn .form-group {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.departingOn label {
+    margin-bottom: 1px;
+}
+
+    .departingOn label.checkbox {
+        margin-bottom: 5px;
+    }
+
+.departingOn .adults {
+    background: none;
+    padding: 0 2px;
+    display: inline-block;
+    border: none;
+    width: 45px;
+    float: left;
+    line-height: 24px;
+}
+
+.departingOn .child {
+    background: none;
+    padding: 0 2px;
+    display: inline-block;
+    border: none;
+    width: 60px;
+    float: left;
+    line-height: 24px;
+}
+
+a.btnSearch {
+    background: #00a1ff;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+}
+
+/*===================20150320 descriptionPage========================*/
+.descriptionPage {
+}
+
+    .descriptionPage .row {
+        margin-top: 40px;
+        padding: 0 10px;
+    }
+
+    .descriptionPage .clickable {
+        cursor: pointer;
+    }
+
+    .descriptionPage .panel-heading div {
+        margin-top: -18px;
+        font-size: 15px;
+    }
+
+        .descriptionPage .panel-heading div span {
+            margin-left: 5px;
+        }
+
+    .descriptionPage .panel-body {
+        display: none;
+    }
+
+/*--------------------------*/
+.productDescImg {
+    width: 170px;
+    height: 80px;
+    border: 1px solid #d9d9d9;
+}
+
+.productDescription h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #3d3d3d;
+    font-weight:800;
+    line-height: 20px;
+}
+
+.productDescription ul li a {
+    font-size: 14px;
+    color: #6e6e6e;
+    border-bottom: 1px solid #d9d9d9;
+    line-height: 30px;
+}
+
+.trfoter {
+    background: #eae9e9;
+    font-size: 14px;
+    color: #717171;
+    margin: -8px;
+    text-align: center;
+    padding: 8px;
+}
+
+.apr {
+    background: #d1eeff;
+    padding: 34px 0;
+    text-align: center;
+}
+
+.ttlPay h4 {
+    font-size: 24px;
+    color: #3d3d3d;
+}
+
+.repayble h4 {
+    color: #00a2ff;
+    font-size: 24px;
+}
+
+.repayble p {
+    color: #00a2ff;
+    font-size: 18px;
+}
+
+.applyBox a {
+    font-size: 14px;
+    color: #ff0000;
+    display: block;
+    margin: 10px 0;
+}
+
+    .applyBox a.btn {
+        font-size: 14px;
+        color: #fff;
+        display: block;
+        background: #ff0000;
+    }
+     .applyBox a.btn-infor {
+        font-size: 14px;
+        color: #fff;
+        display: block;
+        background: #00A2FF;
+    }
+      .applyBox a.btn-sucess1 {
+        font-size: 14px;
+        color: #fff;
+        display: block;
+        background:#48a41b;
+    }
+    .applyBox .btn span.glyphicon{
+        opacity:1;
+    }
+
+
+.productDescImg p {
+    color: #00A2FF;
+    font-size: 14px;
+}
+
+    .productDescImg p span {
+        color: #00A2FF;
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+.tbLoan > thead > tr > th, .tbLoan > tbody > tr > th, .tbLoan > tfoot > tr > th, .tbLoan > thead > tr > td, .tbLoan > tbody > tr > td, .tbLoan > tfoot > tr > td {
+    border: none;
+}
+
+.tbLoan > thead > tr > th {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.awWinner {
+    display: block;
+    background: #0084b9;
+    margin-top: 15px;
+}
+
+.tbLoanAccount > thead > tr > th, .tbLoanAccount > tbody > tr > th, .tbLoanAccount > tfoot > tr > th, .tbLoanAccount > thead > tr > td, .tbLoanAccount > tbody > tr > td, .tbLoanAccount > tfoot > tr > td {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.descpageMenu {
+    background: #f7f7f7;
+}
+
+    .descpageMenu ul li {
+        border-right: 1px solid #dedede;
+        background: #f7f7f7;
+    }
+
+        .descpageMenu ul li:last-child {
+            border: none;
+        }
+
+    .descpageMenu .navbar-nav > li > a {
+        color: #5b5b5b;
+        font-size: 16px;
+    }
+
+    .descpageMenu .oiioMainMenu ul li a:hover, .descpageMenu .oiioMainMenu ul li a.active {
+        background: #ffffff;
+        color: #000;
+    }
+
+/*============================== Admin CSS 28-Mar-2015 ========================*/
+.manageAdd {
+    /*border:1px solid #cccccc;
+	background:#f2f2f2;
+	padding:20px;*/
+    margin: 10px auto;
+}
+
+    .manageAdd h4 {
+        font-size: 14px;
+        line-height: 18px;
+        color: #333333;
+    }
+
+.addPostMang {
+}
+
+.gridViewHaat .table > thead > tr > th {
+    background: #C00;
+    color: #fff;
+    padding: 4px;
+}
+
+.gridViewHaat .table > tbody > tr > td {
+    padding: 0px 4px;
+    vertical-align: middle;
+}
+
+.gridViewHaat p {
+    margin: 5px 0;
+}
+
+
+
+/*============================Credit Cards 20150403 ================================*/
+/********************************/
+/*     creditCardspage     */
+/********************************/
+.creditCardspage {
+    margin-bottom: 0px;
+}
+
+    .creditCardspage .slides .slide10,
+    .creditCardspage .slides .slide11,
+    .creditCardspage .slides .slide13 {
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .creditCardspage .slides .slide10 {
+        background: #99e2ff;
+        /*background-image: url(../images/banner/3.jpg);*/
+    }
+
+    .creditCardspage .slides .slide11 {
+        background: #00A1B4;
+    }
+
+
+    .creditCardspage .slides .hero2 {
+        top: 32%;
+    }
+
+    .creditCardspage .bannerMortagesCnt h3 {
+        margin-top: 10%;
+        color: #1c1f4e;
+        margin-bottom: 40px;
+    }
+
+.oiioMainMenuCredit {
+    background: #F7F7F7;
+}
+
+    .oiioMainMenuCredit .navbar-nav > li > a {
+        padding: 0 12px;
+    }
+
+.descpageMenu .oiioMainMenuCredit ul li a:hover, .descpageMenu .oiioMainMenuCredit ul li a.active {
+    background: #99e2ff;
+}
+
+.caret30 {
+    color: #00A2FF;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid;
+}
+
+.applyBox .oioCherRight2 {
+    color: #fff;
+    opacity:1;
+}
+
+.applyBox .oioCherRight3 {
+    color: #fff;
+    opacity:1;
+}
+ul.creditList {
+    width: 100%;
+    margin-top: 10px;
+}
+
+    ul.creditList li {
+        list-style: none;
+        margin: 2px 0;
+        display: block;
+    }
+
+        ul.creditList li a {
+            display: block;
+            background: #99e2ff;
+            color: #696969;
+            line-height: 21px;
+            padding: 0 10px;
+        }
+
+            ul.creditList li a:hover {
+                background: #ff0000;
+                color: #fff;
+                text-decoration: none;
+            }
+
+.creditDesPage p {
+    margin: 0;
+}
+
+.providerIem0403 {
+    background: #00a1ff;
+}
+
+    .providerIem0403 a {
+        color: #fff !important;
+    }
+
+
+/********************************/
+/*     payasyouBanner     */
+/********************************/
+.payasyouBanner {
+    margin-bottom: 0px;
+}
+
+    .payasyouBanner .slides .slide20,
+    .payasyouBanner .slides .slide21,
+    .payasyouBanner .slides .slide23 {
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .payasyouBanner .slides .slide20 {
+        /*background: #99e2ff;*/
+        /*background-image: url(../images/interfaces/banner_bg20.png);*/
+        background: #a8dfff;
+        background-repeat: repeat;
+    }
+
+    .payasyouBanner .slides .slide21 {
+        background: #a8dfff;
+    }
+
+
+    .payasyouBanner .slides .hero2 {
+        top: 0%;
+    }
+
+        .payasyouBanner .slides .hero2 img {
+            width: 70%;
+        }
+
+    .payasyouBanner .bannerMortagesCnt h3 {
+        font-size: 24px;
+        color: #4b4a4a;
+        font-style: italic;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+.caret31 {
+    color: #000;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid;
+}
+
+.payasyouBanner .bannerMortagesCnt p a {
+    font-size: 18px;
+    color: #272727;
+    display: block;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #a8dfff;
+}
+
+.payasyouBanner .bannerMortagesCnt h4 {
+    color: #4b4a4a;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.payasyouBanner .bannerMortagesCnt h5 {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.payasuToppage {
+    padding: 10px 0;
+    background: #a8dfff;
+}
+
+    .payasuToppage h3 {
+        color: #4b4a4a;
+        line-height: 66px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .payasuToppage .row {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+.payasuDesc .row .table {
+    text-align: center;
+}
+
+.payasuDescTb > thead > tr > th, .payasuDescTb > tbody > tr > th, .payasuDescTb > tfoot > tr > th, .payasuDescTb > thead > tr > td, .payasuDescTb > tbody > tr > td, .payasuDescTb > tfoot > tr > td {
+    border-bottom: 1px solid #a8dfff;
+}
+
+.payasuDescTb > thead > tr {
+    border: 1px solid #a8dfff;
+    border-top: 0;
+}
+
+.payasuDesc .sl_th {
+    color: #ff0000;
+    font-size: 22px;
+    vertical-align: middle;
+}
+
+.payasuDesc .sort_th {
+    color: #9b9b9b;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+
+    .payasuDesc .sort_th span {
+        background: #ff0000;
+        color: #fff;
+        font-size: 14px;
+        padding: 2px 10px;
+        font-weight: bold;
+        border: none;
+    }
+
+.payasuDesc .cont_th {
+    color: #25a6e8;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.payasuDesc .mint_th {
+    color: #0231ca;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.payasuDesc .text_th {
+    color: #36de00;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.payasuDesc .date_th {
+    color: #0191d8;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.payasuDesc .montCst_th {
+    color: #ff0099;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.btn-seeDeal {
+    padding: 2px 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.providerIem0403_A {
+    padding: 10px;
+    background-color: #b5e4ff;
+    background-image: url(../images/interfaces/payasu_bg1.png);
+    background-repeat: repeat-x;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .providerIem0403_A a {
+        line-height: 28px;
+        font-size: 18px;
+        display: inline-block;
+        font-family: 'Open Sans', sans-serif;
+        margin-right: 70px;
+        font-weight: 600;
+        color: #656565 !important;
+    }
+/*============================MortgageDescription=========================*/
+.mortagageTabingWrp {
+    /*margin-top: -65px;*/
+    /*margin-top:-86px;*/
+}
+
+.priceSlider h2 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+    .priceSlider h2 span {
+        font-size: 22px;
+    }
+/*=================Promotion banner Part ===================*/
+
+.loanapplyBox {
+    background: #BEBEBE url(../images/interfaces/promotion_bg.png) repeat-x left top;
+    border: 2px solid #bbbbbb;
+    padding: 5px;
+}
+
+    .loanapplyBox h2 {
+        font-family: 'Advent Pro', sans-serif;
+        color: #ff0000;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+    }
+
+    .loanapplyBox h5 {
+        font-family: 'Cagliostro', sans-serif;
+        color: #00a2ff;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin: 0 0 0px 0;
+    }
+
+    .loanapplyBox h6 {
+        color: #ff0000;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0 0 0px 0;
+    }
+
+
+    .loanapplyBox ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .loanapplyBox ul li {
+            list-style: none;
+            font-size: 14px;
+            line-height: 25px;
+            color: #757575;
+            font-family: 'Advent Pro', sans-serif;
+        }
+
+            .loanapplyBox ul li .glyphicon-ok {
+                margin-right: 10px;
+                color: #ff0000;
+            }
+
+.applyBtn {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #ff0000;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    background-image: -webkit-linear-gradient(top, #fff, #a1a1a1);
+    background-image: -moz-linear-gradient(top, #fff, #a1a1a1);
+    background-image: -ms-linear-gradient(top, #fff, #a1a1a1);
+    background-image: -o-linear-gradient(top, #fff, #a1a1a1);
+    background-image: linear-gradient(to bottom, #fff, #a1a1a1);
+    -webkit-border-radius: 11;
+    -moz-border-radius: 11;
+    border-radius: 11px;
+    padding: 5px 20px 5px 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+    .applyBtn:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
+
+.oiioInsBanner .fade-carousel .carousel-inner .item {
+    height: 320px;
+}
+
+.selectAllmfg {
+    border: 1px solid #d9d9d9;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 9px;
+}
+
+    .selectAllmfg .form-control {
+        border: none;
+        background: none;
+        box-shadow: none;
+        padding-left: 25px;
+        background: #E2E2E0;
+        background: #E2E2E0 url(../images/interfaces/phone_icon.png) no-repeat 0px center;
+        /*background:url(../images/interfaces/select_bg.png) no-repeat  right center;*/
+    }
+
+.panelSearchSidebar h4 {
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.chooseNetwork a {
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    padding: 2px 0;
+    margin: 2px 0;
+    display: inline-block;
+}
+
+    .chooseNetwork a.activeNetwork {
+        background: #99e2ff;
+        padding: 11px 25px;
+        color: #4b4a4a;
+        font-size: 14px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+.selectDeal {
+}
+
+
+    .selectDeal ul li {
+        list-style: none;
+        height: 45px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #cbcccc;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+        .selectDeal ul li a span {
+            margin: 0 10px 0 0;
+            width: 50px;
+            height: 45px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .selectDeal ul li a {
+            line-height: 45px;
+            font-size: 14px;
+            color: #4b4a4a;
+        }
+
+.soryBy ul li a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*====================================================
+
+    2015-04-13
+    InsuranceCover Requerds
+
+    ========================================================
+*/
+.oiioInsuranceFormMenu {
+    background: #00a2ff;
+    border: none;
+    border-radius: 0;
+    min-height: 43px;
+    margin: 0;
+}
+
+    .oiioInsuranceFormMenu ul li {
+        list-style: none;
+        float: left;
+    }
+
+        .oiioInsuranceFormMenu ul li a {
+            color: #00629b !important;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            line-height: 43px;
+            display: block;
+        }
+
+            .oiioInsuranceFormMenu ul li a span {
+                background: #1b537c;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                padding: 5px 10px;
+                margin-right: 15px;
+                color: #009ef8;
+            }
+
+            .oiioInsuranceFormMenu ul li a:hover, .oiioInsuranceFormMenu ul li a.active {
+                color: #fff !important;
+                background: url(../images/interfaces/menuHover_bg.png) no-repeat bottom center;
+            }
+
+                .oiioInsuranceFormMenu ul li a span:hover, .oiioInsuranceFormMenu ul li a.active span {
+                    color: #00a2ff !important;
+                    background: #fff;
+                }
+
+.oiioInsuranceFormWrp .formTitel {
+    background: #a8dfff;
+    margin: 0 0 20px 0;
+}
+
+    .oiioInsuranceFormWrp .formTitel h2 {
+        color: #00629b;
+        line-height: 66px;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+    }
+
+.oiioInsuranceFormWrp h3 {
+    color: #717171;
+    margin: 0;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+    .oiioInsuranceFormWrp h3 span a {
+        background: #cbcccc;
+        padding: 5px 10px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        padding: 5px 15px;
+        color: #fff;
+    }
+
+.oiioInsuranceFormWrp p {
+    color: #717171;
+    margin: 0;
+    font-size: 14px;
+    line-height: 28px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.oiioInsuranceFormWrp .txtBox_ofw {
+    border: 1px solid #dddddd;
+    background: #f2f0f0;
+    margin: 10px 0;
+    border-radius: 0;
+    max-width: 275px;
+}
+
+.oiioInsuranceFormWrp .radio label {
+    line-height: 34px;
+    font-size: 18px;
+    color: #717171;
+}
+
+.oiioInsuranceFormWrp .radio input[type="radio"], .oiioInsuranceFormWrp .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .oiioInsuranceFormWrp .checkbox-inline input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+.dateBox {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+}
+
+    .dateBox .dateBox_day {
+        border: 1px solid #dddddd;
+        background: #f2f0f0;
+        padding: 5px 5px;
+        line-height: 28px;
+        width: 53px;
+        color: #717171;
+        text-align: center;
+    }
+
+    .dateBox .dateBox_month {
+        border: 1px solid #dddddd;
+        background: #f2f0f0;
+        padding: 5px 5px;
+        line-height: 28px;
+        width: 53px;
+        text-align: center;
+        color: #717171;
+    }
+
+    .dateBox .dateBox_year {
+        border: 1px solid #dddddd;
+        background: #f2f0f0;
+        padding: 5px 5px;
+        line-height: 28px;
+        width: 100px;
+        color: #717171;
+        text-align: center;
+    }
+
+.dateBox {
+    color: #717171;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+
+.multiCkbox .btn-group {
+    margin-right: 20px;
+}
+
+    .multiCkbox .btn-group label {
+        margin-right: 10px;
+        margin-left: 0;
+        color: #a1a1a1;
+        font-size: 18px;
+    }
+
+.multiCkbox .btn-group {
+    line-height: 34px;
+    color: #a1a1a1;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.multiCkbox .btn {
+    padding: 2px 8px;
+}
+
+.btn span.glyphicon {
+    opacity: 0;
+}
+
+.btn.active span.glyphicon {
+    opacity: 1;
+}
+
+.seeResultsBtn {
+    margin: 16px 0;
+    padding: 12px 12px;
+    width: 100%;
+    background: #00a2ff;
+    border: none;
+}
+
+.seeResultsBtn2 {
+    margin: 32px 0 0;
+    padding: 12px 12px;
+    width: 100%;
+    background: #00a2ff;
+    border: none;
+}
+
+.formTitel2 {
+    background: #f2f0f0;
+}
+
+.searchPanel13 {
+    background: #e5f5ff;
+    padding: 15px 0;
+    border-top: 1px solid #cecece;
+}
+
+    .searchPanel13 h4 {
+        font-size: 16px;
+        color: #adadad;
+        line-height: 22px;
+        font-weight: 700;
+    }
+
+    .searchPanel13 a.myAcc {
+        font-size: 16px;
+        color: #00a2ff;
+        line-height: 22px;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+.oiioInsuranceFormWrp .radio, .checkbox {
+    padding-left: 0;
+}
+
+.oiioInsuranceFormWrp .payasuDescTb > thead > tr {
+    border: 0;
+}
+
+.btn-seeMore1 {
+    border: 1px solid #00A2FF;
+    font-size: 14px;
+    text-align: center;
+    color: #00a2ff !important;
+    background: none !important;
+}
+
+.btn-seeMore2 {
+    text-align: center;
+    font-size: 14px;
+    color: #fff !important;
+    background: #ff0000 !important;
+}
+
+.glyphiconWrp .glyphicon {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.oiioInsuranceFormWrp .payasuDescTb > thead > tr > th, .oiioInsuranceFormWrp .payasuDescTb > tbody > tr > th, .oiioInsuranceFormWrp .payasuDescTb > tfoot > tr > th, .oiioInsuranceFormWrp .payasuDescTb > thead > tr > td, .oiioInsuranceFormWrp .payasuDescTb > tbody > tr > td, .oiioInsuranceFormWrp .payasuDescTb > tfoot > tr > td {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.oiioInsuranceFormWrp .payasuDescTb > thead > tr > th, .oiioInsuranceFormWrp .payasuDescTb > tbody > tr > th, .oiioInsuranceFormWrp .payasuDescTb > tfoot > tr > th {
+    font-size: 14px;
+    color: #838383;
+    text-align: center;
+}
+/*==============Sort by=================*/
+.soryBy ul {
+    width: 100%;
+    border: 1px solid #cbcccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0 3px;
+    overflow: hidden;
+    background: #00a1ff;
+}
+
+    .soryBy ul li {
+        float: left;
+        list-style: none;
+    }
+
+        .soryBy ul li:first-child {
+            border-right: 1px solid #cbcccc;
+        }
+
+        .soryBy ul li a {
+            line-height: 38px;
+            background: #00a1ff;
+            color: #fff;
+            font-size: 16px;
+            padding: 0 7%;
+            display: block;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+            .soryBy ul li a:hover {
+                background: #99e2ff;
+                color: #4b4a4a;
+            }
+
+.contrLengthSlt .form-control {
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding-left: 25px;
+    background: #d9d9d9 url(../images/interfaces/icon9.png) no-repeat 0px center;
+    /*background:url(../images/interfaces/select_bg.png) no-repeat  right center;*/
+}
+
+.stndSim .form-control {
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding-left: 25px;
+    background: #d9d9d9 url(../images/interfaces/icon10.png) no-repeat 0px center;
+    /*background:url(../images/interfaces/select_bg.png) no-repeat  right center;*/
+}
+/*==================================Life Insurance : 20150417=======================*/
+.lifeInsr {
+    overflow: hidden;
+    /*margin-top: -123px;*/
+}
+
+.lifeInsr_compPart {
+    background: #52bfff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 20px;
+    min-height: 240PX;
+}
+
+    .lifeInsr_compPart img {
+        float: right;
+        margin: 5px 5PX 0 5PX;
+    }
+
+lifeInsr_compPart h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: #42413e;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.btnQuote {
+    padding: 6px 15%;
+    color: #42413e;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.lifeInsr_compPart p {
+    font-family: 'Open Sans', sans-serif;
+    color: #42413e;
+    font-size: 16px;
+}
+
+.lifeIsr_BoxWrp {
+    margin: 28px 0;
+}
+
+.lifeIsr_BoxA {
+    min-height: 222px;
+    padding: 24px 24px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #52bfff;
+}
+
+    .lifeIsr_BoxA h3 {
+        font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        line-height: 30px;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .lifeIsr_BoxA p {
+        font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        font-size: 14px;
+    }
+
+.divider2 {
+    border-left: 1px solid #52bfff;
+}
+
+.quoteImg {
+    float: right;
+}
+
+.lifeIsr_BoxA ul {
+    margin: 0;
+    padding: 0;
+}
+
+    .lifeIsr_BoxA ul li {
+        list-style: none;
+    }
+
+        .lifeIsr_BoxA ul li a {
+            padding: 5px 0;
+        }
+
+.lifeIsr_BoxA .nav > li > a:hover, .lifeIsr_BoxA .nav > li > a:focus {
+    background: none;
+}
+
+.leftsidebar_ins {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #52bfff;
+    margin-bottom:20px;
+}
+
+.leftsidebar_insInnr {
+    padding: 10px;
+}
+
+    .leftsidebar_insInnr h3 {
+        font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        line-height: 30px;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+    }
+    .leftsidebar_insInnr p {
+        font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        font-size: 14px;
+    }
+
+    .contentArea_ins h3 {
+        font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        line-height: 30px;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0 20px;
+    }
+
+    .contentArea_ins p {
+        font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        font-size: 16px;
+        text-align:justify;
+    }
+    .right_sidebar_ins{
+        background:#f2f1f1;
+        padding:10px;
+    }
+
+     .right_sidebar_ins h3 {
+        font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        line-height: 50px;
+        font-size: 15px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        padding-left:50px;
+        background: url(../images/interfaces/0417_7.png) no-repeat left center;
+    }
+        .right_sidebar_ins p {
+        font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        font-size: 16px;
+        padding-left:50px;
+        text-align:justify;
+    }
+        .rightSidebarA{
+            border-bottom:1px solid #d8d8d8;
+            margin-bottom:20px;
+        }
+        .topLeadIns h4{
+             font-family: 'Open Sans', sans-serif;
+        color: #42413e;
+        font-size: 18px;
+        font-weight: 600;
+        }
+    /*==========================20150419===================Insurance Quotes From=============*/
+    .oiioForm_a{
+        padding:10px;
+        
+    }
+    .oiioInsuranceFormMenu2 {
+    background:none;
+    border: none;
+    border-radius: 0;
+    min-height: 43px;
+    margin:8px 0 ;
+}
+
+    .oiioInsuranceFormMenu2 ul li {
+        list-style: none;
+        float: left;
+        margin:0 20px;
+    }
+        .oiioInsuranceFormMenu2 ul li:first-child {
+            margin-left: 0;
+        }
+        .oiioInsuranceFormMenu2 ul li:last-child {
+            margin-right: 0;
+        }
+
+        .oiioInsuranceFormMenu2 ul li a {
+            color: #fff !important;
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            line-height: 43px;
+            display: block;
+            background:#00a2ff;
+            min-width:350px;
+            padding:0 10px;
+            -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+background:#00a2ff url(../images/interfaces/tabmenu_bg1.png) no-repeat right center;
+
+        }
+
+            .oiioInsuranceFormMenu2 ul li a span {
+                background: #1b537c;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                padding: 5px 10px;
+                margin-right: 15px;
+                color: #009ef8;
+            }
+
+            .oiioInsuranceFormMenu2 ul li a:hover, .oiioInsuranceFormMenu2 ul li a.active {
+                color: #000 !important;
+                background:#f7f7f7 !important;
+            }
+
+.oiioForm_a h3{
+    color:#ff0000;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:22px;
+    
+}            
+/*===============================broadBandToppage=======================*/    
+.broadBandToppage{
+    background:#00a2ff;
+    padding:10px 0;
+    margin-bottom:20px;
+}
+.broadBandToppage h3{
+    color: #fff;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 700;
+    line-height: 66px;
+    margin: 0;
+    font-size:30px;
+
+}
+.broadbandDeals .same_th {
+    color: #7d7777;
+    font-size: 18px;
+    background:#e9e9e9;
+    border-right:3px solid #fff;
+    text-align:center;
+    padding:4px 0;
+    border-left:0;
+    font-family: 'Open Sans', sans-serif;
+}
+.broadbandDeals .payasuDescTb > thead > tr > th, .broadbandDeals .payasuDescTb > tbody > tr > th, .broadbandDeals .payasuDescTb > tfoot > tr > th, .broadbandDeals .payasuDescTb > thead > tr > td, .broadbandDeals .payasuDescTb > tbody > tr > td, .broadbandDeals .payasuDescTb > tfoot > tr > td {
+   border-bottom:0;
+   border-left:0;
+}
+.broadbandDeals .same_td h4{
+    font-size:24px;
+    line-height:25px;
+    margin:0;
+    font-weight:600;
+    vertical-align:middle;
+    color:#7d7777;
+}
+.broadbandDeals .same_td p{
+    font-size:18px;
+    margin:0;
+    color:#7d7777;
+}
+.broadbandDeals .same_td_3 h4{
+    color:#00a1ff;
+    margin-top:40px;
+}
+.broadbandDeals .same_td_2 h4{
+    margin-top:40px;
+}
+.broadbandDeals .same_td_4 h4{
+    margin-top:40px;
+}
+.broadbandDeals .same_td_5 h4{
+    margin-top:20px;
+}
+.broadbandDeals .same_td_6 a{
+    margin-top:40px;
+}
+.providerIem0403_B {
+    text-align:center;
+    background:#d9d9d9;
+     color:#00a2ff !important;
+}
+    .providerIem0403_B a {
+        color:#00a2ff !important;
+    }
+
+
+
+    /*====================================Energy Part==========================*/
+    .updateForm{
+        background:#f3f3f3;
+        border:1px solid #dcdcdc;
+        -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+    }
+    .updateForm .row{
+        margin-bottom:5px;
+
+    }
+        .updateForm .row .row_A {
+            padding: 15px 0;
+            margin:0 25px;
+            border-bottom:1px solid #d9d9d9;
+        }
+        .updateForm .row label {
+            color: #555555;
+            font-size: 13px;
+            font-weight:bold;
+
+            line-height: 24px;
+        }
+         .updateForm .row .form-control {
+            color: #555555;
+            font-size: 13px;
+            height:24px;
+            padding:0 12px;
+            box-shadow:none;
+            border:1px solid #dbdbdb;
+            line-height: 24px;
+        }
+         .updateBtn{
+             /*margin:0 10px;*/
+             line-height:40px;
+             font-weight:bold;
+             display:block;
+             font-size:14px;
+         }
+.updateProduct{
+        background:#f3f3f3;
+        border:1px solid #dcdcdc;
+        -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+padding:15px 10px;
+margin-top:10px;
+    }
+.updateProductRow{
+    margin-bottom:15px;
+    border-bottom:1px dotted #d9d9d9;
+}
+    .updateProductRow:last-child {
+        border: none;
+        margin: 0;
+    }
+.updateProduct img{
+    float:left;
+    margin-right:10px;
+
+}
+.updateProduct h3{
+    color:#555555;
+    font-size:16px;
+    font-weight:bold;
+    line-height:20px;
+    margin:0;
+}
+.updateProduct a{
+    color:#00A2FF;
+}
+
+
+/*==========================================Header CSS=======================================*/
+
+.userPanel ul{
+	width:100%;
+	margin:0;
+	overflow:hidden;
+	}
+.userPanel ul li{
+	color:#fff;
+	float:left;
+	line-height:40px;
+	list-style:none;
+	font-family: Arial, Helvetica, sans-serif;
+	/*background: url(../images/interface/userpanelDivider1.png) no-repeat center right;*/ 
+	}
+.userPanel ul li:first-child{
+	padding-right:9px;
+	}
+.userPanel ul li:last-child{
+	background:none;
+	}	
+.userPanel ul li a{
+	color:#fff;
+	display:block;
+	padding:0 9px;
+}
+.userPanel ul li a:hover{
+	background:none;
+	color:#fff;
+    text-decoration:underline;
+	}
+
+
+/*=============================bannerNewsComm=============================*/
+.bannerLeftWrp {
+    position: relative;
+}
+
+    .bannerLeftWrp img {
+        width: 100%;
+        max-height: 352px !important;
+    }
+
+.bannerNewsComm {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+    .bannerNewsComm h1 {
+        font-size: 40px;
+        line-height: 40px;
+        color: #555555;
+        margin: 0;
+        font-style: italic;
+        font-weight: 600;
+        font-family: "Open Sans",sans-serif;
+    }
+
+        .bannerNewsComm h1 span:nth-child(1) {
+            color: #ff0000;
+            display: block;
+        }
+
+        .bannerNewsComm h1 span:nth-child(2) {
+            padding-left: 115px;
+            display: block;
+        }
+
+        .bannerNewsComm h1 span:nth-child(3) {
+            padding-left: 150px;
+            display: block;
+        }
+
+.newsBox {
+    background: #7ad5ff;
+    width: 350px;
+    padding: 5px 10px;
+    color: #fff;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 80px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-bottomright: 80px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 80px;
+}
+
+.banRbox {
+    border: 1px solid #e7e7e7;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-family: "Open Sans",sans-serif;
+    overflow: hidden;
+}
+
+    .banRbox h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 25px;
+        color: #ff0000;
+    }
+
+    .banRbox .form-control {
+        background: #d9d9d9;
+        color: #000;
+        margin: 10px 0;
+    }
+
+    .banRbox a:nth-child(1) {
+        margin: 5px 0;
+        font-size: 12px;
+        line-height: 18px;
+        color: #ff0000;
+        display: inline-block;
+    }
+
+    .banRbox a:nth-child(2) {
+        margin: 5px 0;
+        font-size: 12px;
+        display: inline-block;
+        line-height: 18px;
+        color: #fff;
+    }
+
+    .banRbox h4 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+        color: #00a2ff;
+    }
+
+.commUnity {
+    background: #e7e7e7;
+}
+
+    .commUnity img {
+        float: left;
+        margin-right: 10px;
+    }
+
+.newsMenupart {
+    margin: 20px 0;
+}
+
+    .newsMenupart a {
+        text-align: center;
+    }
+
+        .newsMenupart a img {
+            margin: 0 auto;
+            display: block;
+        }
+
+    .newsMenupart span {
+        display: block;
+        font-family: "Open Sans",sans-serif;
+        color: #000;
+        margin: 5px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+
+    .newsMenupart a:hover {
+        text-decoration: none;
+        opacity: 0.5;
+    }
+
+.newsItem {
+    border: 1px solid #d9d9d9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .newsItem h3 {
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background: #ff0000;
+        color: #fff;
+        font-size: 18px;
+        line-height: 33px;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+        padding: 0 0 0 20px;
+    }
+
+    .newsItem h4 {
+        color: #000;
+        font-size: 14px;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+    }
+
+.newsItemInner {
+    margin: 10px 5px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.newsItemInnerLastBox {
+    border: 0;
+    margin: 10px 0 0 0;
+}
+
+.newsItemPart p {
+    margin: 0;
+}
+
+    .newsItemPart p:nth-last-child(1) {
+        color: #9d9d9d;
+    }
+
+    .newsItemPart p:nth-last-child(2) {
+        color: #9d9d9d;
+    }
+
+.videoPart iframe {
+    float: left;
+    margin-right: 10px;
+}
+
+.videoPart p.datePost {
+    color: #5AB2C9;
+    font-size: 12px;
+    margin: 0;
+}
+
+.showAllNews {
+    background: #dbdddc;
+    color: #ff0000;
+    text-align: center;
+    display: block;
+    line-height: 25px;
+}
+
+.newsItem2 h3 {
+    font-size: 18px;
+    color: #555555;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.newsItem2 img {
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.newsItem2 h4 {
+    color: #7b7b7b;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.newsItem2 p {
+    margin: 0;
+    color: #909090;
+}
+
+    .newsItem2 p a {
+        color: #ff0000;
+        font-weight: 400;
+    }
+
+.newsItem2Inner {
+    margin: 10px 0;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.mostPopular h4 {
+    margin-bottom: 10px;
+    color: #00A2FF;
+}
+
+.recreation h4 {
+    margin-bottom: 10px;
+}
+
+/*=====================20150428================*/
+.oiioInsuranceFormWrp .oiioForm_fcon .txtBox_ofw{
+    margin:0 5px 0 0;
+    background:#fff;
+    border-radius:5px;
+    width:100%;
+}
+.oiioInsuranceFormWrp .oiioForm_fcon label{
+    margin:0;
+    
+}
+.carApplyForm ul li{
+    list-style:disc;
+    margin-left:10px;
+    font-size:12px;
+    color:#717171;
+    font-family:"Open Sans",sans-serif;
+
+}
+
+/*=================================Home Insurance========================*/
+.quoteImg2{
+    margin-top:-10px;
+}
+.listItemfRM li{
+    list-style:none;
+    padding-left:40px;
+    line-height:30px;
+
+    background:url(../images/interfaces/ok_bg.png) no-repeat left center;
+}
+.rightSidebar h3{
+    color:#ff0000;
+    font-size:18px;
+    font-weight:600;
+
+}
+.rightSideListItem li{
+    list-style:none;
+    margin:5px 0;
+}
+    .rightSideListItem li a {
+        padding:2px 5px;
+        line-height:25px;
+        color:#8b8b8b;
+
+        border:1px solid #d9d9d9;
+    }
+.rightSidebar p a {
+color:#8b8b8b;
+}
+/*====================bannerWrpMain=======================*/
+.bannerWrpMain{
+    background:#A8DFFF;
+}
+.bannerWrpMain .hero2{
+    width:320px;
+    height:260px;
+}
+.formItemWrp .form-group{
+    margin:5px 0;
+}
+.adminContent .container {
+    min-height: 441px;
+}

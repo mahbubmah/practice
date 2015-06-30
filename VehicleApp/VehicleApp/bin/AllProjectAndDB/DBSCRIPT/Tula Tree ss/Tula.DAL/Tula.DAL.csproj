@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{379FD1CB-2FC8-4AC2-A231-39FEE31A31A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tula.DAL</RootNamespace>
+    <AssemblyName>Tula.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdGiver.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdGiverTracing.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\GlobalDA.cs" />
+    <Compile Include="Basic\MaterialDA.cs" />
+    <Compile Include="Brand.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMSContent.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Color.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="District.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionOrState.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAdGiverArcMaterialsForSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAdGiverMaterialsForSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllFromPostOffice_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetArcMaterialsForSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMapCategory_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMaterialsForSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetModelNameForSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSearchResultForRegisteredUser_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSortedMaterialAccordingToCategoreyIIDnClientTypeIdForClientListView_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageBanner.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LeavingCaus.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Loc.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Location.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MappingCategory.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MappingTable.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Material.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialLog.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyFavourite.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OH_OT_GetAllOtherContent_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OH_OT_GetNavMenu_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OH_SP_GetAllSpotLightAds_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OiiONewsLetter.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OiiOOther.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Picture.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PictureLog.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceStation.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostOffice.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchForPoliceStationbyCountryDivisionDistrict_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpGetAllMaterialForCategorey_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpGetAllPoliceStation_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpGetData_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CategoryTree_GetCategoryListByParentID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CategoryTree_GetCategoryParentID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CategoryTree_GetSearchedCategoryOrAll_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CategoryTree_GetSearchedCategory_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetAdgiverFnameLnamePhn_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetAllLatestAds_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetAllMaterialAccordingToCategoreyIID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetAllMaterialForCategoreyIIDnClientType_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetAllRecentMaterialAdsForCategoreyIID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetAllSortedRecentMaterialAdsForCategoreyIID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetDistrictForSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetHelpSupportAccordingToHelpSupportID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetLocationByMaterialIID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetLocationForGoogleMap_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetLocationForSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetMaterialAccordingToMaterialIID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetPoliceStaionForSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetRandomAllRecentMaterialAccordingToCategoreyIID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetRandomAllRecentMaterialAds_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetSortedAllMaterialForCategoreyIIDnClientType_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetSortedMaterialAccordingToCategoreyIID_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetWholeWebSearch_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tula.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TulaDbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TulaDbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TulaDbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TulaDbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TulaDbContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TulaTreeAlert.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TulaTreeHelpSupport.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UrlWFList.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroup.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRating.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserWFPermission.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorCounter.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorInfo.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorInfoDetail.cs">
+      <DependentUpon>TulaDbContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="TulaDbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TulaDbContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TulaDbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TulaDbContext.edmx</DependentUpon>
+      <LastGenOutput>TulaDbContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="TulaDbContext.edmx.diagram">
+      <DependentUpon>TulaDbContext.edmx</DependentUpon>
+    </None>
+    <None Include="TulaDbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TulaDbContext.edmx</DependentUpon>
+      <LastGenOutput>TulaDbContext.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

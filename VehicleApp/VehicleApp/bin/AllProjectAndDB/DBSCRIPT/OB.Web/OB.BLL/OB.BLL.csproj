@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97D4B80F-11E5-4E14-87A9-7574046DFB79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OB.BLL</RootNamespace>
+    <AssemblyName>OB.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic\AdGiverRT.cs" />
+    <Compile Include="Basic\BookAuthorRT.cs" />
+    <Compile Include="Basic\BookCategoryRT.cs" />
+    <Compile Include="Basic\BookNewsLetterRT.cs" />
+    <Compile Include="Basic\BookNewsRT.cs" />
+    <Compile Include="Basic\BookOrderRT.cs" />
+    <Compile Include="Basic\BookRT.cs" />
+    <Compile Include="Basic\cmsRT.cs" />
+    <Compile Include="Basic\CompetitionInfoRT.cs" />
+    <Compile Include="Basic\CountryRT.cs" />
+    <Compile Include="Basic\DefaultRT.cs" />
+    <Compile Include="Basic\DistrictRT.cs" />
+    <Compile Include="Basic\DivisionOrStateRT.cs" />
+    <Compile Include="Basic\GlobalRT.cs" />
+    <Compile Include="Basic\LocationRT.cs" />
+    <Compile Include="Basic\OiiOBookRT.cs" />
+    <Compile Include="Basic\PoliceStationRT.cs" />
+    <Compile Include="Basic\PostOfficeRT.cs" />
+    <Compile Include="Basic\BookPublisherRT.cs" />
+    <Compile Include="Basic\ProfessionRT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Basic\UrlWFListRT.cs" />
+    <Compile Include="Basic\UserGroupRT.cs" />
+    <Compile Include="Basic\UserInformationRT.cs" />
+    <Compile Include="Basic\UserPermissionRT.cs" />
+    <Compile Include="Basic\VisitorCounterRT.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OB.DAL\OB.DAL.csproj">
+      <Project>{a95a2769-f93c-42d7-9057-c80d08b53047}</Project>
+      <Name>OB.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OB.Utilities\OB.Utilities.csproj">
+      <Project>{e5953d5f-20d6-4007-9990-267584638ac9}</Project>
+      <Name>OB.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

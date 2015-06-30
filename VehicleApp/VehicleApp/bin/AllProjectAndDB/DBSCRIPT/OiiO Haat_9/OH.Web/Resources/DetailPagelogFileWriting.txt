@@ -1,0 +1,44 @@
+10-Mar-2015 11:53:33 AM   192.168.1.24   The process cannot access the file 'D:\PROJECT(s)\MD. Azizur Rahman\Projects\OH\OH.Web.root\OH.Web\OH.Web\Resources\DetailPageVisitorlogFileWriting.txt' because it is being used by another process.      at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at System.IO.File.AppendText(String path)
+   at OH.Web.DetailPage.VisitorLogFileWritten() in d:\PROJECT(s)\MD. Azizur Rahman\Projects\OH\OH.Web.root\OH.Web\OH.Web\DetailPage.aspx.cs:line 180
+22/03/2015 10:15:11   192.168.1.26   Object reference not set to an instance of an object.      at OH.Web.DetailPage.<>c__DisplayClass3.<LoadRelatedLatestAds>b__0(SP_GetAllLatestAdsResult tr) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 80
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.<TakeIterator>d__3a`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at OH.Web.DetailPage.LoadRelatedLatestAds(Int64 Iid) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 79
+22/03/2015 10:15:11   192.168.1.26   Object reference not set to an instance of an object.      at OH.BLL.Basic.MaterialRT.GetLocationByIID(Int64 locationIID) in e:\- F - Project\OiiO Haat\OH.BLL\Basic\MaterialRT.cs:line 206
+   at OH.Web.DetailPage.LoadGoogleMAP(Int64 locationID) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 220
+22/03/2015 10:15:23   192.168.1.26   Object reference not set to an instance of an object.      at OH.Web.DetailPage.<>c__DisplayClass3.<LoadRelatedLatestAds>b__0(SP_GetAllLatestAdsResult tr) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 80
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.<TakeIterator>d__3a`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at OH.Web.DetailPage.LoadRelatedLatestAds(Int64 Iid) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 79
+22/03/2015 10:15:23   192.168.1.26   Object reference not set to an instance of an object.      at OH.BLL.Basic.MaterialRT.GetLocationByIID(Int64 locationIID) in e:\- F - Project\OiiO Haat\OH.BLL\Basic\MaterialRT.cs:line 206
+   at OH.Web.DetailPage.LoadGoogleMAP(Int64 locationID) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 220
+22/03/2015 10:16:13   192.168.1.26   Object reference not set to an instance of an object.      at OH.Web.DetailPage.<>c__DisplayClass3.<LoadRelatedLatestAds>b__0(SP_GetAllLatestAdsResult tr) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 80
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.<TakeIterator>d__3a`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at OH.Web.DetailPage.LoadRelatedLatestAds(Int64 Iid) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 79
+22/03/2015 10:16:13   192.168.1.26   Object reference not set to an instance of an object.      at OH.BLL.Basic.MaterialRT.GetLocationByIID(Int64 locationIID) in e:\- F - Project\OiiO Haat\OH.BLL\Basic\MaterialRT.cs:line 206
+   at OH.Web.DetailPage.LoadGoogleMAP(Int64 locationID) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 220
+22/03/2015 12:41:29   192.168.1.26   Object reference not set to an instance of an object.      at OH.Web.DetailPage.<>c__DisplayClass3.<LoadRelatedLatestAds>b__0(SP_GetAllLatestAdsResult tr) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 80
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.<TakeIterator>d__3a`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at OH.Web.DetailPage.LoadRelatedLatestAds(Int64 Iid) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 79
+22/03/2015 12:41:30   192.168.1.26   Object reference not set to an instance of an object.      at OH.BLL.Basic.MaterialRT.GetLocationByIID(Int64 locationIID) in e:\- F - Project\OiiO Haat\OH.BLL\Basic\MaterialRT.cs:line 206
+   at OH.Web.DetailPage.LoadGoogleMAP(Int64 locationID) in e:\- F - Project\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 220
+25/05/2015 11:02:58   127.0.0.1   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at OH.Utilities.StringCipher.Decrypt(String cipherText) in e:\Projects\OiiO Haat\OH.Utilities\StringCipher.cs:line 81
+   at OH.Web.DetailPage.Page_Load(Object sender, EventArgs e) in e:\Projects\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 56
+26/05/2015 11:14:17   192.168.1.26   The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.       at OH.Utilities.StringCipher.Decrypt(String cipherText) in e:\Projects\OiiO Haat\OH.Utilities\StringCipher.cs:line 81
+   at OH.Web.DetailPage.Page_Load(Object sender, EventArgs e) in e:\Projects\OiiO Haat\OH.Web\DetailPage.aspx.cs:line 56

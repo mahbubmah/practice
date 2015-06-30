@@ -1,0 +1,14 @@
+﻿@using Tula.BLL.Basic
+
+<div class="col-md-3 col-sm-3">
+    <div class="footer_box">
+        <h1>About us</h1>
+        <ul>
+            @foreach (var cms in  new CmsRt().GetCmsContentAllForListView())
+            {
+                <li><a href="#">@cms.Title</a></li>
+            }
+        </ul>
+    </div>
+</div>
+

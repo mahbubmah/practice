@@ -1,0 +1,2 @@
+18/05/2015 16:19:27   192.168.1.12   A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)      at BLL.Basic.DefaultRT.GetAllModuleList() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\BLL\Basic\DefaultRT.cs:line 50
+   at OMart.Web.OiiOMasterPage.LoadMenuLinkRepeater() in f:\- E - PROJECT\OiiOMartWorkingFolder\OMart.Web\OMart.Web\OiiOMasterPage.Master.cs:line 84

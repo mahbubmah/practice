@@ -1,0 +1,2919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C5BB513-828E-4613-B053-AFB8756CF8B9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OMart.Web</RootNamespace>
+    <AssemblyName>OMart.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>Resources\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CkEditor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CKEditorDLL\CkEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.4.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CKEditorDLL\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.1\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="AdminPanel\AdLogInfoView.aspx" />
+    <Content Include="AdminPanel\AdLogInfoViewInsertUpdate.aspx" />
+    <Content Include="AdminPanel\AdminDefault.aspx" />
+    <Content Include="AdminPanel\AllFeatureDisplay.aspx" />
+    <Content Include="AdminPanel\AllFeatureInsertUpdate.aspx" />
+    <Content Include="AdminPanel\AllNewsDisplay.aspx" />
+    <Content Include="AdminPanel\AllNewsInsertUpdate.aspx" />
+    <Content Include="AdminPanel\BDInternetInsertUpdate.aspx" />
+    <Content Include="AdminPanel\BDInternetView.aspx" />
+    <Content Include="AdminPanel\BIAmountRangeDisplay.aspx" />
+    <Content Include="AdminPanel\BIAmountRangeInsertUpdate.aspx" />
+    <Content Include="AdminPanel\BIBusinessAgeDisplay.aspx" />
+    <Content Include="AdminPanel\BIBusinessAgeInsertUpdate.aspx" />
+    <Content Include="AdminPanel\BICategoryDisplay.aspx" />
+    <Content Include="AdminPanel\BICategoryInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CardBalanceTransferWF.aspx" />
+    <Content Include="AdminPanel\CardFeatureDisplay.aspx" />
+    <Content Include="AdminPanel\CardFeatureInsertPopupForCardInfo.aspx" />
+    <Content Include="AdminPanel\CardFeatureInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CardInfoDisplay.aspx" />
+    <Content Include="AdminPanel\CardInfoInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CardInfoPurchase.aspx" />
+    <Content Include="AdminPanel\CardPurchaseWF.aspx" />
+    <Content Include="AdminPanel\CardRegionWiseFeeDisplay.aspx" />
+    <Content Include="AdminPanel\CardRegionWiseFeeInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CarInsuranceInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CarInsuranceParameterInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CarInsuranceParameterView.aspx" />
+    <Content Include="AdminPanel\CarInsuranceView.aspx" />
+    <Content Include="AdminPanel\ChannelInfoInsertUpdate.aspx" />
+    <Content Include="AdminPanel\ChannelInfoView.aspx" />
+    <Content Include="AdminPanel\CMSpage.aspx" />
+    <Content Include="AdminPanel\CommunityNewsDisplay.aspx" />
+    <Content Include="AdminPanel\CommunityNewsInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CompanyDisplay.aspx" />
+    <Content Include="AdminPanel\CompanyInfoDisplay.aspx" />
+    <Content Include="AdminPanel\CompanyInfoInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CompanyInsertUpdate.aspx" />
+    <Content Include="AdminPanel\CountryDisplay.aspx" />
+    <Content Include="AdminPanel\CountryInsertUpdate.aspx" />
+    <Content Include="AdminPanel\DefaultReportViewer.aspx" />
+    <Content Include="AdminPanel\DistrictWF.aspx" />
+    <Content Include="AdminPanel\DivisionOrStateWF.aspx" />
+    <Content Include="AdminPanel\GasCylienderDisplay.aspx" />
+    <Content Include="AdminPanel\GasDealerInfoDisplay.aspx" />
+    <Content Include="AdminPanel\GasInsertUpdate.aspx" />
+    <Content Include="AdminPanel\GuideLineDetailDisplay.aspx" />
+    <Content Include="AdminPanel\GuideLineDetailMoredisplay.aspx" />
+    <Content Include="AdminPanel\GuideLineDetailMoreInsUpdate.aspx" />
+    <Content Include="AdminPanel\GuideLineWithDetails.aspx" />
+    <Content Include="AdminPanel\GuideLineWithDetailsInsertUpdate.aspx" />
+    <Content Include="AdminPanel\HelpAdviceWF.aspx" />
+    <Content Include="AdminPanel\LIApplicableFeatureInsertUpdate.aspx" />
+    <Content Include="AdminPanel\LIApplicableFeatureView.aspx" />
+    <Content Include="AdminPanel\LifeInsuranceInsertUpdate.aspx" />
+    <Content Include="AdminPanel\LifeInsuranceWF.aspx" />
+    <Content Include="AdminPanel\LISchemaInsertUpdate.aspx" />
+    <Content Include="AdminPanel\LISchemaView.aspx" />
+    <Content Include="AdminPanel\LoanAmntYrScdle.aspx" />
+    <Content Include="AdminPanel\LoanAmntYrScdleInsertUpdate.aspx" />
+    <Content Include="AdminPanel\LoanInfoDisplay.aspx" />
+    <Content Include="AdminPanel\LoanInfoInsertUpdate.aspx" />
+    <Content Include="AdminPanel\LocationDisplay.aspx" />
+    <Content Include="AdminPanel\LocationInsertUpdate.aspx" />
+    <Content Include="AdminPanel\MobilePhoneInfoDisplay.aspx" />
+    <Content Include="AdminPanel\MobilePhoneInfoInsertUpdate.aspx" />
+    <Content Include="AdminPanel\MortgageDisplay.aspx" />
+    <Content Include="AdminPanel\MortgageInsertUpdate.aspx" />
+    <Content Include="AdminPanel\MortgageReportUI.aspx" />
+    <Content Include="AdminPanel\MPTypeDisplay.aspx" />
+    <Content Include="AdminPanel\MPTypeWF.aspx" />
+    <Content Include="AdminPanel\OiiOMartContent.aspx" />
+    <Content Include="AdminPanel\PoliceStationWF.aspx" />
+    <Content Include="AdminPanel\PostOfficeDisplay.aspx" />
+    <Content Include="AdminPanel\PostOfficeInsertUpdate.aspx" />
+    <Content Include="AdminPanel\ProfessionInsertUpdate.aspx" />
+    <Content Include="AdminPanel\ProfessionView.aspx" />
+    <Content Include="AdminPanel\ShowReport.aspx" />
+    <Content Include="AdminPanel\UrlInsertUpdateDelete.aspx" />
+    <Content Include="AdminPanel\UrlWFListOnePage.aspx" />
+    <Content Include="AdminPanel\UrlWFListWF.aspx" />
+    <Content Include="AdminPanel\UserGroupWF.aspx" />
+    <Content Include="AdminPanel\UserInfoWF.aspx" />
+    <Content Include="AdminPanel\UserPermissionWF.aspx" />
+    <Content Include="AdminPanel\VisitorsInfoWF.aspx" />
+    <Content Include="All Photos\AllFeatureDetails\20150422155304776873553325325__7.png" />
+    <Content Include="All Photos\AllFeatureDetails\20150422155825519404553325325__7.png" />
+    <Content Include="All Photos\AllFeatureDetails\20150422162123694302553325325__dbbl.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150422173450582113553325325__3.png" />
+    <Content Include="All Photos\AllFeatureDetails\20150422173837626901553325325__primeBank.png" />
+    <Content Include="All Photos\AllFeatureDetails\20150422175330106252553325325.png" />
+    <Content Include="All Photos\AllFeatureDetails\20150426104850603075553325325.png" />
+    <Content Include="All Photos\AllFeatureDetails\20150426105202044335553325325.png" />
+    <Content Include="All Photos\AllFeatureDetails\20150426111253236397553325325.png" />
+    <Content Include="All Photos\AllFeatureDetails\20150426113800903253553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150426113826852278553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150429130013333744553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150429130557443173553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150429140953349728553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150429151922711655553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150429153235163993553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150429155853663734553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150429160335811443553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20150429163141566454553325325.jpg" />
+    <Content Include="All Photos\AllFeatureDetails\20553325325__20150412153229746765553325325.png" />
+    <Content Include="All Photos\AllFeature\09.786566553325325__dbbl.jpg" />
+    <Content Include="All Photos\AllFeature\2.png" />
+    <Content Include="All Photos\AllFeature\20150422155354245872553325325__6.png" />
+    <Content Include="All Photos\AllFeature\20150422162211925644553325325__microsoft.png" />
+    <Content Include="All Photos\AllFeature\20150422173913100100553325325__8.png" />
+    <Content Include="All Photos\AllFeature\20150422175401253198553325325.png" />
+    <Content Include="All Photos\AllFeature\20150422180001775815553325325.png" />
+    <Content Include="All Photos\AllFeature\20150426110731266747553325325.png" />
+    <Content Include="All Photos\AllFeature\20150426113916860228553325325.png" />
+    <Content Include="All Photos\AllFeature\20150429105339313693553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429105749779602553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429105824906371553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429110321224988553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429130037372196553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429130614892992553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429141639419206553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429141859292377553325325.jpg" />
+    <Content Include="All Photos\AllFeature\201504291418592923775533253251010.jpg" />
+    <Content Include="All Photos\AllFeature\20150429155926389976553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429160354211917553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20150429163521021410553325325.jpg" />
+    <Content Include="All Photos\AllFeature\20553325325__6.png" />
+    <Content Include="All Photos\AllFeature\20553325325__microsoft.png" />
+    <Content Include="All Photos\Banking\1.jpg" />
+    <Content Include="All Photos\Broadband\1.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150505161603418071553325325.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150505164644950032553325325.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150505172440172682553325325.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150505180418137350553325325.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150506111801688673553325325.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150506111845971399553325325.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150506111929525004553325325.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150506112100918425553325325.jpg" />
+    <Content Include="All Photos\CMSPhoto\20150506112132604352553325325.jpg" />
+    <Content Include="All Photos\Company\Samsung1.jpg" />
+    <Content Include="All Photos\Energy\1.jpg" />
+    <Content Include="All Photos\GuideLine\GuideLineDetailMore\20150429163950013606553325325.jpg" />
+    <Content Include="All Photos\GuideLine\GuideLineDetailMore\20150429164246737615553325325.jpg" />
+    <Content Include="All Photos\GuideLine\GuideLineDetailMore\20150429170125775705553325325.jpg" />
+    <Content Include="All Photos\GuideLine\GuideLineDetail\20150429163859174380553325325.jpg" />
+    <Content Include="All Photos\GuideLine\GuideLine\20150429173123507592553325325.jpg" />
+    <Content Include="All Photos\GuideLine\GuideLine\20150429173433586005553325325.jpg" />
+    <Content Include="All Photos\GuideLine\GuideLine\20150429175012362026553325325.jpeg" />
+    <Content Include="All Photos\GuideLine\GuideLine\20150429175438122240553325325.jpg" />
+    <Content Include="All Photos\Insurance\1.jpg" />
+    <Content Include="All Photos\Logo\20150429170325439223553325325.jpg" />
+    <Content Include="All Photos\Logo\20150429170407094528553325325.jpg" />
+    <Content Include="All Photos\Logo\20150430111436986043553325325.jpg" />
+    <Content Include="All Photos\Logo\20150430111539877060553325325.jpg" />
+    <Content Include="All Photos\Logo\20150430111600626447553325325.png" />
+    <Content Include="All Photos\Logo\20150430111710851858553325325.jpg" />
+    <Content Include="All Photos\Mobile Phone\1.jpg" />
+    <Content Include="All Photos\Shopping\1.jpg" />
+    <Content Include="All Photos\Travel\1.jpg" />
+    <Content Include="AllCommunityNewsDetails.aspx" />
+    <Content Include="AllFeatureMoreDetails.aspx" />
+    <Content Include="AllNewsDetails.aspx" />
+    <Content Include="BankingInformation.aspx" />
+    <Content Include="BankingNews.aspx" />
+    <Content Include="Broadband.aspx" />
+    <Content Include="BroadbandMobileDeals.aspx" />
+    <Content Include="BroadbandTVDeals.aspx" />
+    <Content Include="BusinessInsurance.aspx" />
+    <Content Include="BusinessInsuranceCover.aspx" />
+    <Content Include="CardInfoPurchase.aspx" />
+    <Content Include="CarInsuranceQuote.aspx" />
+    <Content Include="CarInsuranceQuoteResults.aspx" />
+    <Content Include="CarInsuranceWF.aspx" />
+    <Content Include="CKEditorDLL\CkEditor.dll" />
+    <Content Include="CKEditorDLL\CKEditor.NET.dll" />
+    <Content Include="CKEditorDLL\CKEditor.NET.pdb" />
+    <Content Include="CKEditorDLL\CkEditor.pdb" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\build-config.js" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\id.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\ku.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mk.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\si.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sq.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\tt.js" />
+    <Content Include="ckeditor\lang\ug.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\icons.png" />
+    <Content Include="ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="ckeditor\samples\ajax.html" />
+    <Content Include="ckeditor\samples\api.html" />
+    <Content Include="ckeditor\samples\appendto.html" />
+    <Content Include="ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="ckeditor\samples\assets\sample.jpg" />
+    <Content Include="ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="ckeditor\samples\datafiltering.html" />
+    <Content Include="ckeditor\samples\divreplace.html" />
+    <Content Include="ckeditor\samples\index.html" />
+    <Content Include="ckeditor\samples\inlineall.html" />
+    <Content Include="ckeditor\samples\inlinebycode.html" />
+    <Content Include="ckeditor\samples\inlinetextarea.html" />
+    <Content Include="ckeditor\samples\jquery.html" />
+    <Content Include="ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="ckeditor\samples\readonly.html" />
+    <Content Include="ckeditor\samples\replacebyclass.html" />
+    <Content Include="ckeditor\samples\replacebycode.html" />
+    <Content Include="ckeditor\samples\sample.css" />
+    <Content Include="ckeditor\samples\sample.js" />
+    <Content Include="ckeditor\samples\tabindex.html" />
+    <Content Include="ckeditor\samples\uicolor.html" />
+    <Content Include="ckeditor\samples\uilanguages.html" />
+    <Content Include="ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="ckeditor\skins\moono\dialog.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="ckeditor\skins\moono\editor.css" />
+    <Content Include="ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="ckeditor\skins\moono\icons.png" />
+    <Content Include="ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="ckeditor\skins\moono\images\close.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="ckeditor\skins\moono\images\lock.png" />
+    <Content Include="ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="ckeditor\styles.js" />
+    <Content Include="CMSDetailPage.aspx" />
+    <Content Include="CompanyWiseSpecificLoanTypeInfo.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CustomStyle.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\oiioStyle.css" />
+    <Content Include="Content\rangeslider.css" />
+    <Content Include="Content\screen.css" />
+    <Content Include="Content\Admin_Menu.css" />
+    <Content Include="Content\slider.css" />
+    <Content Include="CreditCardsDetail.aspx" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_cs.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_da.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_de.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_en.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_es.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_fi.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_fr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_hu.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_it.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_ja.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_ko.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_nb.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_nl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_pl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_pt.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_ru.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_sk.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_sv.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_th.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_tr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\CRViewer_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_cs.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_da.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_de.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_en.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_es.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_fi.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_fr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_hu.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_it.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_ja.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_ko.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_nb.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_nl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_pl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_pt.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_ru.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_sk.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_sv.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_th.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_tr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\csprintdlg_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\LCIDTable.xml" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_cs.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_da.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_de.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_en.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_es.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_fi.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_fr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_hu.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_it.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_ja.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_ko.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_nb.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_nl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_pl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_pt.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_ru.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_sk.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_sv.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_th.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_tr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\PrintControl_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\pvlocale-1-0.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_cs.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_da.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_de.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_en.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_es.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_fi.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_fr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_hu.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_it.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_ja.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_ko.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_nb.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_nl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_pl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_pt.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_ru.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_sk.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_sv.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_th.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_tr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\sviewhlp_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_cs.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_da.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_de.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_en.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_es.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_fi.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_fr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_hu.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_it.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_ja.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_ko.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_nb.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_nl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_pl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_pt.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_ru.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_sk.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_sv.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_th.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_tr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\swebrs_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_cs.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_da.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_de.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_en.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_es.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_fi.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_fr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_hu.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_it.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_ja.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_ko.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_nb.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_nl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_pl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_pt.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_ru.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_sk.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_sv.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_th.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_tr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\csprintdlg_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_cs.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_da.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_de.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_en.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_es.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_fi.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_fr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_hu.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_it.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_ja.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_ko.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_nb.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_nl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_pl.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_pt.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_ru.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_sk.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_sv.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_th.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_tr.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_zh_CN.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\PrintControl_res_zh_TW.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\pvlocale-1-0.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\xerces-c_2_7.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\win64_x64\XERCES27_LICENSE.txt" />
+    <Content Include="crystalreportviewers\ActiveXControls\xerces-c_2_7.dll" />
+    <Content Include="crystalreportviewers\ActiveXControls\XERCES27_LICENSE.txt" />
+    <Content Include="crystalreportviewers\allInOne.js" />
+    <Content Include="crystalreportviewers\allStrings_cs.js" />
+    <Content Include="crystalreportviewers\allStrings_da.js" />
+    <Content Include="crystalreportviewers\allStrings_de.js" />
+    <Content Include="crystalreportviewers\allStrings_en.js" />
+    <Content Include="crystalreportviewers\allStrings_es.js" />
+    <Content Include="crystalreportviewers\allStrings_fi.js" />
+    <Content Include="crystalreportviewers\allStrings_fr.js" />
+    <Content Include="crystalreportviewers\allStrings_hu.js" />
+    <Content Include="crystalreportviewers\allStrings_it.js" />
+    <Content Include="crystalreportviewers\allStrings_ja.js" />
+    <Content Include="crystalreportviewers\allStrings_ko.js" />
+    <Content Include="crystalreportviewers\allStrings_nb.js" />
+    <Content Include="crystalreportviewers\allStrings_nl.js" />
+    <Content Include="crystalreportviewers\allStrings_pl.js" />
+    <Content Include="crystalreportviewers\allStrings_pt.js" />
+    <Content Include="crystalreportviewers\allStrings_ru.js" />
+    <Content Include="crystalreportviewers\allStrings_sk.js" />
+    <Content Include="crystalreportviewers\allStrings_sv.js" />
+    <Content Include="crystalreportviewers\allStrings_th.js" />
+    <Content Include="crystalreportviewers\allStrings_tr.js" />
+    <Content Include="crystalreportviewers\allStrings_zh_CN.js" />
+    <Content Include="crystalreportviewers\allStrings_zh_TW.js" />
+    <Content Include="crystalreportviewers\crsmarttag.asp" />
+    <Content Include="crystalreportviewers\crystalimagehandler.asp" />
+    <Content Include="crystalreportviewers\css\cedefault.css" />
+    <Content Include="crystalreportviewers\css\default.css" />
+    <Content Include="crystalreportviewers\css\exception.css" />
+    <Content Include="crystalreportviewers\css\prompting.css" />
+    <Content Include="crystalreportviewers\html\calendar.html" />
+    <Content Include="crystalreportviewers\html\calendarbottom.html" />
+    <Content Include="crystalreportviewers\html\calendartop.html" />
+    <Content Include="crystalreportviewers\imagehandlerdotnetbridge.aspx" />
+    <Content Include="crystalreportviewers\images\buttonl.gif" />
+    <Content Include="crystalreportviewers\images\buttonm.gif" />
+    <Content Include="crystalreportviewers\images\buttonr.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortActive100.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortActive150.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortActive200.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortActive250.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortActive300.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortActive350.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortActive400.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortActive50.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortHover100.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortHover150.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortHover200.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortHover250.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortHover300.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortHover350.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortHover400.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortHover50.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortInactive100.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortInactive150.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortInactive200.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortInactive250.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortInactive300.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortInactive400.gif" />
+    <Content Include="crystalreportviewers\images\isort\DownArrowSortInactive50.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortActive100.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortActive150.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortActive200.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortActive250.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortActive300.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortActive350.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortActive400.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortActive50.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortHover100.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortHover150.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortHover200.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortHover250.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortHover300.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortHover350.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortHover400.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortHover50.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortInactive100.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortInactive150.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortInactive200.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortInactive250.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortInactive300.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortInactive400.gif" />
+    <Content Include="crystalreportviewers\images\isort\UpArrowSortInactive50.gif" />
+    <Content Include="crystalreportviewers\js\calendar.js" />
+    <Content Include="crystalreportviewers\js\calendar_param.js" />
+    <Content Include="crystalreportviewers\js\crviewerinclude.js" />
+    <Content Include="crystalreportviewers\js\crviewer\api.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ArgumentNormalizer.js" />
+    <Content Include="crystalreportviewers\js\crviewer\bobjcallback.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ButtonList.js" />
+    <Content Include="crystalreportviewers\js\crviewer\Calendar.js" />
+    <Content Include="crystalreportviewers\js\crviewer\Colors.js" />
+    <Content Include="crystalreportviewers\js\crviewer\common.js" />
+    <Content Include="crystalreportviewers\js\crviewer\crv.js" />
+    <Content Include="crystalreportviewers\js\crviewer\Dialogs.js" />
+    <Content Include="crystalreportviewers\js\crviewer\dom.js" />
+    <Content Include="crystalreportviewers\js\crviewer\encoding.js" />
+    <Content Include="crystalreportviewers\js\crviewer\event.js" />
+    <Content Include="crystalreportviewers\js\crviewer\GroupTree.js" />
+    <Content Include="crystalreportviewers\js\crviewer\GroupTreeListener.js" />
+    <Content Include="crystalreportviewers\js\crviewer\GroupTreeNode.js" />
+    <Content Include="crystalreportviewers\js\crviewer\html.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ImageSprites.js" />
+    <Content Include="crystalreportviewers\js\crviewer\images\allInOne.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\allInOneBG.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\arrow_button_depressed.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\arrow_button_hover.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\breadcrumbSep.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\calendar.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\catalyst.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\clearValues.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\clear_x.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\closePanel.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\delete.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\drill_cursor.cur" />
+    <Content Include="crystalreportviewers\js\crviewer\images\export.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\filledCircle.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\first.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\grouptree_toggle.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\hollowCircle.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\last.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\leftTriangle.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\line.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\logo.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\magnify.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\min.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\next.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\open_parameter_arrow.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\panelHeaderBG.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\panelNavigatorItemHL.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\panelNavigatorItemSelectedBG.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\panel_toggle.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\param_datafetching.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\param_dirty.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\param_info.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\param_run.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\param_warning.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\plus.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\prev.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\print.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\refresh.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\rightTriangle.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\search.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\separator.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\StackedTab.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\style.css" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_background.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_buttongroup_background.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_buttongroup_left.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_buttongroup_right.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_button_depressed.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_button_hover.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_menuarrow_depressed.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_menuarrow_hover.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_pagenav_buttons.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\toolbar_separator_icon.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\undo.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\up.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\images\WarningPopupTriangle.gif" />
+    <Content Include="crystalreportviewers\js\crviewer\initDhtmlLib.js" />
+    <Content Include="crystalreportviewers\js\crviewer\IOAdapters.js" />
+    <Content Include="crystalreportviewers\js\crviewer\LeftPanel.js" />
+    <Content Include="crystalreportviewers\js\crviewer\OptionalParameterUI.js" />
+    <Content Include="crystalreportviewers\js\crviewer\OptionalParameterValueRow.js" />
+    <Content Include="crystalreportviewers\js\crviewer\PanelHeader.js" />
+    <Content Include="crystalreportviewers\js\crviewer\PanelNavigator.js" />
+    <Content Include="crystalreportviewers\js\crviewer\PanelNavigatorItem.js" />
+    <Content Include="crystalreportviewers\js\crviewer\Parameter.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ParameterController.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ParameterDialog.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ParameterInfoRow.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ParameterPanel.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ParameterPanelToolbar.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ParameterUI.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ParameterValueRow.js" />
+    <Content Include="crystalreportviewers\js\crviewer\PromptPage.js" />
+    <Content Include="crystalreportviewers\js\crviewer\RangeField.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ReportAlbum.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ReportPage.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ReportView.js" />
+    <Content Include="crystalreportviewers\js\crviewer\Separator.js" />
+    <Content Include="crystalreportviewers\js\crviewer\SharedWidgetHolder.js" />
+    <Content Include="crystalreportviewers\js\crviewer\SignalDisposer.js" />
+    <Content Include="crystalreportviewers\js\crviewer\StackedPanel.js" />
+    <Content Include="crystalreportviewers\js\crviewer\StackedTab.js" />
+    <Content Include="crystalreportviewers\js\crviewer\StateManager.js" />
+    <Content Include="crystalreportviewers\js\crviewer\Statusbar.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_cs.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_da.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_de.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_en.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_es.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_fi.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_fr.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_hu.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_it.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_ja.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_ko.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_nb.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_nl.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_pl.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_pt.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_ru.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_sk.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_sv.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_th.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_tr.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_zh_CN.js" />
+    <Content Include="crystalreportviewers\js\crviewer\strings_zh_TW.js" />
+    <Content Include="crystalreportviewers\js\crviewer\TextCombo.js" />
+    <Content Include="crystalreportviewers\js\crviewer\TextField.js" />
+    <Content Include="crystalreportviewers\js\crviewer\Toolbar.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ToolPanel.js" />
+    <Content Include="crystalreportviewers\js\crviewer\Viewer.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ViewerFlexParameterAdapter.js" />
+    <Content Include="crystalreportviewers\js\crviewer\ViewerListener.js" />
+    <Content Include="crystalreportviewers\js\crviewer\WarningPopup.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\bolist.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\calendar.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\dialog.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\dom.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\empty.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\borders.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\help.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\loading.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\lov.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\min.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\plus.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\print.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\print_fe.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\prompt.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\resizepattern.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\bolist.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\button.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\buttonIcons.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\critical_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogelements.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframe.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogtitle.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\down.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\iconsep.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\information_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\left.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\menus.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\node.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\progress.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\resize.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\right.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\scroll_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\sep.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\sep_solid.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\style.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\style.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\style_fe.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\tabs.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\up.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\wait01.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\wait02.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_coloredline\warning_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\bolist.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\button.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\buttonIcons.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\critical_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogelements.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframe.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogtitle.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\down.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\iconsep.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\information_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\left.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\menus.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\node.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\progress.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\resize.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\right.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\scroll_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\sep.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\sep_solid.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\style.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\style.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\style_fe.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\tabs.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\up.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\wait01.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\wait02.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_corporate\warning_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\bolist.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\button.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\buttonIcons.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\critical_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\dialogelements.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\dialogframe.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\dialogtitle.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\down.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\iconsep.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\information_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\left.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\menus.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\node.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\progress.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\resize.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\right.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\scroll_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\sep.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\sep_solid.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\style.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\style.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\style_fe.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\tabs.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\up.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\wait01.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\wait02.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_default\warning_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\background_field.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\background_menusel.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\bolist.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\button.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\buttonIcons.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\critical_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\critical_icon.png" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\dialogelements.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframe.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframeleftright.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframetopbottom.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\dialogtitle.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\down.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\hgrab.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\horiz_tabs.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\iconsep.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\information_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\left.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\menuitem_check.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\menus.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\node.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\panemenu.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\panetitle.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\progress.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\resize.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\right.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\scroll_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\sep.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\sep_solid.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\style.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\style.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\style_fe.css" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\tabs.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\toolbar_elements.png" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\up.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\vgrab.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\wait01.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\wait02.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\skin_standard\warning_icon.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\swap.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\transp.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\images\tree.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\cs\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\da\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\de\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\en\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\es\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\fi\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\fr\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\hu\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\it\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\ja\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\ko\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\nb\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\nl\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\pl\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\pt\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\ru\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\sk\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\sv\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\th\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\tr\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\zh_CN\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\language\zh_TW\labels.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\lov.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\menu.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\palette.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\prompttree.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\psheet.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\andorwidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\basicDialog.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\blockWhileWait.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\bolist.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\borderswidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\buttons.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\calendar.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\checktree.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\default.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\dim.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\dim_close.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\dim_o.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\dim_open.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\empty.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\eventsDialog.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\fieldswidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\format.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\framezone.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\grabber.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\iconlistpopupwidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\iconscrollmenuwidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\imgtabs.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\inconwidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\infowidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\lov.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\measure.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\measure_o.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\menu.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\navigation.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\palettes.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\pane.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\parent_dialog.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\progressBar.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\prompttree.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\qualif.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\scrolltabs.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\simplelist.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\skinIntl.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\tabs.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\textcombowidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\tooltipwidget.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\treeicons.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\treeview.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\unv_close.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\unv_o.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\unv_open.gif" />
+    <Content Include="crystalreportviewers\js\dhtmllib\samples\waitDialog.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\treeview.js" />
+    <Content Include="crystalreportviewers\js\dhtmllib\validator\default.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\validator\validator_res.html" />
+    <Content Include="crystalreportviewers\js\dhtmllib\waitdialog.js" />
+    <Content Include="crystalreportviewers\js\dt_param.js" />
+    <Content Include="crystalreportviewers\js\external\date.js" />
+    <Content Include="crystalreportviewers\js\FlexParameterBridge.js" />
+    <Content Include="crystalreportviewers\js\KeyDownEvent.js" />
+    <Content Include="crystalreportviewers\js\log4javascript\log4javascript.js" />
+    <Content Include="crystalreportviewers\js\log4javascript\log4javascript_stub.js" />
+    <Content Include="crystalreportviewers\js\log4javascript\log4javascript_stub_uncompressed.js" />
+    <Content Include="crystalreportviewers\js\log4javascript\log4javascript_uncompressed.js" />
+    <Content Include="crystalreportviewers\js\log4javascript\main.css" />
+    <Content Include="crystalreportviewers\js\MochiKit\3rdParty.txt" />
+    <Content Include="crystalreportviewers\js\MochiKit\Async.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Base.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Color.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Controls.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\DateTime.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\DOM.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\DragAndDrop.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Format.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Iter.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\License.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Logging.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\LoggingPane.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\MochiKit.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\MockDOM.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\New.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Signal.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Sortable.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Style.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Test.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\Visual.js" />
+    <Content Include="crystalreportviewers\js\MochiKit\__package__.js" />
+    <Content Include="crystalreportviewers\js\previewerror.js" />
+    <Content Include="crystalreportviewers\js\prompts.js" />
+    <Content Include="crystalreportviewers\js\prompts_param.js" />
+    <Content Include="crystalreportviewers\js\swfobject\swfobject.js" />
+    <Content Include="crystalreportviewers\parameterUIController-compressed.js" />
+    <Content Include="crystalreportviewers\preview.aspx" />
+    <Content Include="crystalreportviewers\processindicator.js" />
+    <Content Include="crystalreportviewers\promptengine-compressed.js" />
+    <Content Include="crystalreportviewers\prompting\css\promptengine2.css" />
+    <Content Include="crystalreportviewers\prompting\css\promptengine_default.css" />
+    <Content Include="crystalreportviewers\prompting\html\calendar.html" />
+    <Content Include="crystalreportviewers\prompting\html\calendarbottom.html" />
+    <Content Include="crystalreportviewers\prompting\html\calendartop.html" />
+    <Content Include="crystalreportviewers\prompting\images\addallfield.gif" />
+    <Content Include="crystalreportviewers\prompting\images\addallfield_over.gif" />
+    <Content Include="crystalreportviewers\prompting\images\addfield.gif" />
+    <Content Include="crystalreportviewers\prompting\images\addfield_over.gif" />
+    <Content Include="crystalreportviewers\prompting\images\back.gif" />
+    <Content Include="crystalreportviewers\prompting\images\background_field.gif" />
+    <Content Include="crystalreportviewers\prompting\images\back_over.gif" />
+    <Content Include="crystalreportviewers\prompting\images\button.gif" />
+    <Content Include="crystalreportviewers\prompting\images\button_left_normal.gif" />
+    <Content Include="crystalreportviewers\prompting\images\button_middle_normal.gif" />
+    <Content Include="crystalreportviewers\prompting\images\button_right_normal.gif" />
+    <Content Include="crystalreportviewers\prompting\images\calendar.gif" />
+    <Content Include="crystalreportviewers\prompting\images\cfilter.gif" />
+    <Content Include="crystalreportviewers\prompting\images\cfilter_over.gif" />
+    <Content Include="crystalreportviewers\prompting\images\dialogelements.gif" />
+    <Content Include="crystalreportviewers\prompting\images\dialogtitle.gif" />
+    <Content Include="crystalreportviewers\prompting\images\error.gif" />
+    <Content Include="crystalreportviewers\prompting\images\errormsg.gif" />
+    <Content Include="crystalreportviewers\prompting\images\filter.gif" />
+    <Content Include="crystalreportviewers\prompting\images\filter_over.gif" />
+    <Content Include="crystalreportviewers\prompting\images\forward.gif" />
+    <Content Include="crystalreportviewers\prompting\images\forward_over.gif" />
+    <Content Include="crystalreportviewers\prompting\images\info.gif" />
+    <Content Include="crystalreportviewers\prompting\images\infomsg.gif" />
+    <Content Include="crystalreportviewers\prompting\images\minus.gif" />
+    <Content Include="crystalreportviewers\prompting\images\next.gif" />
+    <Content Include="crystalreportviewers\prompting\images\next_over.gif" />
+    <Content Include="crystalreportviewers\prompting\images\plus.gif" />
+    <Content Include="crystalreportviewers\prompting\images\prev.gif" />
+    <Content Include="crystalreportviewers\prompting\images\prev_over.gif" />
+    <Content Include="crystalreportviewers\prompting\images\resize.gif" />
+    <Content Include="crystalreportviewers\prompting\images\transp.gif" />
+    <Content Include="crystalreportviewers\prompting\images\warning.gif" />
+    <Content Include="crystalreportviewers\prompting\images\warningmsg.gif" />
+    <Content Include="crystalreportviewers\prompting\js\initDhtmlLib.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_calendar.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_calendar2.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_prompts.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_prompts2.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_cs.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_da.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_de.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_en.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_es.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_fi.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_fr.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_hu.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_it.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_ja.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_ko.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_nb.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_nl.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_pl.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_pt.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_ru.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_sk.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_sv.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_th.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_tr.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_zh_CN.js" />
+    <Content Include="crystalreportviewers\prompting\js\promptengine_strings_zh_TW.js" />
+    <Content Include="crystalreportviewers\urlreporting\activexviewer.js" />
+    <Content Include="crystalreportviewers\urlreporting\appletviewer.js" />
+    <Content Include="CurrentAccount.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EnergyGas.aspx" />
+    <Content Include="EnergyPayment.aspx" />
+    <Content Include="FeatureDescription.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\LoginLogo.jpg" />
+    <Content Include="fonts\MyriadPro-Light.svg" />
+    <Content Include="fonts\MyriadPro-Regular.svg" />
+    <Content Include="AdminPanel\GasDealerInfoWF.aspx" />
+    <Content Include="GuideLineDetails.aspx" />
+    <Content Include="GuideLineMoreDetails.aspx" />
+    <Content Include="HelpDescription.aspx" />
+    <Content Include="HomeInsurance.aspx" />
+    <Content Include="HomeInsuranceCover.aspx" />
+    <Content Include="Images\AllFeatureDetails\20150422155304776873553325325__7.png" />
+    <Content Include="Images\AllFeatureDetails\20150422155825519404553325325__7.png" />
+    <Content Include="Images\AllFeatureDetails\20150422162123694302553325325__dbbl.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150422173450582113553325325__3.png" />
+    <Content Include="Images\AllFeatureDetails\20150422173837626901553325325__primeBank.png" />
+    <Content Include="Images\AllFeatureDetails\20150422175330106252553325325.png" />
+    <Content Include="Images\AllFeatureDetails\20150426104850603075553325325.png" />
+    <Content Include="Images\AllFeatureDetails\20150426105202044335553325325.png" />
+    <Content Include="Images\AllFeatureDetails\20150426111253236397553325325.png" />
+    <Content Include="Images\AllFeatureDetails\20150426113800903253553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150426113826852278553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150429130013333744553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150429130557443173553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150429140953349728553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150429151922711655553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150429153235163993553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150429155853663734553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20150429160335811443553325325.jpg" />
+    <Content Include="Images\AllFeatureDetails\20553325325__20150412153229746765553325325.png" />
+    <Content Include="Images\AllFeature\09.786566553325325__dbbl.jpg" />
+    <Content Include="Images\AllFeature\2.png" />
+    <Content Include="Images\AllFeature\20150422155354245872553325325__6.png" />
+    <Content Include="Images\AllFeature\20150422162211925644553325325__microsoft.png" />
+    <Content Include="Images\AllFeature\20150422173913100100553325325__8.png" />
+    <Content Include="Images\AllFeature\20150422175401253198553325325.png" />
+    <Content Include="Images\AllFeature\20150422180001775815553325325.png" />
+    <Content Include="Images\AllFeature\20150426110731266747553325325.png" />
+    <Content Include="Images\AllFeature\20150426113916860228553325325.png" />
+    <Content Include="Images\AllFeature\20150429105339313693553325325.jpg" />
+    <Content Include="Images\AllFeature\20150429105749779602553325325.jpg" />
+    <Content Include="Images\AllFeature\20150429105824906371553325325.jpg" />
+    <Content Include="Images\AllFeature\20150429110321224988553325325.jpg" />
+    <Content Include="Images\AllFeature\20150429130037372196553325325.jpg" />
+    <Content Include="Images\AllFeature\20150429130614892992553325325.jpg" />
+    <Content Include="Images\AllFeature\20150429141639419206553325325.jpg" />
+    <Content Include="Images\AllFeature\20150429141859292377553325325.jpg" />
+    <Content Include="Images\AllFeature\201504291418592923775533253251010.jpg" />
+    <Content Include="Images\AllFeature\20150429155926389976553325325.jpg" />
+    <Content Include="Images\AllFeature\20150429160354211917553325325.jpg" />
+    <Content Include="Images\AllFeature\20553325325__6.png" />
+    <Content Include="Images\AllFeature\20553325325__microsoft.png" />
+    <Content Include="Images\banner\1.jpg" />
+    <Content Include="Images\banner\2.jpg" />
+    <Content Include="Images\banner\20150412125841003811553325325.png" />
+    <Content Include="Images\banner\20150412142733563346553325325.png" />
+    <Content Include="Images\banner\20150412153229746765553325325.png" />
+    <Content Include="Images\banner\20150412153548004662553325325.png" />
+    <Content Include="Images\banner\20150412153602297697553325325.png" />
+    <Content Include="Images\banner\20150420100742710961553325325.png" />
+    <Content Include="Images\banner\20150420101059292289553325325.jpg" />
+    <Content Include="Images\banner\20150420101731282631553325325.jpg" />
+    <Content Include="Images\banner\20150420102330361014553325325.jpg" />
+    <Content Include="Images\banner\20150420102817429600553325325.png" />
+    <Content Include="Images\banner\20150420102937176979553325325.jpg" />
+    <Content Include="Images\banner\20150420103926306884553325325.jpg" />
+    <Content Include="Images\banner\20150420103945090205553325325.png" />
+    <Content Include="Images\banner\20150420104620550011553325325.jpg" />
+    <Content Include="Images\banner\20150420110809826465553325325.png" />
+    <Content Include="Images\banner\20150420110826577306553325325.png" />
+    <Content Include="Images\banner\20150420111204929632553325325.png" />
+    <Content Include="Images\banner\20150420111530214456553325325.png" />
+    <Content Include="Images\banner\20150420111718525847553325325.jpg" />
+    <Content Include="Images\banner\20150420111739868993553325325.png" />
+    <Content Include="Images\banner\20150420112734347483553325325.jpg" />
+    <Content Include="Images\banner\20150420112744979920553325325.jpg" />
+    <Content Include="Images\banner\20150420112829452547553325325.png" />
+    <Content Include="Images\banner\20150420112920412397553325325.jpg" />
+    <Content Include="Images\banner\20150420114308633950553325325.png" />
+    <Content Include="Images\banner\20150420121247520921553325325.png" />
+    <Content Include="Images\banner\20150420151002851470553325325.png" />
+    <Content Include="Images\banner\20150420151024881258553325325.jpg" />
+    <Content Include="Images\banner\20150420151219934418553325325.png" />
+    <Content Include="Images\banner\20150420151246325538553325325.png" />
+    <Content Include="Images\banner\20150420151843713724553325325.jpg" />
+    <Content Include="Images\banner\20150420151857491811553325325.jpg" />
+    <Content Include="Images\banner\20150420161823340376553325325.png" />
+    <Content Include="Images\banner\20150420165222318451553325325.png" />
+    <Content Include="Images\banner\20150420165325417866553325325.png" />
+    <Content Include="Images\banner\20150420172710251240553325325.png" />
+    <Content Include="Images\banner\20150420172731047616553325325.jpg" />
+    <Content Include="Images\banner\20150420172834072569553325325.jpg" />
+    <Content Include="Images\banner\20150427150936950210553325325.jpg" />
+    <Content Include="Images\banner\20150427151102534321553325325.jpg" />
+    <Content Include="Images\banner\20150427151116148911553325325.jpg" />
+    <Content Include="Images\banner\20150427151925435463553325325.jpg" />
+    <Content Include="Images\banner\20150427152039048730553325325.jpg" />
+    <Content Include="Images\banner\20150427152144852087553325325.jpg" />
+    <Content Include="Images\banner\20150427152612516211553325325.jpg" />
+    <Content Include="Images\banner\20150427153030297678553325325.jpg" />
+    <Content Include="Images\banner\20150427153334630083553325325.jpg" />
+    <Content Include="Images\banner\20150427153736113483553325325.jpg" />
+    <Content Include="Images\banner\20150427154036941490553325325.jpg" />
+    <Content Include="Images\banner\20150427154124830512553325325.png" />
+    <Content Include="Images\banner\20150427154148620898553325325.jpg" />
+    <Content Include="Images\banner\20150427154907615352553325325.jpg" />
+    <Content Include="Images\banner\20150427155024919041553325325.jpg" />
+    <Content Include="Images\banner\20150427155154805700553325325.jpg" />
+    <Content Include="Images\banner\20150429124335004788553325325.jpg" />
+    <Content Include="Images\banner\20150429131249864585553325325.png" />
+    <Content Include="Images\banner\20150429140749570918553325325.png" />
+    <Content Include="Images\banner\20150429160909183199553325325.png" />
+    <Content Include="Images\banner\20150429161116805314553325325.jpg" />
+    <Content Include="Images\banner\20150429161445546276553325325.jpg" />
+    <Content Include="Images\banner\20150429162530854250553325325.jpg" />
+    <Content Include="Images\banner\3.jpg" />
+    <Content Include="Images\banner\4.jpg" />
+    <Content Include="Images\banner\5.jpg" />
+    <Content Include="Images\banner\6.jpg" />
+    <Content Include="Images\banner\7.jpg" />
+    <Content Include="Images\banner\8.jpg" />
+    <Content Include="Images\banner\bannner10.png" />
+    <Content Include="Images\banner\bannner11.png" />
+    <Content Include="Images\banner\bannner12.png" />
+    <Content Include="Images\banner\bannner13.png" />
+    <Content Include="Images\banner\bannner14.png" />
+    <Content Include="Images\banner\bannner15.png" />
+    <Content Include="Images\banner\broadband1.png" />
+    <Content Include="Images\banner\carImg.png" />
+    <Content Include="Images\banner\carImg2.png" />
+    <Content Include="Images\Company\Samsung1.jpg" />
+    <Content Include="Images\Interfaces\0423_2.png" />
+    <Content Include="Images\Interfaces\0423_3.png" />
+    <Content Include="Images\Interfaces\0424_4.png" />
+    <Content Include="Images\Interfaces\0424_5.png" />
+    <Content Include="Images\Interfaces\0424_6.png" />
+    <Content Include="Images\Interfaces\0424_7.png" />
+    <Content Include="Images\Interfaces\0424_8.png" />
+    <Content Include="Images\Interfaces\0424_9.png" />
+    <Content Include="Images\Interfaces\0426.png" />
+    <Content Include="Images\Interfaces\1.png" />
+    <Content Include="Images\Interfaces\2.png" />
+    <Content Include="Images\Interfaces\3.png" />
+    <Content Include="Images\Interfaces\4.png" />
+    <Content Include="Images\Interfaces\6.png" />
+    <Content Include="Images\Interfaces\7.png" />
+    <Content Include="Images\Interfaces\8.png" />
+    <Content Include="Images\Interfaces\bannerImg10.jpg" />
+    <Content Include="Images\Interfaces\bannerImg12.jpg" />
+    <Content Include="Images\Interfaces\bBand_bg1.png" />
+    <Content Include="Images\Interfaces\bBand_bg2.png" />
+    <Content Include="Images\Interfaces\broadbandProduct_bg.png" />
+    <Content Include="Images\Interfaces\broadbandprovider1.jpg" />
+    <Content Include="Images\Interfaces\broadbandprovider2.jpg" />
+    <Content Include="Images\Interfaces\broadbandprovider3.jpg" />
+    <Content Include="Images\Interfaces\broadbandprovider4.jpg" />
+    <Content Include="Images\Interfaces\dbbl.jpg" />
+    <Content Include="Images\Interfaces\icon1.png" />
+    <Content Include="Images\Interfaces\icon10.png" />
+    <Content Include="Images\Interfaces\icon11.png" />
+    <Content Include="Images\Interfaces\icon12.png" />
+    <Content Include="Images\Interfaces\icon13.png" />
+    <Content Include="Images\Interfaces\icon14.png" />
+    <Content Include="Images\Interfaces\icon15.png" />
+    <Content Include="Images\Interfaces\icon16.png" />
+    <Content Include="Images\Interfaces\icon17.png" />
+    <Content Include="Images\Interfaces\icon18.png" />
+    <Content Include="Images\Interfaces\icon19.png" />
+    <Content Include="Images\Interfaces\icon2.png" />
+    <Content Include="Images\Interfaces\icon20.png" />
+    <Content Include="Images\Interfaces\icon21.png" />
+    <Content Include="Images\Interfaces\icon25.png" />
+    <Content Include="Images\Interfaces\icon3.png" />
+    <Content Include="Images\Interfaces\icon4.png" />
+    <Content Include="Images\Interfaces\icon5.png" />
+    <Content Include="Images\Interfaces\icon6.png" />
+    <Content Include="Images\Interfaces\icon7.png" />
+    <Content Include="Images\Interfaces\icon8.png" />
+    <Content Include="Images\Interfaces\icon9.png" />
+    <Content Include="Images\Interfaces\insurance_banner_bg.png" />
+    <Content Include="Images\Interfaces\loandBanner_bg1.png" />
+    <Content Include="Images\Interfaces\loandBanner_bg2.png" />
+    <Content Include="Images\Interfaces\logo.png" />
+    <Content Include="Images\Interfaces\logo1.png" />
+    <Content Include="Images\Interfaces\logo2.png" />
+    <Content Include="Images\Interfaces\logo3.png" />
+    <Content Include="Images\Interfaces\logo4.png" />
+    <Content Include="Images\Interfaces\logo5.png" />
+    <Content Include="Images\Interfaces\logo6.png" />
+    <Content Include="Images\Interfaces\logo7.png" />
+    <Content Include="Images\Interfaces\logo8.png" />
+    <Content Include="Images\Interfaces\logo9.png" />
+    <Content Include="Images\Interfaces\menu_bg.png" />
+    <Content Include="Images\Interfaces\microsoft.png" />
+    <Content Include="Images\Interfaces\news1.jpg" />
+    <Content Include="Images\Interfaces\news2.jpg" />
+    <Content Include="Images\Interfaces\news3.jpg" />
+    <Content Include="Images\Interfaces\news4.jpg" />
+    <Content Include="Images\Interfaces\news5.jpg" />
+    <Content Include="Images\Interfaces\news6.jpg" />
+    <Content Include="Images\Interfaces\paypal2.png" />
+    <Content Include="Images\Interfaces\primeBank.png" />
+    <Content Include="Images\Interfaces\productBox_bg - Copy.png" />
+    <Content Include="Images\Interfaces\productBox_bg.png" />
+    <Content Include="Images\Interfaces\productBox_bg_oiioGuide.png" />
+    <Content Include="Images\Interfaces\questionIocn.png" />
+    <Content Include="Images\Interfaces\servBoxDivider-bg.png" />
+    <Content Include="Images\Interfaces\social_bg.png" />
+    <Content Include="Images\Interfaces\sports1.jpg" />
+    <Content Include="Images\Interfaces\sports2.jpg" />
+    <Content Include="Images\Interfaces\Titel_bg01.png" />
+    <Content Include="Images\Interfaces\vodeo1.jpg" />
+    <Content Include="Images\Interfaces\vodeo2.jpg" />
+    <Content Include="Images\Interfaces\vodeo3.jpg" />
+    <Content Include="Images\logo\20150330111219146441553325325__Oiio-logo-05.png" />
+    <Content Include="Images\logo\20150330133026758150553325325__Oiio-logo-2015-vs-02.png" />
+    <Content Include="Images\logo\20150402155050094112553325325__Capjhhture.JPG" />
+    <Content Include="Images\MobilePhone\20150331130158757708553325325__aa.JPG" />
+    <Content Include="Images\MobilePhone\20150401175122670070553325325__Capjhhture.JPG" />
+    <Content Include="Images\MobilePhone\20150402093537965825553325325__images %281%29.jpg" />
+    <Content Include="Images\MobilePhone\20150402161014618316553325325__Capjhhture.JPG" />
+    <Content Include="Images\MobilePhone\20150402161305268574553325325__Capture.JPG" />
+    <Content Include="Images\MobilePhone\20150420104548869287553325325__Capjhhture.JPG" />
+    <Content Include="Images\MobilePhone\20150420125023056128553325325___4.jpg" />
+    <Content Include="Images\MobilePhone\20150420130030379391553325325___4.jpg" />
+    <Content Include="Images\MobilePhone\20150420131755960980553325325___4.jpg" />
+    <Content Include="Images\MobilePhone\20150420132025195599553325325___4.jpg" />
+    <Content Include="Images\MobilePhone\20150420132235962733553325325___2.jpg" />
+    <Content Include="Images\MobilePhone\20150420142859527006553325325__201503000010_4.jpg" />
+    <Content Include="Images\MobilePhone\20150429133112842879553325325___4.jpg" />
+    <Content Include="Images\MobilePhone\ExplorerZII__ExplorerZII.jpg" />
+    <Content Include="Images\MobilePhone\xperiaZ+.jpg" />
+    <Content Include="Images\MobilePhone\xperiaZplus.jpg" />
+    <Content Include="Images\MobilePhone\xperiaZ___2.jpg" />
+    <Content Include="Images\products\1.jpg" />
+    <Content Include="Images\products\10.jpg" />
+    <Content Include="Images\products\100.jpg" />
+    <Content Include="Images\products\101.jpg" />
+    <Content Include="Images\products\102.jpg" />
+    <Content Include="Images\products\103.jpg" />
+    <Content Include="Images\products\104.jpg" />
+    <Content Include="Images\products\105.jpg" />
+    <Content Include="Images\products\106.jpg" />
+    <Content Include="Images\products\107.jpg" />
+    <Content Include="Images\products\108.jpg" />
+    <Content Include="Images\products\11.jpg" />
+    <Content Include="Images\products\12.jpg" />
+    <Content Include="Images\products\13.jpg" />
+    <Content Include="Images\products\14.jpg" />
+    <Content Include="Images\products\15.jpg" />
+    <Content Include="Images\products\16.jpg" />
+    <Content Include="Images\products\17.jpg" />
+    <Content Include="Images\products\18.jpg" />
+    <Content Include="Images\products\19.jpg" />
+    <Content Include="Images\products\2.jpg" />
+    <Content Include="Images\products\20.jpg" />
+    <Content Include="Images\products\21.jpg" />
+    <Content Include="Images\products\22.jpg" />
+    <Content Include="Images\products\23.jpg" />
+    <Content Include="Images\products\24.jpg" />
+    <Content Include="Images\products\3.jpg" />
+    <Content Include="Images\products\4.jpg" />
+    <Content Include="Images\products\5.jpg" />
+    <Content Include="Images\products\51.jpg" />
+    <Content Include="Images\products\52.jpg" />
+    <Content Include="Images\products\53.jpg" />
+    <Content Include="Images\products\6.jpg" />
+    <Content Include="Images\products\60.png" />
+    <Content Include="Images\products\61.png" />
+    <Content Include="Images\products\62.png" />
+    <Content Include="Images\products\63.jpg" />
+    <Content Include="Images\products\64.jpg" />
+    <Content Include="Images\products\65.jpg" />
+    <Content Include="Images\products\66.jpg" />
+    <Content Include="Images\products\67.jpg" />
+    <Content Include="Images\products\68.jpg" />
+    <Content Include="Images\products\69.jpg" />
+    <Content Include="Images\products\7.jpg" />
+    <Content Include="Images\products\70.jpg" />
+    <Content Include="Images\products\71.jpg" />
+    <Content Include="Images\products\72.jpg" />
+    <Content Include="Images\products\73.jpg" />
+    <Content Include="Images\products\74.jpg" />
+    <Content Include="Images\products\75.jpg" />
+    <Content Include="Images\products\76.jpg" />
+    <Content Include="Images\products\77.jpg" />
+    <Content Include="Images\products\78.jpg" />
+    <Content Include="Images\products\79.jpg" />
+    <Content Include="Images\products\8.jpg" />
+    <Content Include="Images\products\80.jpg" />
+    <Content Include="Images\products\81.jpg" />
+    <Content Include="Images\products\82.jpg" />
+    <Content Include="Images\products\83.jpg" />
+    <Content Include="Images\products\85.jpg" />
+    <Content Include="Images\products\86.jpg" />
+    <Content Include="Images\products\87.jpg" />
+    <Content Include="Images\products\88.jpg" />
+    <Content Include="Images\products\89.jpg" />
+    <Content Include="Images\products\9.jpg" />
+    <Content Include="Images\products\90.jpg" />
+    <Content Include="Images\products\91.jpg" />
+    <Content Include="Images\products\92.jpg" />
+    <Content Include="Images\products\93.jpg" />
+    <Content Include="Images\products\94.jpg" />
+    <Content Include="Images\products\95.jpg" />
+    <Content Include="Images\products\96.png" />
+    <Content Include="Images\products\97.jpg" />
+    <Content Include="Images\products\98.jpg" />
+    <Content Include="Images\products\99.jpg" />
+    <Content Include="InsuranceDefault.aspx" />
+    <Content Include="InsuranceNews.aspx" />
+    <Content Include="InsuranceQuotes.aspx" />
+    <Content Include="InsuranceCover.aspx" />
+    <Content Include="LifeInsurance.aspx" />
+    <Content Include="LoanDesciptionDetails.aspx" />
+    <Content Include="LoanInformationDisplay.aspx" />
+    <Content Include="Log file\AllCommunityNewsDetails.txt" />
+    <Content Include="Log file\AllNewsDetails.txt" />
+    <Content Include="Log file\CreditCardsDetail.txt" />
+    <Content Include="Log file\GuideLineDetails.txt" />
+    <Content Include="Log file\LoanDesciptionDetails.txt" />
+    <Content Include="Log file\VisitorlogFileWriting.txt" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="MobilePhoneInformationWF.aspx" />
+    <Content Include="MortgageDetails.aspx" />
+    <Content Include="Mortgages.aspx" />
+    <Content Include="AdminPanel\MortgageTermWF.aspx" />
+    <Content Include="NewsAndCommunity.aspx" />
+    <Content Include="OMartWebService.asmx" />
+    <Content Include="packages.config" />
+    <Content Include="Account\Web.config" />
+    <Content Include="AdminPanel\AdminMaster.Master" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\MyriadPro-Light.eot" />
+    <Content Include="fonts\MyriadPro-Light.ttf" />
+    <Content Include="fonts\MyriadPro-Regular.eot" />
+    <Content Include="fonts\MyriadPro-Regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="OiiOMasterPage.Master" />
+    <Content Include="MortgageMasterPage.Master" />
+    <Content Include="ckeditor\CHANGES.md" />
+    <Content Include="ckeditor\LICENSE.md" />
+    <Content Include="ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="ckeditor\plugins\scayt\README.md" />
+    <Content Include="ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="ckeditor\plugins\wsc\README.md" />
+    <Content Include="ckeditor\README.md" />
+    <Content Include="ckeditor\samples\assets\posteddata.php" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="ckeditor\samples\sample_posteddata.php" />
+    <Content Include="ckeditor\skins\moono\readme.md" />
+    <Content Include="InsuranceMaster.Master" />
+    <Content Include="LoanMasterPage.Master" />
+    <Content Include="MobileMasterPage.Master" />
+    <Content Include="EnergyMaster.Master" />
+    <Content Include="CKEditorDLL\CkEditor.dll.config" />
+    <Content Include="BroadbandMaster.Master" />
+    <Content Include="crystalreportviewers\ActiveXControls\crviewer.dep" />
+    <Content Include="crystalreportviewers\crsmarttag.jsp" />
+    <Content Include="crystalreportviewers\preview.jsp" />
+    <Content Include="AdminPanel\ReportMortgage\ContainerData.xsc">
+      <DependentUpon>ContainerData.xsd</DependentUpon>
+    </Content>
+    <None Include="AdminPanel\ReportMortgage\ContainerData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContainerData1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="AdminPanel\ReportMortgage\ContainerData.xss">
+      <DependentUpon>ContainerData.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="PayAsYouGoWF.aspx" />
+    <Content Include="Resources\AjaxControlToolkit.dll" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\external\jquery\jquery.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\datepickerImage.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\index.html" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.theme.min.css" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\rangeslider.js" />
+    <Content Include="Scripts\rangeslider.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Shopping.aspx" />
+    <Content Include="Travel.aspx" />
+    <Content Include="UserRegistration.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="ShoppingMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdLogInfoView.aspx.cs">
+      <DependentUpon>AdLogInfoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdLogInfoView.aspx.designer.cs">
+      <DependentUpon>AdLogInfoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdLogInfoViewInsertUpdate.aspx.cs">
+      <DependentUpon>AdLogInfoViewInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdLogInfoViewInsertUpdate.aspx.designer.cs">
+      <DependentUpon>AdLogInfoViewInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdminDefault.aspx.cs">
+      <DependentUpon>AdminDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdminDefault.aspx.designer.cs">
+      <DependentUpon>AdminDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AllFeatureDisplay.aspx.cs">
+      <DependentUpon>AllFeatureDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AllFeatureDisplay.aspx.designer.cs">
+      <DependentUpon>AllFeatureDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AllFeatureInsertUpdate.aspx.cs">
+      <DependentUpon>AllFeatureInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AllFeatureInsertUpdate.aspx.designer.cs">
+      <DependentUpon>AllFeatureInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AllNewsDisplay.aspx.cs">
+      <DependentUpon>AllNewsDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AllNewsDisplay.aspx.designer.cs">
+      <DependentUpon>AllNewsDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AllNewsInsertUpdate.aspx.cs">
+      <DependentUpon>AllNewsInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AllNewsInsertUpdate.aspx.designer.cs">
+      <DependentUpon>AllNewsInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BDInternetInsertUpdate.aspx.cs">
+      <DependentUpon>BDInternetInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BDInternetInsertUpdate.aspx.designer.cs">
+      <DependentUpon>BDInternetInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BDInternetView.aspx.cs">
+      <DependentUpon>BDInternetView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BDInternetView.aspx.designer.cs">
+      <DependentUpon>BDInternetView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BIAmountRangeDisplay.aspx.cs">
+      <DependentUpon>BIAmountRangeDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BIAmountRangeDisplay.aspx.designer.cs">
+      <DependentUpon>BIAmountRangeDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BIAmountRangeInsertUpdate.aspx.cs">
+      <DependentUpon>BIAmountRangeInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BIAmountRangeInsertUpdate.aspx.designer.cs">
+      <DependentUpon>BIAmountRangeInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BIBusinessAgeDisplay.aspx.cs">
+      <DependentUpon>BIBusinessAgeDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BIBusinessAgeDisplay.aspx.designer.cs">
+      <DependentUpon>BIBusinessAgeDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BIBusinessAgeInsertUpdate.aspx.cs">
+      <DependentUpon>BIBusinessAgeInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BIBusinessAgeInsertUpdate.aspx.designer.cs">
+      <DependentUpon>BIBusinessAgeInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BICategoryDisplay.aspx.cs">
+      <DependentUpon>BICategoryDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BICategoryDisplay.aspx.designer.cs">
+      <DependentUpon>BICategoryDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BICategoryInsertUpdate.aspx.cs">
+      <DependentUpon>BICategoryInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BICategoryInsertUpdate.aspx.designer.cs">
+      <DependentUpon>BICategoryInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardBalanceTransferWF.aspx.cs">
+      <DependentUpon>CardBalanceTransferWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardBalanceTransferWF.aspx.designer.cs">
+      <DependentUpon>CardBalanceTransferWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardFeatureDisplay.aspx.cs">
+      <DependentUpon>CardFeatureDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardFeatureDisplay.aspx.designer.cs">
+      <DependentUpon>CardFeatureDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardFeatureInsertPopupForCardInfo.aspx.cs">
+      <DependentUpon>CardFeatureInsertPopupForCardInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardFeatureInsertPopupForCardInfo.aspx.designer.cs">
+      <DependentUpon>CardFeatureInsertPopupForCardInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardFeatureInsertUpdate.aspx.cs">
+      <DependentUpon>CardFeatureInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardFeatureInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CardFeatureInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardInfoDisplay.aspx.cs">
+      <DependentUpon>CardInfoDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardInfoDisplay.aspx.designer.cs">
+      <DependentUpon>CardInfoDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardInfoInsertUpdate.aspx.cs">
+      <DependentUpon>CardInfoInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardInfoInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CardInfoInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardInfoPurchase.aspx.cs">
+      <DependentUpon>CardInfoPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardInfoPurchase.aspx.designer.cs">
+      <DependentUpon>CardInfoPurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardPurchaseWF.aspx.cs">
+      <DependentUpon>CardPurchaseWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardPurchaseWF.aspx.designer.cs">
+      <DependentUpon>CardPurchaseWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardRegionWiseFeeDisplay.aspx.cs">
+      <DependentUpon>CardRegionWiseFeeDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardRegionWiseFeeDisplay.aspx.designer.cs">
+      <DependentUpon>CardRegionWiseFeeDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CardRegionWiseFeeInsertUpdate.aspx.cs">
+      <DependentUpon>CardRegionWiseFeeInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CardRegionWiseFeeInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CardRegionWiseFeeInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CarInsuranceInsertUpdate.aspx.cs">
+      <DependentUpon>CarInsuranceInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CarInsuranceInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CarInsuranceInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CarInsuranceParameterInsertUpdate.aspx.cs">
+      <DependentUpon>CarInsuranceParameterInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CarInsuranceParameterInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CarInsuranceParameterInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CarInsuranceParameterView.aspx.cs">
+      <DependentUpon>CarInsuranceParameterView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CarInsuranceParameterView.aspx.designer.cs">
+      <DependentUpon>CarInsuranceParameterView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CarInsuranceView.aspx.cs">
+      <DependentUpon>CarInsuranceView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CarInsuranceView.aspx.designer.cs">
+      <DependentUpon>CarInsuranceView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ChannelInfoInsertUpdate.aspx.cs">
+      <DependentUpon>ChannelInfoInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ChannelInfoInsertUpdate.aspx.designer.cs">
+      <DependentUpon>ChannelInfoInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ChannelInfoView.aspx.cs">
+      <DependentUpon>ChannelInfoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ChannelInfoView.aspx.designer.cs">
+      <DependentUpon>ChannelInfoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CMSpage.aspx.cs">
+      <DependentUpon>CMSpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CMSpage.aspx.designer.cs">
+      <DependentUpon>CMSpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CommunityNewsDisplay.aspx.cs">
+      <DependentUpon>CommunityNewsDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CommunityNewsDisplay.aspx.designer.cs">
+      <DependentUpon>CommunityNewsDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CommunityNewsInsertUpdate.aspx.cs">
+      <DependentUpon>CommunityNewsInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CommunityNewsInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CommunityNewsInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CompanyDisplay.aspx.cs">
+      <DependentUpon>CompanyDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CompanyDisplay.aspx.designer.cs">
+      <DependentUpon>CompanyDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CompanyInfoDisplay.aspx.cs">
+      <DependentUpon>CompanyInfoDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CompanyInfoDisplay.aspx.designer.cs">
+      <DependentUpon>CompanyInfoDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CompanyInfoInsertUpdate.aspx.cs">
+      <DependentUpon>CompanyInfoInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CompanyInfoInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CompanyInfoInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CompanyInsertUpdate.aspx.cs">
+      <DependentUpon>CompanyInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CompanyInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CompanyInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CountryDisplay.aspx.cs">
+      <DependentUpon>CountryDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CountryDisplay.aspx.designer.cs">
+      <DependentUpon>CountryDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CountryInsertUpdate.aspx.cs">
+      <DependentUpon>CountryInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CountryInsertUpdate.aspx.designer.cs">
+      <DependentUpon>CountryInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CrystalReports\crCardInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCardInfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CrystalReports\RPTBDInternet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTBDInternet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CrystalReports\rptHeaderSub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptHeaderSub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\DefaultReportViewer.aspx.cs">
+      <DependentUpon>DefaultReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\DefaultReportViewer.aspx.designer.cs">
+      <DependentUpon>DefaultReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\DistrictWF.aspx.cs">
+      <DependentUpon>DistrictWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\DistrictWF.aspx.designer.cs">
+      <DependentUpon>DistrictWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\DivisionOrStateWF.aspx.cs">
+      <DependentUpon>DivisionOrStateWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\DivisionOrStateWF.aspx.designer.cs">
+      <DependentUpon>DivisionOrStateWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GasCylienderDisplay.aspx.cs">
+      <DependentUpon>GasCylienderDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GasCylienderDisplay.aspx.designer.cs">
+      <DependentUpon>GasCylienderDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GasDealerInfoDisplay.aspx.cs">
+      <DependentUpon>GasDealerInfoDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GasDealerInfoDisplay.aspx.designer.cs">
+      <DependentUpon>GasDealerInfoDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GasInsertUpdate.aspx.cs">
+      <DependentUpon>GasInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GasInsertUpdate.aspx.designer.cs">
+      <DependentUpon>GasInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineDetailDisplay.aspx.cs">
+      <DependentUpon>GuideLineDetailDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineDetailDisplay.aspx.designer.cs">
+      <DependentUpon>GuideLineDetailDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineDetailMoredisplay.aspx.cs">
+      <DependentUpon>GuideLineDetailMoredisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineDetailMoredisplay.aspx.designer.cs">
+      <DependentUpon>GuideLineDetailMoredisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineDetailMoreInsUpdate.aspx.cs">
+      <DependentUpon>GuideLineDetailMoreInsUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineDetailMoreInsUpdate.aspx.designer.cs">
+      <DependentUpon>GuideLineDetailMoreInsUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineWithDetails.aspx.cs">
+      <DependentUpon>GuideLineWithDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineWithDetails.aspx.designer.cs">
+      <DependentUpon>GuideLineWithDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineWithDetailsInsertUpdate.aspx.cs">
+      <DependentUpon>GuideLineWithDetailsInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GuideLineWithDetailsInsertUpdate.aspx.designer.cs">
+      <DependentUpon>GuideLineWithDetailsInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\HelpAdviceWF.aspx.cs">
+      <DependentUpon>HelpAdviceWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\HelpAdviceWF.aspx.designer.cs">
+      <DependentUpon>HelpAdviceWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LIApplicableFeatureInsertUpdate.aspx.cs">
+      <DependentUpon>LIApplicableFeatureInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LIApplicableFeatureInsertUpdate.aspx.designer.cs">
+      <DependentUpon>LIApplicableFeatureInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LIApplicableFeatureView.aspx.cs">
+      <DependentUpon>LIApplicableFeatureView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LIApplicableFeatureView.aspx.designer.cs">
+      <DependentUpon>LIApplicableFeatureView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LifeInsuranceInsertUpdate.aspx.cs">
+      <DependentUpon>LifeInsuranceInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LifeInsuranceInsertUpdate.aspx.designer.cs">
+      <DependentUpon>LifeInsuranceInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LifeInsuranceWF.aspx.cs">
+      <DependentUpon>LifeInsuranceWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LifeInsuranceWF.aspx.designer.cs">
+      <DependentUpon>LifeInsuranceWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LISchemaInsertUpdate.aspx.cs">
+      <DependentUpon>LISchemaInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LISchemaInsertUpdate.aspx.designer.cs">
+      <DependentUpon>LISchemaInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LISchemaView.aspx.cs">
+      <DependentUpon>LISchemaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LISchemaView.aspx.designer.cs">
+      <DependentUpon>LISchemaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LoanAmntYrScdle.aspx.cs">
+      <DependentUpon>LoanAmntYrScdle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LoanAmntYrScdle.aspx.designer.cs">
+      <DependentUpon>LoanAmntYrScdle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LoanAmntYrScdleInsertUpdate.aspx.cs">
+      <DependentUpon>LoanAmntYrScdleInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LoanAmntYrScdleInsertUpdate.aspx.designer.cs">
+      <DependentUpon>LoanAmntYrScdleInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LoanInfoDisplay.aspx.cs">
+      <DependentUpon>LoanInfoDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LoanInfoDisplay.aspx.designer.cs">
+      <DependentUpon>LoanInfoDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LoanInfoInsertUpdate.aspx.cs">
+      <DependentUpon>LoanInfoInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LoanInfoInsertUpdate.aspx.designer.cs">
+      <DependentUpon>LoanInfoInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LocationDisplay.aspx.cs">
+      <DependentUpon>LocationDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LocationDisplay.aspx.designer.cs">
+      <DependentUpon>LocationDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\LocationInsertUpdate.aspx.cs">
+      <DependentUpon>LocationInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\LocationInsertUpdate.aspx.designer.cs">
+      <DependentUpon>LocationInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MobilePhoneInfoDisplay.aspx.cs">
+      <DependentUpon>MobilePhoneInfoDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MobilePhoneInfoDisplay.aspx.designer.cs">
+      <DependentUpon>MobilePhoneInfoDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MobilePhoneInfoInsertUpdate.aspx.cs">
+      <DependentUpon>MobilePhoneInfoInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MobilePhoneInfoInsertUpdate.aspx.designer.cs">
+      <DependentUpon>MobilePhoneInfoInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MortgageDisplay.aspx.cs">
+      <DependentUpon>MortgageDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MortgageDisplay.aspx.designer.cs">
+      <DependentUpon>MortgageDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MortgageInsertUpdate.aspx.cs">
+      <DependentUpon>MortgageInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MortgageInsertUpdate.aspx.designer.cs">
+      <DependentUpon>MortgageInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MortgageReportUI.aspx.cs">
+      <DependentUpon>MortgageReportUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MortgageReportUI.aspx.designer.cs">
+      <DependentUpon>MortgageReportUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MPTypeDisplay.aspx.cs">
+      <DependentUpon>MPTypeDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MPTypeDisplay.aspx.designer.cs">
+      <DependentUpon>MPTypeDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MPTypeWF.aspx.cs">
+      <DependentUpon>MPTypeWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MPTypeWF.aspx.designer.cs">
+      <DependentUpon>MPTypeWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\OiiOMartContent.aspx.cs">
+      <DependentUpon>OiiOMartContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\OiiOMartContent.aspx.designer.cs">
+      <DependentUpon>OiiOMartContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\PoliceStationWF.aspx.cs">
+      <DependentUpon>PoliceStationWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\PoliceStationWF.aspx.designer.cs">
+      <DependentUpon>PoliceStationWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\PostOfficeDisplay.aspx.cs">
+      <DependentUpon>PostOfficeDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\PostOfficeDisplay.aspx.designer.cs">
+      <DependentUpon>PostOfficeDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\PostOfficeInsertUpdate.aspx.cs">
+      <DependentUpon>PostOfficeInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\PostOfficeInsertUpdate.aspx.designer.cs">
+      <DependentUpon>PostOfficeInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ProfessionInsertUpdate.aspx.cs">
+      <DependentUpon>ProfessionInsertUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ProfessionInsertUpdate.aspx.designer.cs">
+      <DependentUpon>ProfessionInsertUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ProfessionView.aspx.cs">
+      <DependentUpon>ProfessionView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ProfessionView.aspx.designer.cs">
+      <DependentUpon>ProfessionView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ReportMortgage\ContainerData.Designer.cs" />
+    <Compile Include="AdminPanel\ReportMortgage\MortgageReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MortgageReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ShowReport.aspx.cs">
+      <DependentUpon>ShowReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ShowReport.aspx.designer.cs">
+      <DependentUpon>ShowReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UrlInsertUpdateDelete.aspx.cs">
+      <DependentUpon>UrlInsertUpdateDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UrlInsertUpdateDelete.aspx.designer.cs">
+      <DependentUpon>UrlInsertUpdateDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UrlWFListOnePage.aspx.cs">
+      <DependentUpon>UrlWFListOnePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UrlWFListOnePage.aspx.designer.cs">
+      <DependentUpon>UrlWFListOnePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UrlWFListWF.aspx.cs">
+      <DependentUpon>UrlWFListWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UrlWFListWF.aspx.designer.cs">
+      <DependentUpon>UrlWFListWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UserGroupWF.aspx.cs">
+      <DependentUpon>UserGroupWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UserGroupWF.aspx.designer.cs">
+      <DependentUpon>UserGroupWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UserInfoWF.aspx.cs">
+      <DependentUpon>UserInfoWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UserInfoWF.aspx.designer.cs">
+      <DependentUpon>UserInfoWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UserPermissionWF.aspx.cs">
+      <DependentUpon>UserPermissionWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UserPermissionWF.aspx.designer.cs">
+      <DependentUpon>UserPermissionWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\VisitorsInfoWF.aspx.cs">
+      <DependentUpon>VisitorsInfoWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\VisitorsInfoWF.aspx.designer.cs">
+      <DependentUpon>VisitorsInfoWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllCommunityNewsDetails.aspx.cs">
+      <DependentUpon>AllCommunityNewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllCommunityNewsDetails.aspx.designer.cs">
+      <DependentUpon>AllCommunityNewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllFeatureMoreDetails.aspx.cs">
+      <DependentUpon>AllFeatureMoreDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllFeatureMoreDetails.aspx.designer.cs">
+      <DependentUpon>AllFeatureMoreDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllNewsDetails.aspx.cs">
+      <DependentUpon>AllNewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllNewsDetails.aspx.designer.cs">
+      <DependentUpon>AllNewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BankingInformation.aspx.cs">
+      <DependentUpon>BankingInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BankingInformation.aspx.designer.cs">
+      <DependentUpon>BankingInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BankingNews.aspx.cs">
+      <DependentUpon>BankingNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Broadband.aspx.cs">
+      <DependentUpon>Broadband.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BroadbandMaster.Master.cs">
+      <DependentUpon>BroadbandMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BroadbandMaster.Master.designer.cs">
+      <DependentUpon>BroadbandMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BroadbandMobileDeals.aspx.cs">
+      <DependentUpon>BroadbandMobileDeals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BroadbandTVDeals.aspx.cs">
+      <DependentUpon>BroadbandTVDeals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusinessInsurance.aspx.cs">
+      <DependentUpon>BusinessInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusinessInsurance.aspx.designer.cs">
+      <DependentUpon>BusinessInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessInsuranceCover.aspx.cs">
+      <DependentUpon>BusinessInsuranceCover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusinessInsuranceCover.aspx.designer.cs">
+      <DependentUpon>BusinessInsuranceCover.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CardInfoPurchase.aspx.cs">
+      <DependentUpon>CardInfoPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CardInfoPurchase.aspx.designer.cs">
+      <DependentUpon>CardInfoPurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CarInsuranceQuote.aspx.cs">
+      <DependentUpon>CarInsuranceQuote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarInsuranceQuote.aspx.designer.cs">
+      <DependentUpon>CarInsuranceQuote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CarInsuranceQuoteResults.aspx.cs">
+      <DependentUpon>CarInsuranceQuoteResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarInsuranceQuoteResults.aspx.designer.cs">
+      <DependentUpon>CarInsuranceQuoteResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CarInsuranceWF.aspx.cs">
+      <DependentUpon>CarInsuranceWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarInsuranceWF.aspx.designer.cs">
+      <DependentUpon>CarInsuranceWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSDetailPage.aspx.cs">
+      <DependentUpon>CMSDetailPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSDetailPage.aspx.designer.cs">
+      <DependentUpon>CMSDetailPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyWiseSpecificLoanTypeInfo.aspx.cs">
+      <DependentUpon>CompanyWiseSpecificLoanTypeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyWiseSpecificLoanTypeInfo.aspx.designer.cs">
+      <DependentUpon>CompanyWiseSpecificLoanTypeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCardsDetail.aspx.cs">
+      <DependentUpon>CreditCardsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditCardsDetail.aspx.designer.cs">
+      <DependentUpon>CreditCardsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentAccount.aspx.cs">
+      <DependentUpon>CurrentAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\GasDealerInfoWF.aspx.cs">
+      <DependentUpon>GasDealerInfoWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\GasDealerInfoWF.aspx.designer.cs">
+      <DependentUpon>GasDealerInfoWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnergyGas.aspx.cs">
+      <DependentUpon>EnergyGas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnergyGas.aspx.designer.cs">
+      <DependentUpon>EnergyGas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnergyMaster.Master.cs">
+      <DependentUpon>EnergyMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnergyMaster.Master.designer.cs">
+      <DependentUpon>EnergyMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EnergyPayment.aspx.cs">
+      <DependentUpon>EnergyPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeatureDescription.aspx.cs">
+      <DependentUpon>FeatureDescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeatureDescription.aspx.designer.cs">
+      <DependentUpon>FeatureDescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GuideLineDetails.aspx.cs">
+      <DependentUpon>GuideLineDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuideLineDetails.aspx.designer.cs">
+      <DependentUpon>GuideLineDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuideLineMoreDetails.aspx.cs">
+      <DependentUpon>GuideLineMoreDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuideLineMoreDetails.aspx.designer.cs">
+      <DependentUpon>GuideLineMoreDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDescription.aspx.cs">
+      <DependentUpon>HelpDescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDescription.aspx.designer.cs">
+      <DependentUpon>HelpDescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeInsurance.aspx.cs">
+      <DependentUpon>HomeInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeInsurance.aspx.designer.cs">
+      <DependentUpon>HomeInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeInsuranceCover.aspx.cs">
+      <DependentUpon>HomeInsuranceCover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeInsuranceCover.aspx.designer.cs">
+      <DependentUpon>HomeInsuranceCover.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceDefault.aspx.cs">
+      <DependentUpon>InsuranceDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceDefault.aspx.designer.cs">
+      <DependentUpon>InsuranceDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceMaster.Master.cs">
+      <DependentUpon>InsuranceMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceMaster.Master.designer.cs">
+      <DependentUpon>InsuranceMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceNews.aspx.cs">
+      <DependentUpon>InsuranceNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceQuotes.aspx.cs">
+      <DependentUpon>InsuranceQuotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceQuotes.aspx.designer.cs">
+      <DependentUpon>InsuranceQuotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceCover.aspx.cs">
+      <DependentUpon>InsuranceCover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsuranceCover.aspx.designer.cs">
+      <DependentUpon>InsuranceCover.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LifeInsurance.aspx.cs">
+      <DependentUpon>LifeInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LifeInsurance.aspx.designer.cs">
+      <DependentUpon>LifeInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanDesciptionDetails.aspx.cs">
+      <DependentUpon>LoanDesciptionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanDesciptionDetails.aspx.designer.cs">
+      <DependentUpon>LoanDesciptionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanInformationDisplay.aspx.cs">
+      <DependentUpon>LoanInformationDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanInformationDisplay.aspx.designer.cs">
+      <DependentUpon>LoanInformationDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanMasterPage.Master.cs">
+      <DependentUpon>LoanMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanMasterPage.Master.designer.cs">
+      <DependentUpon>LoanMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileMasterPage.Master.cs">
+      <DependentUpon>MobileMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileMasterPage.Master.designer.cs">
+      <DependentUpon>MobileMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MobilePhoneInformationWF.aspx.cs">
+      <DependentUpon>MobilePhoneInformationWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobilePhoneInformationWF.aspx.designer.cs">
+      <DependentUpon>MobilePhoneInformationWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="MortgageDetails.aspx.cs">
+      <DependentUpon>MortgageDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MortgageDetails.aspx.designer.cs">
+      <DependentUpon>MortgageDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MortgageMasterPage.Master.cs">
+      <DependentUpon>MortgageMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MortgageMasterPage.Master.designer.cs">
+      <DependentUpon>MortgageMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mortgages.aspx.cs">
+      <DependentUpon>Mortgages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MortgageTermWF.aspx.cs">
+      <DependentUpon>MortgageTermWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MortgageTermWF.aspx.designer.cs">
+      <DependentUpon>MortgageTermWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mortgages.aspx.designer.cs">
+      <DependentUpon>Mortgages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsAndCommunity.aspx.cs">
+      <DependentUpon>NewsAndCommunity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsAndCommunity.aspx.designer.cs">
+      <DependentUpon>NewsAndCommunity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OiiOMasterPage.Master.cs">
+      <DependentUpon>OiiOMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OiiOMasterPage.Master.designer.cs">
+      <DependentUpon>OiiOMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OMartWebService.asmx.cs">
+      <DependentUpon>OMartWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PayAsYouGoWF.aspx.cs">
+      <DependentUpon>PayAsYouGoWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayAsYouGoWF.aspx.designer.cs">
+      <DependentUpon>PayAsYouGoWF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shopping.aspx.cs">
+      <DependentUpon>Shopping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shopping.aspx.designer.cs">
+      <DependentUpon>Shopping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingMaster.Master.cs">
+      <DependentUpon>ShoppingMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingMaster.Master.designer.cs">
+      <DependentUpon>ShoppingMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Travel.aspx.cs">
+      <DependentUpon>Travel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="All Photos\Banking\Card\CardLogo\" />
+    <Folder Include="All Photos\Energy\Gas\Cyliender\" />
+    <Folder Include="All Photos\NewsImage\AllNewsDetailsTemp\" />
+    <Folder Include="All Photos\NewsImage\AllNewsDetails\" />
+    <Folder Include="All Photos\NewsImage\AllNews\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\CommunityNews\" />
+    <Folder Include="Images\Gas\Cyliender\" />
+    <Folder Include="Images\GuideLineDetailMore\" />
+    <Folder Include="Images\NewsImage\AllNewsDetailsTemp\" />
+    <Folder Include="Images\NewsImage\AllNewsDetails\" />
+    <Folder Include="Images\NewsImage\AllNews\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{c3fb16b5-bb92-4f49-ac41-b49546674b9c}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{4d8ab962-fd3c-4418-9801-c722e498fb4f}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{cf5f37f7-5be0-42eb-91d7-076939a395a9}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminPanel\CrystalReports\crCardInfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCardInfo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\CrystalReports\RPTBDInternet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTBDInternet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\CrystalReports\rptHeaderSub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHeaderSub.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ReportMortgage\MortgageReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MortgageReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62592</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62592/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

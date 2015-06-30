@@ -1,0 +1,68 @@
+﻿@model TulaTreeMvc.Areas.AdminPanel.Models.BrandViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+        <hr />
+        @Html.ValidationSummary(true)
+       
+        <div class="row">
+            <div class="form-group col-xs-6">
+                @Html.ChqLabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control ", placeholder = "Enter brand name" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-6">
+                @Html.ChqLabelFor(model => model.Origin, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.DropDownList("Origin", ViewBag.CountrySelectList as System.Web.Mvc.SelectList, "--Select origin country--", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Origin, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-6">
+                @Html.ChqLabelFor(model => model.EastblishYear, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.EastblishYear, new { htmlAttributes = new { @class = "form-control ", placeholder = "Enter establish year" } })
+                    @Html.ValidationMessageFor(model => model.EastblishYear, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-6">
+                @Html.LabelFor(model => model.IsRemoved, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.CheckBoxFor(model => model.IsRemoved, new { htmlAttributes = new { @class = "form-control btn btn-default" } })
+                    @Html.ValidationMessageFor(model => model.IsRemoved, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group col-xs-6">
+                <div class="col-md-offset-3 col-md-8">
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-success" })
+                    <input type="submit" value="Edit" class="btn btn-success pull-right" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

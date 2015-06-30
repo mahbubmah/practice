@@ -1,0 +1,1239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TulaTreeModelStoreContainer" CdmEntityContainer="DBConnectionString">
+    <EntitySetMapping Name="AdGivers">
+      <EntityTypeMapping TypeName="TulaTreeModel.AdGiver">
+        <MappingFragment StoreEntitySet="AdGiver">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+          <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+          <ScalarProperty Name="CompanyOrOrganizationName" ColumnName="CompanyOrOrganizationName" />
+          <ScalarProperty Name="ComOrOrgAddress" ColumnName="ComOrOrgAddress" />
+          <ScalarProperty Name="ComOrOrgPhone" ColumnName="ComOrOrgPhone" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="PhoneNo1" ColumnName="PhoneNo1" />
+          <ScalarProperty Name="PhoneNo2" ColumnName="PhoneNo2" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="TotalPostNo" ColumnName="TotalPostNo" />
+          <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdGiverTracings">
+      <EntityTypeMapping TypeName="TulaTreeModel.AdGiverTracing">
+        <MappingFragment StoreEntitySet="AdGiverTracing">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="AdGiverID" ColumnName="AdGiverID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="MACAddress" ColumnName="MACAddress" />
+          <ScalarProperty Name="BrowserNameID" ColumnName="BrowserNameID" />
+          <ScalarProperty Name="BrowsingTimeDuration" ColumnName="BrowsingTimeDuration" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="TulaTreeModel.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="EastblishYear" ColumnName="EastblishYear" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="TulaTreeModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CMSContents">
+      <EntityTypeMapping TypeName="TulaTreeModel.CMSContent">
+        <MappingFragment StoreEntitySet="CMSContent">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CMSTypeID" ColumnName="CMSTypeID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CMSDescription" ColumnName="CMSDescription" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="TulaTreeModel.Color">
+        <MappingFragment StoreEntitySet="Color">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="TulaTreeModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ISDCode" ColumnName="ISDCode" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Districts">
+      <EntityTypeMapping TypeName="TulaTreeModel.District">
+        <MappingFragment StoreEntitySet="District">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="DivisionOrStateID" ColumnName="DivisionOrStateID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DivisionOrStates">
+      <EntityTypeMapping TypeName="TulaTreeModel.DivisionOrState">
+        <MappingFragment StoreEntitySet="DivisionOrState">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomePageBanners">
+      <EntityTypeMapping TypeName="TulaTreeModel.HomePageBanner">
+        <MappingFragment StoreEntitySet="HomePageBanner">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeavingCauses">
+      <EntityTypeMapping TypeName="TulaTreeModel.LeavingCaus">
+        <MappingFragment StoreEntitySet="LeavingCauses">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="TulaTreeModel.Location">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="SubDistrictID" ColumnName="SubDistrictID" />
+          <ScalarProperty Name="PoliceStationID" ColumnName="PoliceStationID" />
+          <ScalarProperty Name="PostOfficeID" ColumnName="PostOfficeID" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MappingCategories">
+      <EntityTypeMapping TypeName="TulaTreeModel.MappingCategory">
+        <MappingFragment StoreEntitySet="MappingCategory">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="MappingTableID" ColumnName="MappingTableID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MappingTables">
+      <EntityTypeMapping TypeName="TulaTreeModel.MappingTable">
+        <MappingFragment StoreEntitySet="MappingTable">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materials">
+      <EntityTypeMapping TypeName="TulaTreeModel.Material">
+        <MappingFragment StoreEntitySet="Material">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="AdGiverID" ColumnName="AdGiverID" />
+          <ScalarProperty Name="AdTypeID" ColumnName="AdTypeID" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="WebSiteUrl" ColumnName="WebSiteUrl" />
+          <ScalarProperty Name="YoutubeUrl" ColumnName="YoutubeUrl" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPhoneNumber" ColumnName="UserPhoneNumber" />
+          <ScalarProperty Name="IsNegotiablePrice" ColumnName="IsNegotiablePrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="TulaTreeModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyFavourites">
+      <EntityTypeMapping TypeName="TulaTreeModel.MyFavourite">
+        <MappingFragment StoreEntitySet="MyFavourites">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="UserLoginID" ColumnName="UserLoginID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReturnURL" ColumnName="ReturnURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OiiONewsLetters">
+      <EntityTypeMapping TypeName="TulaTreeModel.OiiONewsLetter">
+        <MappingFragment StoreEntitySet="OiiONewsLetter">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="IsSubscribe" ColumnName="IsSubscribe" />
+          <ScalarProperty Name="SubscribeDate" ColumnName="SubscribeDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OiiOOthers">
+      <EntityTypeMapping TypeName="TulaTreeModel.OiiOOther">
+        <MappingFragment StoreEntitySet="OiiOOthers">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="DetailDescription" ColumnName="DetailDescription" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pictures">
+      <EntityTypeMapping TypeName="TulaTreeModel.Picture">
+        <MappingFragment StoreEntitySet="Picture">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="UrlAddress" ColumnName="UrlAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PictureLogs">
+      <EntityTypeMapping TypeName="TulaTreeModel.PictureLog">
+        <MappingFragment StoreEntitySet="PictureLog">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="UrlAddress" ColumnName="UrlAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PoliceStations">
+      <EntityTypeMapping TypeName="TulaTreeModel.PoliceStation">
+        <MappingFragment StoreEntitySet="PoliceStation">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="DivisionOrStateID" ColumnName="DivisionOrStateID" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostOffices">
+      <EntityTypeMapping TypeName="TulaTreeModel.PostOffice">
+        <MappingFragment StoreEntitySet="PostOffice">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="PoliceStationID" ColumnName="PoliceStationID" />
+          <ScalarProperty Name="SubDistrictID" ColumnName="SubDistrictID" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="DivisionOrStateID" ColumnName="DivisionOrStateID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TulaTreeModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tulas">
+      <EntityTypeMapping TypeName="TulaTreeModel.Tula">
+        <MappingFragment StoreEntitySet="Tula">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="LoginLogo" ColumnName="LoginLogo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TulaTreeAlerts">
+      <EntityTypeMapping TypeName="TulaTreeModel.TulaTreeAlert">
+        <MappingFragment StoreEntitySet="TulaTreeAlert">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TulaTreeHelpSupports">
+      <EntityTypeMapping TypeName="TulaTreeModel.TulaTreeHelpSupport">
+        <MappingFragment StoreEntitySet="TulaTreeHelpSupport">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="HelpSupportTypeID" ColumnName="HelpSupportTypeID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UrlWFLists">
+      <EntityTypeMapping TypeName="TulaTreeModel.UrlWFList">
+        <MappingFragment StoreEntitySet="UrlWFList">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="ModuleSerialNo" ColumnName="ModuleSerialNo" />
+          <ScalarProperty Name="UrlWFName" ColumnName="UrlWFName" />
+          <ScalarProperty Name="UrlWFSerialNo" ColumnName="UrlWFSerialNo" />
+          <ScalarProperty Name="UrlWFDisplayName" ColumnName="UrlWFDisplayName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroups">
+      <EntityTypeMapping TypeName="TulaTreeModel.UserGroup">
+        <MappingFragment StoreEntitySet="UserGroup">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfoes">
+      <EntityTypeMapping TypeName="TulaTreeModel.UserInfo">
+        <MappingFragment StoreEntitySet="UserInfo">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="AdGiverID" ColumnName="AdGiverID" />
+          <ScalarProperty Name="IsActiveUser" ColumnName="IsActiveUser" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="LeavingCausesID" ColumnName="LeavingCausesID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IsEmail" ColumnName="IsEmail" />
+          <ScalarProperty Name="IsSMS" ColumnName="IsSMS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRatings">
+      <EntityTypeMapping TypeName="TulaTreeModel.UserRating">
+        <MappingFragment StoreEntitySet="UserRatings">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="Ratings" ColumnName="Ratings" />
+          <ScalarProperty Name="AdGiverID" ColumnName="AdGiverID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserWFPermissions">
+      <EntityTypeMapping TypeName="TulaTreeModel.UserWFPermission">
+        <MappingFragment StoreEntitySet="UserWFPermission">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+          <ScalarProperty Name="UrlWFListID" ColumnName="UrlWFListID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitorCounters">
+      <EntityTypeMapping TypeName="TulaTreeModel.VisitorCounter">
+        <MappingFragment StoreEntitySet="VisitorCounter">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitorInfoes">
+      <EntityTypeMapping TypeName="TulaTreeModel.VisitorInfo">
+        <MappingFragment StoreEntitySet="VisitorInfo">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="IPType" ColumnName="IPType" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitorInfoDetails">
+      <EntityTypeMapping TypeName="TulaTreeModel.VisitorInfoDetail">
+        <MappingFragment StoreEntitySet="VisitorInfoDetails">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="VisitorInfoID" ColumnName="VisitorInfoID" />
+          <ScalarProperty Name="AccessDateTime" ColumnName="AccessDateTime" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locs">
+      <EntityTypeMapping TypeName="TulaTreeModel.Loc">
+        <MappingFragment StoreEntitySet="Loc">
+          <ScalarProperty Name="CurrentLocationName" ColumnName="CurrentLocationName" />
+          <ScalarProperty Name="PoliceStationName" ColumnName="PoliceStationName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="DivisionOrStateName" ColumnName="DivisionOrStateName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaterialLogs">
+      <EntityTypeMapping TypeName="TulaTreeModel.MaterialLog">
+        <MappingFragment StoreEntitySet="MaterialLog">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="AdGiverID" ColumnName="AdGiverID" />
+          <ScalarProperty Name="AdTypeID" ColumnName="AdTypeID" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="WebSiteUrl" ColumnName="WebSiteUrl" />
+          <ScalarProperty Name="YoutubeUrl" ColumnName="YoutubeUrl" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPhoneNumber" ColumnName="UserPhoneNumber" />
+          <ScalarProperty Name="IsNegotiablePrice" ColumnName="IsNegotiablePrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteFromMaterialAndSaveToLog" FunctionName="TulaTreeModel.Store.DeleteFromMaterialAndSaveToLog" />
+    <FunctionImportMapping FunctionImportName="DeleteFromMyFvrt" FunctionName="TulaTreeModel.Store.DeleteFromMyFvrt" />
+    <FunctionImportMapping FunctionImportName="DeleteFromUserGroup" FunctionName="TulaTreeModel.Store.DeleteFromUserGroup" />
+    <FunctionImportMapping FunctionImportName="GetAdGiverArcMaterialsForSearch" FunctionName="TulaTreeModel.Store.GetAdGiverArcMaterialsForSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetAdGiverArcMaterialsForSearch_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="AdGiverName" ColumnName="AdGiverName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAdGiverMaterialsForSearch" FunctionName="TulaTreeModel.Store.GetAdGiverMaterialsForSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetAdGiverMaterialsForSearch_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="AdGiverName" ColumnName="AdGiverName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllFromPostOffice" FunctionName="TulaTreeModel.Store.GetAllFromPostOffice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetAllFromPostOffice_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="DivisionOrState" ColumnName="DivisionOrState" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="PoliceStationName" ColumnName="PoliceStationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetArcMaterialsForSearch" FunctionName="TulaTreeModel.Store.GetArcMaterialsForSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetArcMaterialsForSearch_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="AdGiverName" ColumnName="AdGiverName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetMapCategory" FunctionName="TulaTreeModel.Store.GetMapCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetMapCategory_Result">
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="MapName" ColumnName="MapName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetMaterialsForSearch" FunctionName="TulaTreeModel.Store.GetMaterialsForSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetMaterialsForSearch_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="AdGiverName" ColumnName="AdGiverName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetModelNameForSearch" FunctionName="TulaTreeModel.Store.GetModelNameForSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetModelNameForSearch_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSearchResultForRegisteredUser" FunctionName="TulaTreeModel.Store.GetSearchResultForRegisteredUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetSearchResultForRegisteredUser_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetServerDateTime" FunctionName="TulaTreeModel.Store.GetServerDateTime" />
+    <FunctionImportMapping FunctionImportName="GetSortedMaterialAccordingToCategoreyIIDnClientTypeIdForClientListView" FunctionName="TulaTreeModel.Store.GetSortedMaterialAccordingToCategoreyIIDnClientTypeIdForClientListView">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.GetSortedMaterialAccordingToCategoreyIIDnClientTypeIdForClientListView_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="CategoryIID" ColumnName="CategoryIID" />
+          <ScalarProperty Name="ParentCategoryIID" ColumnName="ParentCategoryIID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="IsNegotiablePrice" ColumnName="IsNegotiablePrice" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertMaterialAndAllChildXML" FunctionName="TulaTreeModel.Store.InsertMaterialAndAllChildXML" />
+    <FunctionImportMapping FunctionImportName="OH_OT_GetAllOtherContent" FunctionName="TulaTreeModel.Store.OH_OT_GetAllOtherContent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.OH_OT_GetAllOtherContent_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="DetailDescription" ColumnName="DetailDescription" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="OH_OT_GetNavMenu" FunctionName="TulaTreeModel.Store.OH_OT_GetNavMenu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.OH_OT_GetNavMenu_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="OH_SP_GetAllSpotLightAds" FunctionName="TulaTreeModel.Store.OH_SP_GetAllSpotLightAds">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.OH_SP_GetAllSpotLightAds_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AdGiverID" ColumnName="AdGiverID" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+          <ScalarProperty Name="UrlAddress" ColumnName="UrlAddress" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SearchForPoliceStationbyCountryDivisionDistrict" FunctionName="TulaTreeModel.Store.SearchForPoliceStationbyCountryDivisionDistrict">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SearchForPoliceStationbyCountryDivisionDistrict_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TulaTreeModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_CategoryTree_GetCategoryListByParentID" FunctionName="TulaTreeModel.Store.SP_CategoryTree_GetCategoryListByParentID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_CategoryTree_GetCategoryListByParentID_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CategoryTree_GetCategoryParentID" FunctionName="TulaTreeModel.Store.SP_CategoryTree_GetCategoryParentID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_CategoryTree_GetCategoryParentID_Result">
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CategoryTree_GetSearchedCategory" FunctionName="TulaTreeModel.Store.SP_CategoryTree_GetSearchedCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_CategoryTree_GetSearchedCategory_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CategoryTree_GetSearchedCategoryOrAll" FunctionName="TulaTreeModel.Store.SP_CategoryTree_GetSearchedCategoryOrAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_CategoryTree_GetSearchedCategoryOrAll_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TulaTreeModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TulaTreeModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_GetAdgiverFnameLnamePhn" FunctionName="TulaTreeModel.Store.sp_GetAdgiverFnameLnamePhn">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.sp_GetAdgiverFnameLnamePhn_Result">
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="PhoneNo1" ColumnName="PhoneNo1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllLatestAds" FunctionName="TulaTreeModel.Store.SP_GetAllLatestAds">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetAllLatestAds_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AdGiverID" ColumnName="AdGiverID" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllMaterialAccordingToCategoreyIID" FunctionName="TulaTreeModel.Store.SP_GetAllMaterialAccordingToCategoreyIID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetAllMaterialAccordingToCategoreyIID_Result">
+          <ScalarProperty Name="CategoryIID" ColumnName="CategoryIID" />
+          <ScalarProperty Name="ParentCategoryIID" ColumnName="ParentCategoryIID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllMaterialForCategoreyIIDnClientType" FunctionName="TulaTreeModel.Store.SP_GetAllMaterialForCategoreyIIDnClientType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetAllMaterialForCategoreyIIDnClientType_Result">
+          <ScalarProperty Name="CategoryIID" ColumnName="CategoryIID" />
+          <ScalarProperty Name="ParentCategoryIID" ColumnName="ParentCategoryIID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="IsNegotiablePrice" ColumnName="IsNegotiablePrice" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllRecentMaterialAdsForCategoreyIID" FunctionName="TulaTreeModel.Store.SP_GetAllRecentMaterialAdsForCategoreyIID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetAllRecentMaterialAdsForCategoreyIID_Result">
+          <ScalarProperty Name="CategoryIID" ColumnName="CategoryIID" />
+          <ScalarProperty Name="ParentCategoryIID" ColumnName="ParentCategoryIID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="IsNegotiablePrice" ColumnName="IsNegotiablePrice" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllSortedRecentMaterialAdsForCategoreyIID" FunctionName="TulaTreeModel.Store.SP_GetAllSortedRecentMaterialAdsForCategoreyIID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetAllSortedRecentMaterialAdsForCategoreyIID_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="CategoryIID" ColumnName="CategoryIID" />
+          <ScalarProperty Name="ParentCategoryIID" ColumnName="ParentCategoryIID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="IsNegotiablePrice" ColumnName="IsNegotiablePrice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetDistrictForSearch" FunctionName="TulaTreeModel.Store.SP_GetDistrictForSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetDistrictForSearch_Result">
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="DivisionOrStateID" ColumnName="DivisionOrStateID" />
+          <ScalarProperty Name="DivisionOrStateName" ColumnName="DivisionOrStateName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetFourMortgageType" FunctionName="TulaTreeModel.Store.SP_GetFourMortgageType" />
+    <FunctionImportMapping FunctionImportName="SP_GetHelpSupportAccordingToHelpSupportID" FunctionName="TulaTreeModel.Store.SP_GetHelpSupportAccordingToHelpSupportID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetHelpSupportAccordingToHelpSupportID_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetLocationByMaterialIID" FunctionName="TulaTreeModel.Store.SP_GetLocationByMaterialIID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetLocationByMaterialIID_Result">
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetLocationForGoogleMap" FunctionName="TulaTreeModel.Store.SP_GetLocationForGoogleMap">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetLocationForGoogleMap_Result">
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="PoliceStationName" ColumnName="PoliceStationName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="DivisionOrStateName" ColumnName="DivisionOrStateName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetLocationForSearch" FunctionName="TulaTreeModel.Store.SP_GetLocationForSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetLocationForSearch_Result">
+          <ScalarProperty Name="PoliceStationID" ColumnName="PoliceStationID" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="DivisionOrStateID" ColumnName="DivisionOrStateID" />
+          <ScalarProperty Name="DivisionOrStateName" ColumnName="DivisionOrStateName" />
+          <ScalarProperty Name="PoliceStationName" ColumnName="PoliceStationName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CurrentLocationName" ColumnName="CurrentLocationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetMaterialAccordingToMaterialIID" FunctionName="TulaTreeModel.Store.SP_GetMaterialAccordingToMaterialIID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetMaterialAccordingToMaterialIID_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetPoliceStaionForSearch" FunctionName="TulaTreeModel.Store.SP_GetPoliceStaionForSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetPoliceStaionForSearch_Result">
+          <ScalarProperty Name="PoliceStationID" ColumnName="PoliceStationID" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="DivisionOrStateID" ColumnName="DivisionOrStateID" />
+          <ScalarProperty Name="DivisionOrStateName" ColumnName="DivisionOrStateName" />
+          <ScalarProperty Name="PoliceStationName" ColumnName="PoliceStationName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetRandomAllRecentMaterialAccordingToCategoreyIID" FunctionName="TulaTreeModel.Store.SP_GetRandomAllRecentMaterialAccordingToCategoreyIID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetRandomAllRecentMaterialAccordingToCategoreyIID_Result">
+          <ScalarProperty Name="CategoryIID" ColumnName="CategoryIID" />
+          <ScalarProperty Name="ParentCategoryIID" ColumnName="ParentCategoryIID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetRandomAllRecentMaterialAds" FunctionName="TulaTreeModel.Store.SP_GetRandomAllRecentMaterialAds">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetRandomAllRecentMaterialAds_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetSortedAllMaterialForCategoreyIIDnClientType" FunctionName="TulaTreeModel.Store.SP_GetSortedAllMaterialForCategoreyIIDnClientType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetSortedAllMaterialForCategoreyIIDnClientType_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="CategoryIID" ColumnName="CategoryIID" />
+          <ScalarProperty Name="ParentCategoryIID" ColumnName="ParentCategoryIID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="IsNegotiablePrice" ColumnName="IsNegotiablePrice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetSortedMaterialAccordingToCategoreyIID" FunctionName="TulaTreeModel.Store.SP_GetSortedMaterialAccordingToCategoreyIID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetSortedMaterialAccordingToCategoreyIID_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="CategoryIID" ColumnName="CategoryIID" />
+          <ScalarProperty Name="ParentCategoryIID" ColumnName="ParentCategoryIID" />
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="IsNegotiablePrice" ColumnName="IsNegotiablePrice" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetWholeWebSearch" FunctionName="TulaTreeModel.Store.SP_GetWholeWebSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SP_GetWholeWebSearch_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Matdis" ColumnName="Matdis" />
+          <ScalarProperty Name="catdis" ColumnName="catdis" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="catID" ColumnName="catID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TulaTreeModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TulaTreeModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TulaTreeModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAccNamePhone" FunctionName="TulaTreeModel.Store.sp_UpdateAccNamePhone" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateAccPassword" FunctionName="TulaTreeModel.Store.sp_UpdateAccPassword" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserDeactivation" FunctionName="TulaTreeModel.Store.sp_UpdateUserDeactivation" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TulaTreeModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SpCountAllMaterialForCategorey" FunctionName="TulaTreeModel.Store.SpCountAllMaterialForCategorey" />
+    <FunctionImportMapping FunctionImportName="SpDeleteUrlList" FunctionName="TulaTreeModel.Store.SpDeleteUrlList" />
+    <FunctionImportMapping FunctionImportName="SpGetAllMaterialForCategorey" FunctionName="TulaTreeModel.Store.SpGetAllMaterialForCategorey">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SpGetAllMaterialForCategorey_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="AdDate" ColumnName="AdDate" />
+          <ScalarProperty Name="AdDisplayLastDate" ColumnName="AdDisplayLastDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="IsSpotlight" ColumnName="IsSpotlight" />
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetAllPoliceStation" FunctionName="TulaTreeModel.Store.SpGetAllPoliceStation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SpGetAllPoliceStation_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="DivisionOrState" ColumnName="DivisionOrState" />
+          <ScalarProperty Name="District" ColumnName="District" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetData" FunctionName="TulaTreeModel.Store.SpGetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TulaTreeModel.SpGetData_Result">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="DivisionOrStateID" ColumnName="DivisionOrStateID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

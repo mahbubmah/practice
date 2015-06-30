@@ -1,0 +1,6 @@
+F:\- E - PROJECT\OiiO Haat_9\OH.DAL\bin\Debug\OH.DAL.dll
+F:\- E - PROJECT\OiiO Haat_9\OH.DAL\bin\Debug\OH.DAL.pdb
+F:\- E - PROJECT\OiiO Haat_9\OH.DAL\obj\Debug\OH.DAL.dll
+F:\- E - PROJECT\OiiO Haat_9\OH.DAL\obj\Debug\OH.DAL.pdb
+F:\- E - PROJECT\OiiO Haat_9\OH.DAL\bin\Debug\OH.DAL.dll.config
+F:\- E - PROJECT\OiiO Haat_9\OH.DAL\obj\Debug\OH.DAL.csprojResolveAssemblyReference.cache

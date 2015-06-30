@@ -1,0 +1,214 @@
+﻿@using Tula.DAL
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    @RenderSection("style", required: false)
+</head>
+<body>
+   
+        <div class="header">
+            <!-- Start: Header -->
+            <div class="header_top">
+                <!-- Start: header_top -->
+                <div class="container">
+                    <div class="topheader_cont">
+                        <div class="top_menu">
+                            <ul>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Registration</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                        <a class="myaccount" href="#">My OiiO Account</a>
+                    </div>
+                </div>
+            </div><!-- End: header_top -->
+            <div class="header_mid">
+                <!-- Start: header_mid -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            <div class="logo">
+                                <h1><a href="~/"><img src="~/images/logo.png" class="img-responsive" alt="" /></a></h1>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            <div class="search_part">
+                                <div class="col-md-7 col-md-offset-2 col-sm-9 col-xs-7">
+                                    <input type="text" class="input_search" placeholder="I’m searching category, Products & ..........">
+                                    <input class="search_btn" type="button" value="">
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-5">
+                                    <button class="btn btn-default pull-right btn_post" type="submit">Post your ad</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End: header_mid -->
+            <div class="container">
+                <div class="visible-xs">
+                    <ul id="menu">
+                        <li><a href="#">For sell</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Property</a></li>
+                        <li><a href="detailPage.aspx">Motors</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">News and Community</a></li>
+                    </ul>
+                </div>
+                <div class="menu hidden-xs">
+                    <ul>
+                        <li class="selected"><a href="#">For sell</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Property</a></li>
+                        <li><a href="detailPage.aspx">Motors</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">News and Community</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- End: Header -->
+
+        <div>
+            @RenderBody()
+        </div>
+        <div class="footer">
+            <!-- Start: footer -->
+            <div class="footer_top">
+                <!-- Start: footer_top -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer_box">
+                                <h1>Newsletter</h1>
+                                <div class="newsletter">
+                                    <input type="text" class="newsletter_input">
+                                    <input type="submit" class="newsletter_btn" value="">
+                                </div>
+                                <h1>FOLLOW US</h1>
+                                <div class="social_link">
+                                    <a target="_blank" href="https://www.facebook.com/">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a target="_blank" href="https://plus.google.com/">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                    <a target="_blank" href="https://instagram.com/">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.linkedin.com/">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.pinterest.com/">
+                                        <i class="fa fa-pinterest"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.tumblr.com/">
+                                        <i class="fa fa-tumblr"></i>
+                                    </a>
+                                    <a target="_blank" href="https://twitter.com/">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.youtube.com/">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                    <p>© 2015 Magento Demo Store. All Rights Reserved.</p>
+                                    <a href="#"><img src="~/images/paypal.png" class="img-responsive" alt="" /></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        @Html.Partial("_CMSPartial")
+
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer_box">
+                                <h1>services</h1>
+                                <ul>
+                                    <li><a href="#">Fault Diagnostics</a></li>
+                                    <li><a href="#">Virus Protection </a></li>
+                                    <li><a href="#">Virus/Spyware/Malware Removal</a></li>
+                                    <li><a href="#">Performance Tune-up</a></li>
+                                    <li><a href="#">Software Installation</a></li>
+                                    <li><a href="#">Software Troubleshooting</a></li>
+                                    <li><a href="#">Printer Installation & Troubleshooting</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer_box">
+                                <h1>contact us</h1>
+                                <p><strong>Address: </strong>Lorem ipsum</p>
+                                <p><strong>Phone: </strong><span>(123) 456 7890</span></p>
+                                <p><strong>E-mail: </strong> <a href="mailto:oiiointernational.com">oiiointernational.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End: footer_top -->
+            <div class="footer_bottom">
+                <!-- Start: footer_bottom -->
+                <div class="container">
+                    <p>All contents copyright © OiiO Haat 2015. All rights reserved Website Design,Development and SEO by -Oiio International.com</p>
+                    <a href="#"><img src="~/images/payment.png" class="img-responsive" alt="" /></a>
+                </div>
+            </div><!-- End: footer_bottom -->
+        </div><!-- End: footer -->
+
+
+   
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#menu').slicknav();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                auto: true,
+                pager: false,
+                controls: false
+            });
+            $('.lastesad_slider').bxSlider({
+                maxSlides: 4,
+                moveSlides: 1,
+                slideWidth: 262,
+                slideMargin: 30,
+                controls: false,
+                responsive: true,
+                pager: false,
+                auto: true,
+            });
+            $('#main_slider').flexslider({
+                animation: "slide",
+                directionNav: false,
+                controlNav: false,
+                auto: false
+            });
+            $('.prev, .next').on('click', function () {
+                var href = $(this).attr('href');
+                $('#main_slider').flexslider(href)
+                return false;
+            });
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

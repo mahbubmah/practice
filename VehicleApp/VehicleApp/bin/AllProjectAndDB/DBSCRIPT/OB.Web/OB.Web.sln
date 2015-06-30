@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OB.BLL", "OB.BLL\OB.BLL.csproj", "{97D4B80F-11E5-4E14-87A9-7574046DFB79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OB.DAL", "OB.DAL\OB.DAL.csproj", "{A95A2769-F93C-42D7-9057-C80D08B53047}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OB.Utilities", "OB.Utilities\OB.Utilities.csproj", "{E5953D5F-20D6-4007-9990-267584638AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OB.Web", "OB.Web\OB.Web.csproj", "{22B5BECE-137B-4202-8CB1-5C8CE9309C70}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 5
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = OB.BLL\\OB.BLL.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = OB.BLL\\
+		SccProjectUniqueName2 = OB.DAL\\OB.DAL.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = OB.DAL\\
+		SccProjectUniqueName3 = OB.Utilities\\OB.Utilities.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = OB.Utilities\\
+		SccProjectUniqueName4 = OB.Web\\OB.Web.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = OB.Web\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97D4B80F-11E5-4E14-87A9-7574046DFB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D4B80F-11E5-4E14-87A9-7574046DFB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D4B80F-11E5-4E14-87A9-7574046DFB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D4B80F-11E5-4E14-87A9-7574046DFB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95A2769-F93C-42D7-9057-C80D08B53047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95A2769-F93C-42D7-9057-C80D08B53047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95A2769-F93C-42D7-9057-C80D08B53047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95A2769-F93C-42D7-9057-C80D08B53047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5953D5F-20D6-4007-9990-267584638AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5953D5F-20D6-4007-9990-267584638AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5953D5F-20D6-4007-9990-267584638AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5953D5F-20D6-4007-9990-267584638AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B5BECE-137B-4202-8CB1-5C8CE9309C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B5BECE-137B-4202-8CB1-5C8CE9309C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B5BECE-137B-4202-8CB1-5C8CE9309C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B5BECE-137B-4202-8CB1-5C8CE9309C70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

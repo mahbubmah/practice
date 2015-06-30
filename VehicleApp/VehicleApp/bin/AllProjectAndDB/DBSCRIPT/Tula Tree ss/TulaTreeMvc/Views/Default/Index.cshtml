@@ -1,0 +1,315 @@
+﻿@model TulaTreeMvc.Models.DefaultViewModel
+
+@{
+    ViewBag.Title = "Default";
+}
+@using Microsoft.Ajax.Utilities
+@using Tula.DAL;
+
+<div class="banner">
+    <!-- Start: banner -->
+    <ul class="bxslider">
+        <li>
+            <img class="img-responsive" src="/images/banner/banner_00.jpg" />
+            <div class="banner_content">
+                <h2>Lorem Ipsum is simply</h2>
+                <p>Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.mauris.Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.</p>
+            </div>
+        </li>
+        <li>
+            <img class="img-responsive" src="/images/banner/banner_00.jpg" />
+            <div class="banner_content">
+                <h2>Lorem Ipsum is simply</h2>
+                <p>Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.mauris.Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.</p>
+            </div>
+        </li>
+        <li>
+            <img class="img-responsive" src="/images/banner/banner_00.jpg" />
+            <div class="banner_content">
+                <h2>Lorem Ipsum is simply</h2>
+                <p>Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.mauris.Lorem ipsum dr sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.</p>
+            </div>
+        </li>
+    </ul>
+</div><!-- End: banner -->
+<div class="container">
+    <!-- Start: container -->
+    <div class="content">
+        <!-- Start: content -->
+        <div class="content_row">
+            <!-- Start: content_row -->
+            <div class="row">
+                <div class="col-md-9 col-sm-9">
+                    <div class="menu_name">
+                        <h1>Latest ads <i class="fa fa-caret-down"></i></h1>
+                    </div>
+                    <div class="slider_inner">
+                        <div id="main_slider" class="flexslider">
+                            <ul class="slides">
+
+                                @if (Model.LatestRandomAds.Take(4).Any())
+                                {
+                                    var fristSlide = Model.LatestRandomAds.Take(4).ToList();
+                                    int i = 1;
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                @foreach (var item in fristSlide.Take(2))
+                                                {
+                                                    bool isEven = i % 2 == 0;
+                                                    <div class="ad_box">
+                                                        <img src="@item.ImageUrl" style="height: 117px; width: 188px" />
+                                                        <h2>@item.TitleName</h2>
+                                                        <p>@(item.Description.Length > 102 ? item.Description.Substring(0, 100) + "..." : item.Description)</p>
+                                                        <a class="read_more" href="#">Read More</a>
+                                                    </div>
+                                                    if (!isEven)
+                                                    {
+                                                        <div class="spacebar"></div>
+                                                    }
+                                                    i++;
+                                                }
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-6">
+                                                @foreach (var item in fristSlide.Skip(2))
+                                                {
+                                                    i = 1;
+                                                    bool isEven = i % 2 == 0;
+                                                    <div class="ad_box">
+                                                        <img src="@item.ImageUrl" style="height: 117px; width: 188px" />
+                                                        <h2>@item.TitleName</h2>
+                                                        <p>@(item.Description.Length > 102 ? item.Description.Substring(0, 100) + "..." : item.Description)</p>
+                                                        <a class="read_more" href="#">Read More</a>
+                                                    </div>
+                                                    if (!isEven)
+                                                    {
+                                                        <div class="spacebar"></div>
+                                                    }
+                                                    i++;
+                                                }
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                }
+
+                                @if (Model.LatestRandomAds.Skip(4).Take(4).Any())
+                                {
+                                    var secondSlide = Model.LatestRandomAds.Skip(4).Take(4).ToList();
+                                    int i = 1;
+                                    <li>
+                                        <div class="row">
+
+                                            <div class="col-md-6 col-sm-6">
+                                                @foreach (var item in secondSlide.Take(2))
+                                                {
+                                                    bool isEven = i % 2 == 0;
+                                                    <div class="ad_box">
+                                                        <img src="@item.ImageUrl" style="height: 117px; width: 188px" />
+                                                        <h2>@item.TitleName</h2>
+                                                        <p>@(item.Description.Length > 102 ? item.Description.Substring(0, 100) + "..." : item.Description)</p>
+                                                        <a class="read_more" href="#">Read More</a>
+                                                    </div>
+                                                    if (!isEven)
+                                                    {
+                                                        <div class="spacebar"></div>
+                                                    }
+                                                    i++;
+                                                }
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-6">
+                                                @foreach (var item in secondSlide.Skip(2))
+                                                {
+                                                    i = 1;
+                                                    bool isEven = i % 2 == 0;
+                                                    <div class="ad_box">
+                                                        <img src="@item.ImageUrl" style="height: 117px; width: 188px" />
+                                                        <h2>@item.TitleName</h2>
+                                                        <p>@(item.Description.Length > 102 ? item.Description.Substring(0, 100) + "..." : item.Description)</p>
+                                                        <a class="read_more" href="#">Read More</a>
+                                                    </div>
+                                                    if (!isEven)
+                                                    {
+                                                        <div class="spacebar"></div>
+                                                    }
+                                                    i++;
+                                                }
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                }
+                                @if (Model.LatestRandomAds.Skip(8).Take(4).Any())
+                                {
+                                    var thirdSlide = Model.LatestRandomAds.Skip(8).Take(4).ToList();
+                                    int i = 1;
+                                    <li>
+                                        <div class="row">
+
+                                            <div class="col-md-6 col-sm-6">
+                                                @foreach (var item in thirdSlide.Take(2))
+                                                {
+                                                    bool isEven = i % 2 == 0;
+                                                    <div class="ad_box">
+                                                        <img src="@item.ImageUrl" style="height: 117px; width: 188px" />
+                                                        <h2>@item.TitleName</h2>
+                                                        <p>@(item.Description.Length > 102 ? item.Description.Substring(0, 100) + "..." : item.Description)</p>
+                                                        <a class="read_more" href="#">Read More</a>
+                                                    </div>
+                                                    if (!isEven)
+                                                    {
+                                                        <div class="spacebar"></div>
+                                                    }
+                                                    i++;
+                                                }
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-6">
+                                                @foreach (var item in thirdSlide.Skip(2))
+                                                {
+                                                    i = 1;
+                                                    bool isEven = i % 2 == 0;
+                                                    <div class="ad_box">
+                                                        <img src="@item.ImageUrl" style="height: 117px; width: 188px" />
+                                                        <h2>@item.TitleName</h2>
+                                                        <p>@(item.Description.Length > 102 ? item.Description.Substring(0, 100) + "..." : item.Description)</p>
+                                                        <a class="read_more" href="#">Read More</a>
+                                                    </div>
+
+                                                    if (!isEven)
+                                                    {
+                                                        <div class="spacebar"></div>
+                                                    }
+                                                    i++;
+                                                }
+                                            </div>
+                                        </div>
+                                    </li>                               
+                                }
+                            </ul>
+
+                        </div>
+                        <div class="custom-navigation">
+                            <a href="prev" class="prev">prev</a>
+                            <a class="selectcontrol next" href="next">next</a>
+                        </div><div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 ad">
+                    <a href="#"><img class="img-responsive" src="/images/ad.jpg" /></a>
+                </div>
+            </div>
+        </div><!-- End: content_row -->
+        <div class="space-20"></div>
+        <div class="content_row">
+            <!-- Start: content_row -->
+            <div class="menu_name">
+                <h1>Latest ads in For sell<i class="fa fa-caret-down"></i></h1>
+            </div>
+            <ul class="lastesad_slider">
+                @foreach (var item in Model.LatestAdsInForSell)
+                {
+                    <li>
+                        <div class="latestad_box">
+                            <img class="img-responsive" src="@item.ImageUrl" />
+                            <h2>@item.TitleName</h2>
+                            <p>@(item.Description.Length > 102 ? item.Description.Substring(0, 100) + "..." : item.Description)</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div><!-- End: content_row -->
+        <div class="space-20"></div>
+
+        @if (Model.SpotLightAds != null || Model.SpotLightAds.Count > 0)
+        {
+            <div class="content_row">
+                <!-- Start: content_row -->
+                <div class="menu_name">
+                    <h1>Ad in the Spotlight <i class="fa fa-caret-down"></i></h1>
+                </div>
+                <div class="row">
+                    @foreach (var ads in Model.SpotLightAds)
+                    {
+                        <div class="col-md-4 col-sm-4">
+                            <div class="spotlight_box">
+                                <img class="img-responsive" src="@ads.UrlAddress" />
+                                <h2>@ads.TitleName</h2>
+                                <p>@(ads.Description.Length > 503 ? ads.Description.Substring(0, 500) + "..." : ads.Description)</p>
+                                <a class="read_more" href="#">Read More</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div><!-- End: content_row -->
+        }
+
+        <div class="space-20"></div>
+    </div><!-- End: content -->
+</div><!-- End: container -->
+@if (Model.OtherContents != null && Model.OtherContents.Count > 0)
+{
+    <div class="others">
+        <!-- Start: others -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="other_from">
+                        <h1>Others from oiio</h1>
+                        <span>@Model.OtherContents.FirstOrDefault().ShortDescription</span>
+                        <p>@(Model.OtherContents.FirstOrDefault().DetailDescription.Length > 1003 ? Model.OtherContents.FirstOrDefault().DetailDescription.Substring(0, 1000) + "..." : Model.OtherContents.FirstOrDefault().DetailDescription)</p>
+                        <a class="read_more" href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="row">
+                        @foreach (var otherContent in Model.OtherContents.Skip(1))
+                        {
+                            <div class="col-md-6 col-sm-6">
+                                <div class="others_Rbox">
+                                    <img class="img-responsive" src="@otherContent.ImageUrl" />
+                                    <h1>@otherContent.ShortDescription</h1>
+                                    <p>@(otherContent.DetailDescription.Length > 150 ? otherContent.DetailDescription.Substring(0, 145) + "..." : otherContent.DetailDescription) </p>
+                                    <a class="read_more" href="#">Read More</a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End: others -->
+}
+
+
+<div class="container">
+    <!-- Start: container -->
+    <div class="social_part">
+        <a href="#"><img src="/images/social/social_00.png" class="img-responsive" alt="" /></a>
+        <a href="#"><img src="/images/social/social_01.png" class="img-responsive" alt="" /></a>
+        <a href="#"><img src="/images/social/social_02.png" class="img-responsive" alt="" /></a>
+        <a href="#"><img src="/images/social/social_03.png" class="img-responsive" alt="" /></a>
+        <a href="#"><img src="/images/social/social_04.png" class="img-responsive" alt="" /></a>
+        <a href="#"><img src="/images/social/social_05.png" class="img-responsive" alt="" /></a>
+        <a href="#"><img src="/images/social/social_06.png" class="img-responsive" alt="" /></a>
+        <a href="#"><img src="/images/social/social_07.png" class="img-responsive" alt="" /></a>
+    </div>
+</div><!-- End: container -->
+<div class="container">
+    <!-- Start: container -->
+    <div class="partners">
+        <!-- Start: partners -->
+        <ul>
+            <li><a href="#"><img src="/images/partner/partner_00.png" class="img-responsive" alt="" /></a></li>
+            <li><a href="#"><img src="/images/partner/partner_01.png" class="img-responsive" alt="" /></a></li>
+            <li><a href="#"><img src="/images/partner/partner_02.png" class="img-responsive" alt="" /></a></li>
+            <li><a href="#"><img src="/images/partner/partner_03.png" class="img-responsive" alt="" /></a></li>
+            <li><a href="#"><img src="/images/partner/partner_04.png" class="img-responsive" alt="" /></a></li>
+            <li><a href="#"><img src="/images/partner/partner_05.png" class="img-responsive" alt="" /></a></li>
+            <li><a href="#"><img src="/images/partner/partner_06.png" class="img-responsive" alt="" /></a></li>
+        </ul>
+    </div><!-- End: partners -->
+</div><!-- End: container -->
